@@ -47,9 +47,8 @@ namespace CalTestHelpers.UI
             new SpecialUIElement("Toggle Demon Heart", TextureAssets.Item[ItemID.DemonHeart].Value, () => ToggleUpgrade(PlayerUpgrade.DemonHeart)),
             new SpecialUIElement("Toggle Celestial Onion", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/CelestialOnion").Value, () => ToggleUpgrade(PlayerUpgrade.CelestialOnion)),
         };
-        public override float UIScale => ResolutionRatio;
 
-        public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 660 - 270 * ResolutionRatio, 40);
+        public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 660 - 350 * ResolutionRatio, 40);
 
         public static void ToggleUpgrade(PlayerUpgrade upgradeToToggle)
         {
