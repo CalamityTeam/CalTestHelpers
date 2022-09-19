@@ -1,4 +1,4 @@
 displayName = Calamity Test Helper Mod
-author = Dominic K
+author = Dominic K, Ben-TK
 modReferences=CalamityMod
-version = 2.0.3
+version = 2.0.5
