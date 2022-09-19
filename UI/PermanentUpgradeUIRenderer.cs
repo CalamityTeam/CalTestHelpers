@@ -31,23 +31,23 @@ namespace CalTestHelpers.UI
         }
         public override List<SpecialUIElement> UIElements => new List<SpecialUIElement>()
         {
-            new SpecialUIElement("Toggle your blood orange effect.", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/BloodOrange").Value, () => ToggleUpgrade(PlayerUpgrade.BloodOrange)),
-            new SpecialUIElement("Toggle your miracle fruit effect.", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/MiracleFruit").Value, () => ToggleUpgrade(PlayerUpgrade.MiracleFruit)),
-            new SpecialUIElement("Toggle your elderberry effect.", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Elderberry").Value, () => ToggleUpgrade(PlayerUpgrade.Elderberry)),
-            new SpecialUIElement("Toggle your dragonfruit effect.", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Dragonfruit").Value, () => ToggleUpgrade(PlayerUpgrade.Dragonfruit)),
-            new SpecialUIElement("Toggle your comet shard effect.", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/CometShard").Value, () => ToggleUpgrade(PlayerUpgrade.CometShard)),
-            new SpecialUIElement("Toggle your ethereal core effect.", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/EtherealCore").Value, () => ToggleUpgrade(PlayerUpgrade.EtherealCore)),
-            new SpecialUIElement("Toggle your phantom heart effect.", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/PhantomHeart").Value, () => ToggleUpgrade(PlayerUpgrade.PhantomHeart)),
-            new SpecialUIElement("Toggle your mushroom plasma root effect.", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/MushroomPlasmaRoot").Value, () => ToggleUpgrade(PlayerUpgrade.MushroomPlasmaRoot)),
-            new SpecialUIElement("Toggle your infernal blood effect.", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/InfernalBlood").Value, () => ToggleUpgrade(PlayerUpgrade.InfernalBlood)),
-            new SpecialUIElement("Toggle your red lightning effect.", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/RedLightningContainer").Value, () => ToggleUpgrade(PlayerUpgrade.RedLightningContainer)),
-            new SpecialUIElement("Toggle your electrolyte gel effect.", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/ElectrolyteGelPack").Value, () => ToggleUpgrade(PlayerUpgrade.ElectrolyteGelPack)),
-            new SpecialUIElement("Toggle your starlight fuel cell effect.", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/StarlightFuelCell").Value, () => ToggleUpgrade(PlayerUpgrade.StarlightFuelCell)),
-            new SpecialUIElement("Toggle your ectoheart core effect.", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Ectoheart").Value, () => ToggleUpgrade(PlayerUpgrade.Ectoheart)),
-            new SpecialUIElement("Toggle your demon heart effect.", TextureAssets.Item[ItemID.DemonHeart].Value, () => ToggleUpgrade(PlayerUpgrade.DemonHeart)),
-            new SpecialUIElement("Toggle your celestial onion effect.", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/CelestialOnion").Value, () => ToggleUpgrade(PlayerUpgrade.CelestialOnion)),
+            new SpecialUIElement("Toggle Blood Orange", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/BloodOrange").Value, () => ToggleUpgrade(PlayerUpgrade.BloodOrange)),
+            new SpecialUIElement("Toggle Miracle Fruit", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/MiracleFruit").Value, () => ToggleUpgrade(PlayerUpgrade.MiracleFruit)),
+            new SpecialUIElement("Toggle Elderberry", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Elderberry").Value, () => ToggleUpgrade(PlayerUpgrade.Elderberry)),
+            new SpecialUIElement("Toggle Dragonfruit", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Dragonfruit").Value, () => ToggleUpgrade(PlayerUpgrade.Dragonfruit)),
+            new SpecialUIElement("Toggle Comet Shard", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/CometShard").Value, () => ToggleUpgrade(PlayerUpgrade.CometShard)),
+            new SpecialUIElement("Toggle Ethereal Core", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/EtherealCore").Value, () => ToggleUpgrade(PlayerUpgrade.EtherealCore)),
+            new SpecialUIElement("Toggle Phantom Heart", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/PhantomHeart").Value, () => ToggleUpgrade(PlayerUpgrade.PhantomHeart)),
+            new SpecialUIElement("Toggle Mushroom Plasma Root", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/MushroomPlasmaRoot").Value, () => ToggleUpgrade(PlayerUpgrade.MushroomPlasmaRoot)),
+            new SpecialUIElement("Toggle Infernal Blood", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/InfernalBlood").Value, () => ToggleUpgrade(PlayerUpgrade.InfernalBlood)),
+            new SpecialUIElement("Toggle Red Lightning Container", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/RedLightningContainer").Value, () => ToggleUpgrade(PlayerUpgrade.RedLightningContainer)),
+            new SpecialUIElement("Toggle Electrolyte Gel Pack", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/ElectrolyteGelPack").Value, () => ToggleUpgrade(PlayerUpgrade.ElectrolyteGelPack)),
+            new SpecialUIElement("Toggle Starlight Fuel Cell", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/StarlightFuelCell").Value, () => ToggleUpgrade(PlayerUpgrade.StarlightFuelCell)),
+            new SpecialUIElement("Toggle Ectoheart", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Ectoheart").Value, () => ToggleUpgrade(PlayerUpgrade.Ectoheart)),
+            new SpecialUIElement("Toggle Demon Heart", TextureAssets.Item[ItemID.DemonHeart].Value, () => ToggleUpgrade(PlayerUpgrade.DemonHeart)),
+            new SpecialUIElement("Toggle Celestial Onion", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/CelestialOnion").Value, () => ToggleUpgrade(PlayerUpgrade.CelestialOnion)),
         };
-        public override float UIScale => 0.75f * ResolutionRatio;
+        public override float UIScale => ResolutionRatio;
 
         public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 660 - 270 * ResolutionRatio, 40);
 
