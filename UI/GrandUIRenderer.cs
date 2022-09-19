@@ -62,9 +62,17 @@ namespace CalTestHelpers.UI
                         CalTestHelpersWorld.FrozenTime = !CalTestHelpersWorld.FrozenTime;
                         Main.NewText($"Time has {(CalTestHelpersWorld.FrozenTime ? "stopped" : "resumed")}.");
                     }),
-                    new SpecialUIElement("Toggle boss deaths.", ModContent.Request<Texture2D>("CalTestHelpers/UI/Blades").Value, () =>
+                    new SpecialUIElement("Toggle Prehardmode boss deaths.", ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesPHM").Value, () =>
                     {
-                        CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRender : null;
+                        CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderPHM : null;
+                    }),
+                    new SpecialUIElement("Toggle Hardmode boss deaths.", ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesHM").Value, () =>
+                    {
+                        CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderHM : null;
+                    }),
+                    new SpecialUIElement("Toggle Post-Moon Lord boss deaths.", ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesPML").Value, () =>
+                    {
+                        CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderPML : null;
                     }),
                     new SpecialUIElement("Toggle permanent upgrades.", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/BloodOrange").Value, () =>
                     {

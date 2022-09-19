@@ -19,7 +19,17 @@ namespace CalTestHelpers
             internal set;
         } = new();
 
-        public static BossDeathUIRenderer BossUIRender
+        public static BossDeathPHM BossUIRenderPHM
+        {
+            get;
+            internal set;
+        } = new();
+        public static BossDeathHM BossUIRenderHM
+        {
+            get;
+            internal set;
+        } = new();
+        public static BossDeathPML BossUIRenderPML
         {
             get;
             internal set;
