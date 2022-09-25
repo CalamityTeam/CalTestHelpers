@@ -14,20 +14,20 @@ namespace CalTestHelpers.UI
     {
         public override List<SpecialUIElement> UIElements => new List<SpecialUIElement>()
         {
-            new SpecialUIElement("Toggle The Profaned Guardian's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/ProfanedGuardians/ProfanedGuardianCommander_Head_Boss").Value, () => ToggleDeath(Boss.ProfanedGuardians)),
-            new SpecialUIElement("Toggle The Dragonfolly's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Bumblebirb/Birb_Head_Boss").Value, () => ToggleDeath(Boss.Dragonfolly)),
+            new SpecialUIElement("Toggle The Profaned Guardians' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/ProfanedGuardians/ProfanedGuardianCommander_Head_Boss").Value, () => ToggleDeath(Boss.ProfanedGuardians)),
+            new SpecialUIElement("Toggle Dragonfolly's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Bumblebirb/Birb_Head_Boss").Value, () => ToggleDeath(Boss.Dragonfolly)),
             new SpecialUIElement("Toggle Providence's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Providence/Providence_Head_Boss").Value, () => ToggleDeath(Boss.Providence)),
-            new SpecialUIElement("Toggle The Ceasless Void's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/CeaselessVoid/CeaselessVoid_Head_Boss").Value, () => ToggleDeath(Boss.CeaselessVoid)),
-            new SpecialUIElement("Toggle The Storm Weaver's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/StormWeaver/StormWeaverHeadNaked_Head_Boss").Value, () => ToggleDeath(Boss.StormWeaver)),
+            new SpecialUIElement("Toggle Ceaseless Void's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/CeaselessVoid/CeaselessVoid_Head_Boss").Value, () => ToggleDeath(Boss.CeaselessVoid)),
+            new SpecialUIElement("Toggle Storm Weaver's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/StormWeaver/StormWeaverHeadNaked_Head_Boss").Value, () => ToggleDeath(Boss.StormWeaver)),
             new SpecialUIElement("Toggle Signus' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Signus/Signus_Head_Boss").Value, () => ToggleDeath(Boss.Signus)),
-            new SpecialUIElement("Toggle The Polterghast's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Polterghast/Polterghast_Head_Boss").Value, () => ToggleDeath(Boss.Polterghast)),
-            new SpecialUIElement("Toggle The Old Duke's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/OldDuke/OldDuke_Head_Boss").Value, () => ToggleDeath(Boss.OldDuke)),
+            new SpecialUIElement("Toggle Polterghast's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Polterghast/Polterghast_Head_Boss").Value, () => ToggleDeath(Boss.Polterghast)),
+            new SpecialUIElement("Toggle Old Duke's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/OldDuke/OldDuke_Head_Boss").Value, () => ToggleDeath(Boss.OldDuke)),
             new SpecialUIElement("Toggle The Devourer of Gods' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/DevourerofGods/DevourerofGodsHeadS_Head_Boss").Value, () => ToggleDeath(Boss.DevourerOfGods)),
             new SpecialUIElement("Toggle Yharon's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Yharon/Yharon_Head_Boss").Value, () => ToggleDeath(Boss.Yharon)),
             new SpecialUIElement("Toggle The Exo Mechs' Death.", ModContent.Request<Texture2D>("CalTestHelpers/UI/TemporaryDraedonIcon").Value, () => ToggleDeath(Boss.Draedon)),
             new SpecialUIElement("Toggle Supreme Calamitas' Death.", ModContent.Request<Texture2D>("CalamityMod/Items/Pets/BrimstoneJewel").Value, () => ToggleDeath(Boss.SupremeCalamitas)),
-            new SpecialUIElement("Toggle every post-Moon Lord boss' Death.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/ArkoftheCosmos").Value, () => ToggleDeath(Boss.AllPML)),
-            new SpecialUIElement("Toggle every boss' Death.", ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () => ToggleDeath(Boss.All))
+            new SpecialUIElement("Toggle all post-Moon Lord boss Deaths.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/ArkoftheCosmos").Value, () => ToggleDeath(Boss.AllPML)),
+            new SpecialUIElement("Toggle all boss Deaths.", ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () => ToggleDeath(Boss.All))
         };
 
         public static void ToggleDeath(Boss bossDeathToToggle)
@@ -53,7 +53,7 @@ namespace CalTestHelpers.UI
                     bossDeathValue = ref DownedBossSystem._downedGuardians;
                     break;
                 case Boss.Dragonfolly:
-                    bossName = "The Dragonfolly";
+                    bossName = "Dragonfolly";
                     textColor = new Color(255, 20, 20);
                     bossDeathValue = ref DownedBossSystem._downedDragonfolly;
                     break;
@@ -63,12 +63,12 @@ namespace CalTestHelpers.UI
                     bossDeathValue = ref DownedBossSystem._downedProvidence;
                     break;
                 case Boss.CeaselessVoid:
-                    bossName = "The Ceaseless Void";
+                    bossName = "Ceaseless Void";
                     textColor = new Color(125, 100, 153);
                     bossDeathValue = ref DownedBossSystem._downedCeaselessVoid;
                     break;
                 case Boss.StormWeaver:
-                    bossName = "The Storm Weaver";
+                    bossName = "Storm Weaver";
                     textColor = new Color(235, 100, 153);
                     bossDeathValue = ref DownedBossSystem._downedStormWeaver;
                     break;
@@ -83,7 +83,7 @@ namespace CalTestHelpers.UI
                     bossDeathValue = ref DownedBossSystem._downedPolterghast;
                     break;
                 case Boss.OldDuke:
-                    bossName = "The Old Duke";
+                    bossName = "Old Duke";
                     textColor = new Color(133, 180, 49);
                     bossDeathValue = ref DownedBossSystem._downedBoomerDuke;
                     break;
@@ -110,8 +110,8 @@ namespace CalTestHelpers.UI
             }
             bossDeathValue = !bossDeathValue;
             NPC.downedMechBossAny = NPC.downedMechBoss1 || NPC.downedMechBoss2 || NPC.downedMechBoss3;
-            string bossRefernceText = bossName.Last() == 's' ? bossName + "'" : bossName + "'s";
-            Main.NewText($"{bossRefernceText} death is now marked as: {bossDeathValue}", textColor);
+            string bossReferenceText = bossName.Last() == 's' ? bossName + "'" : bossName + "'s";
+            Main.NewText($"{bossReferenceText} death is now marked as: {bossDeathValue}", textColor);
         }
 
         public static void ToggleAllPMLBossDeaths()

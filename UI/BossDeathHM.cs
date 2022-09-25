@@ -17,23 +17,23 @@ namespace CalTestHelpers.UI
             new SpecialUIElement("Toggle Queen Slime's Death.", TextureAssets.NpcHeadBoss[38].Value, () => ToggleDeath(Boss.QueenSlime)),
             new SpecialUIElement("Toggle Cryogen's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Cryogen/Cryogen_Phase1_Head_Boss").Value, () => ToggleDeath(Boss.Cryogen)),
             new SpecialUIElement("Toggle The Twins' Death.", TextureAssets.NpcHeadBoss[16].Value, () => ToggleDeath(Boss.TheTwins)),
-            new SpecialUIElement("Toggle The Brimstone Elemental's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/BrimstoneElemental/BrimstoneElemental_Head_Boss").Value, () => ToggleDeath(Boss.BrimstoneElemental)),
-            new SpecialUIElement("Toggle The Destroyer's Death.", TextureAssets.NpcHeadBoss[25].Value, () => ToggleDeath(Boss.TheDestroyer)),
-            new SpecialUIElement("Toggle The Aquatic Scourge's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/AquaticScourge/AquaticScourgeHead_Head_Boss").Value, () => ToggleDeath(Boss.TheAquaticScourge)),
+            new SpecialUIElement("Toggle Brimstone Elemental's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/BrimstoneElemental/BrimstoneElemental_Head_Boss").Value, () => ToggleDeath(Boss.BrimstoneElemental)),
+            new SpecialUIElement("Toggle Destroyer's Death.", TextureAssets.NpcHeadBoss[25].Value, () => ToggleDeath(Boss.TheDestroyer)),
+            new SpecialUIElement("Toggle Aquatic Scourge's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/AquaticScourge/AquaticScourgeHead_Head_Boss").Value, () => ToggleDeath(Boss.TheAquaticScourge)),
             new SpecialUIElement("Toggle Skeletron Prime's Death.", TextureAssets.NpcHeadBoss[18].Value, () => ToggleDeath(Boss.SkeletronPrime)),
-            new SpecialUIElement("Toggle The Calamitas Clone's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Calamitas/CalamitasClone_Head_Boss").Value, () => ToggleDeath(Boss.Cloneamitas)),
+            new SpecialUIElement("Toggle Calamitas Clone's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Calamitas/CalamitasClone_Head_Boss").Value, () => ToggleDeath(Boss.Cloneamitas)),
             new SpecialUIElement("Toggle Plantera's Death.", TextureAssets.NpcHeadBoss[11].Value, () => ToggleDeath(Boss.Plantera)),
-            new SpecialUIElement("Toggle The Leviathan's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Leviathan/Leviathan_Head_Boss").Value, () => ToggleDeath(Boss.Leviathan)),
+            new SpecialUIElement("Toggle Leviathan's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Leviathan/Leviathan_Head_Boss").Value, () => ToggleDeath(Boss.Leviathan)),
             new SpecialUIElement("Toggle Astrum Aureus' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/AstrumAureus/AstrumAureus_Head_Boss").Value, () => ToggleDeath(Boss.AstrumAureus)),
             new SpecialUIElement("Toggle Golem's Death.", TextureAssets.NpcHeadBoss[5].Value, () => ToggleDeath(Boss.Golem)),
-            new SpecialUIElement("Toggle The Plaguebringer Goliath's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/PlaguebringerGoliath/PlaguebringerGoliath_Head_Boss").Value, () => ToggleDeath(Boss.PlaguebringerGoliath)),
+            new SpecialUIElement("Toggle Plaguebringer Goliath's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/PlaguebringerGoliath/PlaguebringerGoliath_Head_Boss").Value, () => ToggleDeath(Boss.PlaguebringerGoliath)),
             new SpecialUIElement("Toggle Empress of Light's Death.", TextureAssets.NpcHeadBoss[37].Value, () => ToggleDeath(Boss.EmpressOfLight)),
             new SpecialUIElement("Toggle Duke Fishron's Death.", TextureAssets.NpcHeadBoss[4].Value, () => ToggleDeath(Boss.DukeFishron)),
-            new SpecialUIElement("Toggle The Ravager's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Ravager/RavagerBody_Head_Boss").Value, () => ToggleDeath(Boss.Ravager)),
-            new SpecialUIElement("Toggle The Lunatic Cultist's Death.", TextureAssets.NpcHeadBoss[31].Value, () => ToggleDeath(Boss.LunaticCultist)),
+            new SpecialUIElement("Toggle Ravager's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Ravager/RavagerBody_Head_Boss").Value, () => ToggleDeath(Boss.Ravager)),
+            new SpecialUIElement("Toggle Lunatic Cultist's Death.", TextureAssets.NpcHeadBoss[31].Value, () => ToggleDeath(Boss.LunaticCultist)),
             new SpecialUIElement("Toggle Astrum Deus' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/AstrumDeus/AstrumDeusHead_Head_Boss").Value, () => ToggleDeath(Boss.AstrumDeus)),
-            new SpecialUIElement("Toggle The Moon Lord's Death.", TextureAssets.NpcHeadBoss[8].Value, () => ToggleDeath(Boss.MoonLord)),
-            new SpecialUIElement("Toggle every Hardmode boss' Death.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/TrueArkoftheAncients").Value, () => ToggleDeath(Boss.AllHM))
+            new SpecialUIElement("Toggle Moon Lord's Death.", TextureAssets.NpcHeadBoss[8].Value, () => ToggleDeath(Boss.MoonLord)),
+            new SpecialUIElement("Toggle all Hardmode boss Deaths.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/TrueArkoftheAncients").Value, () => ToggleDeath(Boss.AllHM))
         };
 
         public static void ToggleDeath(Boss bossDeathToToggle)
@@ -64,17 +64,17 @@ namespace CalTestHelpers.UI
                     bossDeathValue = ref NPC.downedMechBoss2;
                     break;
                 case Boss.BrimstoneElemental:
-                    bossName = "The Brimstone Elemental";
+                    bossName = "Brimstone Elemental";
                     textColor = new Color(196, 7, 102);
                     bossDeathValue = ref DownedBossSystem._downedBrimstoneElemental;
                     break;
                 case Boss.TheDestroyer:
-                    bossName = "The Destroyer";
+                    bossName = "Destroyer";
                     textColor = new Color(147, 189, 198);
                     bossDeathValue = ref NPC.downedMechBoss1;
                     break;
                 case Boss.TheAquaticScourge:
-                    bossName = "The Aquatic Scourge";
+                    bossName = "Aquatic Scourge";
                     textColor = new Color(54, 156, 196);
                     bossDeathValue = ref DownedBossSystem._downedAquaticScourge;
                     break;
@@ -84,7 +84,7 @@ namespace CalTestHelpers.UI
                     bossDeathValue = ref NPC.downedMechBoss3;
                     break;
                 case Boss.Cloneamitas:
-                    bossName = "The Calamitas Clone";
+                    bossName = "Calamitas Clone";
                     textColor = new Color(204, 3, 0);
                     bossDeathValue = ref DownedBossSystem._downedCalamitas;
                     break;
@@ -109,12 +109,12 @@ namespace CalTestHelpers.UI
                     bossDeathValue = ref NPC.downedGolemBoss;
                     break;
                 case Boss.PlaguebringerGoliath:
-                    bossName = "The Plaguebringer Goliath";
+                    bossName = "Plaguebringer Goliath";
                     textColor = new Color(73, 130, 57);
                     bossDeathValue = ref DownedBossSystem._downedPlaguebringer;
                     break;
                 case Boss.EmpressOfLight:
-                    bossName = "Duke Fishron";
+                    bossName = "Empress of Light";
                     textColor = new Color(248, 255, 129);
                     bossDeathValue = ref NPC.downedEmpressOfLight;
                     break;
@@ -124,12 +124,12 @@ namespace CalTestHelpers.UI
                     bossDeathValue = ref NPC.downedFishron;
                     break;
                 case Boss.Ravager:
-                    bossName = "The Ravager";
+                    bossName = "Ravager";
                     textColor = new Color(88, 97, 189);
                     bossDeathValue = ref DownedBossSystem._downedRavager;
                     break;
                 case Boss.LunaticCultist:
-                    bossName = "The Lunatic Cultist";
+                    bossName = "Lunatic Cultist";
                     textColor = new Color(112, 132, 211);
                     bossDeathValue = ref NPC.downedAncientCultist;
                     break;
@@ -139,15 +139,15 @@ namespace CalTestHelpers.UI
                     bossDeathValue = ref DownedBossSystem._downedAstrumDeus;
                     break;
                 case Boss.MoonLord:
-                    bossName = "The Moon Lord";
+                    bossName = "Moon Lord";
                     textColor = new Color(0, 215, 155);
                     bossDeathValue = ref NPC.downedMoonlord;
                     break;
             }
             bossDeathValue = !bossDeathValue;
             NPC.downedMechBossAny = NPC.downedMechBoss1 || NPC.downedMechBoss2 || NPC.downedMechBoss3;
-            string bossRefernceText = bossName.Last() == 's' ? bossName + "'" : bossName + "'s";
-            Main.NewText($"{bossRefernceText} death is now marked as: {bossDeathValue}", textColor);
+            string bossReferenceText = bossName.Last() == 's' ? bossName + "'" : bossName + "'s";
+            Main.NewText($"{bossReferenceText} death is now marked as: {bossDeathValue}", textColor);
         }
 
         public static void ToggleAllHMBossDeaths()

@@ -16,19 +16,19 @@ namespace CalTestHelpers.UI
         public override List<SpecialUIElement> UIElements => new List<SpecialUIElement>()
         {
             new SpecialUIElement("Toggle King Slime's Death.", TextureAssets.NpcHeadBoss[7].Value, () => ToggleDeath(Boss.KingSlime)),
-            new SpecialUIElement("Toggle The Desert Scourge's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/DesertScourge/DesertScourgeHead_Head_Boss").Value, () => ToggleDeath(Boss.DesertScourge)),
-            new SpecialUIElement("Toggle The Eye of Cthulhu's Death.", TextureAssets.NpcHeadBoss[0].Value, () => ToggleDeath(Boss.EyeOfCthulhu)),
+            new SpecialUIElement("Toggle Desert Scourge's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/DesertScourge/DesertScourgeHead_Head_Boss").Value, () => ToggleDeath(Boss.DesertScourge)),
+            new SpecialUIElement("Toggle Eye of Cthulhu's Death.", TextureAssets.NpcHeadBoss[0].Value, () => ToggleDeath(Boss.EyeOfCthulhu)),
             new SpecialUIElement("Toggle Crabulon's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Crabulon/Crabulon_Head_Boss").Value, () => ToggleDeath(Boss.Crabulon)),
-            new SpecialUIElement("Toggle The Eater of World's Death.", TextureAssets.NpcHeadBoss[2].Value, () => ToggleDeath(Boss.EaterOfWorlds)),
-            new SpecialUIElement("Toggle The Brain of Cthulhu's Death.", TextureAssets.NpcHeadBoss[23].Value, () => ToggleDeath(Boss.BrainOfCthulhu)),
-            new SpecialUIElement("Toggle The Hive Mind's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/HiveMind/HiveMindP2_Head_Boss").Value, () => ToggleDeath(Boss.HiveMind)),
+            new SpecialUIElement("Toggle Eater of World's Death.", TextureAssets.NpcHeadBoss[2].Value, () => ToggleDeath(Boss.EaterOfWorlds)),
+            new SpecialUIElement("Toggle Brain of Cthulhu's Death.", TextureAssets.NpcHeadBoss[23].Value, () => ToggleDeath(Boss.BrainOfCthulhu)),
+            new SpecialUIElement("Toggle Hive Mind's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/HiveMind/HiveMindP2_Head_Boss").Value, () => ToggleDeath(Boss.HiveMind)),
             new SpecialUIElement("Toggle The Perforator's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Perforator/PerforatorHive_Head_Boss").Value, () => ToggleDeath(Boss.Perforators)),
-            new SpecialUIElement("Toggle The Queen Bee's Death.", TextureAssets.NpcHeadBoss[14].Value, () => ToggleDeath(Boss.QueenBee)),
+            new SpecialUIElement("Toggle Queen Bee's Death.", TextureAssets.NpcHeadBoss[14].Value, () => ToggleDeath(Boss.QueenBee)),
             new SpecialUIElement("Toggle Deerclops' Death.", TextureAssets.NpcHeadBoss[39].Value, () => ToggleDeath(Boss.Deerclops)),
             new SpecialUIElement("Toggle Skeletron's Death.", TextureAssets.NpcHeadBoss[19].Value, () => ToggleDeath(Boss.Skeletron)),
             new SpecialUIElement("Toggle The Slime God's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/SlimeGod/SlimeGodCore_Head_Boss").Value, () => ToggleDeath(Boss.SlimeGod)),
-            new SpecialUIElement("Toggle The Wall of Flesh's Death.", TextureAssets.NpcHeadBoss[22].Value, () => ToggleDeath(Boss.WallOfFlesh)),
-            new SpecialUIElement("Toggle every Prehardmode boss' Death.", TextureAssets.Item[ItemID.EnchantedSword].Value, () => ToggleDeath(Boss.AllPHM))
+            new SpecialUIElement("Toggle Wall of Flesh's Death.", TextureAssets.NpcHeadBoss[22].Value, () => ToggleDeath(Boss.WallOfFlesh)),
+            new SpecialUIElement("Toggle all Prehardmode boss Deaths.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/FracturedArk").Value, () => ToggleDeath(Boss.AllPHM))
         };
 
         public static void ToggleDeath(Boss bossDeathToToggle)
@@ -49,12 +49,12 @@ namespace CalTestHelpers.UI
                     bossDeathValue = ref NPC.downedSlimeKing;
                     break;
                 case Boss.DesertScourge:
-                    bossName = "The Desert Scourge";
+                    bossName = "Desert Scourge";
                     textColor = new Color(216, 151, 82);
                     bossDeathValue = ref DownedBossSystem._downedDesertScourge;
                     break;
                 case Boss.EyeOfCthulhu:
-                    bossName = "The Eye of Cthulhu";
+                    bossName = "Eye of Cthulhu";
                     textColor = new Color(216, 116, 114);
                     bossDeathValue = ref NPC.downedBoss1;
                     break;
@@ -64,17 +64,17 @@ namespace CalTestHelpers.UI
                     bossDeathValue = ref DownedBossSystem._downedCrabulon;
                     break;
                 case Boss.EaterOfWorlds:
-                    bossName = "The Eater of Worlds";
+                    bossName = "Eater of Worlds";
                     textColor = new Color(160, 131, 201);
                     bossDeathValue = ref NPC.downedBoss2;
                     break;
                 case Boss.BrainOfCthulhu:
-                    bossName = "The Brain of Cthulhu";
+                    bossName = "Brain of Cthulhu";
                     textColor = new Color(214, 147, 182);
                     bossDeathValue = ref NPC.downedBoss2;
                     break;
                 case Boss.HiveMind:
-                    bossName = "The Hive Mind";
+                    bossName = "Hive Mind";
                     textColor = new Color(160, 131, 201);
                     bossDeathValue = ref DownedBossSystem._downedHiveMind;
                     break;
@@ -84,7 +84,7 @@ namespace CalTestHelpers.UI
                     bossDeathValue = ref DownedBossSystem._downedPerforator;
                     break;
                 case Boss.QueenBee:
-                    bossName = "The Queen Bee";
+                    bossName = "Queen Bee";
                     textColor = new Color(216, 205, 2);
                     bossDeathValue = ref NPC.downedQueenBee;
                     break;
@@ -104,15 +104,15 @@ namespace CalTestHelpers.UI
                     bossDeathValue = ref DownedBossSystem._downedSlimeGod;
                     break;
                 case Boss.WallOfFlesh:
-                    bossName = "The Wall of Flesh";
+                    bossName = "Wall of Flesh";
                     textColor = new Color(192, 106, 122);
                     bossDeathValue = ref Main.hardMode;
                     break;
             }
             bossDeathValue = !bossDeathValue;
             NPC.downedMechBossAny = NPC.downedMechBoss1 || NPC.downedMechBoss2 || NPC.downedMechBoss3;
-            string bossRefernceText = bossName.Last() == 's' ? bossName + "'" : bossName + "'s";
-            Main.NewText($"{bossRefernceText} death is now marked as: {bossDeathValue}", textColor);
+            string bossReferenceText = bossName.Last() == 's' ? bossName + "'" : bossName + "'s";
+            Main.NewText($"{bossReferenceText} death is now marked as: {bossDeathValue}", textColor);
         }
 
         public static void ToggleAllPHMBossDeaths()
