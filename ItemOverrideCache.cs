@@ -13,6 +13,8 @@ namespace CalTestHelpers
 		public static int[] DamageOverrides;
 		public static int[] UseTimeOverrides;
 		public static int[] UseAnimationOverrides;
+		public static float[] ShootSpeedOverrides;
+		public static int[] ManaCostOverrides;
 
 		internal static void Load()
 		{
@@ -37,6 +39,8 @@ namespace CalTestHelpers
 			DamageOverrides = new int[ItemNames.Count];
 			UseTimeOverrides = new int[ItemNames.Count];
 			UseAnimationOverrides = new int[ItemNames.Count];
+			ShootSpeedOverrides = new float[ItemNames.Count];
+			ManaCostOverrides = new int[ItemNames.Count];
 		}
 
 		internal static void Unload()
@@ -46,6 +50,8 @@ namespace CalTestHelpers
 			DamageOverrides = null;
 			UseTimeOverrides = null;
 			UseAnimationOverrides = null;
+			ShootSpeedOverrides = null;
+			ManaCostOverrides = null;
 		}
 
 		public static void ResetOverrides()
@@ -53,6 +59,8 @@ namespace CalTestHelpers
 			DamageOverrides = new int[DamageOverrides.Length];
 			UseTimeOverrides = new int[UseTimeOverrides.Length];
 			UseAnimationOverrides = new int[UseAnimationOverrides.Length];
+			ShootSpeedOverrides = new float[ShootSpeedOverrides.Length];
+			ManaCostOverrides = new int[ManaCostOverrides.Length];
 		}
 
 		public static IEnumerable<int> AttemptToLocateItemsWithSimilarName(string name)

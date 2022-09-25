@@ -20,6 +20,12 @@ namespace CalTestHelpers
 
 			if (ItemOverrideCache.UseAnimationOverrides[Type] > 0)
 				self.useAnimation = ItemOverrideCache.UseAnimationOverrides[Type];
+
+			if (ItemOverrideCache.ShootSpeedOverrides[Type] > 0f)
+				self.shootSpeed = ItemOverrideCache.ShootSpeedOverrides[Type];
+
+			if (ItemOverrideCache.ManaCostOverrides[Type] > 0)
+				self.mana = ItemOverrideCache.ManaCostOverrides[Type];
 		}
 
 		private static void OverrideProjectileSetDefaultData(On.Terraria.Projectile.orig_SetDefaults orig, Projectile self, int Type)

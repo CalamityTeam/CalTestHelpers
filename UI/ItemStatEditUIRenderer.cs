@@ -200,6 +200,57 @@ namespace CalTestHelpers.UI
 				});
 			}
 
+			if (ItemBeingEdited.shootSpeed > 0f)
+			{
+				float display = (float)Math.Truncate(100 * ItemBeingEdited.shootSpeed) / 100f;
+				drawCustomManipulatorIcon($" {ItemBeingEdited.Name} Shoot Speed: {display}f", () =>
+				{
+					float shootSpeed = ItemBeingEdited.shootSpeed;
+					if (Main.mouseLeft)
+					{
+						if (Main.keyState.PressingShift())
+							shootSpeed -= 0.5f;
+						else
+							shootSpeed += 0.5f;
+						if (shootSpeed >= 125f)
+							shootSpeed = 125f;
+						if (shootSpeed <= 0f)
+							shootSpeed = 0.5f;
+
+						if (ItemBeingEdited.shootSpeed != shootSpeed)
+						{
+							ResetItemStats();
+							ItemBeingEdited.shootSpeed = shootSpeed;
+						}
+					}
+				});
+			}
+
+			if (ItemBeingEdited.mana > 0)
+			{
+				drawCustomManipulatorIcon($" {ItemBeingEdited.Name} Mana Cost: {ItemBeingEdited.mana}", () =>
+				{
+					int manaCost = ItemBeingEdited.mana;
+					if (Main.mouseLeft)
+					{
+						if (Main.keyState.PressingShift())
+							manaCost--;
+						else
+							manaCost++;
+						if (manaCost >= 125)
+							manaCost = 125;
+						if (manaCost <= 0)
+							manaCost = 1;
+
+						if (ItemBeingEdited.mana != manaCost)
+						{
+							ResetItemStats();
+							ItemBeingEdited.mana = manaCost;
+						}
+					}
+				});
+			}
+
 			// Bleh.
 			void drawCustomManipulatorIcon(string text, Action hoverOverEffects)
 			{
@@ -233,6 +284,8 @@ namespace CalTestHelpers.UI
 			ItemOverrideCache.DamageOverrides[itemType] = ItemBeingEdited.damage;
 			ItemOverrideCache.UseTimeOverrides[itemType] = ItemBeingEdited.useTime;
 			ItemOverrideCache.UseAnimationOverrides[itemType] = ItemBeingEdited.useAnimation;
+			ItemOverrideCache.ShootSpeedOverrides[itemType] = ItemBeingEdited.shootSpeed;
+			ItemOverrideCache.ManaCostOverrides[itemType] = ItemBeingEdited.mana;
 			CalTestHelpers.HaveAnyStatManipulationsBeenDone = true;
 		}
 
