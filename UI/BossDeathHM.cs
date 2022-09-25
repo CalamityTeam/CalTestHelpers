@@ -32,11 +32,17 @@ namespace CalTestHelpers.UI
             new SpecialUIElement("Toggle The Ravager's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Ravager/RavagerBody_Head_Boss").Value, () => ToggleDeath(Boss.Ravager)),
             new SpecialUIElement("Toggle The Lunatic Cultist's Death.", TextureAssets.NpcHeadBoss[31].Value, () => ToggleDeath(Boss.LunaticCultist)),
             new SpecialUIElement("Toggle Astrum Deus' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/AstrumDeus/AstrumDeusHead_Head_Boss").Value, () => ToggleDeath(Boss.AstrumDeus)),
-            new SpecialUIElement("Toggle The Moon Lord's Death.", TextureAssets.NpcHeadBoss[8].Value, () => ToggleDeath(Boss.MoonLord))
+            new SpecialUIElement("Toggle The Moon Lord's Death.", TextureAssets.NpcHeadBoss[8].Value, () => ToggleDeath(Boss.MoonLord)),
+            new SpecialUIElement("Toggle every Hardmode boss' Death.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/TrueArkoftheAncients").Value, () => ToggleDeath(Boss.AllHM))
         };
 
         public static void ToggleDeath(Boss bossDeathToToggle)
         {
+            if (bossDeathToToggle == Boss.AllHM)
+            {
+                ToggleAllHMBossDeaths();
+                return;
+            }
             string bossName = string.Empty;
             Color textColor = Color.White;
             ref bool bossDeathValue = ref NPC.downedQueenSlime;
@@ -142,6 +148,19 @@ namespace CalTestHelpers.UI
             NPC.downedMechBossAny = NPC.downedMechBoss1 || NPC.downedMechBoss2 || NPC.downedMechBoss3;
             string bossRefernceText = bossName.Last() == 's' ? bossName + "'" : bossName + "'s";
             Main.NewText($"{bossRefernceText} death is now marked as: {bossDeathValue}", textColor);
+        }
+
+        public static void ToggleAllHMBossDeaths()
+        {
+            bool killAll = NPC.downedQueenSlime;
+            Main.NewText($"All Hardmode bosses are now marked as {(killAll ? "alive" : "dead")}", Color.Red);
+
+            NPC.downedQueenSlime = NPC.downedMechBoss1 = NPC.downedMechBoss2 = NPC.downedMechBoss3 = !killAll;
+            DownedBossSystem._downedBrimstoneElemental = DownedBossSystem._downedAquaticScourge = DownedBossSystem._downedCryogen = !killAll;
+            DownedBossSystem._downedCalamitas = NPC.downedPlantBoss = DownedBossSystem._downedLeviathan = DownedBossSystem._downedAstrumAureus = !killAll;
+            NPC.downedGolemBoss = DownedBossSystem._downedPlaguebringer = NPC.downedEmpressOfLight = NPC.downedFishron = DownedBossSystem._downedRavager = !killAll;
+            NPC.downedAncientCultist = DownedBossSystem._downedAstrumDeus = NPC.downedMoonlord = !killAll;
+            NPC.downedMechBossAny = !killAll;
         }
     }
 }

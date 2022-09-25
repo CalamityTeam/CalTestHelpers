@@ -26,11 +26,17 @@ namespace CalTestHelpers.UI
             new SpecialUIElement("Toggle Yharon's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Yharon/Yharon_Head_Boss").Value, () => ToggleDeath(Boss.Yharon)),
             new SpecialUIElement("Toggle The Exo Mechs' Death.", ModContent.Request<Texture2D>("CalTestHelpers/UI/TemporaryDraedonIcon").Value, () => ToggleDeath(Boss.Draedon)),
             new SpecialUIElement("Toggle Supreme Calamitas' Death.", ModContent.Request<Texture2D>("CalamityMod/Items/Pets/BrimstoneJewel").Value, () => ToggleDeath(Boss.SupremeCalamitas)),
+            new SpecialUIElement("Toggle every post-Moon Lord boss' Death.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/ArkoftheCosmos").Value, () => ToggleDeath(Boss.AllPML)),
             new SpecialUIElement("Toggle every boss' Death.", ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () => ToggleDeath(Boss.All))
         };
 
         public static void ToggleDeath(Boss bossDeathToToggle)
         {
+            if (bossDeathToToggle == Boss.AllPML)
+            {
+                ToggleAllBossDeaths();
+                return;
+            }
             if (bossDeathToToggle == Boss.All)
             {
                 ToggleAllBossDeaths();
@@ -106,6 +112,17 @@ namespace CalTestHelpers.UI
             NPC.downedMechBossAny = NPC.downedMechBoss1 || NPC.downedMechBoss2 || NPC.downedMechBoss3;
             string bossRefernceText = bossName.Last() == 's' ? bossName + "'" : bossName + "'s";
             Main.NewText($"{bossRefernceText} death is now marked as: {bossDeathValue}", textColor);
+        }
+
+        public static void ToggleAllPMLBossDeaths()
+        {
+            bool killAll = DownedBossSystem._downedGuardians;
+            Main.NewText($"All post-Moon Lord bosses are now marked as {(killAll ? "alive" : "dead")}", Color.Red);
+
+            DownedBossSystem._downedGuardians = DownedBossSystem._downedDragonfolly = DownedBossSystem._downedProvidence = !killAll;
+            DownedBossSystem._downedCeaselessVoid = DownedBossSystem._downedStormWeaver = DownedBossSystem._downedSignus = !killAll;
+            DownedBossSystem._downedPolterghast = DownedBossSystem._downedBoomerDuke = DownedBossSystem._downedDoG = !killAll;
+            DownedBossSystem._downedYharon = DownedBossSystem._downedExoMechs = DownedBossSystem._downedSCal = !killAll;
         }
 
         public static void ToggleAllBossDeaths()

@@ -27,6 +27,7 @@ namespace CalTestHelpers.UI
             Skeletron,
             SlimeGod,
             WallOfFlesh,
+            AllPHM,
 			QueenSlime,
             Cryogen,
             TheTwins,
@@ -46,6 +47,7 @@ namespace CalTestHelpers.UI
             LunaticCultist,
             AstrumDeus,
             MoonLord,
+            AllHM,
             ProfanedGuardians,
             Dragonfolly,
             Providence,
@@ -58,6 +60,7 @@ namespace CalTestHelpers.UI
             Yharon,
             Draedon,
             SupremeCalamitas,
+            AllPML,
             All
         }
 

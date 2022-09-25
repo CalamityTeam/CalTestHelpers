@@ -26,11 +26,17 @@ namespace CalTestHelpers.UI
             new SpecialUIElement("Toggle Deerclops' Death.", TextureAssets.NpcHeadBoss[39].Value, () => ToggleDeath(Boss.Deerclops)),
             new SpecialUIElement("Toggle Skeletron's Death.", TextureAssets.NpcHeadBoss[19].Value, () => ToggleDeath(Boss.Skeletron)),
             new SpecialUIElement("Toggle The Slime God's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/SlimeGod/SlimeGodCore_Head_Boss").Value, () => ToggleDeath(Boss.SlimeGod)),
-            new SpecialUIElement("Toggle The Wall of Flesh's Death.", TextureAssets.NpcHeadBoss[22].Value, () => ToggleDeath(Boss.WallOfFlesh))
+            new SpecialUIElement("Toggle The Wall of Flesh's Death.", TextureAssets.NpcHeadBoss[22].Value, () => ToggleDeath(Boss.WallOfFlesh)),
+            new SpecialUIElement("Toggle every Prehardmode boss' Death.", TextureAssets.Item[ItemID.EnchantedSword].Value, () => ToggleDeath(Boss.AllPHM))
         };
 
         public static void ToggleDeath(Boss bossDeathToToggle)
         {
+            if (bossDeathToToggle == Boss.AllPHM)
+            {
+                ToggleAllPHMBossDeaths();
+                return;
+            }
             string bossName = string.Empty;
             Color textColor = Color.White;
             ref bool bossDeathValue = ref NPC.downedSlimeKing;
@@ -106,6 +112,16 @@ namespace CalTestHelpers.UI
             NPC.downedMechBossAny = NPC.downedMechBoss1 || NPC.downedMechBoss2 || NPC.downedMechBoss3;
             string bossRefernceText = bossName.Last() == 's' ? bossName + "'" : bossName + "'s";
             Main.NewText($"{bossRefernceText} death is now marked as: {bossDeathValue}", textColor);
+        }
+
+        public static void ToggleAllPHMBossDeaths()
+        {
+            bool killAll = NPC.downedSlimeKing;
+            Main.NewText($"All Prehardmode bosses are now marked as {(killAll ? "alive" : "dead")}", Color.Red);
+
+            NPC.downedSlimeKing = DownedBossSystem._downedDesertScourge = NPC.downedBoss1 = !killAll;
+            DownedBossSystem._downedCrabulon = NPC.downedBoss2 = DownedBossSystem._downedHiveMind = DownedBossSystem._downedPerforator = !killAll;
+            NPC.downedQueenBee = NPC.downedDeerclops = NPC.downedBoss3 = DownedBossSystem._downedSlimeGod = Main.hardMode = !killAll;
         }
     }
 }
