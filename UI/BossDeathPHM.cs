@@ -15,20 +15,20 @@ namespace CalTestHelpers.UI
     {
         public override List<SpecialUIElement> UIElements => new List<SpecialUIElement>()
         {
-            new SpecialUIElement("Toggle King Slime's Death.", TextureAssets.NpcHeadBoss[7].Value, () => ToggleDeath(Boss.KingSlime)),
-            new SpecialUIElement("Toggle Desert Scourge's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/DesertScourge/DesertScourgeHead_Head_Boss").Value, () => ToggleDeath(Boss.DesertScourge)),
-            new SpecialUIElement("Toggle Eye of Cthulhu's Death.", TextureAssets.NpcHeadBoss[0].Value, () => ToggleDeath(Boss.EyeOfCthulhu)),
-            new SpecialUIElement("Toggle Crabulon's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Crabulon/Crabulon_Head_Boss").Value, () => ToggleDeath(Boss.Crabulon)),
-            new SpecialUIElement("Toggle Eater of World's Death.", TextureAssets.NpcHeadBoss[2].Value, () => ToggleDeath(Boss.EaterOfWorlds)),
-            new SpecialUIElement("Toggle Brain of Cthulhu's Death.", TextureAssets.NpcHeadBoss[23].Value, () => ToggleDeath(Boss.BrainOfCthulhu)),
-            new SpecialUIElement("Toggle Hive Mind's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/HiveMind/HiveMindP2_Head_Boss").Value, () => ToggleDeath(Boss.HiveMind)),
-            new SpecialUIElement("Toggle The Perforator's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Perforator/PerforatorHive_Head_Boss").Value, () => ToggleDeath(Boss.Perforators)),
-            new SpecialUIElement("Toggle Queen Bee's Death.", TextureAssets.NpcHeadBoss[14].Value, () => ToggleDeath(Boss.QueenBee)),
-            new SpecialUIElement("Toggle Deerclops' Death.", TextureAssets.NpcHeadBoss[39].Value, () => ToggleDeath(Boss.Deerclops)),
-            new SpecialUIElement("Toggle Skeletron's Death.", TextureAssets.NpcHeadBoss[19].Value, () => ToggleDeath(Boss.Skeletron)),
-            new SpecialUIElement("Toggle The Slime God's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/SlimeGod/SlimeGodCore_Head_Boss").Value, () => ToggleDeath(Boss.SlimeGod)),
-            new SpecialUIElement("Toggle Wall of Flesh's Death.", TextureAssets.NpcHeadBoss[22].Value, () => ToggleDeath(Boss.WallOfFlesh)),
-            new SpecialUIElement("Toggle all Prehardmode boss Deaths.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/FracturedArk").Value, () => ToggleDeath(Boss.AllPHM))
+            new SpecialUIElement("Toggle King Slime's Death.", TextureAssets.NpcHeadBoss[7].Value, () => ToggleDeath(Boss.KingSlime), GetColor(GetDownedBool(Boss.KingSlime))),
+            new SpecialUIElement("Toggle Desert Scourge's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/DesertScourge/DesertScourgeHead_Head_Boss").Value, () => ToggleDeath(Boss.DesertScourge), GetColor(GetDownedBool(Boss.DesertScourge))),
+            new SpecialUIElement("Toggle Eye of Cthulhu's Death.", TextureAssets.NpcHeadBoss[0].Value, () => ToggleDeath(Boss.EyeOfCthulhu), GetColor(GetDownedBool(Boss.EyeOfCthulhu))),
+            new SpecialUIElement("Toggle Crabulon's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Crabulon/Crabulon_Head_Boss").Value, () => ToggleDeath(Boss.Crabulon), GetColor(GetDownedBool(Boss.Crabulon))),
+            new SpecialUIElement("Toggle Eater of World's Death.", TextureAssets.NpcHeadBoss[2].Value, () => ToggleDeath(Boss.EaterOfWorlds), GetColor(GetDownedBool(Boss.EaterOfWorlds))),
+            new SpecialUIElement("Toggle Brain of Cthulhu's Death.", TextureAssets.NpcHeadBoss[23].Value, () => ToggleDeath(Boss.BrainOfCthulhu), GetColor(GetDownedBool(Boss.BrainOfCthulhu))),
+            new SpecialUIElement("Toggle Hive Mind's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/HiveMind/HiveMindP2_Head_Boss").Value, () => ToggleDeath(Boss.HiveMind), GetColor(GetDownedBool(Boss.HiveMind))),
+            new SpecialUIElement("Toggle The Perforator's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Perforator/PerforatorHive_Head_Boss").Value, () => ToggleDeath(Boss.Perforators), GetColor(GetDownedBool(Boss.Perforators))),
+            new SpecialUIElement("Toggle Queen Bee's Death.", TextureAssets.NpcHeadBoss[14].Value, () => ToggleDeath(Boss.QueenBee), GetColor(GetDownedBool(Boss.QueenBee))),
+            new SpecialUIElement("Toggle Deerclops' Death.", TextureAssets.NpcHeadBoss[39].Value, () => ToggleDeath(Boss.Deerclops), GetColor(GetDownedBool(Boss.Deerclops))),
+            new SpecialUIElement("Toggle Skeletron's Death.", TextureAssets.NpcHeadBoss[19].Value, () => ToggleDeath(Boss.Skeletron), GetColor(GetDownedBool(Boss.Skeletron))),
+            new SpecialUIElement("Toggle The Slime God's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/SlimeGod/SlimeGodCore_Head_Boss").Value, () => ToggleDeath(Boss.SlimeGod), GetColor(GetDownedBool(Boss.SlimeGod))),
+            new SpecialUIElement("Toggle Wall of Flesh's Death.", TextureAssets.NpcHeadBoss[22].Value, () => ToggleDeath(Boss.WallOfFlesh), GetColor(GetDownedBool(Boss.WallOfFlesh))),
+            new SpecialUIElement("Toggle all Prehardmode boss Deaths.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/FracturedArk").Value, () => ToggleDeath(Boss.AllPHM), GetColor(GetDownedBool(Boss.AllPHM)))
         };
 
         public static void ToggleDeath(Boss bossDeathToToggle)

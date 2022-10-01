@@ -31,24 +31,26 @@ namespace CalTestHelpers.UI
         }
         public override List<SpecialUIElement> UIElements => new List<SpecialUIElement>()
         {
-            new SpecialUIElement("Toggle Blood Orange", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/BloodOrange").Value, () => ToggleUpgrade(PlayerUpgrade.BloodOrange)),
-            new SpecialUIElement("Toggle Miracle Fruit", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/MiracleFruit").Value, () => ToggleUpgrade(PlayerUpgrade.MiracleFruit)),
-            new SpecialUIElement("Toggle Elderberry", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Elderberry").Value, () => ToggleUpgrade(PlayerUpgrade.Elderberry)),
-            new SpecialUIElement("Toggle Dragonfruit", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Dragonfruit").Value, () => ToggleUpgrade(PlayerUpgrade.Dragonfruit)),
-            new SpecialUIElement("Toggle Comet Shard", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/CometShard").Value, () => ToggleUpgrade(PlayerUpgrade.CometShard)),
-            new SpecialUIElement("Toggle Ethereal Core", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/EtherealCore").Value, () => ToggleUpgrade(PlayerUpgrade.EtherealCore)),
-            new SpecialUIElement("Toggle Phantom Heart", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/PhantomHeart").Value, () => ToggleUpgrade(PlayerUpgrade.PhantomHeart)),
-            new SpecialUIElement("Toggle Mushroom Plasma Root", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/MushroomPlasmaRoot").Value, () => ToggleUpgrade(PlayerUpgrade.MushroomPlasmaRoot)),
-            new SpecialUIElement("Toggle Infernal Blood", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/InfernalBlood").Value, () => ToggleUpgrade(PlayerUpgrade.InfernalBlood)),
-            new SpecialUIElement("Toggle Red Lightning Container", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/RedLightningContainer").Value, () => ToggleUpgrade(PlayerUpgrade.RedLightningContainer)),
-            new SpecialUIElement("Toggle Electrolyte Gel Pack", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/ElectrolyteGelPack").Value, () => ToggleUpgrade(PlayerUpgrade.ElectrolyteGelPack)),
-            new SpecialUIElement("Toggle Starlight Fuel Cell", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/StarlightFuelCell").Value, () => ToggleUpgrade(PlayerUpgrade.StarlightFuelCell)),
-            new SpecialUIElement("Toggle Ectoheart", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Ectoheart").Value, () => ToggleUpgrade(PlayerUpgrade.Ectoheart)),
-            new SpecialUIElement("Toggle Demon Heart", TextureAssets.Item[ItemID.DemonHeart].Value, () => ToggleUpgrade(PlayerUpgrade.DemonHeart)),
-            new SpecialUIElement("Toggle Celestial Onion", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/CelestialOnion").Value, () => ToggleUpgrade(PlayerUpgrade.CelestialOnion)),
+            new SpecialUIElement("Toggle Blood Orange", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/BloodOrange").Value, () => ToggleUpgrade(PlayerUpgrade.BloodOrange), GetColor(HasUpgrade(PlayerUpgrade.BloodOrange))),
+            new SpecialUIElement("Toggle Miracle Fruit", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/MiracleFruit").Value, () => ToggleUpgrade(PlayerUpgrade.MiracleFruit), GetColor(HasUpgrade(PlayerUpgrade.MiracleFruit))),
+            new SpecialUIElement("Toggle Elderberry", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Elderberry").Value, () => ToggleUpgrade(PlayerUpgrade.Elderberry), GetColor(HasUpgrade(PlayerUpgrade.Elderberry))),
+            new SpecialUIElement("Toggle Dragonfruit", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Dragonfruit").Value, () => ToggleUpgrade(PlayerUpgrade.Dragonfruit), GetColor(HasUpgrade(PlayerUpgrade.Dragonfruit))),
+            new SpecialUIElement("Toggle Comet Shard", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/CometShard").Value, () => ToggleUpgrade(PlayerUpgrade.CometShard), GetColor(HasUpgrade(PlayerUpgrade.CometShard))),
+            new SpecialUIElement("Toggle Ethereal Core", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/EtherealCore").Value, () => ToggleUpgrade(PlayerUpgrade.EtherealCore), GetColor(HasUpgrade(PlayerUpgrade.EtherealCore))),
+            new SpecialUIElement("Toggle Phantom Heart", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/PhantomHeart").Value, () => ToggleUpgrade(PlayerUpgrade.PhantomHeart), GetColor(HasUpgrade(PlayerUpgrade.PhantomHeart))),
+            new SpecialUIElement("Toggle Mushroom Plasma Root", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/MushroomPlasmaRoot").Value, () => ToggleUpgrade(PlayerUpgrade.MushroomPlasmaRoot), GetColor(HasUpgrade(PlayerUpgrade.MushroomPlasmaRoot))),
+            new SpecialUIElement("Toggle Infernal Blood", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/InfernalBlood").Value, () => ToggleUpgrade(PlayerUpgrade.InfernalBlood), GetColor(HasUpgrade(PlayerUpgrade.InfernalBlood))),
+            new SpecialUIElement("Toggle Red Lightning Container", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/RedLightningContainer").Value, () => ToggleUpgrade(PlayerUpgrade.RedLightningContainer), GetColor(HasUpgrade(PlayerUpgrade.RedLightningContainer))),
+            new SpecialUIElement("Toggle Electrolyte Gel Pack", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/ElectrolyteGelPack").Value, () => ToggleUpgrade(PlayerUpgrade.ElectrolyteGelPack), GetColor(HasUpgrade(PlayerUpgrade.ElectrolyteGelPack))),
+            new SpecialUIElement("Toggle Starlight Fuel Cell", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/StarlightFuelCell").Value, () => ToggleUpgrade(PlayerUpgrade.StarlightFuelCell), GetColor(HasUpgrade(PlayerUpgrade.StarlightFuelCell))),
+            new SpecialUIElement("Toggle Ectoheart", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Ectoheart").Value, () => ToggleUpgrade(PlayerUpgrade.Ectoheart), GetColor(HasUpgrade(PlayerUpgrade.Ectoheart))),
+            new SpecialUIElement("Toggle Demon Heart", TextureAssets.Item[ItemID.DemonHeart].Value, () => ToggleUpgrade(PlayerUpgrade.DemonHeart), GetColor(HasUpgrade(PlayerUpgrade.DemonHeart))),
+            new SpecialUIElement("Toggle Celestial Onion", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/CelestialOnion").Value, () => ToggleUpgrade(PlayerUpgrade.CelestialOnion), GetColor(HasUpgrade(PlayerUpgrade.CelestialOnion))),
         };
 
         public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 660 - 350 * ResolutionRatio, 40);
+
+        public static Color GetColor(bool hasUpgrade) => hasUpgrade ? Color.Green : Color.Red;
 
         public static void ToggleUpgrade(PlayerUpgrade upgradeToToggle)
         {
@@ -135,6 +137,44 @@ namespace CalTestHelpers.UI
             }
             upgradeValue = !upgradeValue;
             Main.NewText($"The {upgradeName} effect is now marked as: {upgradeValue}", textColor);
+        }
+
+        public static bool HasUpgrade(PlayerUpgrade upgradeToToggle)
+        {
+            switch (upgradeToToggle)
+            {
+                case PlayerUpgrade.BloodOrange:
+                    return Main.LocalPlayer.Calamity().bOrange;
+                case PlayerUpgrade.MiracleFruit:
+                    return Main.LocalPlayer.Calamity().mFruit;
+                case PlayerUpgrade.Elderberry:
+                    return Main.LocalPlayer.Calamity().eBerry;
+                case PlayerUpgrade.Dragonfruit:
+                    return Main.LocalPlayer.Calamity().dFruit;
+                case PlayerUpgrade.CometShard:
+                    return Main.LocalPlayer.Calamity().cShard;
+                case PlayerUpgrade.EtherealCore:
+                    return Main.LocalPlayer.Calamity().eCore;
+                case PlayerUpgrade.PhantomHeart:
+                    return Main.LocalPlayer.Calamity().pHeart;
+                case PlayerUpgrade.MushroomPlasmaRoot:
+                    return Main.LocalPlayer.Calamity().rageBoostOne;
+                case PlayerUpgrade.InfernalBlood:
+                    return Main.LocalPlayer.Calamity().rageBoostTwo;
+                case PlayerUpgrade.RedLightningContainer:
+                    return Main.LocalPlayer.Calamity().rageBoostThree;
+                case PlayerUpgrade.ElectrolyteGelPack:
+                    return Main.LocalPlayer.Calamity().adrenalineBoostOne;
+                case PlayerUpgrade.StarlightFuelCell:
+                    return Main.LocalPlayer.Calamity().adrenalineBoostTwo;
+                case PlayerUpgrade.Ectoheart:
+                    return Main.LocalPlayer.Calamity().adrenalineBoostThree;
+                case PlayerUpgrade.DemonHeart:
+                    return Main.LocalPlayer.extraAccessory;
+                case PlayerUpgrade.CelestialOnion:
+                    return Main.LocalPlayer.Calamity().extraAccessoryML;
+			}
+			return false;
         }
     }
 }

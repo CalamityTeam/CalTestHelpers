@@ -14,26 +14,26 @@ namespace CalTestHelpers.UI
     {
         public override List<SpecialUIElement> UIElements => new List<SpecialUIElement>()
         {
-            new SpecialUIElement("Toggle Queen Slime's Death.", TextureAssets.NpcHeadBoss[38].Value, () => ToggleDeath(Boss.QueenSlime)),
-            new SpecialUIElement("Toggle Cryogen's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Cryogen/Cryogen_Phase1_Head_Boss").Value, () => ToggleDeath(Boss.Cryogen)),
-            new SpecialUIElement("Toggle The Twins' Death.", TextureAssets.NpcHeadBoss[16].Value, () => ToggleDeath(Boss.TheTwins)),
-            new SpecialUIElement("Toggle Brimstone Elemental's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/BrimstoneElemental/BrimstoneElemental_Head_Boss").Value, () => ToggleDeath(Boss.BrimstoneElemental)),
-            new SpecialUIElement("Toggle Destroyer's Death.", TextureAssets.NpcHeadBoss[25].Value, () => ToggleDeath(Boss.TheDestroyer)),
-            new SpecialUIElement("Toggle Aquatic Scourge's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/AquaticScourge/AquaticScourgeHead_Head_Boss").Value, () => ToggleDeath(Boss.TheAquaticScourge)),
-            new SpecialUIElement("Toggle Skeletron Prime's Death.", TextureAssets.NpcHeadBoss[18].Value, () => ToggleDeath(Boss.SkeletronPrime)),
-            new SpecialUIElement("Toggle Calamitas Clone's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Calamitas/CalamitasClone_Head_Boss").Value, () => ToggleDeath(Boss.Cloneamitas)),
-            new SpecialUIElement("Toggle Plantera's Death.", TextureAssets.NpcHeadBoss[11].Value, () => ToggleDeath(Boss.Plantera)),
-            new SpecialUIElement("Toggle Leviathan's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Leviathan/Leviathan_Head_Boss").Value, () => ToggleDeath(Boss.Leviathan)),
-            new SpecialUIElement("Toggle Astrum Aureus' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/AstrumAureus/AstrumAureus_Head_Boss").Value, () => ToggleDeath(Boss.AstrumAureus)),
-            new SpecialUIElement("Toggle Golem's Death.", TextureAssets.NpcHeadBoss[5].Value, () => ToggleDeath(Boss.Golem)),
-            new SpecialUIElement("Toggle Plaguebringer Goliath's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/PlaguebringerGoliath/PlaguebringerGoliath_Head_Boss").Value, () => ToggleDeath(Boss.PlaguebringerGoliath)),
-            new SpecialUIElement("Toggle Empress of Light's Death.", TextureAssets.NpcHeadBoss[37].Value, () => ToggleDeath(Boss.EmpressOfLight)),
-            new SpecialUIElement("Toggle Duke Fishron's Death.", TextureAssets.NpcHeadBoss[4].Value, () => ToggleDeath(Boss.DukeFishron)),
-            new SpecialUIElement("Toggle Ravager's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Ravager/RavagerBody_Head_Boss").Value, () => ToggleDeath(Boss.Ravager)),
-            new SpecialUIElement("Toggle Lunatic Cultist's Death.", TextureAssets.NpcHeadBoss[31].Value, () => ToggleDeath(Boss.LunaticCultist)),
-            new SpecialUIElement("Toggle Astrum Deus' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/AstrumDeus/AstrumDeusHead_Head_Boss").Value, () => ToggleDeath(Boss.AstrumDeus)),
-            new SpecialUIElement("Toggle Moon Lord's Death.", TextureAssets.NpcHeadBoss[8].Value, () => ToggleDeath(Boss.MoonLord)),
-            new SpecialUIElement("Toggle all Hardmode boss Deaths.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/TrueArkoftheAncients").Value, () => ToggleDeath(Boss.AllHM))
+            new SpecialUIElement("Toggle Queen Slime's Death.", TextureAssets.NpcHeadBoss[38].Value, () => ToggleDeath(Boss.QueenSlime), GetColor(GetDownedBool(Boss.QueenSlime))),
+            new SpecialUIElement("Toggle Cryogen's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Cryogen/Cryogen_Phase1_Head_Boss").Value, () => ToggleDeath(Boss.Cryogen), GetColor(GetDownedBool(Boss.Cryogen))),
+            new SpecialUIElement("Toggle The Twins' Death.", TextureAssets.NpcHeadBoss[16].Value, () => ToggleDeath(Boss.TheTwins), GetColor(GetDownedBool(Boss.TheTwins))),
+            new SpecialUIElement("Toggle Brimstone Elemental's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/BrimstoneElemental/BrimstoneElemental_Head_Boss").Value, () => ToggleDeath(Boss.BrimstoneElemental), GetColor(GetDownedBool(Boss.BrimstoneElemental))),
+            new SpecialUIElement("Toggle Destroyer's Death.", TextureAssets.NpcHeadBoss[25].Value, () => ToggleDeath(Boss.TheDestroyer), GetColor(GetDownedBool(Boss.TheDestroyer))),
+            new SpecialUIElement("Toggle Aquatic Scourge's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/AquaticScourge/AquaticScourgeHead_Head_Boss").Value, () => ToggleDeath(Boss.TheAquaticScourge), GetColor(GetDownedBool(Boss.TheAquaticScourge))),
+            new SpecialUIElement("Toggle Skeletron Prime's Death.", TextureAssets.NpcHeadBoss[18].Value, () => ToggleDeath(Boss.SkeletronPrime), GetColor(GetDownedBool(Boss.SkeletronPrime))),
+            new SpecialUIElement("Toggle Calamitas Clone's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Calamitas/CalamitasClone_Head_Boss").Value, () => ToggleDeath(Boss.Cloneamitas), GetColor(GetDownedBool(Boss.Cloneamitas))),
+            new SpecialUIElement("Toggle Plantera's Death.", TextureAssets.NpcHeadBoss[11].Value, () => ToggleDeath(Boss.Plantera), GetColor(GetDownedBool(Boss.Plantera))),
+            new SpecialUIElement("Toggle Leviathan's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Leviathan/Leviathan_Head_Boss").Value, () => ToggleDeath(Boss.Leviathan), GetColor(GetDownedBool(Boss.Leviathan))),
+            new SpecialUIElement("Toggle Astrum Aureus' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/AstrumAureus/AstrumAureus_Head_Boss").Value, () => ToggleDeath(Boss.AstrumAureus), GetColor(GetDownedBool(Boss.AstrumAureus))),
+            new SpecialUIElement("Toggle Golem's Death.", TextureAssets.NpcHeadBoss[5].Value, () => ToggleDeath(Boss.Golem), GetColor(GetDownedBool(Boss.Golem))),
+            new SpecialUIElement("Toggle Plaguebringer Goliath's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/PlaguebringerGoliath/PlaguebringerGoliath_Head_Boss").Value, () => ToggleDeath(Boss.PlaguebringerGoliath), GetColor(GetDownedBool(Boss.PlaguebringerGoliath))),
+            new SpecialUIElement("Toggle Empress of Light's Death.", TextureAssets.NpcHeadBoss[37].Value, () => ToggleDeath(Boss.EmpressOfLight), GetColor(GetDownedBool(Boss.EmpressOfLight))),
+            new SpecialUIElement("Toggle Duke Fishron's Death.", TextureAssets.NpcHeadBoss[4].Value, () => ToggleDeath(Boss.DukeFishron), GetColor(GetDownedBool(Boss.DukeFishron))),
+            new SpecialUIElement("Toggle Ravager's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Ravager/RavagerBody_Head_Boss").Value, () => ToggleDeath(Boss.Ravager), GetColor(GetDownedBool(Boss.Ravager))),
+            new SpecialUIElement("Toggle Lunatic Cultist's Death.", TextureAssets.NpcHeadBoss[31].Value, () => ToggleDeath(Boss.LunaticCultist), GetColor(GetDownedBool(Boss.LunaticCultist))),
+            new SpecialUIElement("Toggle Astrum Deus' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/AstrumDeus/AstrumDeusHead_Head_Boss").Value, () => ToggleDeath(Boss.AstrumDeus), GetColor(GetDownedBool(Boss.AstrumDeus))),
+            new SpecialUIElement("Toggle Moon Lord's Death.", TextureAssets.NpcHeadBoss[8].Value, () => ToggleDeath(Boss.MoonLord), GetColor(GetDownedBool(Boss.MoonLord))),
+            new SpecialUIElement("Toggle all Hardmode boss Deaths.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/TrueArkoftheAncients").Value, () => ToggleDeath(Boss.AllHM), GetColor(GetDownedBool(Boss.AllHM)))
         };
 
         public static void ToggleDeath(Boss bossDeathToToggle)

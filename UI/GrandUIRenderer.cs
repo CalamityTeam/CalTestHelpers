@@ -136,7 +136,7 @@ namespace CalTestHelpers.UI
 
                 float iconScale = UIScale / (button.IconTexture.Size().Length() / IconBounds.Length()) * 1.25f;
                 spriteBatch.Draw(button.IconTexture, currentRectangleArea.Center(), null, Color.White, 0f, button.IconTexture.Size() * 0.5f, iconScale, SpriteEffects.None, 0f);
-                button.DrawDescription(spriteBatch, currentRectangleArea.TopRight() + new Vector2(4f, IconBounds.Y * 0.25f), TextColor, UIScale);
+                button.DrawDescription(spriteBatch, currentRectangleArea.TopRight() + new Vector2(4f, IconBounds.Y * 0.25f), button.TextColor is null ? TextColor : (Color)button.TextColor, UIScale);
 
                 if (button.OnClick != null && CalamityUtils.MouseHitbox.Intersects(currentRectangleAreaWorld))
                 {

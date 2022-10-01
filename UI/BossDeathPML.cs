@@ -14,27 +14,27 @@ namespace CalTestHelpers.UI
     {
         public override List<SpecialUIElement> UIElements => new List<SpecialUIElement>()
         {
-            new SpecialUIElement("Toggle The Profaned Guardians' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/ProfanedGuardians/ProfanedGuardianCommander_Head_Boss").Value, () => ToggleDeath(Boss.ProfanedGuardians)),
-            new SpecialUIElement("Toggle Dragonfolly's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Bumblebirb/Birb_Head_Boss").Value, () => ToggleDeath(Boss.Dragonfolly)),
-            new SpecialUIElement("Toggle Providence's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Providence/Providence_Head_Boss").Value, () => ToggleDeath(Boss.Providence)),
-            new SpecialUIElement("Toggle Ceaseless Void's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/CeaselessVoid/CeaselessVoid_Head_Boss").Value, () => ToggleDeath(Boss.CeaselessVoid)),
-            new SpecialUIElement("Toggle Storm Weaver's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/StormWeaver/StormWeaverHeadNaked_Head_Boss").Value, () => ToggleDeath(Boss.StormWeaver)),
-            new SpecialUIElement("Toggle Signus' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Signus/Signus_Head_Boss").Value, () => ToggleDeath(Boss.Signus)),
-            new SpecialUIElement("Toggle Polterghast's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Polterghast/Polterghast_Head_Boss").Value, () => ToggleDeath(Boss.Polterghast)),
-            new SpecialUIElement("Toggle Old Duke's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/OldDuke/OldDuke_Head_Boss").Value, () => ToggleDeath(Boss.OldDuke)),
-            new SpecialUIElement("Toggle The Devourer of Gods' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/DevourerofGods/DevourerofGodsHeadS_Head_Boss").Value, () => ToggleDeath(Boss.DevourerOfGods)),
-            new SpecialUIElement("Toggle Yharon's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Yharon/Yharon_Head_Boss").Value, () => ToggleDeath(Boss.Yharon)),
-            new SpecialUIElement("Toggle The Exo Mechs' Death.", ModContent.Request<Texture2D>("CalTestHelpers/UI/TemporaryDraedonIcon").Value, () => ToggleDeath(Boss.Draedon)),
-            new SpecialUIElement("Toggle Supreme Calamitas' Death.", ModContent.Request<Texture2D>("CalamityMod/Items/Pets/BrimstoneJewel").Value, () => ToggleDeath(Boss.SupremeCalamitas)),
-            new SpecialUIElement("Toggle all post-Moon Lord boss Deaths.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/ArkoftheCosmos").Value, () => ToggleDeath(Boss.AllPML)),
-            new SpecialUIElement("Toggle all boss Deaths.", ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () => ToggleDeath(Boss.All))
+            new SpecialUIElement("Toggle The Profaned Guardians' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/ProfanedGuardians/ProfanedGuardianCommander_Head_Boss").Value, () => ToggleDeath(Boss.ProfanedGuardians), GetColor(GetDownedBool(Boss.ProfanedGuardians))),
+            new SpecialUIElement("Toggle Dragonfolly's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Bumblebirb/Birb_Head_Boss").Value, () => ToggleDeath(Boss.Dragonfolly), GetColor(GetDownedBool(Boss.Dragonfolly))),
+            new SpecialUIElement("Toggle Providence's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Providence/Providence_Head_Boss").Value, () => ToggleDeath(Boss.Providence), GetColor(GetDownedBool(Boss.Providence))),
+            new SpecialUIElement("Toggle Ceaseless Void's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/CeaselessVoid/CeaselessVoid_Head_Boss").Value, () => ToggleDeath(Boss.CeaselessVoid), GetColor(GetDownedBool(Boss.CeaselessVoid))),
+            new SpecialUIElement("Toggle Storm Weaver's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/StormWeaver/StormWeaverHeadNaked_Head_Boss").Value, () => ToggleDeath(Boss.StormWeaver), GetColor(GetDownedBool(Boss.StormWeaver))),
+            new SpecialUIElement("Toggle Signus' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Signus/Signus_Head_Boss").Value, () => ToggleDeath(Boss.Signus), GetColor(GetDownedBool(Boss.Signus))),
+            new SpecialUIElement("Toggle Polterghast's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Polterghast/Polterghast_Head_Boss").Value, () => ToggleDeath(Boss.Polterghast), GetColor(GetDownedBool(Boss.Polterghast))),
+            new SpecialUIElement("Toggle Old Duke's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/OldDuke/OldDuke_Head_Boss").Value, () => ToggleDeath(Boss.OldDuke), GetColor(GetDownedBool(Boss.OldDuke))),
+            new SpecialUIElement("Toggle The Devourer of Gods' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/DevourerofGods/DevourerofGodsHeadS_Head_Boss").Value, () => ToggleDeath(Boss.DevourerOfGods), GetColor(GetDownedBool(Boss.DevourerOfGods))),
+            new SpecialUIElement("Toggle Yharon's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Yharon/Yharon_Head_Boss").Value, () => ToggleDeath(Boss.Yharon), GetColor(GetDownedBool(Boss.Yharon))),
+            new SpecialUIElement("Toggle The Exo Mechs' Death.", ModContent.Request<Texture2D>("CalTestHelpers/UI/TemporaryDraedonIcon").Value, () => ToggleDeath(Boss.Draedon), GetColor(GetDownedBool(Boss.Draedon))),
+            new SpecialUIElement("Toggle Supreme Calamitas' Death.", ModContent.Request<Texture2D>("CalamityMod/Items/Pets/BrimstoneJewel").Value, () => ToggleDeath(Boss.SupremeCalamitas), GetColor(GetDownedBool(Boss.SupremeCalamitas))),
+            new SpecialUIElement("Toggle all post-Moon Lord boss Deaths.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/ArkoftheCosmos").Value, () => ToggleDeath(Boss.AllPML), GetColor(GetDownedBool(Boss.AllPML))),
+            new SpecialUIElement("Toggle all boss Deaths.", ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () => ToggleDeath(Boss.All), GetColor(GetDownedBool(Boss.All)))
         };
 
         public static void ToggleDeath(Boss bossDeathToToggle)
         {
             if (bossDeathToToggle == Boss.AllPML)
             {
-                ToggleAllBossDeaths();
+                ToggleAllPMLBossDeaths();
                 return;
             }
             if (bossDeathToToggle == Boss.All)

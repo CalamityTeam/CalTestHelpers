@@ -11,11 +11,13 @@ namespace CalTestHelpers.UI
 		public string Description;
 		public Texture2D IconTexture;
 		public Action OnClick;
-		public SpecialUIElement(string description, Texture2D icon, Action onClickEffect = null)
+		public Color? TextColor;
+		public SpecialUIElement(string description, Texture2D icon, Action onClickEffect = null, Color? color = null)
 		{
 			Description = description;
 			IconTexture = icon;
 			OnClick = onClickEffect;
+			TextColor = color;
 		}
 		public void DrawDescription(SpriteBatch spriteBatch, Vector2 drawCoordinates, Color textColor, float maxScale)
 		{
