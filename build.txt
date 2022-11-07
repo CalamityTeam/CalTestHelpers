@@ -2,4 +2,4 @@ displayName = Calamity Test Helper Mod
 author = Dominic K, Ben-TK
 modReferences=CalamityMod
 buildIgnore = Properties\*, *.csproj
-version = 2.1.0
+version = 2.1.1
