@@ -9,9 +9,9 @@ namespace CalTestHelpers
 	public class EntityOverrideCache
 	{
 		internal static List<Projectile> LoadedProjectiles = new();
-		internal static List<NPC> LoadedNPCs = new();
+		//internal static List<NPC> LoadedNPCs = new();
 		internal static List<string> ProjectileNames = new();
-		internal static List<string> NPCNames = new();
+		//internal static List<string> NPCNames = new();
 
 		public static int[] StaticIFrameOverrides;
 		public static int[] LocalIFrameOverrides;
@@ -20,7 +20,7 @@ namespace CalTestHelpers
 		{
 			LoadedProjectiles = new List<Projectile>();
 			ProjectileNames = new List<string>();
-			NPCNames = new List<string>();
+			//NPCNames = new List<string>();
 
 			StaticIFrameOverrides = new int[ProjectileLoader.ProjectileCount];
 			LocalIFrameOverrides = new int[ProjectileLoader.ProjectileCount];
@@ -40,7 +40,7 @@ namespace CalTestHelpers
 				StaticIFrameOverrides[i] = LocalIFrameOverrides[i] = -2;
 			}
 
-			for (int i = 0; i < NPCLoader.NPCCount; i++)
+			/*for (int i = 0; i < NPCLoader.NPCCount; i++)
             {
 				NPC npc = new();
 				npc.SetDefaults(i);
@@ -51,7 +51,7 @@ namespace CalTestHelpers
 				npcName = string.Concat(npcName.Where(c => !char.IsWhiteSpace(c)));
 
 				NPCNames.Add(npcName);
-			}
+			}*/
 		}
 
 		internal static void Unload()
@@ -83,7 +83,7 @@ namespace CalTestHelpers
 				yield return ProjectileNames.IndexOf(itemName);
 		}
 
-		public static IEnumerable<int> AttemptToLocateNPCsWithSimilarName(string name)
+		/*public static IEnumerable<int> AttemptToLocateNPCsWithSimilarName(string name)
 		{
 			if (string.IsNullOrEmpty(name))
 				yield break;
@@ -96,6 +96,6 @@ namespace CalTestHelpers
 			IEnumerable<string> similarProjectileNames = NPCNames.Where(n => n.Contains(name)).Take(20);
 			foreach (string itemName in similarProjectileNames)
 				yield return NPCNames.IndexOf(itemName);
-		}
+		}*/
 	}
 }

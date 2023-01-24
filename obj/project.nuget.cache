@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "LXX8C2CGeOS8dS6OYBTA5GsXA4yb1st0ujldYZq+YrUlYnm0AXhOzPMhbbnYBqJbUrIW8Qus7/SybdIm7nHCtg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpers.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Diego\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}

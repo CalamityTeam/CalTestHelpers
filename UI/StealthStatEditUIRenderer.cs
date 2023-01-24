@@ -15,7 +15,7 @@ namespace CalTestHelpers.UI
 
 		public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 660 - 270 * ResolutionRatio, 50f);
 
-		public string StealthDamageFactorText => $"Stealth Damage Factor: {Math.Round(BalancingConstants.UniversalStealthStrikeDamageFactor / 0.5f * 100f, 4)}";
+		public string StealthDamageFactorText => $"Stealth Damage Factor: x{Math.Round(BalancingConstants.UniversalStealthStrikeDamageFactor / 0.5f, 4)}";
 
 		public override void DrawElements(SpriteBatch spriteBatch, float top)
 		{
@@ -35,7 +35,7 @@ namespace CalTestHelpers.UI
 
 			if (hoveringOverArrow && Main.mouseLeft && CalTestHelpers.GlobalTickTimer % 4 == 0) 
 			{
-				BalancingConstants.UniversalStealthStrikeDamageFactor -= 0.01f;
+				BalancingConstants.UniversalStealthStrikeDamageFactor -= 0.005f;
 				CalTestHelpers.HaveAnyStatManipulationsBeenDone = true;
 			}
 			spriteBatch.Draw(arrowTexture, upwardArrowDrawPosition, null, arrowColor, 0f, arrowTexture.Size() * 0.5f, 1f, SpriteEffects.FlipVertically, 0f);
@@ -54,7 +54,7 @@ namespace CalTestHelpers.UI
 
 			if (hoveringOverArrow && Main.mouseLeft && CalTestHelpers.GlobalTickTimer % 4 == 0)
 			{
-				BalancingConstants.UniversalStealthStrikeDamageFactor += 0.01f;
+				BalancingConstants.UniversalStealthStrikeDamageFactor += 0.005f;
 				CalTestHelpers.HaveAnyStatManipulationsBeenDone = true;
 			}
 
@@ -65,8 +65,8 @@ namespace CalTestHelpers.UI
 			textDrawPosition.X -= FontAssets.MouseText.Value.MeasureString(StealthDamageFactorText).X * 0.5f;
 			Utils.DrawBorderStringBig(spriteBatch, StealthDamageFactorText, textDrawPosition, Color.Orange, UIScale);
 
-			// Clamp the stealth damage to 2% - 300%.
-			BalancingConstants.UniversalStealthStrikeDamageFactor = Utils.Clamp(BalancingConstants.UniversalStealthStrikeDamageFactor, 0.01f, 1.5f);
+			// Clamp the stealth damage to 1% - 500%. or x0.01 - x5
+			BalancingConstants.UniversalStealthStrikeDamageFactor = Utils.Clamp(BalancingConstants.UniversalStealthStrikeDamageFactor, 0.005f, 2.5f);
 		}
 	}
 }
