@@ -21,7 +21,7 @@ namespace CalTestHelpers.UI
             new SpecialUIElement("Toggle Destroyer's Death.", TextureAssets.NpcHeadBoss[25].Value, () => ToggleDeath(Boss.TheDestroyer), GetColor(GetDownedBool(Boss.TheDestroyer))),
             new SpecialUIElement("Toggle Aquatic Scourge's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/AquaticScourge/AquaticScourgeHead_Head_Boss").Value, () => ToggleDeath(Boss.TheAquaticScourge), GetColor(GetDownedBool(Boss.TheAquaticScourge))),
             new SpecialUIElement("Toggle Skeletron Prime's Death.", TextureAssets.NpcHeadBoss[18].Value, () => ToggleDeath(Boss.SkeletronPrime), GetColor(GetDownedBool(Boss.SkeletronPrime))),
-            new SpecialUIElement("Toggle Calamitas Clone's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Calamitas/CalamitasClone_Head_Boss").Value, () => ToggleDeath(Boss.Cloneamitas), GetColor(GetDownedBool(Boss.Cloneamitas))),
+            new SpecialUIElement("Toggle Calamitas Clone's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/CalClone/CalamitasClone_Head_Boss").Value, () => ToggleDeath(Boss.Cloneamitas), GetColor(GetDownedBool(Boss.Cloneamitas))),
             new SpecialUIElement("Toggle Plantera's Death.", TextureAssets.NpcHeadBoss[11].Value, () => ToggleDeath(Boss.Plantera), GetColor(GetDownedBool(Boss.Plantera))),
             new SpecialUIElement("Toggle Leviathan's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Leviathan/Leviathan_Head_Boss").Value, () => ToggleDeath(Boss.Leviathan), GetColor(GetDownedBool(Boss.Leviathan))),
             new SpecialUIElement("Toggle Astrum Aureus' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/AstrumAureus/AstrumAureus_Head_Boss").Value, () => ToggleDeath(Boss.AstrumAureus), GetColor(GetDownedBool(Boss.AstrumAureus))),
@@ -86,7 +86,7 @@ namespace CalTestHelpers.UI
                 case Boss.Cloneamitas:
                     bossName = "Calamitas Clone";
                     textColor = new Color(204, 3, 0);
-                    bossDeathValue = ref DownedBossSystem._downedCalamitas;
+                    bossDeathValue = ref DownedBossSystem._downedCalamitasClone;
                     break;
                 case Boss.Plantera:
                     bossName = "Plantera";
@@ -157,7 +157,7 @@ namespace CalTestHelpers.UI
 
             NPC.downedQueenSlime = NPC.downedMechBoss1 = NPC.downedMechBoss2 = NPC.downedMechBoss3 = !killAll;
             DownedBossSystem._downedBrimstoneElemental = DownedBossSystem._downedAquaticScourge = DownedBossSystem._downedCryogen = !killAll;
-            DownedBossSystem._downedCalamitas = NPC.downedPlantBoss = DownedBossSystem._downedLeviathan = DownedBossSystem._downedAstrumAureus = !killAll;
+            DownedBossSystem._downedCalamitasClone = NPC.downedPlantBoss = DownedBossSystem._downedLeviathan = DownedBossSystem._downedAstrumAureus = !killAll;
             NPC.downedGolemBoss = DownedBossSystem._downedPlaguebringer = NPC.downedEmpressOfLight = NPC.downedFishron = DownedBossSystem._downedRavager = !killAll;
             NPC.downedAncientCultist = DownedBossSystem._downedAstrumDeus = NPC.downedMoonlord = !killAll;
             NPC.downedMechBossAny = !killAll;

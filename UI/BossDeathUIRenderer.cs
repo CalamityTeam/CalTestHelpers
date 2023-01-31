@@ -59,7 +59,7 @@ namespace CalTestHelpers.UI
             DevourerOfGods,
             Yharon,
             Draedon,
-            SupremeCalamitas,
+            Calamitas,
             AllPML,
             All
         }
@@ -113,7 +113,7 @@ namespace CalTestHelpers.UI
                 case Boss.SkeletronPrime:
                     return NPC.downedMechBoss3;
                 case Boss.Cloneamitas:
-                    return DownedBossSystem._downedCalamitas;
+                    return DownedBossSystem._downedCalamitasClone;
                 case Boss.Plantera:
                     return NPC.downedPlantBoss;
                 case Boss.Leviathan:
@@ -159,8 +159,8 @@ namespace CalTestHelpers.UI
                     return DownedBossSystem._downedYharon;
                 case Boss.Draedon:
                     return DownedBossSystem._downedExoMechs;
-                case Boss.SupremeCalamitas:
-                    return DownedBossSystem._downedSCal;
+                case Boss.Calamitas:
+                    return DownedBossSystem._downedCalamitas;
             }
 			return false;
         }

@@ -25,7 +25,7 @@ namespace CalTestHelpers.UI
             new SpecialUIElement("Toggle The Devourer of Gods' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/DevourerofGods/DevourerofGodsHeadS_Head_Boss").Value, () => ToggleDeath(Boss.DevourerOfGods), GetColor(GetDownedBool(Boss.DevourerOfGods))),
             new SpecialUIElement("Toggle Yharon's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Yharon/Yharon_Head_Boss").Value, () => ToggleDeath(Boss.Yharon), GetColor(GetDownedBool(Boss.Yharon))),
             new SpecialUIElement("Toggle The Exo Mechs' Death.", ModContent.Request<Texture2D>("CalTestHelpers/UI/TemporaryDraedonIcon").Value, () => ToggleDeath(Boss.Draedon), GetColor(GetDownedBool(Boss.Draedon))),
-            new SpecialUIElement("Toggle Supreme Calamitas' Death.", ModContent.Request<Texture2D>("CalamityMod/Items/Pets/BrimstoneJewel").Value, () => ToggleDeath(Boss.SupremeCalamitas), GetColor(GetDownedBool(Boss.SupremeCalamitas))),
+            new SpecialUIElement("Toggle Supreme Witch, Calamitas' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/SupremeCalamitas/HoodlessHeadIconP2").Value, () => ToggleDeath(Boss.Calamitas), GetColor(GetDownedBool(Boss.Calamitas))),
             new SpecialUIElement("Toggle all post-Moon Lord boss Deaths.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/ArkoftheCosmos").Value, () => ToggleDeath(Boss.AllPML), GetColor(GetDownedBool(Boss.AllPML))),
             new SpecialUIElement("Toggle all boss Deaths.", ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () => ToggleDeath(Boss.All), GetColor(GetDownedBool(Boss.All)))
         };
@@ -102,10 +102,10 @@ namespace CalTestHelpers.UI
                     textColor = new Color(155, 255, 255);
                     bossDeathValue = ref DownedBossSystem._downedExoMechs;
                     break;
-                case Boss.SupremeCalamitas:
-                    bossName = "Supreme Calamitas";
+                case Boss.Calamitas:
+                    bossName = "Supreme Witch, Calamitas";
                     textColor = new Color(255, 0, 0);
-                    bossDeathValue = ref DownedBossSystem._downedSCal;
+                    bossDeathValue = ref DownedBossSystem._downedCalamitas;
                     break;
             }
             bossDeathValue = !bossDeathValue;
@@ -122,7 +122,7 @@ namespace CalTestHelpers.UI
             DownedBossSystem._downedGuardians = DownedBossSystem._downedDragonfolly = DownedBossSystem._downedProvidence = !killAll;
             DownedBossSystem._downedCeaselessVoid = DownedBossSystem._downedStormWeaver = DownedBossSystem._downedSignus = !killAll;
             DownedBossSystem._downedPolterghast = DownedBossSystem._downedBoomerDuke = DownedBossSystem._downedDoG = !killAll;
-            DownedBossSystem._downedYharon = DownedBossSystem._downedExoMechs = DownedBossSystem._downedSCal = !killAll;
+            DownedBossSystem._downedYharon = DownedBossSystem._downedExoMechs = DownedBossSystem._downedCalamitas = !killAll;
         }
 
         public static void ToggleAllBossDeaths()
@@ -135,13 +135,13 @@ namespace CalTestHelpers.UI
             NPC.downedQueenBee = NPC.downedDeerclops = NPC.downedBoss3 = DownedBossSystem._downedSlimeGod = Main.hardMode = !killAll;
             NPC.downedQueenSlime = NPC.downedMechBoss1 = NPC.downedMechBoss2 = NPC.downedMechBoss3 = !killAll;
             DownedBossSystem._downedBrimstoneElemental = DownedBossSystem._downedAquaticScourge = DownedBossSystem._downedCryogen = !killAll;
-            DownedBossSystem._downedCalamitas = NPC.downedPlantBoss = DownedBossSystem._downedLeviathan = DownedBossSystem._downedAstrumAureus = !killAll;
+            DownedBossSystem._downedCalamitasClone = NPC.downedPlantBoss = DownedBossSystem._downedLeviathan = DownedBossSystem._downedAstrumAureus = !killAll;
             NPC.downedGolemBoss = DownedBossSystem._downedPlaguebringer = NPC.downedEmpressOfLight = NPC.downedFishron = DownedBossSystem._downedRavager = !killAll;
             NPC.downedAncientCultist = DownedBossSystem._downedAstrumDeus = NPC.downedMoonlord = !killAll;
             DownedBossSystem._downedGuardians = DownedBossSystem._downedDragonfolly = DownedBossSystem._downedProvidence = !killAll;
             DownedBossSystem._downedCeaselessVoid = DownedBossSystem._downedStormWeaver = DownedBossSystem._downedSignus = !killAll;
             DownedBossSystem._downedPolterghast = DownedBossSystem._downedBoomerDuke = DownedBossSystem._downedDoG = !killAll;
-            DownedBossSystem._downedYharon = DownedBossSystem._downedExoMechs = DownedBossSystem._downedSCal = !killAll;
+            DownedBossSystem._downedYharon = DownedBossSystem._downedExoMechs = DownedBossSystem._downedCalamitas = !killAll;
             NPC.downedMechBossAny = !killAll;
         }
     }

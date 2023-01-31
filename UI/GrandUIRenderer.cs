@@ -78,11 +78,11 @@ namespace CalTestHelpers.UI
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.UpgradeUIRenderer : null;
                     }),
-                    new SpecialUIElement("Change item stats.", ModContent.Request<Texture2D>("CalTestHelpers/UI/UpwardBoost").Value, () =>
+                    new SpecialUIElement("Change item stats.", ModContent.Request<Texture2D>("CalamityMod/Items/TreasureBags/MiscGrabBags/StarterBag").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.ItemEditerUIRenderer : null;
                     }),
-                    new SpecialUIElement("Change projectile stats.", ModContent.Request<Texture2D>("CalTestHelpers/UI/UpwardBoost").Value, () =>
+                    new SpecialUIElement("Change projectile stats.", ModContent.Request<Texture2D>("CalamityMod/Items/Ammo/MarksmanRound").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.ProjectileEditerUIRenderer : null;
                     }),
@@ -90,11 +90,11 @@ namespace CalTestHelpers.UI
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.NPCStatsUIRenderer : null;
                     }),*/
-                    new SpecialUIElement("Change the universal stealth strike damage factor.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/CobaltKunai").Value, () =>
+                    new SpecialUIElement("Change the universal stealth strike damage factor.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/Cinquedea").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.StealthEditerUIRenderer : null;
                     }),
-                    new SpecialUIElement("Reset changed stats.", ModContent.Request<Texture2D>("CalTestHelpers/UI/UpwardBoost").Value, () =>
+                    new SpecialUIElement("Reset changed stats.", ModContent.Request<Texture2D>("CalTestHelpers/UI/Gear").Value, () =>
                     {
                         ItemOverrideCache.ResetOverrides();
                         EntityOverrideCache.ResetOverrides();
