@@ -4,7 +4,7 @@ namespace CalTestHelpers
 {
 	public static partial class ILEdits
 	{
-		private static void OverrideItemSetDefaultData(On.Terraria.Item.orig_SetDefaults_int_bool orig, Item self, int Type, bool noMatCheck)
+		private static void OverrideItemSetDefaultData(Terraria.On_Item.orig_SetDefaults_int_bool_ItemVariant orig, Item self, int Type, bool noMatCheck)
 		{
 			orig(self, Type, noMatCheck);
 
@@ -28,7 +28,7 @@ namespace CalTestHelpers
 				self.mana = ItemOverrideCache.ManaCostOverrides[Type];
 		}
 
-		private static void OverrideProjectileSetDefaultData(On.Terraria.Projectile.orig_SetDefaults orig, Projectile self, int Type)
+		private static void OverrideProjectileSetDefaultData(Terraria.On_Projectile.orig_SetDefaults orig, Projectile self, int Type)
 		{
 			orig(self, Type);
 

@@ -12,9 +12,9 @@ namespace CalTestHelpers.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Charger Test Item");
-            Tooltip.SetDefault("Testing/Cheat Item\n" +
-                               "Fully charges all Draedon's Arsenal items in your inventory");
+            // DisplayName.SetDefault("Charger Test Item");
+            /* Tooltip.SetDefault("Testing/Cheat Item\n" +
+                               "Fully charges all Draedon's Arsenal items in your inventory"); */
         }
 
         public override void SetDefaults()
