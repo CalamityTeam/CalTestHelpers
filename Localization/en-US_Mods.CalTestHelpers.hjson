@@ -1,24 +1,24 @@
-Configs: {
-	CalTestHelperConfig: {
-		StoreFightInformation: {
-			Tooltip: Enables the the boss death stat chat messages. Includes fight time, average DPS, and max DPS.
-			Label: Store Boss Fight Information
-		}
-
-		BossDeathStatMessages: {
-			Tooltip: Enables the the boss death stat chat messages. Includes fight time, average DPS, and max DPS.
-			Label: Boss Death Stat Chat Messages
-		}
-
-		DisplayName: Config
-	}
-}
+"Keybinds.Toggle Test UIs.DisplayName": Toggle  Test  U Is
 
 Items: {
 	ChargerTestItem: {
-		Tooltip: ""
 		DisplayName: Charger Test Item
+		Tooltip: ""
 	}
 }
 
-"Keybinds.Toggle Test UIs.DisplayName": Toggle  Test  U Is
+Configs: {
+	CalTestHelperConfig: {
+		DisplayName: Config
+
+		BossDeathStatMessages: {
+			Label: Boss Death Stat Chat Messages
+			Tooltip: Enables the the boss death stat chat messages. Includes fight time, average DPS, and max DPS.
+		}
+
+		StoreFightInformation: {
+			Label: Store Boss Fight Information
+			Tooltip: Enables the the boss death stat chat messages. Includes fight time, average DPS, and max DPS.
+		}
+	}
+}
