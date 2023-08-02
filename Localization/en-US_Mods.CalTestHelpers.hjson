@@ -1,0 +1,24 @@
+"Keybinds.Toggle Test UIs.DisplayName": Toggle  Test  U Is
+
+Items: {
+	ChargerTestItem: {
+		DisplayName: Charger Test Item
+		Tooltip: ""
+	}
+}
+
+Configs: {
+	CalTestHelperConfig: {
+		DisplayName: Config
+
+		BossDeathStatMessages: {
+			Label: Boss Death Stat Chat Messages
+			Tooltip: Enables the the boss death stat chat messages. Includes fight time, average DPS, and max DPS.
+		}
+
+		StoreFightInformation: {
+			Label: Store Boss Fight Information
+			Tooltip: Enables the the boss death stat chat messages. Includes fight time, average DPS, and max DPS.
+		}
+	}
+}

@@ -4,14 +4,14 @@ namespace CalTestHelpers
 	{
 		public static void Load()
 		{
-            On.Terraria.Item.SetDefaults_int_bool += OverrideItemSetDefaultData;
-			On.Terraria.Projectile.SetDefaults += OverrideProjectileSetDefaultData;
+            Terraria.On_Item.SetDefaults_int_bool_ItemVariant += OverrideItemSetDefaultData;
+			Terraria.On_Projectile.SetDefaults += OverrideProjectileSetDefaultData;
 		}
 
         public static void Unload()
 		{
-			On.Terraria.Item.SetDefaults_int_bool -= OverrideItemSetDefaultData;
-			On.Terraria.Projectile.SetDefaults -= OverrideProjectileSetDefaultData;
+			Terraria.On_Item.SetDefaults_int_bool_ItemVariant -= OverrideItemSetDefaultData;
+			Terraria.On_Projectile.SetDefaults -= OverrideProjectileSetDefaultData;
 		}
 	}
 }
