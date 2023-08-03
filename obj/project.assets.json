@@ -1,0 +1,113 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "tModLoader.CodeAssist/0.1.5": {
+        "type": "package"
+      }
+    }
+  },
+  "libraries": {
+    "tModLoader.CodeAssist/0.1.5": {
+      "sha512": "Sg/jKEg/z5eN+Cdi3/9CU4JfJwvXHVH+UDJf4Lipo26uTa+guLLJXH1XDJNPShTFwKK8jMUYbthINP4QhsgHSA==",
+      "type": "package",
+      "path": "tmodloader.codeassist/0.1.5",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NugetIcon.png",
+        "analyzers/dotnet/cs/tModLoader.CodeAssist.dll",
+        "tmodloader.codeassist.0.1.5.nupkg.sha512",
+        "tmodloader.codeassist.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj",
+      "tModLoader.CodeAssist >= 0.1.*"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Diego\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpers.csproj",
+      "projectName": "CalTestHelpers",
+      "projectPath": "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpers.csproj",
+      "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
+      "outputPath": "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj": {
+              "projectPath": "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "tModLoader.CodeAssist": {
+            "target": "Package",
+            "version": "[0.1.*, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}
