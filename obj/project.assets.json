@@ -4,6 +4,19 @@
     "net6.0": {
       "tModLoader.CodeAssist/0.1.5": {
         "type": "package"
+      },
+      "CalamityMod/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "tModLoader.CodeAssist": "0.1.0"
+        },
+        "compile": {
+          "bin/placeholder/CalamityMod.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CalamityMod.dll": {}
+        }
       }
     }
   },
@@ -23,11 +36,16 @@
         "tools/install.ps1",
         "tools/uninstall.ps1"
       ]
+    },
+    "CalamityMod/1.0.0": {
+      "type": "project",
+      "path": "../CalamityMod/CalamityMod.csproj",
+      "msbuildProject": "../CalamityMod/CalamityMod.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj",
+      "CalamityMod >= 1.0.0",
       "tModLoader.CodeAssist >= 0.1.*"
     ]
   },
@@ -95,19 +113,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

@@ -1,20 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/y/blcGi/pEWdqPepD1xM7i+wWk+gM4mkcPOgW+4kQx6JI6qnC2PFejYPDnP2jk5fINj/BwN8ObV9+G4yIdcIQ==",
-  "success": false,
+  "dgSpecHash": "sFQlB1IAllOF/anQ4t3st4pCmd2IsxfPbv057HLLXwkzT1cn9CksSBFvY6zbkFzMnk7lXizmGIqC1ElJ/GpUQw==",
+  "success": true,
   "projectFilePath": "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpers.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Diego\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

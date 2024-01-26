@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using Terraria.ModLoader.Config;
 
 namespace CalTestHelpers
@@ -18,10 +19,19 @@ namespace CalTestHelpers
 
 		[Label("Store Boss Fight Information")]
 		[BackgroundColor(128, 129, 225, 192)]
-		[DefaultValue(true)]
+		[DefaultValue(false)]
 		[Tooltip("Enables the the boss death stat chat messages. Includes fight time, average DPS, and max DPS.")]
 		public bool StoreFightInformation { get; set; }
 
-		public override bool AcceptClientChanges(ModConfig pendingConfig, int whoAmI, ref string message) => false;
+		private const int MinimumStuff = 20;
+		private const int MaximumStuff = 100;
+        [Label("Amount of stuff to display in menus")]
+        [BackgroundColor(128, 129, 225, 192)]
+        [DefaultValue(40)]
+		[Terraria.ModLoader.Config.Range(MinimumStuff,MaximumStuff)] //Ambiguous reference moment
+        [Tooltip("How many projectiles should the Projectile and item stat editor display")]
+        public int StuffAmountDisplay { get; set; }
+
+        public override bool AcceptClientChanges(ModConfig pendingConfig, int whoAmI, ref string message) => false;
 	}
 }
