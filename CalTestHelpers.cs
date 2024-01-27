@@ -53,12 +53,6 @@ namespace CalTestHelpers
             internal set;
         } = new();
 
-        /*public static NPCStatManipulatorUIRenderer NPCStatsUIRenderer
-        {
-            get;
-            internal set;
-        } = new();*/
-
         public static StealthStatEditUIRenderer StealthEditerUIRenderer
         {
             get;

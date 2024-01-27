@@ -27,7 +27,14 @@ namespace CalTestHelpers.UI
             StarlightFuelCell,
             Ectoheart,
             DemonHeart,
-            CelestialOnion
+            CelestialOnion,
+            VitalCrystal,
+            ArcaneCrystal,
+            AegisFruit,
+            Ambrosia,
+            GummyWorm,
+            GalaxyPearl,
+            ArtisanLoaf
         }
         public override List<SpecialUIElement> UIElements => new List<SpecialUIElement>()
         {
@@ -46,6 +53,13 @@ namespace CalTestHelpers.UI
             new SpecialUIElement("Toggle Ectoheart", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Ectoheart").Value, () => ToggleUpgrade(PlayerUpgrade.Ectoheart), GetColor(HasUpgrade(PlayerUpgrade.Ectoheart))),
             new SpecialUIElement("Toggle Demon Heart", TextureAssets.Item[ItemID.DemonHeart].Value, () => ToggleUpgrade(PlayerUpgrade.DemonHeart), GetColor(HasUpgrade(PlayerUpgrade.DemonHeart))),
             new SpecialUIElement("Toggle Celestial Onion", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/CelestialOnion").Value, () => ToggleUpgrade(PlayerUpgrade.CelestialOnion), GetColor(HasUpgrade(PlayerUpgrade.CelestialOnion))),
+            new SpecialUIElement("Toggle Vital Crystal", TextureAssets.Item[ItemID.AegisCrystal].Value, () => ToggleUpgrade(PlayerUpgrade.VitalCrystal), GetColor(HasUpgrade(PlayerUpgrade.VitalCrystal))),
+            new SpecialUIElement("Toggle Arcane Crystal", TextureAssets.Item[ItemID.ArcaneCrystal].Value, () => ToggleUpgrade(PlayerUpgrade.ArcaneCrystal), GetColor(HasUpgrade(PlayerUpgrade.ArcaneCrystal))),
+            new SpecialUIElement("Toggle Aegis Fruit", TextureAssets.Item[ItemID.AegisFruit].Value, () => ToggleUpgrade(PlayerUpgrade.AegisFruit), GetColor(HasUpgrade(PlayerUpgrade.AegisFruit))),
+            new SpecialUIElement("Toggle Ambrosia", TextureAssets.Item[ItemID.Ambrosia].Value, () => ToggleUpgrade(PlayerUpgrade.Ambrosia), GetColor(HasUpgrade(PlayerUpgrade.Ambrosia))),
+            new SpecialUIElement("Toggle Gummy Worm", TextureAssets.Item[ItemID.GummyWorm].Value, () => ToggleUpgrade(PlayerUpgrade.GummyWorm), GetColor(HasUpgrade(PlayerUpgrade.GummyWorm))),
+            new SpecialUIElement("Toggle Galaxy Pearl", TextureAssets.Item[ItemID.GalaxyPearl].Value, () => ToggleUpgrade(PlayerUpgrade.GalaxyPearl), GetColor(HasUpgrade(PlayerUpgrade.GalaxyPearl))),
+            new SpecialUIElement("Toggle Artisan Loaf", TextureAssets.Item[ItemID.ArtisanLoaf].Value, () => ToggleUpgrade(PlayerUpgrade.ArtisanLoaf), GetColor(HasUpgrade(PlayerUpgrade.ArtisanLoaf))),
         };
 
         public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 660 - 350 * ResolutionRatio, 40);
@@ -134,6 +148,41 @@ namespace CalTestHelpers.UI
                     textColor = new Color(132, 203, 127);
                     upgradeValue = ref Main.LocalPlayer.Calamity().extraAccessoryML;
                     break;
+                case PlayerUpgrade.VitalCrystal:
+                    upgradeName = "Vital Crystal";
+                    textColor = new Color(216, 126, 224);
+                    upgradeValue = ref Main.LocalPlayer.usedAegisCrystal;
+                    break;
+                case PlayerUpgrade.ArcaneCrystal:
+                    upgradeName = "Arcane Crystal";
+                    textColor = new Color(173, 96, 214);
+                    upgradeValue = ref Main.LocalPlayer.usedArcaneCrystal;
+                    break;
+                case PlayerUpgrade.AegisFruit:
+                    upgradeName = "Aegis Fruit";
+                    textColor = new Color(191, 133, 222);
+                    upgradeValue = ref Main.LocalPlayer.usedAegisFruit;
+                    break;
+                case PlayerUpgrade.Ambrosia:
+                    upgradeName = "Ambrosia";
+                    textColor = new Color(214, 158, 15);
+                    upgradeValue = ref Main.LocalPlayer.usedAmbrosia;
+                    break;
+                case PlayerUpgrade.GummyWorm:
+                    upgradeName = "Gummy Worm";
+                    textColor = new Color(214, 19, 172);
+                    upgradeValue = ref Main.LocalPlayer.usedGummyWorm;
+                    break;
+                case PlayerUpgrade.GalaxyPearl:
+                    upgradeName = "Galaxy Pearl";
+                    textColor = new Color(88, 39, 168);
+                    upgradeValue = ref Main.LocalPlayer.usedGalaxyPearl;
+                    break;
+                case PlayerUpgrade.ArtisanLoaf:
+                    upgradeName = "Artisan Loaf";
+                    textColor = new Color(199, 111, 24);
+                    upgradeValue = ref Main.LocalPlayer.ateArtisanBread;
+                    break;
             }
             upgradeValue = !upgradeValue;
             Main.NewText($"The {upgradeName} effect is now marked as: {upgradeValue}", textColor);
@@ -173,7 +222,21 @@ namespace CalTestHelpers.UI
                     return Main.LocalPlayer.extraAccessory;
                 case PlayerUpgrade.CelestialOnion:
                     return Main.LocalPlayer.Calamity().extraAccessoryML;
-			}
+                case PlayerUpgrade.VitalCrystal:
+                    return Main.LocalPlayer.usedAegisCrystal;
+                case PlayerUpgrade.ArcaneCrystal:
+                    return Main.LocalPlayer.usedArcaneCrystal;
+                case PlayerUpgrade.AegisFruit:
+                    return Main.LocalPlayer.usedAegisFruit;
+                case PlayerUpgrade.Ambrosia:
+                    return Main.LocalPlayer.usedAmbrosia;
+                case PlayerUpgrade.GummyWorm:
+                    return Main.LocalPlayer.usedGummyWorm;
+                case PlayerUpgrade.GalaxyPearl:
+                    return Main.LocalPlayer.usedGalaxyPearl;
+                case PlayerUpgrade.ArtisanLoaf:
+                    return Main.LocalPlayer.ateArtisanBread;
+            }
 			return false;
         }
     }
