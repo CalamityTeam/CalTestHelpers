@@ -20,5 +20,10 @@ Configs: {
 			Label: Store Boss Fight Information
 			Tooltip: Enables the the boss death stat chat messages. Includes fight time, average DPS, and max DPS.
 		}
+
+		StuffAmountDisplay: {
+			Label: Amount of stuff to display
+			Tooltip: How many projectiles should the Projectile and item stat editor display
+		}
 	}
 }

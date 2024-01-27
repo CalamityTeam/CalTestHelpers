@@ -25,7 +25,7 @@ namespace CalTestHelpers.UI
 		{
 			Texture2D backgroundTexture = TextureAssets.ChatBack.Value;
 			Texture2D textBackgroundTexture = TextureAssets.ClothesStyleBack.Value;
-			Vector2 baseDrawPosition = TopLeftLocation + Vector2.UnitY * (backgroundTexture.Width + 60f) * ResolutionRatio;
+			Vector2 baseDrawPosition = TopLeftLocation + Vector2.UnitY * (backgroundTexture.Width + 120f) * ResolutionRatio;
 			Vector2 textDrawPosition = baseDrawPosition + new Vector2(175f, 12f) * ResolutionRatio * 0.75f;
 			Vector2 backgroundDrawPosition = baseDrawPosition + Vector2.UnitX * backgroundTexture.Width * ResolutionRatio * 0.75f;
 
@@ -72,7 +72,7 @@ namespace CalTestHelpers.UI
 			IEnumerable<int> projectileTypes = EntityOverrideCache.AttemptToLocateProjectilesWithSimilarName(ProjectileText);
 
 			int projectileCounter = 0;
-			int moveToNextLineRate = (int)((textBackgroundTexture.Width * ResolutionRatio - 18) / 36);
+			int moveToNextLineRate = (int)((textBackgroundTexture.Width * ResolutionRatio - 16) / 32);
 			bool hoveringOverIcon = false;
 			foreach (int projectileType in projectileTypes)
 			{

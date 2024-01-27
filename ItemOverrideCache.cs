@@ -73,7 +73,7 @@ namespace CalTestHelpers
 			// Remove whitespace from the name.
 			name = string.Concat(name.Where(c => !char.IsWhiteSpace(c)));
 
-			IEnumerable<string> similarItemNames = ItemNames.Where(n => n.Contains(name)).Take(20);
+			IEnumerable<string> similarItemNames = ItemNames.Where(n => n.Contains(name)).Take(CalTestHelperConfig.Instance.StuffAmountDisplay);
 			foreach (string itemName in similarItemNames)
 				yield return ItemNames.IndexOf(itemName);
 		}
