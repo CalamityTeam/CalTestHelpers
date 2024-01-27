@@ -39,19 +39,6 @@ namespace CalTestHelpers
 
 				StaticIFrameOverrides[i] = LocalIFrameOverrides[i] = -2;
 			}
-
-			/*for (int i = 0; i < NPCLoader.NPCCount; i++)
-            {
-				NPC npc = new();
-				npc.SetDefaults(i);
-
-				LoadedNPCs.Add(npc);
-
-				string npcName = npc.TypeName.ToLower();
-				npcName = string.Concat(npcName.Where(c => !char.IsWhiteSpace(c)));
-
-				NPCNames.Add(npcName);
-			}*/
 		}
 
 		internal static void Unload()
@@ -82,20 +69,5 @@ namespace CalTestHelpers
 			foreach (string itemName in similarProjectileNames)
 				yield return ProjectileNames.IndexOf(itemName);
 		}
-
-		/*public static IEnumerable<int> AttemptToLocateNPCsWithSimilarName(string name)
-		{
-			if (string.IsNullOrEmpty(name))
-				yield break;
-
-			name = name.ToLower();
-
-			// Remove whitespace from the name.
-			name = string.Concat(name.Where(c => !char.IsWhiteSpace(c)));
-
-			IEnumerable<string> similarProjectileNames = NPCNames.Where(n => n.Contains(name)).Take(20);
-			foreach (string itemName in similarProjectileNames)
-				yield return NPCNames.IndexOf(itemName);
-		}*/
 	}
 }
