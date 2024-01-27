@@ -24,7 +24,7 @@ namespace CalTestHelpers
 		public bool StoreFightInformation { get; set; }
 
 		private const int MinimumStuff = 20;
-		private const int MaximumStuff = 100;
+		private const int MaximumStuff = 80; // over this it gets outside the box
         [Label("Amount of stuff to display in menus")]
         [BackgroundColor(128, 129, 225, 192)]
         [DefaultValue(40)]

@@ -125,7 +125,16 @@ namespace CalTestHelpers.UI
 
         public virtual void DrawElements(SpriteBatch spriteBatch, float top)
         {
+            //Load items as otherwise the icons will not appear for these vanilla items
             Main.instance.LoadItem(ItemID.GoldenBed);
+            Main.instance.LoadItem(ItemID.DemonHeart);
+            Main.instance.LoadItem(ItemID.AegisCrystal);
+            Main.instance.LoadItem(ItemID.ArcaneCrystal);
+            Main.instance.LoadItem(ItemID.AegisFruit);
+            Main.instance.LoadItem(ItemID.Ambrosia);
+            Main.instance.LoadItem(ItemID.GummyWorm);
+            Main.instance.LoadItem(ItemID.GalaxyPearl);
+            Main.instance.LoadItem(ItemID.ArtisanLoaf);
             Texture2D categorySlotTexture = ModContent.Request<Texture2D>("CalTestHelpers/UI/CategorySlot").Value;
             foreach (var button in UIElements)
             {
@@ -134,7 +143,7 @@ namespace CalTestHelpers.UI
 
                 spriteBatch.Draw(categorySlotTexture, currentRectangleArea.TopLeft(), null, Color.White, 0f, Vector2.Zero, UIScale, SpriteEffects.None, 0f);
 
-                float iconScale = UIScale / (button.IconTexture.Size().Length() / IconBounds.Length()) * 1.25f;
+                float iconScale = UIScale / (button.IconTexture.Size().Length() / IconBounds.Length()) * 1.2f;
                 spriteBatch.Draw(button.IconTexture, currentRectangleArea.Center(), null, Color.White, 0f, button.IconTexture.Size() * 0.5f, iconScale, SpriteEffects.None, 0f);
                 button.DrawDescription(spriteBatch, currentRectangleArea.TopRight() + new Vector2(4f, IconBounds.Y * 0.25f), button.TextColor is null ? TextColor : (Color)button.TextColor, UIScale);
 
