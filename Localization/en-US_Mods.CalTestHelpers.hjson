@@ -3,7 +3,14 @@
 Items: {
 	ChargerTestItem: {
 		DisplayName: Charger Test Item
-		Tooltip: ""
+		Tooltip: "[c/2c2ff5:DEBUG ITEM]"
+	}
+
+	SummonItems: {
+		SirenSong: {
+			DisplayName: Siren Song
+			Tooltip: "[c/2c2ff5:DEBUG ITEM]"
+		}
 	}
 }
 
