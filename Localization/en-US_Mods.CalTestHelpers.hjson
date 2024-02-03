@@ -20,12 +20,12 @@ Configs: {
 
 		BossDeathStatMessages: {
 			Label: Boss Death Stat Chat Messages
-			Tooltip: Enables the the boss death stat chat messages. Includes fight time, average DPS, and max DPS.
+			Tooltip: Enables the boss death stat chat messages. Includes fight time, average DPS, and max DPS.
 		}
 
 		StoreFightInformation: {
 			Label: Store Boss Fight Information
-			Tooltip: Enables the the boss death stat chat messages. Includes fight time, average DPS, and max DPS.
+			Tooltip: Enables the storage of (some) fight data. Includes fight time, average DPS, and max DPS. DO NOT USE UNLESS YOU ABSOLUTELY NEED TO
 		}
 
 		StuffAmountDisplay: {
