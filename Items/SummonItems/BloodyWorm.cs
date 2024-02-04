@@ -1,33 +1,36 @@
 ﻿using CalamityMod.CalPlayer;
 using CalamityMod.Events;
-using CalamityMod.NPCs.Leviathan;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
 using CalamityMod;
+using CalamityMod.Rarities;
+using CalamityMod.Items.SummonItems;
+using CalamityMod.NPCs.OldDuke;
+using Microsoft.Xna.Framework;
 
 namespace CalTestHelpers.Items.SummonItems
 {
-    public class SirenSong : ModItem, ILocalizedModType
+    public class BloodyWorm : ModItem, ILocalizedModType
     {
-        public override string Texture => $"Terraria/Images/Item_{ItemID.MusicBoxDeerclops}";
+        public override string Texture => "CalamityMod/Items/SummonItems/BloodwormItem";
         public new string LocalizationCategory => "Items.SummonItems";
         public override void SetStaticDefaults()
         {
-            ItemID.Sets.SortingPriorityBossSpawns[Type] = 10;
+            ItemID.Sets.SortingPriorityBossSpawns[Type] = 19;
         }
 
         public override void SetDefaults()
         {
-            Item.width = 26;
-            Item.height = 24;
-            Item.rare = ItemRarityID.Lime;
+            Item.width = 28;
+            Item.height = 28;
+            Item.rare = ModContent.RarityType<PureGreen>();
             Item.useAnimation = 10;
             Item.useTime = 10;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = false;
-            Item.color = Microsoft.Xna.Framework.Color.Cyan;
+            Item.color = Color.Crimson;
         }
 
         public override void ModifyResearchSorting(ref ContentSamples.CreativeHelper.ItemGroup itemGroup)
@@ -39,17 +42,16 @@ namespace CalTestHelpers.Items.SummonItems
         {
             CalamityPlayer modPlayer = player.Calamity();
             bool notOcean = player.position.Y < 800f || player.position.Y > Main.worldSurface * 16.0 || (player.position.X > 6400f && player.position.X < (Main.maxTilesX * 16 - 6400));
-            return !notOcean && !modPlayer.ZoneSulphur && !NPC.AnyNPCs(ModContent.NPCType<Anahita>()) && !NPC.AnyNPCs(ModContent.NPCType<Leviathan>()) && !NPC.AnyNPCs(ModContent.NPCType<LeviathanStart>()) && !BossRushEvent.BossRushActive;
-            // No clue why ??? has that name
+            return modPlayer.ZoneSulphur && !notOcean && !NPC.AnyNPCs(ModContent.NPCType<OldDuke>()) && !BossRushEvent.BossRushActive;
         }
 
         public override bool? UseItem(Player player)
         {
-            SoundEngine.PlaySound(SoundID.Roar, player.Center);
+            SoundEngine.PlaySound(SoundID.Zombie20, player.Center); //Just gonna use Fishron's sound
             if (Main.netMode != NetmodeID.MultiplayerClient)
-                NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<Anahita>()); 
+                NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<OldDuke>());
             else
-                NetMessage.SendData(MessageID.SpawnBossUseLicenseStartEvent, -1, -1, null, player.whoAmI, ModContent.NPCType<Anahita>());
+                NetMessage.SendData(MessageID.SpawnBossUseLicenseStartEvent, -1, -1, null, player.whoAmI, ModContent.NPCType<OldDuke>());
 
             return true;
         }
@@ -57,8 +59,9 @@ namespace CalTestHelpers.Items.SummonItems
         public override void AddRecipes()
         {
             CreateRecipe().
-                AddIngredient(ItemID.MusicBox, 1).
-                AddIngredient(ItemID.Seashell, 10).
+                AddIngredient(ModContent.ItemType<BloodwormItem>(), 1).
+                AddIngredient(ItemID.ChumBucket, 10).
+                AddTile(TileID.MeatGrinder).
                 Register();
         }
     }

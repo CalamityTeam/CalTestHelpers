@@ -3,27 +3,48 @@
 Items: {
 	ChargerTestItem: {
 		DisplayName: Charger Test Item
-		Tooltip: "Recharges all arsenal items in the inventory"
+		Tooltip: Recharges all arsenal items in the inventory
 	}
 
 	SummonItems: {
 		SirenSong: {
 			DisplayName: Siren Song
-			Tooltip: 
-			'''
-			Summons Anahita while used in the ocean
-			TEXTURE IS A PLACEHOLDER
-			'''
+			Tooltip:
+				'''
+				Summons Anahita while used in the ocean
+				TEXTURE IS A PLACEHOLDER
+				'''
 		}
+
 		FaeLantern: {
 			DisplayName: Fae's Lantern
-			Tooltip: 
-			'''
-			Summons Empress of Light at night
-			[c/FF0000:No I'm not going to let you summon her at daytime,]
-			[c/FF0000:although why would you?]
-			TEXTURE IS A PLACEHOLDER
-			'''
+			Tooltip:
+				'''
+				Summons Empress of Light at night
+				[c/FF0000:No I'm not going to let you summon her at daytime,]
+				[c/FF0000:although why would you?]
+				TEXTURE IS A PLACEHOLDER
+				'''
+		}
+
+		WORM: {
+			DisplayName: Delicious Truffle Worm
+			Tooltip:
+				'''
+				Summons Duke Fishron while used in the ocean
+				Coated in Delicious Meat powder
+				TEXTURE IS A PLACEHOLDER
+				'''
+		}
+
+		BloodyWorm: {
+			DisplayName: Bloodier Worm
+			Tooltip:
+				'''
+				Summons the Old Fart, I mean Fish
+				[c/FF0000:REIGN IN BLOOD]
+				TEXTURE IS A PLACEHOLDER
+				'''
 		}
 	}
 }

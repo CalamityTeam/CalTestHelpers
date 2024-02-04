@@ -1,16 +1,18 @@
-﻿using CalamityMod.Events;
+﻿using CalamityMod.CalPlayer;
+using CalamityMod.Events;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
+using CalamityMod;
+using CalamityMod.Items.Potions;
 using Microsoft.Xna.Framework;
 
 namespace CalTestHelpers.Items.SummonItems
 {
-    public class FaeLantern : ModItem, ILocalizedModType
+    public class WORM : ModItem, ILocalizedModType
     {
-        public override string Texture => $"Terraria/Images/Item_{ItemID.FairyQueenMagicItem}";
-        //Why is that its internal name?
+        public override string Texture => $"Terraria/Images/Item_{ItemID.TruffleWorm}";
         public new string LocalizationCategory => "Items.SummonItems";
         public override void SetStaticDefaults()
         {
@@ -26,7 +28,7 @@ namespace CalTestHelpers.Items.SummonItems
             Item.useTime = 10;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = false;
-            Item.color = Color.Lavender;
+            Item.color = Color.LightBlue;
         }
 
         public override void ModifyResearchSorting(ref ContentSamples.CreativeHelper.ItemGroup itemGroup)
@@ -36,17 +38,18 @@ namespace CalTestHelpers.Items.SummonItems
 
         public override bool CanUseItem(Player player)
         {
-            // No biome restriction since she doesn't enrage
-            return !Main.dayTime && !NPC.AnyNPCs(NPCID.EmpressButterfly) && !NPC.AnyNPCs(NPCID.HallowBoss) && !BossRushEvent.BossRushActive;
+            CalamityPlayer modPlayer = player.Calamity();
+            bool notOcean = player.position.Y < 800f || player.position.Y > Main.worldSurface * 16.0 || (player.position.X > 6400f && player.position.X < (Main.maxTilesX * 16 - 6400));
+            return !modPlayer.ZoneSulphur && !notOcean && !NPC.AnyNPCs(NPCID.DukeFishron) && !BossRushEvent.BossRushActive;
         }
 
         public override bool? UseItem(Player player)
         {
-            SoundEngine.PlaySound(SoundID.Item161, player.Center); //Why is that the sound?
+            SoundEngine.PlaySound(SoundID.Zombie20, player.Center); //Terraria internal names suck
             if (Main.netMode != NetmodeID.MultiplayerClient)
-                NPC.SpawnOnPlayer(player.whoAmI, NPCID.HallowBoss); // No clue why it has that name
+                NPC.SpawnOnPlayer(player.whoAmI, NPCID.DukeFishron);
             else
-                NetMessage.SendData(MessageID.SpawnBossUseLicenseStartEvent, -1, -1, null, player.whoAmI, NPCID.HallowBoss);
+                NetMessage.SendData(MessageID.SpawnBossUseLicenseStartEvent, -1, -1, null, player.whoAmI, NPCID.DukeFishron);
 
             return true;
         }
@@ -54,8 +57,9 @@ namespace CalTestHelpers.Items.SummonItems
         public override void AddRecipes()
         {
             CreateRecipe().
-                AddIngredient(ItemID.BrassLantern, 1).
-                AddIngredient(ItemID.EmpressButterfly, 1).
+                AddIngredient(ItemID.TruffleWorm, 1).
+                AddIngredient(ModContent.ItemType<DeliciousMeat>(), 10).
+                AddTile(TileID.MeatGrinder).
                 Register();
         }
     }
