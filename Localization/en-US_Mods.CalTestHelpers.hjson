@@ -1,15 +1,29 @@
-"Keybinds.Toggle Test UIs.DisplayName": Toggle  Test  U Is
+"Keybinds.Toggle Test UIs.DisplayName": Toggle  Test  UIs
 
 Items: {
 	ChargerTestItem: {
 		DisplayName: Charger Test Item
-		Tooltip: "[c/2c2ff5:DEBUG ITEM]"
+		Tooltip: "Recharges all arsenal items in the inventory"
 	}
 
 	SummonItems: {
 		SirenSong: {
 			DisplayName: Siren Song
-			Tooltip: "[c/2c2ff5:DEBUG ITEM]"
+			Tooltip: 
+			'''
+			Summons Anahita while used in the ocean
+			TEXTURE IS A PLACEHOLDER
+			'''
+		}
+		FaeLantern: {
+			DisplayName: Fae's Lantern
+			Tooltip: 
+			'''
+			Summons Empress of Light at night
+			[c/FF0000:No I'm not going to let you summon her at daytime,]
+			[c/FF0000:although why would you?]
+			TEXTURE IS A PLACEHOLDER
+			'''
 		}
 	}
 }

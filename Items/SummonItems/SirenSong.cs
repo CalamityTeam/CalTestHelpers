@@ -39,17 +39,21 @@ namespace CalTestHelpers.Items.SummonItems
         public override bool CanUseItem(Player player)
         {
             CalamityPlayer modPlayer = player.Calamity();
-            bool InOcean = player.position.Y > 800f || player.position.Y < Main.worldSurface * 16.0 || (player.position.X < 6400f && player.position.X > (Main.maxTilesX * 16 - 6400));
+            bool InOcean = player.position.Y < 800f && player.position.Y < Main.worldSurface * 16.0 && (player.position.X < 6400f && player.position.X > (Main.maxTilesX * 16 - 6400));
+
+            // For contex notOcean looks like this:
+            //bool notOcean = player.position.Y < 800f || player.position.Y > Main.worldSurface * 16.0 || (player.position.X > 6400f && player.position.X < (Main.maxTilesX * 16 - 6400));
             return InOcean && !modPlayer.ZoneSulphur && !NPC.AnyNPCs(ModContent.NPCType<Anahita>()) && !NPC.AnyNPCs(ModContent.NPCType<Leviathan>()) && !NPC.AnyNPCs(ModContent.NPCType<LeviathanStart>()) && !BossRushEvent.BossRushActive;
+            // No clue why ??? has that name
         }
 
         public override bool? UseItem(Player player)
         {
             SoundEngine.PlaySound(SoundID.Roar, player.Center);
             if (Main.netMode != NetmodeID.MultiplayerClient)
-                NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<LeviathanStart>()); // No clue why it has that name
+                NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<Anahita>()); 
             else
-                NetMessage.SendData(MessageID.SpawnBossUseLicenseStartEvent, -1, -1, null, player.whoAmI, ModContent.NPCType<LeviathanStart>());
+                NetMessage.SendData(MessageID.SpawnBossUseLicenseStartEvent, -1, -1, null, player.whoAmI, ModContent.NPCType<Anahita>());
 
             return true;
         }
