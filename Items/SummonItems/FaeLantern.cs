@@ -57,7 +57,7 @@ namespace CalTestHelpers.Items.SummonItems
         public override void AddRecipes()
         {
             CreateRecipe().
-                AddIngredient(ItemID.MagicLantern, 1).
+                AddIngredient(ItemID.BrassLantern, 1).
                 AddIngredient(ItemID.EmpressButterfly, 1).
                 Register();
         }
