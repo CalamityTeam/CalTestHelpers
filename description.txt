@@ -13,4 +13,6 @@ Projectile i-frame manipulation,
 
 Universal stealth stat damage factor manipulation,
 
-and a game-time based boss kill timer.
+a game-time based boss kill timer,
+
+and some boss summoning items.
