@@ -9,9 +9,7 @@ namespace CalTestHelpers
 	public class EntityOverrideCache
 	{
 		internal static List<Projectile> LoadedProjectiles = new();
-		//internal static List<NPC> LoadedNPCs = new();
 		internal static List<string> ProjectileNames = new();
-		//internal static List<string> NPCNames = new();
 
 		public static int[] StaticIFrameOverrides;
 		public static int[] LocalIFrameOverrides;
@@ -20,7 +18,6 @@ namespace CalTestHelpers
 		{
 			LoadedProjectiles = new List<Projectile>();
 			ProjectileNames = new List<string>();
-			//NPCNames = new List<string>();
 
 			StaticIFrameOverrides = new int[ProjectileLoader.ProjectileCount];
 			LocalIFrameOverrides = new int[ProjectileLoader.ProjectileCount];
