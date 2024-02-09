@@ -8,7 +8,7 @@ using Terraria.ID;
 using CalamityMod.CalPlayer;
 using Terraria.GameContent;
 using CalamityMod.Balancing;
-// using CalamityMod.Testing;
+using CalamityMod.NPCs;
 
 namespace CalTestHelpers.UI
 {
@@ -49,19 +49,19 @@ namespace CalTestHelpers.UI
                             }
                         }
                         Main.NewText($"Enemies now { (CalTestHelpersWorld.NoSpawns ? "cannot" : "can") } spawn.");
-                    }),
+                    }, CalTestHelpersWorld.NoSpawns ? Color.Green : Color.Red),
                     new SpecialUIElement("Change the time.", ModContent.Request<Texture2D>("CalTestHelpers/UI/SunTexture").Value, () =>
                     {
                         Main.dayTime = !Main.dayTime;
                         Main.time = 0;
-                        
+
                         Main.NewText($"It is now {(Main.dayTime ? "day" : "night")}time.");
                     }),
                     new SpecialUIElement("Stop time.", ModContent.Request<Texture2D>("CalTestHelpers/UI/WatchTexture").Value, () =>
                     {
                         CalTestHelpersWorld.FrozenTime = !CalTestHelpersWorld.FrozenTime;
                         Main.NewText($"Time has {(CalTestHelpersWorld.FrozenTime ? "stopped" : "resumed")}.");
-                    }),
+                    }, CalTestHelpersWorld.FrozenTime ? Color.Green : Color.Red),
                     new SpecialUIElement("Toggle Prehardmode boss deaths.", ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesPHM").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderPHM : null;
@@ -86,10 +86,6 @@ namespace CalTestHelpers.UI
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.ProjectileEditerUIRenderer : null;
                     }),
-                    /*new SpecialUIElement("Change NPC-specific stat variables.", ModContent.Request<Texture2D>("CalTestHelpers/UI/NPCIcon").Value, () =>
-                    {
-                        CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.NPCStatsUIRenderer : null;
-                    }),*/
                     new SpecialUIElement("Change the universal stealth strike damage factor.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/Cinquedea").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.StealthEditerUIRenderer : null;
@@ -98,7 +94,6 @@ namespace CalTestHelpers.UI
                     {
                         ItemOverrideCache.ResetOverrides();
                         EntityOverrideCache.ResetOverrides();
-                        // TestAdjustableFieldDatabase.ResetToDefaultValues();
                         CalTestHelpers.ItemEditerUIRenderer.ItemBeingEdited = null;
                         CalTestHelpers.ProjectileEditerUIRenderer.ProjectileBeingEdited = null;
                         CalTestHelpers.SecondaryUIToDisplay = null;
@@ -106,6 +101,11 @@ namespace CalTestHelpers.UI
                         CalTestHelpers.HaveAnyStatManipulationsBeenDone = false;
                         Main.NewText($"Stat changes have been reset.");
                     }),
+                    new SpecialUIElement("Toggle Whip tag", TextureAssets.Item[ItemID.BlandWhip].Value, () =>
+                    {
+                        CalamityGlobalNPC.DisableMultWhipTag = !CalamityGlobalNPC.DisableMultWhipTag;
+                        Main.NewText($"Tag damage is now {(CalamityGlobalNPC.DisableMultWhipTag ? "flat" : "multiplicative")}.");
+                    }, CalamityGlobalNPC.DisableMultWhipTag ? Color.Green : Color.Red),
                 };
 
                 elements.AddRange(CalTestHelpers.SecondaryUIElements);
@@ -135,6 +135,7 @@ namespace CalTestHelpers.UI
             Main.instance.LoadItem(ItemID.GummyWorm);
             Main.instance.LoadItem(ItemID.GalaxyPearl);
             Main.instance.LoadItem(ItemID.ArtisanLoaf);
+            Main.instance.LoadItem(ItemID.BlandWhip);
             Texture2D categorySlotTexture = ModContent.Request<Texture2D>("CalTestHelpers/UI/CategorySlot").Value;
             foreach (var button in UIElements)
             {
