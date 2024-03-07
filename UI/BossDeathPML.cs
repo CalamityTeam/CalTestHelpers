@@ -25,7 +25,7 @@ namespace CalTestHelpers.UI
             new SpecialUIElement("Toggle The Devourer of Gods' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/DevourerofGods/DevourerofGodsHeadS_Head_Boss").Value, () => ToggleDeath(Boss.DevourerOfGods), GetColor(GetDownedBool(Boss.DevourerOfGods))),
             new SpecialUIElement("Toggle Yharon's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Yharon/Yharon_Head_Boss").Value, () => ToggleDeath(Boss.Yharon), GetColor(GetDownedBool(Boss.Yharon))),
             new SpecialUIElement("Toggle The Exo Mechs' Death.", ModContent.Request<Texture2D>("CalTestHelpers/UI/TemporaryDraedonIcon").Value, () => ToggleDeath(Boss.Draedon), GetColor(GetDownedBool(Boss.Draedon))),
-            new SpecialUIElement("Toggle Supreme Witch, Calamitas' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/SupremeCalamitas/HoodlessHeadIconP2").Value, () => ToggleDeath(Boss.Calamitas), GetColor(GetDownedBool(Boss.Calamitas))),
+            new SpecialUIElement("Toggle Supreme Witch, Calamitas' Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/SupremeCalamitas/HoodlessHeadIcon").Value, () => ToggleDeath(Boss.Calamitas), GetColor(GetDownedBool(Boss.Calamitas))),
             new SpecialUIElement("Toggle all post-Moon Lord boss Deaths.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/ArkoftheCosmos").Value, () => ToggleDeath(Boss.AllPML), GetColor(GetDownedBool(Boss.AllPML))),
             new SpecialUIElement("Toggle all boss Deaths.", ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () => ToggleDeath(Boss.All), GetColor(GetDownedBool(Boss.All)))
         };
