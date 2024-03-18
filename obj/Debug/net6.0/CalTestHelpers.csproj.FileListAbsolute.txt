@@ -135,3 +135,4 @@ D:\Documentos\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\n
 D:\Documentos\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\net6.0\refint\CalTestHelpers.dll
 D:\Documentos\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\net6.0\CalTestHelpers.pdb
 D:\Documentos\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\net6.0\ref\CalTestHelpers.dll
+D:\Documentos\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\net6.0\CalTestHelpers.sourcelink.json
