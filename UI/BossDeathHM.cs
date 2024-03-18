@@ -17,9 +17,9 @@ namespace CalTestHelpers.UI
             new SpecialUIElement("Toggle Queen Slime's Death.", TextureAssets.NpcHeadBoss[38].Value, () => ToggleDeath(Boss.QueenSlime), GetColor(GetDownedBool(Boss.QueenSlime))),
             new SpecialUIElement("Toggle Cryogen's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Cryogen/Cryogen_Phase1_Head_Boss").Value, () => ToggleDeath(Boss.Cryogen), GetColor(GetDownedBool(Boss.Cryogen))),
             new SpecialUIElement("Toggle The Twins' Death.", TextureAssets.NpcHeadBoss[16].Value, () => ToggleDeath(Boss.TheTwins), GetColor(GetDownedBool(Boss.TheTwins))),
-            new SpecialUIElement("Toggle Brimstone Elemental's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/BrimstoneElemental/BrimstoneElemental_Head_Boss").Value, () => ToggleDeath(Boss.BrimstoneElemental), GetColor(GetDownedBool(Boss.BrimstoneElemental))),
-            new SpecialUIElement("Toggle Destroyer's Death.", TextureAssets.NpcHeadBoss[25].Value, () => ToggleDeath(Boss.TheDestroyer), GetColor(GetDownedBool(Boss.TheDestroyer))),
             new SpecialUIElement("Toggle Aquatic Scourge's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/AquaticScourge/AquaticScourgeHead_Head_Boss").Value, () => ToggleDeath(Boss.TheAquaticScourge), GetColor(GetDownedBool(Boss.TheAquaticScourge))),
+            new SpecialUIElement("Toggle Destroyer's Death.", TextureAssets.NpcHeadBoss[25].Value, () => ToggleDeath(Boss.TheDestroyer), GetColor(GetDownedBool(Boss.TheDestroyer))),
+            new SpecialUIElement("Toggle Brimstone Elemental's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/BrimstoneElemental/BrimstoneElemental_Head_Boss").Value, () => ToggleDeath(Boss.BrimstoneElemental), GetColor(GetDownedBool(Boss.BrimstoneElemental))),
             new SpecialUIElement("Toggle Skeletron Prime's Death.", TextureAssets.NpcHeadBoss[18].Value, () => ToggleDeath(Boss.SkeletronPrime), GetColor(GetDownedBool(Boss.SkeletronPrime))),
             new SpecialUIElement("Toggle Calamitas Clone's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/CalClone/CalamitasClone_Head_Boss").Value, () => ToggleDeath(Boss.Cloneamitas), GetColor(GetDownedBool(Boss.Cloneamitas))),
             new SpecialUIElement("Toggle Plantera's Death.", TextureAssets.NpcHeadBoss[11].Value, () => ToggleDeath(Boss.Plantera), GetColor(GetDownedBool(Boss.Plantera))),
@@ -63,20 +63,20 @@ namespace CalTestHelpers.UI
                     textColor = new Color(147, 189, 198);
                     bossDeathValue = ref NPC.downedMechBoss2;
                     break;
-                case Boss.BrimstoneElemental:
-                    bossName = "Brimstone Elemental";
-                    textColor = new Color(196, 7, 102);
-                    bossDeathValue = ref DownedBossSystem._downedBrimstoneElemental;
+                case Boss.TheAquaticScourge:
+                    bossName = "Aquatic Scourge";
+                    textColor = new Color(54, 156, 196);
+                    bossDeathValue = ref DownedBossSystem._downedAquaticScourge;
                     break;
                 case Boss.TheDestroyer:
                     bossName = "Destroyer";
                     textColor = new Color(147, 189, 198);
                     bossDeathValue = ref NPC.downedMechBoss1;
                     break;
-                case Boss.TheAquaticScourge:
-                    bossName = "Aquatic Scourge";
-                    textColor = new Color(54, 156, 196);
-                    bossDeathValue = ref DownedBossSystem._downedAquaticScourge;
+                case Boss.BrimstoneElemental:
+                    bossName = "Brimstone Elemental";
+                    textColor = new Color(196, 7, 102);
+                    bossDeathValue = ref DownedBossSystem._downedBrimstoneElemental;
                     break;
                 case Boss.SkeletronPrime:
                     bossName = "Skeletron Prime";
