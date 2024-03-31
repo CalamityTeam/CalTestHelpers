@@ -26,7 +26,7 @@ namespace CalTestHelpers.Items.SummonItems
             Item.useTime = 10;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = false;
-            Item.color = Color.Lavender;
+            Item.color = Color.Pink;
         }
 
         public override void ModifyResearchSorting(ref ContentSamples.CreativeHelper.ItemGroup itemGroup)
