@@ -86,10 +86,6 @@ namespace CalTestHelpers.UI
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.ProjectileEditerUIRenderer : null;
                     }),
-                    /*new SpecialUIElement("Change NPC-specific stat variables.", ModContent.Request<Texture2D>("CalTestHelpers/UI/NPCIcon").Value, () =>
-                    {
-                        CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.NPCStatsUIRenderer : null;
-                    }),*/
                     new SpecialUIElement("Change the universal stealth strike damage factor.", ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/Cinquedea").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.StealthEditerUIRenderer : null;
