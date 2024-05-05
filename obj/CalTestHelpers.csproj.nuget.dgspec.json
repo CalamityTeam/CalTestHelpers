@@ -27,11 +27,7 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {
-              "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj": {
-                "projectPath": "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {

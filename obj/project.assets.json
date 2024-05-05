@@ -27,7 +27,6 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj",
       "tModLoader.CodeAssist >= 0.1.*"
     ]
   },
@@ -57,11 +56,7 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {
-            "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj": {
-              "projectPath": "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -103,16 +98,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalamityMod\\CalamityMod.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }
