@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Terraria.Localization;
 using Terraria.ModLoader.Config;
 
 namespace CalTestHelpers
@@ -32,6 +33,6 @@ namespace CalTestHelpers
         [Tooltip("How many projectiles should the Projectile and item stat editor display")]
         public int StuffAmountDisplay { get; set; }
 
-        public override bool AcceptClientChanges(ModConfig pendingConfig, int whoAmI, ref string message) => false;
+        public override bool AcceptClientChanges(ModConfig pendingConfig, int whoAmI, ref NetworkText message) => false;
 	}
 }
