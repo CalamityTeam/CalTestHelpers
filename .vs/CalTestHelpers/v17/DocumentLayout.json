@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|solutionrelative:items\\summonitems\\bloodyworm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|d:\\documentos\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\items\\summonitems\\sirensong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|solutionrelative:items\\summonitems\\sirensong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|d:\\documentos\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\localization\\en-us_mods.caltesthelpers.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|solutionrelative:localization\\en-us_mods.caltesthelpers.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|d:\\documentos\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\items\\summonitems\\sirensong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|solutionrelative:items\\summonitems\\sirensong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -56,14 +56,14 @@
               "RelativeDocumentMoniker": "Items\\SummonItems\\BloodyWorm.cs",
               "ToolTip": "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\Items\\SummonItems\\BloodyWorm.cs",
               "RelativeToolTip": "Items\\SummonItems\\BloodyWorm.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAIwDAAAAAJAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAIwDAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-11T20:07:42.744Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "en-US_Mods.CalTestHelpers.hjson",
               "DocumentMoniker": "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\Localization\\en-US_Mods.CalTestHelpers.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US_Mods.CalTestHelpers.hjson",
@@ -82,14 +82,14 @@
               "RelativeDocumentMoniker": "Items\\SummonItems\\WORM.cs",
               "ToolTip": "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\Items\\SummonItems\\WORM.cs",
               "RelativeToolTip": "Items\\SummonItems\\WORM.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAIwC4AAAAJAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAIwC4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-11T19:55:18.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SirenSong.cs",
               "DocumentMoniker": "D:\\Documentos\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\Items\\SummonItems\\SirenSong.cs",
               "RelativeDocumentMoniker": "Items\\SummonItems\\SirenSong.cs",
