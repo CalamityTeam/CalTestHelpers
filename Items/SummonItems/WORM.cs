@@ -47,8 +47,10 @@ namespace CalTestHelpers.Items.SummonItems
         {
             SoundEngine.PlaySound(SoundID.Zombie20, player.Center); //Terraria internal names suck
             if (Main.netMode != NetmodeID.MultiplayerClient)
-                NPC.SpawnOnPlayer(player.whoAmI, NPCID.DukeFishron);
+                //the regular method fails so I have to do this instead
+                NPC.SpawnBoss((int)player.Center.X+(player.position.X > 6400f ? 600 : -600), (int)player.Center.Y, NPCID.DukeFishron, player.whoAmI);
             else
+                //may not work
                 NetMessage.SendData(MessageID.SpawnBossUseLicenseStartEvent, -1, -1, null, player.whoAmI, NPCID.DukeFishron);
 
             return true;

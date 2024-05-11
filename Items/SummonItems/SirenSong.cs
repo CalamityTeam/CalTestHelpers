@@ -47,9 +47,9 @@ namespace CalTestHelpers.Items.SummonItems
         {
             SoundEngine.PlaySound(SoundID.Roar, player.Center);
             if (Main.netMode != NetmodeID.MultiplayerClient)
-                NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<Anahita>()); 
+                NPC.SpawnOnPlayer(player.whoAmI, Main.zenithWorld ? ModContent.NPCType<Leviathan>() : ModContent.NPCType<Anahita>()); 
             else
-                NetMessage.SendData(MessageID.SpawnBossUseLicenseStartEvent, -1, -1, null, player.whoAmI, ModContent.NPCType<Anahita>());
+                NetMessage.SendData(MessageID.SpawnBossUseLicenseStartEvent, -1, -1, null, player.whoAmI, Main.zenithWorld ? ModContent.NPCType<Leviathan>() : ModContent.NPCType<Anahita>());
 
             return true;
         }

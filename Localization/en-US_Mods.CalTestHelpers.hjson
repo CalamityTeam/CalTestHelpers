@@ -12,6 +12,7 @@ Items: {
 			Tooltip:
 				'''
 				Summons Anahita while used in the ocean
+				An alluring song can be heard
 				TEXTURE IS A PLACEHOLDER
 				'''
 		}
@@ -22,7 +23,7 @@ Items: {
 				'''
 				Summons Empress of Light at night
 				[c/FF0000:No I'm not going to let you summon her at daytime,]
-				[c/FF0000:although why would you?]
+				[c/FF0000:although why would you, you're balance testing?]
 				TEXTURE IS A PLACEHOLDER
 				'''
 		}
@@ -41,7 +42,7 @@ Items: {
 			DisplayName: Bloodier Worm
 			Tooltip:
 				'''
-				Summons the Old Fart, I mean Fish
+				Summons the Old Duke while used in the Sulphur Sea
 				[c/FF0000:REIGN IN BLOOD]
 				TEXTURE IS A PLACEHOLDER
 				'''
