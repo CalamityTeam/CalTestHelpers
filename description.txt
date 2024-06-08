@@ -1,18 +1,24 @@
-Calamity-based testing mod that provides various services, such as:
+The Calamity-based testing mod is now public due to the growing amount of Calamity Addons that require its services
 
-A GUI that provides certain utilities, such as revealing the entire map, setting your spawnpoint at your current location,
+This mod provides various services, such as:
+
+- A GUI that provides certain utilities, such as revealing the entire map, setting your spawnpoint at your current location,
 toggling permanent upgrades and deaths, and toggling enemy spawns
 
-Infinite Money in your first coin slot,
+- Infinite Money in your first coin slot,
 
-Map-based teleportation,
+- Map-based teleportation
 
-Item damage, useTime, and useAnimation manipulation,
+- Item damage, useTime, and useAnimation manipulation
 
-Projectile i-frame manipulation,
+- Projectile i-frame manipulation,
 
-Universal stealth stat damage factor manipulation,
+- Universal stealth stat damage factor manipulation
 
-a game-time based boss kill timer,
+- A game-time based boss kill timer
 
-and some boss summoning items.
+- Some boss summoning items (Anahita, EoL, Duke Fishron and Old Duke)
+
+- Instant summoning for some bosses (SCal and Draedon)
+
+Ping me (shade__storm) on the Calamity Mod Official Discord's other mod talk channel for suggestions, as I currently maintain this mod.
