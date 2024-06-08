@@ -1,4 +1,5 @@
 using CalamityMod.CalPlayer;
+using CalamityMod.Projectiles.Boss;
 using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -13,6 +14,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using Terraria.UI;
+using static Terraria.ModLoader.ModContent;
 
 namespace CalTestHelpers
 {
@@ -88,6 +90,10 @@ namespace CalTestHelpers
                 BossKillDPS.Clear();
                 BossKillTimeFrames = 0;
             }
+            if (CalTestHelperConfig.Instance.InstantBossSummoning)
+                if (CalamityWorld.DraedonSummonCountdown > 0)
+                    CalamityWorld.DraedonSummonCountdown = 1;
+            // Scal goes on Global Projectile since Xyk made the value of the ritual a constant
         }
 
         public override void PostUpdateEverything()
