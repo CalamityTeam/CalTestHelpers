@@ -32,7 +32,7 @@ namespace CalTestHelpers
 		public bool InstantBossSummoning { get; set; }
 
         [BackgroundColor(192, 54, 64, 192)]
-        [DefaultValue(true)]
+        [DefaultValue(false)]
 		public bool Changelog { get; set;}
 
         [Header("Deprecated")]
