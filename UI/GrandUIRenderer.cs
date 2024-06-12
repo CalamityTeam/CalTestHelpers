@@ -4,11 +4,13 @@ using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 using Terraria.ID;
 using CalamityMod.CalPlayer;
 using Terraria.GameContent;
 using CalamityMod.Balancing;
 using CalamityMod.NPCs;
+using CalamityMod.Items.Weapons.Summon.Whips;
 
 namespace CalTestHelpers.UI
 {
@@ -101,13 +103,19 @@ namespace CalTestHelpers.UI
                         CalTestHelpers.HaveAnyStatManipulationsBeenDone = false;
                         Main.NewText($"Stat changes have been reset.");
                     }),
-                    new SpecialUIElement("Toggle Whip tag", TextureAssets.Item[ItemID.BlandWhip].Value, () =>
-                    {
-                        CalamityGlobalNPC.DisableMultWhipTag = !CalamityGlobalNPC.DisableMultWhipTag;
-                        Main.NewText($"Tag damage is now {(CalamityGlobalNPC.DisableMultWhipTag ? "flat" : "multiplicative")}.");
-                    }, CalamityGlobalNPC.DisableMultWhipTag ? Color.Green : Color.Red),
                 };
-
+                // Just so it doesnt error, this is to find if its summoner branch or not
+                if (ModContent.TryFind("WhipPrototype", out ModItem SummonerBranch))
+                {
+                    SpecialUIElement ToggleWhips = new SpecialUIElement("Toggle Whip tag", TextureAssets.Item[ItemID.BlandWhip].Value, () =>
+                    {
+                        Mod Calamity = GetInstance<CalTestHelpers>().Calamity;
+                        Calamity.Call("ToggleWhipTag");
+                        Main.NewText($"Tag damage is now {(CalamityGlobalNPC.DisableMultWhipTag ? "flat" : "multiplicative")}.");
+                    }, CalamityGlobalNPC.DisableMultWhipTag ? Color.Green : Color.Red);
+                    elements.Add(ToggleWhips);
+                }
+                //Add all elements
                 elements.AddRange(CalTestHelpers.SecondaryUIElements);
                 return elements;
             }
