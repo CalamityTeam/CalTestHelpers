@@ -34,7 +34,8 @@ namespace CalTestHelpers.UI
             Ambrosia,
             GummyWorm,
             GalaxyPearl,
-            ArtisanLoaf
+            ArtisanLoaf,
+            NimbleBounder
         }
         public override List<SpecialUIElement> UIElements => new List<SpecialUIElement>()
         {
@@ -60,6 +61,7 @@ namespace CalTestHelpers.UI
             new SpecialUIElement("Toggle Gummy Worm", TextureAssets.Item[ItemID.GummyWorm].Value, () => ToggleUpgrade(PlayerUpgrade.GummyWorm), GetColor(HasUpgrade(PlayerUpgrade.GummyWorm))),
             new SpecialUIElement("Toggle Galaxy Pearl", TextureAssets.Item[ItemID.GalaxyPearl].Value, () => ToggleUpgrade(PlayerUpgrade.GalaxyPearl), GetColor(HasUpgrade(PlayerUpgrade.GalaxyPearl))),
             new SpecialUIElement("Toggle Artisan Loaf", TextureAssets.Item[ItemID.ArtisanLoaf].Value, () => ToggleUpgrade(PlayerUpgrade.ArtisanLoaf), GetColor(HasUpgrade(PlayerUpgrade.ArtisanLoaf))),
+            new SpecialUIElement("Toggle Celestial Onion", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/NimbleBounder").Value, () => ToggleUpgrade(PlayerUpgrade.NimbleBounder), GetColor(HasUpgrade(PlayerUpgrade.NimbleBounder))),
         };
 
         public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 660 - 350 * ResolutionRatio, 40);
@@ -183,6 +185,11 @@ namespace CalTestHelpers.UI
                     textColor = new Color(199, 111, 24);
                     upgradeValue = ref Main.LocalPlayer.ateArtisanBread;
                     break;
+                case PlayerUpgrade.NimbleBounder:
+                    upgradeName = "Nimble Bounder";
+                    textColor = new Color(200, 111, 145);
+                    upgradeValue = ref Main.LocalPlayer.Calamity().nimbleBounderBoost;
+                    break;
             }
             upgradeValue = !upgradeValue;
             Main.NewText($"The {upgradeName} effect is now marked as: {upgradeValue}", textColor);
@@ -236,6 +243,8 @@ namespace CalTestHelpers.UI
                     return Main.LocalPlayer.usedGalaxyPearl;
                 case PlayerUpgrade.ArtisanLoaf:
                     return Main.LocalPlayer.ateArtisanBread;
+                case PlayerUpgrade.NimbleBounder:
+                    return Main.LocalPlayer.Calamity().nimbleBounderBoost;
             }
 			return false;
         }
