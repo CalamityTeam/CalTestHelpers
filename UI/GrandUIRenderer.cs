@@ -107,7 +107,7 @@ namespace CalTestHelpers.UI
 
                 // Just so it doesnt error WeakReferences are used, this is to find if its summoner branch or not
                 Mod Calamity = GetInstance<CalTestHelpers>().Calamity;
-                if (Calamity.TryFind("WhipPrototype", out ModItem SummonerBranch))
+                if (Calamity.TryFind("UnderBite", out ModItem SummonerBranch))
                 {
                     SpecialUIElement ToggleWhips = new SpecialUIElement("Toggle Whip tag", TextureAssets.Item[ItemID.BlandWhip].Value, () =>
                     {
