@@ -10,17 +10,8 @@ Items: {
 		DisplayName: Changelogs
 		Tooltip:
 			'''
-			Added the Changelog item, which you are reading right now!
-			You can toggle if this item is given to you when you enter the world in the config
-			Changed the Config Menu to not use Deprecated methods, it also has icons now!
-			Fae's Lantern can now be used at daytime, but added a warning to its tooltip
-			Made Draedon's and SCal summon instant if a config is On (Off by default, go to the config)
-
-			Notice:
-			If you want to make a sprite for an item that has a placeholder or a suggestion
-			submit it to shade__storm in #other-mod-talk on the Official Calamity Discord server
-			(I would allow DMs if it wasn't for all those scams and bots that have popped up,
-			sorry guys)
+			Fused both the Main and Summoner branches for the dev version for CalTestHelpers
+			Added Nimble Bounder to the upgrade menu
 			'''
 	}
 
