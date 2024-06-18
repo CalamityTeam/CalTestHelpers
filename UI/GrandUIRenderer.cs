@@ -104,12 +104,13 @@ namespace CalTestHelpers.UI
                         Main.NewText($"Stat changes have been reset.");
                     }),
                 };
-                // Just so it doesnt error, this is to find if its summoner branch or not
-                if (ModContent.TryFind("WhipPrototype", out ModItem SummonerBranch))
+
+                // Just so it doesnt error WeakReferences are used, this is to find if its summoner branch or not
+                Mod Calamity = GetInstance<CalTestHelpers>().Calamity;
+                if (Calamity.TryFind("WhipPrototype", out ModItem SummonerBranch))
                 {
                     SpecialUIElement ToggleWhips = new SpecialUIElement("Toggle Whip tag", TextureAssets.Item[ItemID.BlandWhip].Value, () =>
                     {
-                        Mod Calamity = GetInstance<CalTestHelpers>().Calamity;
                         Calamity.Call("ToggleWhipTag");
                         Main.NewText($"Tag damage is now {(CalamityGlobalNPC.DisableMultWhipTag ? "flat" : "multiplicative")}.");
                     }, CalamityGlobalNPC.DisableMultWhipTag ? Color.Green : Color.Red);
