@@ -4,11 +4,13 @@ using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 using Terraria.ID;
 using CalamityMod.CalPlayer;
 using Terraria.GameContent;
 using CalamityMod.Balancing;
-// using CalamityMod.Testing;
+using CalamityMod.NPCs;
+using CalamityMod.Items.Weapons.Summon.Whips;
 
 namespace CalTestHelpers.UI
 {
@@ -49,19 +51,19 @@ namespace CalTestHelpers.UI
                             }
                         }
                         Main.NewText($"Enemies now { (CalTestHelpersWorld.NoSpawns ? "cannot" : "can") } spawn.");
-                    }),
+                    }, CalTestHelpersWorld.NoSpawns ? Color.Green : Color.Red),
                     new SpecialUIElement("Change the time.", ModContent.Request<Texture2D>("CalTestHelpers/UI/SunTexture").Value, () =>
                     {
                         Main.dayTime = !Main.dayTime;
                         Main.time = 0;
-                        
+
                         Main.NewText($"It is now {(Main.dayTime ? "day" : "night")}time.");
                     }),
                     new SpecialUIElement("Stop time.", ModContent.Request<Texture2D>("CalTestHelpers/UI/WatchTexture").Value, () =>
                     {
                         CalTestHelpersWorld.FrozenTime = !CalTestHelpersWorld.FrozenTime;
                         Main.NewText($"Time has {(CalTestHelpersWorld.FrozenTime ? "stopped" : "resumed")}.");
-                    }),
+                    }, CalTestHelpersWorld.FrozenTime ? Color.Green : Color.Red),
                     new SpecialUIElement("Toggle Prehardmode boss deaths.", ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesPHM").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderPHM : null;
@@ -94,7 +96,6 @@ namespace CalTestHelpers.UI
                     {
                         ItemOverrideCache.ResetOverrides();
                         EntityOverrideCache.ResetOverrides();
-                        // TestAdjustableFieldDatabase.ResetToDefaultValues();
                         CalTestHelpers.ItemEditerUIRenderer.ItemBeingEdited = null;
                         CalTestHelpers.ProjectileEditerUIRenderer.ProjectileBeingEdited = null;
                         CalTestHelpers.SecondaryUIToDisplay = null;
@@ -104,6 +105,18 @@ namespace CalTestHelpers.UI
                     }),
                 };
 
+                // Just so it doesnt error WeakReferences are used, this is to find if its summoner branch or not
+                Mod Calamity = GetInstance<CalTestHelpers>().Calamity;
+                if (Calamity.TryFind("WhipPrototype", out ModItem SummonerBranch))
+                {
+                    SpecialUIElement ToggleWhips = new SpecialUIElement("Toggle Whip tag", TextureAssets.Item[ItemID.BlandWhip].Value, () =>
+                    {
+                        Calamity.Call("ToggleWhipTag");
+                        Main.NewText($"Tag damage is now {(CalamityGlobalNPC.DisableMultWhipTag ? "flat" : "multiplicative")}.");
+                    }, CalamityGlobalNPC.DisableMultWhipTag ? Color.Green : Color.Red);
+                    elements.Add(ToggleWhips);
+                }
+                //Add all elements
                 elements.AddRange(CalTestHelpers.SecondaryUIElements);
                 return elements;
             }
@@ -131,6 +144,7 @@ namespace CalTestHelpers.UI
             Main.instance.LoadItem(ItemID.GummyWorm);
             Main.instance.LoadItem(ItemID.GalaxyPearl);
             Main.instance.LoadItem(ItemID.ArtisanLoaf);
+            Main.instance.LoadItem(ItemID.BlandWhip);
             Texture2D categorySlotTexture = ModContent.Request<Texture2D>("CalTestHelpers/UI/CategorySlot").Value;
             foreach (var button in UIElements)
             {

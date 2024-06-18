@@ -39,6 +39,9 @@ namespace CalTestHelpers
                     NetMessage.SendData(MessageID.InstancedItem, p.whoAmI, -1, null, changelog);
                 }
             }
+            Mod Calamity = ModContent.GetInstance<CalTestHelpers>().Calamity;
+            bool SummonerBranch = Calamity.TryFind("WhipPrototype", out ModItem PrototypeWhip);
+            Main.NewText($"Summoner branch: {SummonerBranch}");
         }
     }
 }
