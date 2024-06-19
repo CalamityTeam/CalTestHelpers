@@ -9,6 +9,9 @@ using Terraria.ID;
 using CalamityMod.CalPlayer;
 using Terraria.GameContent;
 using CalamityMod.Balancing;
+using CalamityMod.Events;
+using CalamityMod.Systems;
+// using CalamityMod.Testing;
 using CalamityMod.NPCs;
 using CalamityMod.Items.Weapons.Summon.Whips;
 
@@ -103,6 +106,11 @@ namespace CalTestHelpers.UI
                         CalTestHelpers.HaveAnyStatManipulationsBeenDone = false;
                         Main.NewText($"Stat changes have been reset.");
                     }),
+                    new SpecialUIElement("Make Xeroc talk faster", Main.zenithWorld ? ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus_GFB").Value : ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () =>
+                    {
+                       BossRushDialogueSystem.GottaGoFast = !BossRushDialogueSystem.GottaGoFast;
+                       Main.NewText($"Time has {(BossRushDialogueSystem.GottaGoFast ? "Fine, I'll talk faster" : "I will slow down my speech")}.", BossRushEvent.XerocTextColor);
+                    }, BossRushDialogueSystem.GottaGoFast ? Color.Green : Color.Red),
                 };
 
                 // Just so it doesnt error WeakReferences are used, this is to find if its summoner branch or not
