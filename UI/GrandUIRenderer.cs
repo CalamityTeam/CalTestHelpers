@@ -106,7 +106,7 @@ namespace CalTestHelpers.UI
                     new SpecialUIElement("Make Xeroc talk faster", Main.zenithWorld ? ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus_GFB").Value : ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () =>
                     {
                        BossRushDialogueSystem.GottaGoFast = !BossRushDialogueSystem.GottaGoFast;
-                       Main.NewText($"Time has {(BossRushDialogueSystem.GottaGoFast ? "Fine, I'll talk faster" : "I will slow down my speech")}.", BossRushEvent.XerocTextColor);
+                       Main.NewText($"{(BossRushDialogueSystem.GottaGoFast ? "Fine, I'll talk faster" : "I will slow down my speech")}.", BossRushEvent.XerocTextColor);
                     }, BossRushDialogueSystem.GottaGoFast ? Color.Green : Color.Red),
                 };
 
