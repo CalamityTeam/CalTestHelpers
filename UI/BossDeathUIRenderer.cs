@@ -16,6 +16,7 @@ namespace CalTestHelpers.UI
         {
             KingSlime,
             DesertScourge,
+            GiantClam,
             EyeOfCthulhu,
             Crabulon,
             EaterOfWorlds,
@@ -76,6 +77,8 @@ namespace CalTestHelpers.UI
                     return NPC.downedSlimeKing;
                 case Boss.DesertScourge:
                     return DownedBossSystem._downedDesertScourge;
+                case Boss.GiantClam:
+                    return DownedBossSystem._downedCLAM;
                 case Boss.EyeOfCthulhu:
                     return NPC.downedBoss1;
                 case Boss.Crabulon:
