@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CalTestHelpers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c93f7c54fccb29d1aa22e17d82ab70deb4879ad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28ece8f9bf6b5f0eb15700b01c816da511e1f40c")]
 [assembly: System.Reflection.AssemblyProductAttribute("CalTestHelpers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CalTestHelpers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
