@@ -17,6 +17,7 @@ namespace CalTestHelpers.UI
         {
             new SpecialUIElement("Toggle King Slime's Death.", TextureAssets.NpcHeadBoss[7].Value, () => ToggleDeath(Boss.KingSlime), GetColor(GetDownedBool(Boss.KingSlime))),
             new SpecialUIElement("Toggle Desert Scourge's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/DesertScourge/DesertScourgeHead_Head_Boss").Value, () => ToggleDeath(Boss.DesertScourge), GetColor(GetDownedBool(Boss.DesertScourge))),
+            new SpecialUIElement("Toggle Giant Clam's Death:", ModContent.Request<Texture2D>("CalamityMod/NPCs/SunkenSea/GiantClam_Head_Boss").Value, () => ToggleDeath(Boss.GiantClam), GetColor(GetDownedBool(Boss.GiantClam))),
             new SpecialUIElement("Toggle Eye of Cthulhu's Death.", TextureAssets.NpcHeadBoss[0].Value, () => ToggleDeath(Boss.EyeOfCthulhu), GetColor(GetDownedBool(Boss.EyeOfCthulhu))),
             new SpecialUIElement("Toggle Crabulon's Death.", ModContent.Request<Texture2D>("CalamityMod/NPCs/Crabulon/Crabulon_Head_Boss").Value, () => ToggleDeath(Boss.Crabulon), GetColor(GetDownedBool(Boss.Crabulon))),
             new SpecialUIElement("Toggle Eater of World's Death.", TextureAssets.NpcHeadBoss[2].Value, () => ToggleDeath(Boss.EaterOfWorlds), GetColor(GetDownedBool(Boss.EaterOfWorlds))),
@@ -52,6 +53,11 @@ namespace CalTestHelpers.UI
                     bossName = "Desert Scourge";
                     textColor = new Color(216, 151, 82);
                     bossDeathValue = ref DownedBossSystem._downedDesertScourge;
+                    break;
+                case Boss.GiantClam:
+                    bossName = "Giant Clam";
+                    textColor = new Color(66, 239, 245);
+                    bossDeathValue = ref DownedBossSystem._downedCLAM;
                     break;
                 case Boss.EyeOfCthulhu:
                     bossName = "Eye of Cthulhu";
@@ -120,7 +126,7 @@ namespace CalTestHelpers.UI
             bool killAll = NPC.downedSlimeKing;
             Main.NewText($"All Prehardmode bosses are now marked as {(killAll ? "alive" : "dead")}", Color.Red);
 
-            NPC.downedSlimeKing = DownedBossSystem._downedDesertScourge = NPC.downedBoss1 = !killAll;
+            NPC.downedSlimeKing = DownedBossSystem._downedDesertScourge = NPC.downedBoss1 = DownedBossSystem._downedCLAM = !killAll;
             DownedBossSystem._downedCrabulon = NPC.downedBoss2 = DownedBossSystem._downedHiveMind = DownedBossSystem._downedPerforator = !killAll;
             NPC.downedQueenBee = NPC.downedDeerclops = NPC.downedBoss3 = DownedBossSystem._downedSlimeGod = Main.hardMode = !killAll;
         }
