@@ -105,3 +105,14 @@ Configs: {
 		}
 	}
 }
+
+UI: {
+	RevealMap.DisplayName: Reveal the entire map
+	SetSpawnpoint:
+		DisplayName: Set your spawn point to your position
+		Set: Spawn point set, your new spawn point is: 
+	ToggleEnemySpawns:
+		DisplayName: Toggle enemy spawns
+		CanSpawn: Enemies can now spawn
+		CannotSpawn: Enemies cannot spawn
+}

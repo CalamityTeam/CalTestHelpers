@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using static Terraria.ModLoader.ModContent;
 using Terraria.ID;
 using CalamityMod.CalPlayer;
@@ -25,14 +26,14 @@ namespace CalTestHelpers.UI
             {
                 List<SpecialUIElement> elements = new List<SpecialUIElement>()
                 {
-                    new SpecialUIElement("Reveal the entire map.", ModContent.Request<Texture2D>("CalTestHelpers/UI/EyeTexture").Value, MapServices.RevealTheEntireMap),
-                    new SpecialUIElement("Set your spawn point to your position.", TextureAssets.Item[ItemID.GoldenBed].Value, () =>
+                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.RevealMap.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/EyeTexture").Value, MapServices.RevealTheEntireMap),
+                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.SetSpawnpoint.DisplayName"), TextureAssets.Item[ItemID.GoldenBed].Value, () =>
                     {
                         Main.spawnTileX = (int)(Main.LocalPlayer.position.X - 8 + Main.LocalPlayer.width / 2) / 16;
                         Main.spawnTileY = (int)(Main.LocalPlayer.position.Y + Main.LocalPlayer.height) / 16;
-                        Main.NewText($"Spawn point set. Your new spawn point is: { new Vector2(Main.spawnTileX, Main.spawnTileY) }");
+                        Main.NewText(Language.GetTextValue("Mods.CalTestHelpers.UI.SetSpawnpoint.Set" + new Vector2(Main.spawnTileX, Main.spawnTileY)));
                     }),
-                    new SpecialUIElement("Toggle enemy spawns.", ModContent.Request<Texture2D>("CalTestHelpers/UI/EnemyIcon").Value, () =>
+                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleEnemySpawns.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/EnemyIcon").Value, () =>
                     {
                         CalTestHelpersWorld.NoSpawns = !CalTestHelpersWorld.NoSpawns;
                         if (CalTestHelpersWorld.NoSpawns)
@@ -53,7 +54,8 @@ namespace CalTestHelpers.UI
                                 }
                             }
                         }
-                        Main.NewText($"Enemies now { (CalTestHelpersWorld.NoSpawns ? "cannot" : "can") } spawn.");
+                        //Localization is shit
+                        Main.NewText((CalTestHelpersWorld.NoSpawns ? Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleEnemySpawns.CannotSpawn") : Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleEnemySpawns.CanSpawn")));
                     }, CalTestHelpersWorld.NoSpawns ? Color.Green : Color.Red),
                     new SpecialUIElement("Change the time.", ModContent.Request<Texture2D>("CalTestHelpers/UI/SunTexture").Value, () =>
                     {
