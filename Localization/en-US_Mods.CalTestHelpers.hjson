@@ -11,10 +11,11 @@ Items: {
 		Tooltip:
 			'''
 			2.3.1.3 Changelog
-			- Fused both the Main and Summoner branches for the dev version for CalTestHelpers
-			- Added Nimble Bounder to the upgrade menu
+			- Some internal changes to make managing this mod easier
+			- Added Nimble Bounder to the upgrade menu (will show up when the Calamity patch comes out)
 			- Added Giant Clam to boss toggles so that people can stop Amidias from spawning
-			- Updated localization files
+			- Removed the change time button; just use Cosmolight or other mod's time changing since they are far better
+			- Updated localization files, added proper localization support (Idk how this mod still worked despite improper localization)
 
 			Notice:
 			If you want to make a sprite for an item that has a placeholder or a suggestion
@@ -22,6 +23,7 @@ Items: {
 			or the Discussions tab in Steam Workshop
 			(I would allow DMs if it wasn't for all those scams and bots that have popped up,
 			sorry guys)
+			I am not going to use Infernum's assets for boss summoning items, those belong to them
 			'''
 	}
 
@@ -86,7 +88,7 @@ Configs: {
 
 		Changelog: {
 			Label: "[i:CalTestHelpers/Changelog] Changelog"
-			Tooltip: Gives you a changelog on world entry
+			Tooltip: Gives you a changelog item on world entry.
 		}
 
 		StoreFightInformation: {
@@ -96,12 +98,12 @@ Configs: {
 
 		StuffAmountDisplay: {
 			Label: "[i:CalamityMod/LaboratoryElectricPanelItem] Amount of stuff to display"
-			Tooltip: How many projectiles should the Projectile and item stat editor display
+			Tooltip: How many projectiles should the Projectile and item stat editor display?
 		}
 
 		InstantBossSummoning: {
 			Label: "[i:Stopwatch] Instant Boss Summoning"
-			Tooltip: ""
+			Tooltip: "Makes Draedon and Supreme Calamitas summon instantly, skipping their special animations."
 		}
 	}
 }
@@ -112,7 +114,25 @@ UI: {
 		DisplayName: Set your spawn point to your position
 		Set: Spawn point set, your new spawn point is: 
 	ToggleEnemySpawns:
-		DisplayName: Toggle enemy spawns
-		CanSpawn: Enemies can now spawn
-		CannotSpawn: Enemies cannot spawn
+		DisplayName: Toggle enemy spawns.
+		CanSpawn: Enemies can now spawn.
+		CannotSpawn: Enemies cannot spawn.
+	StopTime:
+		DisplayName: Stop Time
+		Stopped: Time has stopped.
+		Resumed: Time has resumed.
+	ToggleDeathsPH: Toggle Pre-hardmode boss deaths
+	ToggleDeathsHM: Toggle Hardmode boss deaths
+	ToggleDeathsPML: Toggle Post-Moon Lord boss deaths
+	TogglePermanentUpgrades: Toggle Permanent Upgrades
+	ChangeItemStats: Change item stats
+	ChangeProjectileStats: Change projectile stats
+	ChangeUniversalStealthFactor: Change Universal Stealth Factor
+	ResetStats:
+		DisplayName: Reset changed stats
+		Reset: Stat changes have been reset
+	BossRushTalkFaster:
+		DisplayName: Make Xeroc talk faster
+		TalkFast: Fine, I'll talk faster
+		TalkSlower: I will slow down my speech
 }
