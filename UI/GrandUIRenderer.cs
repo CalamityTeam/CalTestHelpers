@@ -75,7 +75,7 @@ namespace CalTestHelpers.UI
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderPML : null;
                     }),
-                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.TogglePermanentUpgrades"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/SanguineTangerine").Value, () =>
+                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.TogglePermanentUpgrades.DisplayName"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/SanguineTangerine").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.UpgradeUIRenderer : null;
                     }),
