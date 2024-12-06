@@ -103,24 +103,21 @@ Configs: {
 
 		InstantBossSummoning: {
 			Label: "[i:Stopwatch] Instant Boss Summoning"
-			Tooltip: "Makes Draedon and Supreme Calamitas summon instantly, skipping their special animations."
+			Tooltip: Makes Draedon and Supreme Calamitas summon instantly, skipping their special animations.
 		}
 	}
 }
 
 UI: {
 	RevealMap.DisplayName: Reveal the entire map
-	SetSpawnpoint:
-		DisplayName: Set your spawn point to your position
-		Set: Spawn point set, your new spawn point is: 
-	ToggleEnemySpawns:
-		DisplayName: Toggle enemy spawns.
-		CanSpawn: Enemies can now spawn.
-		CannotSpawn: Enemies cannot spawn.
-	StopTime:
-		DisplayName: Stop Time
-		Stopped: Time has stopped.
-		Resumed: Time has resumed.
+	SetSpawnpoint: DisplayName: Set your spawn point to your position
+	Set: Spawn point set, your new spawn point is:
+	ToggleEnemySpawns: DisplayName: Toggle enemy spawns.
+	CanSpawn: Enemies can now spawn.
+	CannotSpawn: Enemies cannot spawn.
+	StopTime: DisplayName: Stop Time
+	Stopped: Time has stopped.
+	Resumed: Time has resumed.
 	ToggleDeathsPH: Toggle Pre-hardmode boss deaths
 	ToggleDeathsHM: Toggle Hardmode boss deaths
 	ToggleDeathsPML: Toggle Post-Moon Lord boss deaths
@@ -128,11 +125,9 @@ UI: {
 	ChangeItemStats: Change item stats
 	ChangeProjectileStats: Change projectile stats
 	ChangeUniversalStealthFactor: Change Universal Stealth Factor
-	ResetStats:
-		DisplayName: Reset changed stats
-		Reset: Stat changes have been reset
-	BossRushTalkFaster:
-		DisplayName: Make Xeroc talk faster
-		TalkFast: Fine, I'll talk faster
-		TalkSlower: I will slow down my speech
+	ResetStats: DisplayName: Reset changed stats
+	Reset: Stat changes have been reset
+	BossRushTalkFaster: DisplayName: Make Xeroc talk faster
+	TalkFast: Fine, I'll talk faster
+	TalkSlower: I will slow down my speech
 }
