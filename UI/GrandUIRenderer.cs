@@ -129,7 +129,8 @@ namespace CalTestHelpers.UI
 
         public float ResolutionRatio => Main.screenWidth / 2560f;
 
-        public virtual Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 660, 40);
+        //this is to move the button
+        public virtual Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 700, 50);
 
         public virtual float UIScale => ResolutionRatio;
 
@@ -158,9 +159,12 @@ namespace CalTestHelpers.UI
 
                 spriteBatch.Draw(categorySlotTexture, currentRectangleArea.TopLeft(), null, Color.White, 0f, Vector2.Zero, UIScale, SpriteEffects.None, 0f);
 
-                float iconScale = UIScale / (button.IconTexture.Size().Length() / IconBounds.Length()) * 1.2f;
+                //makes the icons in the UI
+                float iconScale = UIScale / (button.IconTexture.Size().Length() / IconBounds.Length()) * 1.1f;
                 spriteBatch.Draw(button.IconTexture, currentRectangleArea.Center(), null, Color.White, 0f, button.IconTexture.Size() * 0.5f, iconScale, SpriteEffects.None, 0f);
-                button.DrawDescription(spriteBatch, currentRectangleArea.TopRight() + new Vector2(4f, IconBounds.Y * 0.25f), button.TextColor is null ? TextColor : (Color)button.TextColor, UIScale);
+
+                //make the buttons
+                button.DrawDescription(spriteBatch, currentRectangleArea.TopRight() + new Vector2(5f, IconBounds.Y * 0.25f), button.TextColor is null ? TextColor : (Color)button.TextColor, UIScale*0.85f);
 
                 if (button.OnClick != null && CalamityUtils.MouseHitbox.Intersects(currentRectangleAreaWorld))
                 {
@@ -181,7 +185,7 @@ namespace CalTestHelpers.UI
             if (GetType() == typeof(GrandUIRenderer))
             {
                 Texture2D toggleIcon = ModContent.Request<Texture2D>("CalTestHelpers/UI/GrandUIToggle").Value;
-                Rectangle currentRectangleArea = new Rectangle((int)TopLeftLocation.X, (int)(top - 44 * ResolutionRatio), (int)IconBounds.X, (int)IconBounds.Y);
+                Rectangle currentRectangleArea = new Rectangle((int)TopLeftLocation.X, (int)(top - 50 * ResolutionRatio), (int)IconBounds.X, (int)IconBounds.Y);
                 Rectangle currentRectangleAreaWorld = new Rectangle((int)(TopLeftLocation.X + Main.screenPosition.X), (int)(currentRectangleArea.Y + Main.screenPosition.Y), (int)IconBounds.X, (int)IconBounds.Y);
                 spriteBatch.Draw(toggleIcon, currentRectangleArea.Center(), null, Color.White, 0f, toggleIcon.Size() * 0.5f, ResolutionRatio * 0.6f, SpriteEffects.None, 0f);
 
