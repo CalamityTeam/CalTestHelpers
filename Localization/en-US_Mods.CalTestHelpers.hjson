@@ -146,6 +146,27 @@ UI: {
 	TogglePermanentUpgrades: {
 		DisplayName: Toggle Permanent Upgrades
 		SanguineTangerine: Toggle Sanguine Tangerine
+		MiracleFruit: Toggle Miracle Fruit
+		TaintedCloudberry: Toggle Tainted Cloudberry
+		SacredStrawberry: Toggle Sacred Strawberry
+		CometShard: Toggle Comet Shard
+		EtherealCore: Toggle Ethereal Core
+		PhantomHeart: Toggle Phantom Heart
+		MushroomPlasmaRoot: Toggle Mushroom Plasma Root
+		InfernalBlood: Toggle Infernal Blood
+		RedLightningContainer: Toggle Red Lightning Container
+		NotBarOfSoap: Toggle Electrolyte Gel Pack
+		StarlightFuelCell: Toggle Starlight Fuel Cell
+		Ectoheart: Toggle Ectoheart
+		DemonHeart: Toggle Demon Heart
+		CelestialOnion: Toggle Celestial Onion
+		VitalCrystal: Toggle Vital Crystal
+		ArcaneCrystal: Toggle Arcane Crystal
+		AegisFruit: Toggle Aegis Fruit
+		Ambrosia: Toggle Ambrosia
+		GummyWorm: Toggle Gummy Worm
+		GalaxyPearl: Toggle Galaxy Pearl
+		Bread: Toggle Artisan Loaf
 		NimbleBounder: Toggle Nimble Bounder
 	}
 
