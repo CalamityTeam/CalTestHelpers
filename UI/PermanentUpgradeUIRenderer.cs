@@ -45,12 +45,8 @@ namespace CalTestHelpers.UI
         }
 
         public string key = "Mods.CalTestHelpers.UI.TogglePermanentUpgrades.";
-        public override List<SpecialUIElement> UIElements
+        public override List<SpecialUIElement> UIElements => new List<SpecialUIElement>()
         {
-            get
-            {
-                List<SpecialUIElement> elements = new List<SpecialUIElement>()
-                {
                     new SpecialUIElement(Language.GetTextValue(key+"SanguineTangerine"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/SanguineTangerine").Value, () => ToggleUpgrade(PlayerUpgrade.BloodOrange), GetColor(HasUpgrade(PlayerUpgrade.BloodOrange))),
                     new SpecialUIElement("Toggle Miracle Fruit", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/MiracleFruit").Value, () => ToggleUpgrade(PlayerUpgrade.MiracleFruit), GetColor(HasUpgrade(PlayerUpgrade.MiracleFruit))),
                     new SpecialUIElement("Toggle Tainted Cloudberry", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/TaintedCloudberry").Value, () => ToggleUpgrade(PlayerUpgrade.Elderberry), GetColor(HasUpgrade(PlayerUpgrade.Elderberry))),
@@ -73,27 +69,8 @@ namespace CalTestHelpers.UI
                     new SpecialUIElement("Toggle Gummy Worm", TextureAssets.Item[ItemID.GummyWorm].Value, () => ToggleUpgrade(PlayerUpgrade.GummyWorm), GetColor(HasUpgrade(PlayerUpgrade.GummyWorm))),
                     new SpecialUIElement("Toggle Galaxy Pearl", TextureAssets.Item[ItemID.GalaxyPearl].Value, () => ToggleUpgrade(PlayerUpgrade.GalaxyPearl), GetColor(HasUpgrade(PlayerUpgrade.GalaxyPearl))),
                     new SpecialUIElement("Toggle Artisan Loaf", TextureAssets.Item[ItemID.ArtisanLoaf].Value, () => ToggleUpgrade(PlayerUpgrade.ArtisanLoaf), GetColor(HasUpgrade(PlayerUpgrade.ArtisanLoaf))),
-                    //new SpecialUIElement(Language.GetTextValue(key+"NimbleBounder"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/NimbleBounder").Value, () => ToggleUpgrade(PlayerUpgrade.NimbleBounder), GetColor(HasUpgrade(PlayerUpgrade.NimbleBounder)));
-                };
-                // Just so it doesnt error WeakReferences are used, this is to find if its dev branch or not, change to normal once update is out
-                Mod Calamity = GetInstance<CalTestHelpers>().Calamity;
-                if (Calamity.TryFind("NimbleBounder", out ModItem NimbleBounderIngame))
-                {
-                    //Defensive coding
-                    try
-                    {
-                        SpecialUIElement NibleBounder = new SpecialUIElement(Language.GetTextValue(key + "NimbleBounder"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/NimbleBounder", ReLogic.Content.AssetRequestMode.AsyncLoad).Value, () => ToggleUpgrade(PlayerUpgrade.NimbleBounder), GetColor(HasUpgrade(PlayerUpgrade.NimbleBounder)));
-                        elements.Add(NibleBounder);
-                    }
-                    catch (NullReferenceException) 
-                    {
-                        CalTestHelpers.Instance.Logger.Error("An error occurred checking if you're using a public Calamity version or a dev version, you can disregard this error if Nimble Bounder is not ingame for you");
-                    }
-                }
-
-                return elements;
-            }
-        }
+                    new SpecialUIElement(Language.GetTextValue(key+"NimbleBounder"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/NimbleBounder").Value, () => ToggleUpgrade(PlayerUpgrade.NimbleBounder), GetColor(HasUpgrade(PlayerUpgrade.NimbleBounder))),
+        };
 
         public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 450 - 350 * ResolutionRatio, 40);
 
