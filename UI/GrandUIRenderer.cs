@@ -63,15 +63,15 @@ namespace CalTestHelpers.UI
                         
                         Main.NewText(CalTestHelpersWorld.FrozenTime ? Language.GetTextValue("Mods.CalTestHelpers.UI.StopTime.Stopped") : Language.GetTextValue("Mods.CalTestHelpers.UI.StopTime.Resumed"));
                     }, CalTestHelpersWorld.FrozenTime ? Color.Green : Color.Red),
-                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleDeathsPH"), ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesPHM").Value, () =>
+                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleDeathsPH.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesPHM").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderPHM : null;
                     }),
-                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleDeathsHM"), ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesHM").Value, () =>
+                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleDeathsHM.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesHM").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderHM : null;
                     }),
-                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleDeathsPML"), ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesPML").Value, () =>
+                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleDeathsPML.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesPML").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderPML : null;
                     }),
@@ -79,18 +79,18 @@ namespace CalTestHelpers.UI
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.UpgradeUIRenderer : null;
                     }),
-                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ChangeItemStats"), ModContent.Request<Texture2D>("CalamityMod/Items/TreasureBags/MiscGrabBags/StarterBag").Value, () =>
+                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ChangeItemStats.DisplayName"), ModContent.Request<Texture2D>("CalamityMod/Items/TreasureBags/MiscGrabBags/StarterBag").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.ItemEditerUIRenderer : null;
-                    }),
-                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ChangeProjectileStats"), ModContent.Request<Texture2D>("CalamityMod/Items/Ammo/MarksmanRound").Value, () =>
+                    }, Color.Yellow),
+                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ChangeProjectileStats.DisplayName"), ModContent.Request<Texture2D>("CalamityMod/Items/Ammo/MarksmanRound").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.ProjectileEditerUIRenderer : null;
-                    }),
-                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ChangeUniversalStealthFactor"), ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/Cinquedea").Value, () =>
+                    }, Color.Yellow),
+                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ChangeUniversalStealthFactor.DisplayName"), ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/Cinquedea").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.StealthEditerUIRenderer : null;
-                    }),
+                    }, Color.Yellow),
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ResetStats.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/Gear").Value, () =>
                     {
                         ItemOverrideCache.ResetOverrides();
@@ -111,9 +111,9 @@ namespace CalTestHelpers.UI
 
                 // Just so it doesnt error WeakReferences are used, this is to find if its summoner branch or not
                 Mod Calamity = GetInstance<CalTestHelpers>().Calamity;
-                if (Calamity.TryFind("UnderBite", out ModItem SummonerBranch))
+                if (Calamity.TryFind("ArdorBlossomStar", out ModItem SummonerBranch))
                 {
-                    SpecialUIElement ToggleWhips = new SpecialUIElement("Toggle Whip tag", TextureAssets.Item[ItemID.BlandWhip].Value, () =>
+                    SpecialUIElement ToggleWhips = new SpecialUIElement("Toggle Whip tag (Dev versions only)", TextureAssets.Item[ItemID.BlandWhip].Value, () =>
                     {
                         Calamity.Call("ToggleWhipTag");
                         //im not gonna bother localizing something only the dev server can see, unless a dev requests
@@ -130,7 +130,7 @@ namespace CalTestHelpers.UI
         public float ResolutionRatio => Main.screenWidth / 2560f;
 
         //this is to move the button
-        public virtual Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 700, 50);
+        public virtual Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 450, 120);
 
         public virtual float UIScale => ResolutionRatio;
 
@@ -154,8 +154,8 @@ namespace CalTestHelpers.UI
             Texture2D categorySlotTexture = ModContent.Request<Texture2D>("CalTestHelpers/UI/CategorySlot").Value;
             foreach (var button in UIElements)
             {
-                Rectangle currentRectangleArea = new Rectangle((int)TopLeftLocation.X, (int)top, (int)IconBounds.X, (int)IconBounds.Y);
-                Rectangle currentRectangleAreaWorld = new Rectangle((int)(TopLeftLocation.X + Main.screenPosition.X), (int)(top + Main.screenPosition.Y), (int)IconBounds.X, (int)IconBounds.Y);
+                Rectangle currentRectangleArea = new Rectangle((int)TopLeftLocation.X-150, (int)top, (int)IconBounds.X, (int)IconBounds.Y);
+                Rectangle currentRectangleAreaWorld = new Rectangle((int)(TopLeftLocation.X-150 + Main.screenPosition.X), (int)(top + Main.screenPosition.Y), (int)IconBounds.X, (int)IconBounds.Y);
 
                 spriteBatch.Draw(categorySlotTexture, currentRectangleArea.TopLeft(), null, Color.White, 0f, Vector2.Zero, UIScale, SpriteEffects.None, 0f);
 
@@ -185,7 +185,7 @@ namespace CalTestHelpers.UI
             if (GetType() == typeof(GrandUIRenderer))
             {
                 Texture2D toggleIcon = ModContent.Request<Texture2D>("CalTestHelpers/UI/GrandUIToggle").Value;
-                Rectangle currentRectangleArea = new Rectangle((int)TopLeftLocation.X, (int)(top - 50 * ResolutionRatio), (int)IconBounds.X, (int)IconBounds.Y);
+                Rectangle currentRectangleArea = new Rectangle((int)TopLeftLocation.X-150, (int)(top - 50 * ResolutionRatio), (int)(IconBounds.X*1.1f), (int)(IconBounds.Y*1.1f));
                 Rectangle currentRectangleAreaWorld = new Rectangle((int)(TopLeftLocation.X + Main.screenPosition.X), (int)(currentRectangleArea.Y + Main.screenPosition.Y), (int)IconBounds.X, (int)IconBounds.Y);
                 spriteBatch.Draw(toggleIcon, currentRectangleArea.Center(), null, Color.White, 0f, toggleIcon.Size() * 0.5f, ResolutionRatio * 0.6f, SpriteEffects.None, 0f);
 

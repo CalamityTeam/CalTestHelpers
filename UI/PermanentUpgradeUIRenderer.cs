@@ -1,16 +1,22 @@
 using CalamityMod;
+// using CalamityMod.Testing;
+using CalamityMod.NPCs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace CalTestHelpers.UI
 {
     public class PermanentUpgradeUIRenderer : GrandUIRenderer
     {
+        public static bool NimbleBounderPresent = false;
         public enum PlayerUpgrade
         {
             BloodOrange,
@@ -37,34 +43,59 @@ namespace CalTestHelpers.UI
             ArtisanLoaf,
             NimbleBounder
         }
-        public override List<SpecialUIElement> UIElements => new List<SpecialUIElement>()
-        {
-            new SpecialUIElement("Toggle Sanguine Tangerine", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/SanguineTangerine").Value, () => ToggleUpgrade(PlayerUpgrade.BloodOrange), GetColor(HasUpgrade(PlayerUpgrade.BloodOrange))),
-            new SpecialUIElement("Toggle Miracle Fruit", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/MiracleFruit").Value, () => ToggleUpgrade(PlayerUpgrade.MiracleFruit), GetColor(HasUpgrade(PlayerUpgrade.MiracleFruit))),
-            new SpecialUIElement("Toggle Tainted Cloudberry", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/TaintedCloudberry").Value, () => ToggleUpgrade(PlayerUpgrade.Elderberry), GetColor(HasUpgrade(PlayerUpgrade.Elderberry))),
-            new SpecialUIElement("Toggle Sacred Strawberry", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/SacredStrawberry").Value, () => ToggleUpgrade(PlayerUpgrade.Dragonfruit), GetColor(HasUpgrade(PlayerUpgrade.Dragonfruit))),
-            new SpecialUIElement("Toggle Comet Shard", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/CometShard").Value, () => ToggleUpgrade(PlayerUpgrade.CometShard), GetColor(HasUpgrade(PlayerUpgrade.CometShard))),
-            new SpecialUIElement("Toggle Ethereal Core", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/EtherealCore").Value, () => ToggleUpgrade(PlayerUpgrade.EtherealCore), GetColor(HasUpgrade(PlayerUpgrade.EtherealCore))),
-            new SpecialUIElement("Toggle Phantom Heart", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/PhantomHeart").Value, () => ToggleUpgrade(PlayerUpgrade.PhantomHeart), GetColor(HasUpgrade(PlayerUpgrade.PhantomHeart))),
-            new SpecialUIElement("Toggle Mushroom Plasma Root", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/MushroomPlasmaRoot").Value, () => ToggleUpgrade(PlayerUpgrade.MushroomPlasmaRoot), GetColor(HasUpgrade(PlayerUpgrade.MushroomPlasmaRoot))),
-            new SpecialUIElement("Toggle Infernal Blood", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/InfernalBlood").Value, () => ToggleUpgrade(PlayerUpgrade.InfernalBlood), GetColor(HasUpgrade(PlayerUpgrade.InfernalBlood))),
-            new SpecialUIElement("Toggle Red Lightning Container", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/RedLightningContainer").Value, () => ToggleUpgrade(PlayerUpgrade.RedLightningContainer), GetColor(HasUpgrade(PlayerUpgrade.RedLightningContainer))),
-            new SpecialUIElement("Toggle Electrolyte Gel Pack", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/ElectrolyteGelPack").Value, () => ToggleUpgrade(PlayerUpgrade.ElectrolyteGelPack), GetColor(HasUpgrade(PlayerUpgrade.ElectrolyteGelPack))),
-            new SpecialUIElement("Toggle Starlight Fuel Cell", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/StarlightFuelCell").Value, () => ToggleUpgrade(PlayerUpgrade.StarlightFuelCell), GetColor(HasUpgrade(PlayerUpgrade.StarlightFuelCell))),
-            new SpecialUIElement("Toggle Ectoheart", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Ectoheart").Value, () => ToggleUpgrade(PlayerUpgrade.Ectoheart), GetColor(HasUpgrade(PlayerUpgrade.Ectoheart))),
-            new SpecialUIElement("Toggle Demon Heart", TextureAssets.Item[ItemID.DemonHeart].Value, () => ToggleUpgrade(PlayerUpgrade.DemonHeart), GetColor(HasUpgrade(PlayerUpgrade.DemonHeart))),
-            new SpecialUIElement("Toggle Celestial Onion", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/CelestialOnion").Value, () => ToggleUpgrade(PlayerUpgrade.CelestialOnion), GetColor(HasUpgrade(PlayerUpgrade.CelestialOnion))),
-            new SpecialUIElement("Toggle Vital Crystal", TextureAssets.Item[ItemID.AegisCrystal].Value, () => ToggleUpgrade(PlayerUpgrade.VitalCrystal), GetColor(HasUpgrade(PlayerUpgrade.VitalCrystal))),
-            new SpecialUIElement("Toggle Arcane Crystal", TextureAssets.Item[ItemID.ArcaneCrystal].Value, () => ToggleUpgrade(PlayerUpgrade.ArcaneCrystal), GetColor(HasUpgrade(PlayerUpgrade.ArcaneCrystal))),
-            new SpecialUIElement("Toggle Aegis Fruit", TextureAssets.Item[ItemID.AegisFruit].Value, () => ToggleUpgrade(PlayerUpgrade.AegisFruit), GetColor(HasUpgrade(PlayerUpgrade.AegisFruit))),
-            new SpecialUIElement("Toggle Ambrosia", TextureAssets.Item[ItemID.Ambrosia].Value, () => ToggleUpgrade(PlayerUpgrade.Ambrosia), GetColor(HasUpgrade(PlayerUpgrade.Ambrosia))),
-            new SpecialUIElement("Toggle Gummy Worm", TextureAssets.Item[ItemID.GummyWorm].Value, () => ToggleUpgrade(PlayerUpgrade.GummyWorm), GetColor(HasUpgrade(PlayerUpgrade.GummyWorm))),
-            new SpecialUIElement("Toggle Galaxy Pearl", TextureAssets.Item[ItemID.GalaxyPearl].Value, () => ToggleUpgrade(PlayerUpgrade.GalaxyPearl), GetColor(HasUpgrade(PlayerUpgrade.GalaxyPearl))),
-            new SpecialUIElement("Toggle Artisan Loaf", TextureAssets.Item[ItemID.ArtisanLoaf].Value, () => ToggleUpgrade(PlayerUpgrade.ArtisanLoaf), GetColor(HasUpgrade(PlayerUpgrade.ArtisanLoaf))),
-            new SpecialUIElement("Toggle Nimble Bounder", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/NimbleBounder").Value, () => ToggleUpgrade(PlayerUpgrade.NimbleBounder), GetColor(HasUpgrade(PlayerUpgrade.NimbleBounder))),
-        };
 
-        public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 660 - 350 * ResolutionRatio, 40);
+        public string key = "Mods.CalTestHelpers.UI.TogglePermanentUpgrades.";
+        public override List<SpecialUIElement> UIElements
+        {
+            get
+            {
+                List<SpecialUIElement> elements = new List<SpecialUIElement>()
+                {
+                    new SpecialUIElement(Language.GetTextValue(key+"SanguineTangerine"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/SanguineTangerine").Value, () => ToggleUpgrade(PlayerUpgrade.BloodOrange), GetColor(HasUpgrade(PlayerUpgrade.BloodOrange))),
+                    new SpecialUIElement("Toggle Miracle Fruit", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/MiracleFruit").Value, () => ToggleUpgrade(PlayerUpgrade.MiracleFruit), GetColor(HasUpgrade(PlayerUpgrade.MiracleFruit))),
+                    new SpecialUIElement("Toggle Tainted Cloudberry", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/TaintedCloudberry").Value, () => ToggleUpgrade(PlayerUpgrade.Elderberry), GetColor(HasUpgrade(PlayerUpgrade.Elderberry))),
+                    new SpecialUIElement("Toggle Sacred Strawberry", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/SacredStrawberry").Value, () => ToggleUpgrade(PlayerUpgrade.Dragonfruit), GetColor(HasUpgrade(PlayerUpgrade.Dragonfruit))),
+                    new SpecialUIElement("Toggle Comet Shard", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/CometShard").Value, () => ToggleUpgrade(PlayerUpgrade.CometShard), GetColor(HasUpgrade(PlayerUpgrade.CometShard))),
+                    new SpecialUIElement("Toggle Ethereal Core", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/EtherealCore").Value, () => ToggleUpgrade(PlayerUpgrade.EtherealCore), GetColor(HasUpgrade(PlayerUpgrade.EtherealCore))),
+                    new SpecialUIElement("Toggle Phantom Heart", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/PhantomHeart").Value, () => ToggleUpgrade(PlayerUpgrade.PhantomHeart), GetColor(HasUpgrade(PlayerUpgrade.PhantomHeart))),
+                    new SpecialUIElement("Toggle Mushroom Plasma Root", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/MushroomPlasmaRoot").Value, () => ToggleUpgrade(PlayerUpgrade.MushroomPlasmaRoot), GetColor(HasUpgrade(PlayerUpgrade.MushroomPlasmaRoot))),
+                    new SpecialUIElement("Toggle Infernal Blood", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/InfernalBlood").Value, () => ToggleUpgrade(PlayerUpgrade.InfernalBlood), GetColor(HasUpgrade(PlayerUpgrade.InfernalBlood))),
+                    new SpecialUIElement("Toggle Red Lightning Container", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/RedLightningContainer").Value, () => ToggleUpgrade(PlayerUpgrade.RedLightningContainer), GetColor(HasUpgrade(PlayerUpgrade.RedLightningContainer))),
+                    new SpecialUIElement("Toggle Electrolyte Gel Pack", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/ElectrolyteGelPack").Value, () => ToggleUpgrade(PlayerUpgrade.ElectrolyteGelPack), GetColor(HasUpgrade(PlayerUpgrade.ElectrolyteGelPack))),
+                    new SpecialUIElement("Toggle Starlight Fuel Cell", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/StarlightFuelCell").Value, () => ToggleUpgrade(PlayerUpgrade.StarlightFuelCell), GetColor(HasUpgrade(PlayerUpgrade.StarlightFuelCell))),
+                    new SpecialUIElement("Toggle Ectoheart", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Ectoheart").Value, () => ToggleUpgrade(PlayerUpgrade.Ectoheart), GetColor(HasUpgrade(PlayerUpgrade.Ectoheart))),
+                    new SpecialUIElement("Toggle Demon Heart", TextureAssets.Item[ItemID.DemonHeart].Value, () => ToggleUpgrade(PlayerUpgrade.DemonHeart), GetColor(HasUpgrade(PlayerUpgrade.DemonHeart))),
+                    new SpecialUIElement("Toggle Celestial Onion", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/CelestialOnion").Value, () => ToggleUpgrade(PlayerUpgrade.CelestialOnion), GetColor(HasUpgrade(PlayerUpgrade.CelestialOnion))),
+                    new SpecialUIElement("Toggle Vital Crystal", TextureAssets.Item[ItemID.AegisCrystal].Value, () => ToggleUpgrade(PlayerUpgrade.VitalCrystal), GetColor(HasUpgrade(PlayerUpgrade.VitalCrystal))),
+                    new SpecialUIElement("Toggle Arcane Crystal", TextureAssets.Item[ItemID.ArcaneCrystal].Value, () => ToggleUpgrade(PlayerUpgrade.ArcaneCrystal), GetColor(HasUpgrade(PlayerUpgrade.ArcaneCrystal))),
+                    new SpecialUIElement("Toggle Aegis Fruit", TextureAssets.Item[ItemID.AegisFruit].Value, () => ToggleUpgrade(PlayerUpgrade.AegisFruit), GetColor(HasUpgrade(PlayerUpgrade.AegisFruit))),
+                    new SpecialUIElement("Toggle Ambrosia", TextureAssets.Item[ItemID.Ambrosia].Value, () => ToggleUpgrade(PlayerUpgrade.Ambrosia), GetColor(HasUpgrade(PlayerUpgrade.Ambrosia))),
+                    new SpecialUIElement("Toggle Gummy Worm", TextureAssets.Item[ItemID.GummyWorm].Value, () => ToggleUpgrade(PlayerUpgrade.GummyWorm), GetColor(HasUpgrade(PlayerUpgrade.GummyWorm))),
+                    new SpecialUIElement("Toggle Galaxy Pearl", TextureAssets.Item[ItemID.GalaxyPearl].Value, () => ToggleUpgrade(PlayerUpgrade.GalaxyPearl), GetColor(HasUpgrade(PlayerUpgrade.GalaxyPearl))),
+                    new SpecialUIElement("Toggle Artisan Loaf", TextureAssets.Item[ItemID.ArtisanLoaf].Value, () => ToggleUpgrade(PlayerUpgrade.ArtisanLoaf), GetColor(HasUpgrade(PlayerUpgrade.ArtisanLoaf))),
+                    //new SpecialUIElement(Language.GetTextValue(key+"NimbleBounder"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/NimbleBounder").Value, () => ToggleUpgrade(PlayerUpgrade.NimbleBounder), GetColor(HasUpgrade(PlayerUpgrade.NimbleBounder)));
+                };
+                // Just so it doesnt error WeakReferences are used, this is to find if its dev branch or not, change to normal once update is out
+                Mod Calamity = GetInstance<CalTestHelpers>().Calamity;
+                if (Calamity.TryFind("NimbleBounder", out ModItem NimbleBounderIngame))
+                {
+                    //Defensive coding
+                    try
+                    {
+                        SpecialUIElement NibleBounder = new SpecialUIElement(Language.GetTextValue(key + "NimbleBounder"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/NimbleBounder", ReLogic.Content.AssetRequestMode.AsyncLoad).Value, () => ToggleUpgrade(PlayerUpgrade.NimbleBounder), GetColor(HasUpgrade(PlayerUpgrade.NimbleBounder)));
+                        elements.Add(NibleBounder);
+                    }
+                    catch (NullReferenceException) 
+                    {
+                        CalTestHelpers.Instance.Logger.Error("An error occurred checking if you're using a public Calamity version or a dev version, you can disregard this error if Nimble Bounder is not ingame for you");
+                    }
+                }
+
+                return elements;
+            }
+        }
+
+        public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 450 - 350 * ResolutionRatio, 40);
 
         public static Color GetColor(bool hasUpgrade) => hasUpgrade ? Color.Green : Color.Red;
 
@@ -246,7 +277,7 @@ namespace CalTestHelpers.UI
                 case PlayerUpgrade.NimbleBounder:
                     return Main.LocalPlayer.Calamity().nimbleBounderBoost;
             }
-			return false;
+            return false;
         }
     }
 }

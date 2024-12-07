@@ -121,6 +121,7 @@ Configs: {
 
 UI: {
 	RevealMap.DisplayName: Reveal the entire map
+
 	SetSpawnpoint: {
 		DisplayName: Set your spawn point to your position
 		Set: Spawn point set, your new spawn point is
@@ -138,32 +139,26 @@ UI: {
 		Resumed: Time has resumed.
 	}
 
-	ToggleDeathsPH:{
-		DisplayName: Toggle Pre-hardmode boss deaths
-	}
-	ToggleDeathsHM:{
-		DisplayName: Toggle Hardmode boss deaths
-	}
-	ToggleDeathsPML:{
-		DisplayName: Toggle Post-Moon Lord boss deaths
-	}
+	ToggleDeathsPH.DisplayName: Toggle Pre-hardmode boss deaths
+	ToggleDeathsHM.DisplayName: Toggle Hardmode boss deaths
+	ToggleDeathsPML.DisplayName: Toggle Post-Moon Lord boss deaths
+
 	TogglePermanentUpgrades: {
 		DisplayName: Toggle Permanent Upgrades
+		SanguineTangerine: Toggle Sanguine Tangerine
+		NimbleBounder: Toggle Nimble Bounder
 	}
-	ChangeItemStats: {
-		DisplayName: [c/FF0000:DEPRECATED] Change item stats
-	}
-	ChangeProjectileStats: {
-		DisplayName: [c/FF0000:DEPRECATED] Change projectile stats
-	}
-	ChangeUniversalStealthFactor: Change Universal Stealth Factor
+
+	ChangeItemStats.DisplayName: "[DEPRECATED] Change item stats"
+	ChangeProjectileStats.DisplayName: "[DEPRECATED] Change projectile stats"
+	ChangeUniversalStealthFactor.DisplayName: "[DEPRECATED] Change Universal Stealth Factor"
 
 	ResetStats: {
 		DisplayName: Reset changed stats
 		Reset: Stat changes have been reset
 	}
 
-	BossRushTalkFaster:{
+	BossRushTalkFaster: {
 		DisplayName: Make Xeroc talk faster
 		TalkFast: Fine, I'll talk faster
 		TalkSlower: I will slow down my speech
