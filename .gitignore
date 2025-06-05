@@ -308,6 +308,5 @@ $RECYCLE.BIN/
 
 /CalTestHelpers.csproj
 /.vs/CalTestHelpers/FileContentIndex
-/.vs/CalTestHelpers/v17/HierarchyCache.v1.txt
-/Properties/launchSettings.json
 /CalTestHelpers.sln
+/.vs/CalTestHelpers/v17/HierarchyCache.v1.txt
