@@ -1,13 +1,4 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/CalTestHelpers.csproj
-/.vs/CalTestHelpers/FileContentIndex
-
-# Start of non automatic stuff so git finally stops bothering me when I build and reload the mod
-
-# manually added cronscript
+﻿# manually added cronscript
 cronpull.sh
 
 # Ignore Visual Studio solution files.
@@ -310,7 +301,13 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/CalTestHelpers.csproj
+/.vs/CalTestHelpers/FileContentIndex
 /.vs/CalTestHelpers/v17/HierarchyCache.v1.txt
 /Properties/launchSettings.json
-/CalTestHelpers.sln
 /CalTestHelpers.sln
