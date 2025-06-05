@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\localization\\en-us_mods.caltesthelpers.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|solutionrelative:localization\\en-us_mods.caltesthelpers.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -34,8 +38,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-05T23:00:16.113Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -82,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CalTestHelpersGlobalItem.cs",
               "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpersGlobalItem.cs",
               "RelativeDocumentMoniker": "CalTestHelpersGlobalItem.cs",
@@ -94,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "description.txt",
               "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\description.txt",
               "RelativeDocumentMoniker": "description.txt",
@@ -102,12 +119,11 @@
               "RelativeToolTip": "description.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-06-19T21:11:44.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T21:11:44.127Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CalTestHelpersWorld.cs",
               "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpersWorld.cs",
               "RelativeDocumentMoniker": "CalTestHelpersWorld.cs",
@@ -119,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "en-US_Mods.CalTestHelpers.hjson",
               "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\Localization\\en-US_Mods.CalTestHelpers.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US_Mods.CalTestHelpers.hjson",
@@ -132,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "build.txt",
               "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\build.txt",
               "RelativeDocumentMoniker": "build.txt",
@@ -144,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "GrandUIRenderer.cs",
               "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\GrandUIRenderer.cs",
               "RelativeDocumentMoniker": "UI\\GrandUIRenderer.cs",

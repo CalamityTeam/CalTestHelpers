@@ -310,3 +310,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/.vs/CalTestHelpers/v17/HierarchyCache.v1.txt
+/Properties/launchSettings.json
+/CalTestHelpers.sln
+/CalTestHelpers.sln

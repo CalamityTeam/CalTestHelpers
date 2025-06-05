@@ -173,3 +173,12 @@ D:\Documentos\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\n
 D:\Documentos\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\net8.0\refint\CalTestHelpers.dll
 D:\Documentos\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\net8.0\CalTestHelpers.pdb
 D:\Documentos\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\net8.0\ref\CalTestHelpers.dll
+C:\Users\diego\Documents\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\net8.0\CalTestHelpers.csproj.AssemblyReference.cache
+C:\Users\diego\Documents\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\net8.0\CalTestHelpers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Documents\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\net8.0\CalTestHelpers.AssemblyInfoInputs.cache
+C:\Users\diego\Documents\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\net8.0\CalTestHelpers.AssemblyInfo.cs
+C:\Users\diego\Documents\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\net8.0\CalTestHelpers.csproj.CoreCompileInputs.cache
+C:\Users\diego\Documents\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\net8.0\CalTestHelpers.sourcelink.json
+C:\Users\diego\Documents\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\net8.0\CalTestHelpers.dll
+C:\Users\diego\Documents\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\net8.0\refint\CalTestHelpers.dll
+C:\Users\diego\Documents\My Games\Terraria\tModLoader\ModSources\CalTestHelpers\obj\Debug\net8.0\CalTestHelpers.pdb
