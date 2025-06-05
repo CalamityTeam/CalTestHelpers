@@ -27,7 +27,7 @@ namespace CalTestHelpers
                     NPC scal = CalamityUtils.SpawnBossBetter(spawnPosition, ModContent.NPCType<SupremeCalamitas>());
                     if (projectile.ai[1] == 1)
                     {
-                        scal.ModNPC<SupremeCalamitas>().cirrus = true;
+                        scal.ModNPC<SupremeCalamitas>().permafrost = true;
                     }
                 }
 
