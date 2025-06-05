@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\description.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:description.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\localization\\en-us_mods.caltesthelpers.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|solutionrelative:localization\\en-us_mods.caltesthelpers.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpersGlobalItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CalTestHelpersGlobalItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\description.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|solutionrelative:description.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpersWorld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CalTestHelpersWorld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\caltesthelpersglobalitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|solutionrelative:caltesthelpersglobalitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\Localization\\en-US_Mods.CalTestHelpers.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Localization\\en-US_Mods.CalTestHelpers.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\caltesthelpersworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|solutionrelative:caltesthelpersworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\build.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:build.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\build.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|solutionrelative:build.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\GrandUIRenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UI\\GrandUIRenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\ui\\granduirenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A38EC578-0ACC-4024-826F-8508BA16791E}|CalTestHelpers.csproj|solutionrelative:ui\\granduirenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CalTestHelpersGlobalItem.cs",
               "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpersGlobalItem.cs",
               "RelativeDocumentMoniker": "CalTestHelpersGlobalItem.cs",
@@ -94,20 +94,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "description.txt",
               "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\description.txt",
               "RelativeDocumentMoniker": "description.txt",
               "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\description.txt",
               "RelativeToolTip": "description.txt",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2024-06-19T21:11:44.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CalTestHelpersWorld.cs",
               "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpersWorld.cs",
               "RelativeDocumentMoniker": "CalTestHelpersWorld.cs",
@@ -119,15 +119,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "en-US_Mods.CalTestHelpers.hjson",
               "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\Localization\\en-US_Mods.CalTestHelpers.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US_Mods.CalTestHelpers.hjson",
               "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\Localization\\en-US_Mods.CalTestHelpers.hjson",
               "RelativeToolTip": "Localization\\en-US_Mods.CalTestHelpers.hjson",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAeAAAA",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-06-19T20:35:03.058Z"
+              "WhenOpened": "2024-06-19T20:35:03.058Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
