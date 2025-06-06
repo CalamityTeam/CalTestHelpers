@@ -11,20 +11,30 @@ Items: {
 		Tooltip:
 			'''
 			2.3.1.3 Changelog
-			- Added Giant Clam to boss toggles so that people can stop Amidias from spawning
 			- Fixed loading crashes due to Calamity's latest update
 			- Replaced Changelog sprite with one made by me and not an ex-developer
 			- Some background changes to make development easier and faster and so that I don't lose progress again 
-			  (RIP localization code, at least I could salvage some of the localization file changes)
 			- Fixed deadname in mod's credits
-			- Removed Time Switching since Cosmolight exists and does it better
+			- Some internal changes to make managing this mod easier
+			- Added Nimble Bounder to the upgrade menu (will show up when the Calamity patch comes out)
+			- Added Giant Clam to boss toggles so that people can stop Amidias from spawning which was a common suggestion
+			- Removed the change time button; just use Cosmolight or other mod's time changing since they are far better
+			- Updated localization files, added proper localization support (Idk how this mod still worked despite improper localization)
+			- Minor tweaks to the UI
+			- Deprecated the Item, Projectile and Stealth factor editors, you should only be using these if you are a tester without access
+			to code for whatever addon you're making
 
-			Notice:
-			If you want to make a sprite for an item that has a placeholder or a suggestion
-			submit it in #other-mod-talk on the Official Calamity Discord server and ping Shade,
-			or send something the Discussions tab in Steam Workshop
+			Known issues:
+			- Game going crazy if multiple time freezes are on: Wont be fixed for the time being so that players arent stuck with frozen time from this mod
+			please use other mod's time freezers if they are available
+
+			Notices:
+			- If you want to make a sprite for an item that has a placeholder or a suggestion
+			submit it to shade__storm in #other-mod-talk on the Official Calamity Discord server,
+			or the Discussions tab in Steam Workshop
 			(I would allow DMs if it wasn't for all those scams and bots that have popped up,
 			sorry guys)
+			- I am not going to use Infernum's assets for boss summoning items, those belong to them
 			'''
 	}
 
@@ -91,7 +101,7 @@ Configs: {
 
 		Changelog: {
 			Label: "[i:CalTestHelpers/Changelog] Changelog"
-			Tooltip: Gives you a changelog on world entry
+			Tooltip: Gives you a changelog item on world entry.
 		}
 
 		StoreFightInformation: {
@@ -101,12 +111,12 @@ Configs: {
 
 		StuffAmountDisplay: {
 			Label: "[i:CalamityMod/LaboratoryElectricPanelItem] Amount of stuff to display"
-			Tooltip: How many projectiles should the Projectile and item stat editor display
+			Tooltip: How many projectiles should the Projectile and item stat editor display?
 		}
 
 		InstantBossSummoning: {
 			Label: "[i:Stopwatch] Instant Boss Summoning"
-			Tooltip: "Skips the Supreme Calamitas and Draedon summoning cutscenes"
+			Tooltip: Makes Draedon and Supreme Calamitas summon instantly, skipping their special animations.
 		}
 	}
 }
@@ -116,7 +126,7 @@ UI: {
 
 	SetSpawnpoint: {
 		DisplayName: Set your spawn point to your position
-		Set: Spawn point set, your new spawn point is:
+		Set: Spawn point set, your new spawn point is
 	}
 
 	ToggleEnemySpawns: {
@@ -138,6 +148,27 @@ UI: {
 	TogglePermanentUpgrades: {
 		DisplayName: Toggle Permanent Upgrades
 		SanguineTangerine: Toggle Sanguine Tangerine
+		MiracleFruit: Toggle Miracle Fruit
+		TaintedCloudberry: Toggle Tainted Cloudberry
+		SacredStrawberry: Toggle Sacred Strawberry
+		CometShard: Toggle Comet Shard
+		EtherealCore: Toggle Ethereal Core
+		PhantomHeart: Toggle Phantom Heart
+		MushroomPlasmaRoot: Toggle Mushroom Plasma Root
+		InfernalBlood: Toggle Infernal Blood
+		RedLightningContainer: Toggle Red Lightning Container
+		NotBarOfSoap: Toggle Electrolyte Gel Pack
+		StarlightFuelCell: Toggle Starlight Fuel Cell
+		Ectoheart: Toggle Ectoheart
+		DemonHeart: Toggle Demon Heart
+		CelestialOnion: Toggle Celestial Onion
+		VitalCrystal: Toggle Vital Crystal
+		ArcaneCrystal: Toggle Arcane Crystal
+		AegisFruit: Toggle Aegis Fruit
+		Ambrosia: Toggle Ambrosia
+		GummyWorm: Toggle Gummy Worm
+		GalaxyPearl: Toggle Galaxy Pearl
+		Bread: Toggle Artisan Loaf
 		NimbleBounder: Toggle Nimble Bounder
 	}
 

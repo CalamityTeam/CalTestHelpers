@@ -6,7 +6,8 @@ namespace CalTestHelpers
 {
     public class CalTestHelpers : Mod
     {
-        internal static Mod Calamity = null;
+        internal static CalTestHelpers Instance;
+        internal Mod Calamity = null;
         public static bool ShouldDisplayUIs
         {
             get;
@@ -74,6 +75,7 @@ namespace CalTestHelpers
         internal static bool HasDonePostLoading = false;
         public override void Load()
         {
+            Instance = this;
             ToggleUIsHotkey = KeybindLoader.RegisterKeybind(this, "Toggle Test UIs", "Q");
             Calamity = ModLoader.GetMod("CalamityMod");
             ILEdits.Load();
