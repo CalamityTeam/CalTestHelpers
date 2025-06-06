@@ -7,6 +7,7 @@ using Terraria.ModLoader;
 using Terraria.Localization;
 using static Terraria.ModLoader.ModContent;
 using Terraria.ID;
+using Terraria.Localization;
 using CalamityMod.CalPlayer;
 using Terraria.GameContent;
 using CalamityMod.Balancing;
@@ -31,7 +32,7 @@ namespace CalTestHelpers.UI
                     {
                         Main.spawnTileX = (int)(Main.LocalPlayer.position.X - 8 + Main.LocalPlayer.width / 2) / 16;
                         Main.spawnTileY = (int)(Main.LocalPlayer.position.Y + Main.LocalPlayer.height) / 16;
-                        Main.NewText(Language.GetTextValue("Mods.CalTestHelpers.UI.SetSpawnpoint.Set" + new Vector2(Main.spawnTileX, Main.spawnTileY)));
+                        Main.NewText(Language.GetTextValue("Mods.CalTestHelpers.UI.SetSpawnpoint.set")+$" { new Vector2(Main.spawnTileX, Main.spawnTileY) }");
                     }),
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleEnemySpawns.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/EnemyIcon").Value, () =>
                     {
@@ -65,17 +66,21 @@ namespace CalTestHelpers.UI
                     }, CalTestHelpersWorld.FrozenTime ? Color.Green : Color.Red),
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleDeathsPH.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesPHM").Value, () =>
                     {
-                        CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderPHM : null;
+                        Main.NewText($"Time has {(CalTestHelpersWorld.FrozenTime ? "stopped" : "resumed")}.");
                     }),
-                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleDeathsHM.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesHM").Value, () =>
+                    new SpecialUIElement("Toggle Prehardmode boss deaths.", ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesPHM").Value, () =>
                     {
-                        CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderHM : null;
+                        CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderPHM : null;
                     }),
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleDeathsPML.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesPML").Value, () =>
                     {
-                        CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderPML : null;
+                        CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderHM : null;
                     }),
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.TogglePermanentUpgrades.DisplayName"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/SanguineTangerine").Value, () =>
+                    {
+                        CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderPML : null;
+                    }),
+                    new SpecialUIElement("Toggle permanent upgrades.", ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/BloodOrange").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.UpgradeUIRenderer : null;
                     }),
@@ -96,16 +101,16 @@ namespace CalTestHelpers.UI
                         ItemOverrideCache.ResetOverrides();
                         EntityOverrideCache.ResetOverrides();
                         CalTestHelpers.ItemEditerUIRenderer.ItemBeingEdited = null;
-                        CalTestHelpers.ProjectileEditerUIRenderer.ProjectileBeingEdited = null;
-                        CalTestHelpers.SecondaryUIToDisplay = null;
-                        BalancingConstants.UniversalStealthStrikeDamageFactor = 0.5f;
-                        CalTestHelpers.HaveAnyStatManipulationsBeenDone = false;
                         Main.NewText(Language.GetTextValue("Mods.CalTestHelpers.UI.ResetStats.Reset"));
                     }),
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.BossRushTalkFaster.DisplayName"), Main.zenithWorld ? ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus_GFB").Value : ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () =>
+                        CalTestHelpers.HaveAnyStatManipulationsBeenDone = false;
+                        Main.NewText($"Stat changes have been reset.");
+                       Main.NewText($"{(BossRushDialogueSystem.GottaGoFast ? Language.GetTextValue("Mods.CalTestHelpers.UI.BossRushTalkFaster.TalkFaster") : Language.GetTextValue("Mods.CalTestHelpers.UI.BossRushTalkFaster.TalkSlower"))}.", BossRushEvent.XerocTextColor);
+                    new SpecialUIElement("Make Xeroc talk faster", Main.zenithWorld ? ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus_GFB").Value : ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () =>
                     {
                        BossRushDialogueSystem.GottaGoFast = !BossRushDialogueSystem.GottaGoFast;
-                       Main.NewText($"{(BossRushDialogueSystem.GottaGoFast ? Language.GetTextValue("Mods.CalTestHelpers.UI.BossRushTalkFaster.TalkFaster") : Language.GetTextValue("Mods.CalTestHelpers.UI.BossRushTalkFaster.TalkSlower"))}.", BossRushEvent.XerocTextColor);
+                       Main.NewText($"{(BossRushDialogueSystem.GottaGoFast ? "Fine, I'll talk faster" : "I will slow down my speech")}.", BossRushEvent.XerocTextColor);
                     }, BossRushDialogueSystem.GottaGoFast ? Color.Green : Color.Red),
                 };
 

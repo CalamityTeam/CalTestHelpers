@@ -11,6 +11,10 @@ Items: {
 		Tooltip:
 			'''
 			2.3.1.3 Changelog
+			- Fixed loading crashes due to Calamity's latest update
+			- Replaced Changelog sprite with one made by me and not an ex-developer
+			- Some background changes to make development easier and faster and so that I don't lose progress again 
+			- Fixed deadname in mod's credits
 			- Some internal changes to make managing this mod easier
 			- Added Nimble Bounder to the upgrade menu (will show up when the Calamity patch comes out)
 			- Added Giant Clam to boss toggles so that people can stop Amidias from spawning which was a common suggestion
@@ -31,7 +35,6 @@ Items: {
 			(I would allow DMs if it wasn't for all those scams and bots that have popped up,
 			sorry guys)
 			- I am not going to use Infernum's assets for boss summoning items, those belong to them
-			- On the Calamity Art server we need assets for Anahita's summon item, once one gets in this item will be moved to the main mod and probably be fancier
 			'''
 	}
 
@@ -87,7 +90,7 @@ Configs: {
 
 		Headers: {
 			Config: Calamity Test Helper configs
-			Deprecated: From extremely old 1.3 TModloader versions, might be fixed someday or not. Enable at your own risk
+			Deprecated: From extremely old 1.3 versions, not supported anymore. USE AT YOUR OWN RISK
 			Configs: Configs Header
 		}
 
