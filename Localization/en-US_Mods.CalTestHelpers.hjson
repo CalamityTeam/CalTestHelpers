@@ -12,11 +12,15 @@ Items: {
 			'''
 			2.3.1.3 Changelog
 			- Added Giant Clam to boss toggles so that people can stop Amidias from spawning
+			- Fixed loading crashes due to Calamity's latest update
+			- Replaced Changelog sprite with one made by me and not an ex-developer
+			- Proper localization code (how did this mod not crash?, anyways translators can now do their thing!)
+			- Some background changes to make development easier and faster
 
 			Notice:
 			If you want to make a sprite for an item that has a placeholder or a suggestion
-			submit it to shade__storm in #other-mod-talk on the Official Calamity Discord server,
-			or the Discussions tab in Steam Workshop
+			submit it in #other-mod-talk on the Official Calamity Discord server and ping Shade,
+			or send something the Discussions tab in Steam Workshop
 			(I would allow DMs if it wasn't for all those scams and bots that have popped up,
 			sorry guys)
 			'''
@@ -74,7 +78,7 @@ Configs: {
 
 		Headers: {
 			Config: Calamity Test Helper configs
-			Deprecated: From extremely old 1.3 versions, might be fixed someday
+			Deprecated: From extremely old 1.3 versions, not supported anymore. USE AT YOUR OWN RISK
 			Configs: Configs Header
 		}
 
@@ -100,7 +104,7 @@ Configs: {
 
 		InstantBossSummoning: {
 			Label: "[i:Stopwatch] Instant Boss Summoning"
-			Tooltip: ""
+			Tooltip: "Skips the Supreme Calamitas and Draedon summoning cutscenes"
 		}
 	}
 }
