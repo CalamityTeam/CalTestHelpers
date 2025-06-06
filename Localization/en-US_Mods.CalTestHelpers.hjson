@@ -14,8 +14,10 @@ Items: {
 			- Added Giant Clam to boss toggles so that people can stop Amidias from spawning
 			- Fixed loading crashes due to Calamity's latest update
 			- Replaced Changelog sprite with one made by me and not an ex-developer
-			- Proper localization code (how did this mod not crash?, anyways translators can now do their thing!)
-			- Some background changes to make development easier and faster
+			- Some background changes to make development easier and faster and so that I don't lose progress again 
+			  (RIP localization code, at least I could salvage some of the localization file changes)
+			- Fixed deadname in mod's credits
+			- Removed Time Switching since Cosmolight exists and does it better
 
 			Notice:
 			If you want to make a sprite for an item that has a placeholder or a suggestion
@@ -106,5 +108,51 @@ Configs: {
 			Label: "[i:Stopwatch] Instant Boss Summoning"
 			Tooltip: "Skips the Supreme Calamitas and Draedon summoning cutscenes"
 		}
+	}
+}
+
+UI: {
+	RevealMap.DisplayName: Reveal the entire map
+
+	SetSpawnpoint: {
+		DisplayName: Set your spawn point to your position
+		Set: Spawn point set, your new spawn point is:
+	}
+
+	ToggleEnemySpawns: {
+		DisplayName: Toggle enemy spawns.
+		CanSpawn: Enemies can now spawn.
+		CannotSpawn: Enemies cannot spawn.
+	}
+
+	StopTime: {
+		DisplayName: Stop Time
+		Stopped: Time has stopped.
+		Resumed: Time has resumed.
+	}
+
+	ToggleDeathsPH.DisplayName: Toggle Pre-hardmode boss deaths
+	ToggleDeathsHM.DisplayName: Toggle Hardmode boss deaths
+	ToggleDeathsPML.DisplayName: Toggle Post-Moon Lord boss deaths
+
+	TogglePermanentUpgrades: {
+		DisplayName: Toggle Permanent Upgrades
+		SanguineTangerine: Toggle Sanguine Tangerine
+		NimbleBounder: Toggle Nimble Bounder
+	}
+
+	ChangeItemStats.DisplayName: "[DEPRECATED] Change item stats"
+	ChangeProjectileStats.DisplayName: "[DEPRECATED] Change projectile stats"
+	ChangeUniversalStealthFactor.DisplayName: "[DEPRECATED] Change Universal Stealth Factor"
+
+	ResetStats: {
+		DisplayName: Reset changed stats
+		Reset: Stat changes have been reset
+	}
+
+	BossRushTalkFaster: {
+		DisplayName: Make Xeroc talk faster
+		TalkFast: Fine, I'll talk faster
+		TalkSlower: I will slow down my speech
 	}
 }
