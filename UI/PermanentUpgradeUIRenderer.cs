@@ -72,7 +72,7 @@ namespace CalTestHelpers.UI
                     //new SpecialUIElement(Language.GetTextValue(key+"NimbleBounder"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/NimbleBounder").Value, () => ToggleUpgrade(PlayerUpgrade.NimbleBounder), GetColor(HasUpgrade(PlayerUpgrade.NimbleBounder))),
         };
 
-        public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 450 - 350 * ResolutionRatio, 40);
+        public override Vector2 TopLeftLocation => SecondaryTopLeftLocation;
 
         public static Color GetColor(bool hasUpgrade) => hasUpgrade ? Color.Green : Color.Red;
 

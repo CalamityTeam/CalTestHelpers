@@ -60,18 +60,17 @@ namespace CalTestHelpers.UI
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.StopTime.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/WatchTexture").Value, () =>
                     {
                         CalTestHelpersWorld.FrozenTime = !CalTestHelpersWorld.FrozenTime;
-
                         Main.NewText(CalTestHelpersWorld.FrozenTime ? Language.GetTextValue("Mods.CalTestHelpers.UI.StopTime.Stopped") : Language.GetTextValue("Mods.CalTestHelpers.UI.StopTime.Resumed"), CalTestHelpersWorld.FrozenTime ? Color.Cyan : Color.Goldenrod);
                     }, CalTestHelpersWorld.FrozenTime ? Color.Green : Color.Red),
                     new SpecialUIElement("Toggle Prehardmode boss deaths.", ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesPHM").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderPHM : null;
                     }),
-                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleDeathsHM.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesPML").Value, () =>
+                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleDeathsHM.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesHM").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderHM : null;
                     }),
-                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleDeathsPML.DisplayName"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/BloodOrange").Value, () =>
+                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleDeathsPML.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesPML").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderPML : null;
                     }),
@@ -79,6 +78,11 @@ namespace CalTestHelpers.UI
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.UpgradeUIRenderer : null;
                     }),
+                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.BossRushTalkFaster.DisplayName"), Main.zenithWorld ? ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus_GFB").Value : ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () =>
+                    {
+                       BossRushDialogueSystem.GottaGoFast = !BossRushDialogueSystem.GottaGoFast;
+                       Main.NewText(BossRushDialogueSystem.GottaGoFast ? Language.GetTextValue("Mods.CalTestHelpers.UI.BossRushTalkFaster.TalkFast") : Language.GetTextValue("Mods.CalTestHelpers.UI.BossRushTalkFaster.TalkSlower"), BossRushEvent.XerocTextColor);
+                    }, BossRushDialogueSystem.GottaGoFast ? Color.Green : Color.Red),
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ChangeItemStats.DisplayName"), ModContent.Request<Texture2D>("CalamityMod/Items/TreasureBags/MiscGrabBags/StarterBag").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.ItemEditerUIRenderer : null;
@@ -97,12 +101,7 @@ namespace CalTestHelpers.UI
                         EntityOverrideCache.ResetOverrides();
                         CalTestHelpers.ItemEditerUIRenderer.ItemBeingEdited = null;
                         Main.NewText(Language.GetTextValue("Mods.CalTestHelpers.UI.ResetStats.Reset"));
-                    }),
-                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.BossRushTalkFaster.DisplayName"), Main.zenithWorld ? ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus_GFB").Value : ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () =>
-                    {
-                       BossRushDialogueSystem.GottaGoFast = !BossRushDialogueSystem.GottaGoFast;
-                       Main.NewText($"{(BossRushDialogueSystem.GottaGoFast ? Language.GetTextValue("Mods.CalTestHelpers.UI.BossRushTalkFaster.TalkFaster") : Language.GetTextValue("Mods.CalTestHelpers.UI.BossRushTalkFaster.TalkSlower"))}.", BossRushEvent.XerocTextColor);
-                    }, BossRushDialogueSystem.GottaGoFast ? Color.Green : Color.Red),
+                    }, Color.Yellow),
                 };
 
                 /*
@@ -125,10 +124,13 @@ namespace CalTestHelpers.UI
             }
         }
 
-        public float ResolutionRatio => Main.screenWidth / 1920f;
+        //keep at this, 1920 makes the icons MASSIVE
+        public static float ResolutionRatio => Main.screenWidth / 2560f;
 
         //this is to move the button
         public virtual Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 450, 120);
+
+        public static Vector2 SecondaryTopLeftLocation => new Vector2(Main.screenWidth - 450 - 350 * ResolutionRatio, 40);
 
         public virtual float UIScale => ResolutionRatio;
 
@@ -155,6 +157,7 @@ namespace CalTestHelpers.UI
                 Rectangle currentRectangleArea = new Rectangle((int)TopLeftLocation.X-150, (int)top, (int)IconBounds.X, (int)IconBounds.Y);
                 Rectangle currentRectangleAreaWorld = new Rectangle((int)(TopLeftLocation.X-150 + Main.screenPosition.X), (int)(top + Main.screenPosition.Y), (int)IconBounds.X, (int)IconBounds.Y);
 
+                //White is default but colors could be changed here
                 spriteBatch.Draw(categorySlotTexture, currentRectangleArea.TopLeft(), null, Color.White, 0f, Vector2.Zero, UIScale, SpriteEffects.None, 0f);
 
                 //makes the icons in the UI

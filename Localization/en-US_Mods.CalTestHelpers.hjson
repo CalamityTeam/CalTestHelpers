@@ -177,7 +177,7 @@ UI: {
 	ChangeUniversalStealthFactor.DisplayName: "[DEPRECATED] Change Universal Stealth Factor"
 
 	ResetStats: {
-		DisplayName: Reset changed stats
+		DisplayName: "[DEPRECATED] Reset changed stats"
 		Reset: Stat changes have been reset
 	}
 

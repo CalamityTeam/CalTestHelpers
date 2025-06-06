@@ -168,6 +168,6 @@ namespace CalTestHelpers.UI
 			return false;
         }
 
-        public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 660 - 350 * ResolutionRatio, 40);
+        public override Vector2 TopLeftLocation => SecondaryTopLeftLocation;
     }
 }

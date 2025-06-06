@@ -1,6 +1,7 @@
 using CalamityMod.CalPlayer;
 using CalamityMod.Projectiles.Boss;
 using CalamityMod.World;
+using CalTestHelpers.UI;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
