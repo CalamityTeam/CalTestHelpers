@@ -107,6 +107,7 @@ Configs: {
 		StoreFightInformation: {
 			Label: "[i:CalamityMod/AgedLaboratoryElectricPanelItem] Store Boss Fight Information"
 			Tooltip: Enables the storage of (some) fight data. Includes fight time, average DPS, and max DPS. DO NOT USE UNLESS YOU ABSOLUTELY NEED TO
+			# I'm not gonna bother localizing this can of worms before even figuring out how it works
 		}
 
 		StuffAmountDisplay: {
@@ -170,11 +171,16 @@ UI: {
 		GalaxyPearl: Toggle Galaxy Pearl
 		Bread: Toggle Artisan Loaf
 		NimbleBounder: Toggle Nimble Bounder
+		# All of these will be renamed in Sunken Sea Overhaul
+		# Also adding NimbleBounder here to save time even tho that item is only in dev builds
 	}
 
 	ChangeItemStats.DisplayName: "[DEPRECATED] Change item stats"
 	ChangeProjectileStats.DisplayName: "[DEPRECATED] Change projectile stats"
 	ChangeUniversalStealthFactor.DisplayName: "[DEPRECATED] Change Universal Stealth Factor"
+	# Far easier to just give testers access to the code; Hot Reload is a blessing for changes while testing and it can change more stuff
+	# Or just use Modder's toolkit or Dragonlens idk
+	# If Tmod breaks this thing again I will comment it out
 
 	ResetStats: {
 		DisplayName: "[DEPRECATED] Reset changed stats"
@@ -185,5 +191,6 @@ UI: {
 		DisplayName: Make Xeroc talk faster
 		TalkFast: Fine, I'll talk faster
 		TalkSlower: I will slow down my speech
+		# I think I nailed his personality since the writters haven't complained
 	}
 }
