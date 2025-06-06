@@ -15,12 +15,12 @@ Items: {
 			- Replaced Changelog sprite with one made by me and not an ex-developer
 			- Some background changes to make development easier and faster and so that I don't lose progress again 
 			- Fixed deadname in mod's credits
-			- Some internal changes to make managing this mod easier
-			- Added Nimble Bounder to the upgrade menu (will show up when the Calamity patch comes out)
+			- Some internal changes to make managing this mod easier (I almost lost weeks of progress lmao)
 			- Added Giant Clam to boss toggles so that people can stop Amidias from spawning which was a common suggestion
+			- EoL can now be summoned at daytime with Fae's Lantern
 			- Removed the change time button; just use Cosmolight or other mod's time changing since they are far better
 			- Updated localization files, added proper localization support (Idk how this mod still worked despite improper localization)
-			- Minor tweaks to the UI
+			- Some tweaks to the UI, should work better in all resolutions now
 			- Deprecated the Item, Projectile and Stealth factor editors, you should only be using these if you are a tester without access
 			to code for whatever addon you're making
 
@@ -77,7 +77,7 @@ Items: {
 			Tooltip:
 				'''
 				Summons the Old Duke while used in the Sulphur Sea
-				[c/FF0000:REIGN IN BLOOD]
+				Boomerfish
 				TEXTURE IS A PLACEHOLDER
 				'''
 		}
@@ -147,10 +147,10 @@ UI: {
 
 	TogglePermanentUpgrades: {
 		DisplayName: Toggle Permanent Upgrades
-		SanguineTangerine: Toggle Sanguine Tangerine
+		BloodOrange: Toggle Blood Orange
 		MiracleFruit: Toggle Miracle Fruit
-		TaintedCloudberry: Toggle Tainted Cloudberry
-		SacredStrawberry: Toggle Sacred Strawberry
+		Elderberry: Toggle Elderberry
+		Dragonfruit: Toggle Dragonfruit
 		CometShard: Toggle Comet Shard
 		EtherealCore: Toggle Ethereal Core
 		PhantomHeart: Toggle Phantom Heart

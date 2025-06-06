@@ -16,7 +16,6 @@ namespace CalTestHelpers.UI
 {
     public class PermanentUpgradeUIRenderer : GrandUIRenderer
     {
-        public static bool NimbleBounderPresent = false;
         public enum PlayerUpgrade
         {
             BloodOrange,
@@ -41,16 +40,16 @@ namespace CalTestHelpers.UI
             GummyWorm,
             GalaxyPearl,
             ArtisanLoaf,
-            NimbleBounder
+            //NimbleBounder
         }
 
         public string key = "Mods.CalTestHelpers.UI.TogglePermanentUpgrades.";
         public override List<SpecialUIElement> UIElements => new List<SpecialUIElement>()
         {
-                    new SpecialUIElement(Language.GetTextValue(key+"SanguineTangerine"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/SanguineTangerine").Value, () => ToggleUpgrade(PlayerUpgrade.BloodOrange), GetColor(HasUpgrade(PlayerUpgrade.BloodOrange))),
+                    new SpecialUIElement(Language.GetTextValue(key+"BloodOrange"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/BloodOrange").Value, () => ToggleUpgrade(PlayerUpgrade.BloodOrange), GetColor(HasUpgrade(PlayerUpgrade.BloodOrange))),
                     new SpecialUIElement(Language.GetTextValue(key+"MiracleFruit"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/MiracleFruit").Value, () => ToggleUpgrade(PlayerUpgrade.MiracleFruit), GetColor(HasUpgrade(PlayerUpgrade.MiracleFruit))),
-                    new SpecialUIElement(Language.GetTextValue(key+"TaintedCloudberry"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/TaintedCloudberry").Value, () => ToggleUpgrade(PlayerUpgrade.Elderberry), GetColor(HasUpgrade(PlayerUpgrade.Elderberry))),
-                    new SpecialUIElement(Language.GetTextValue(key+"SacredStrawberry"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/SacredStrawberry").Value, () => ToggleUpgrade(PlayerUpgrade.Dragonfruit), GetColor(HasUpgrade(PlayerUpgrade.Dragonfruit))),
+                    new SpecialUIElement(Language.GetTextValue(key+"Elderberry"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Elderberry").Value, () => ToggleUpgrade(PlayerUpgrade.Elderberry), GetColor(HasUpgrade(PlayerUpgrade.Elderberry))),
+                    new SpecialUIElement(Language.GetTextValue(key+"Dragonfruit"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/Dragonfruit").Value, () => ToggleUpgrade(PlayerUpgrade.Dragonfruit), GetColor(HasUpgrade(PlayerUpgrade.Dragonfruit))),
                     new SpecialUIElement(Language.GetTextValue(key+"CometShard"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/CometShard").Value, () => ToggleUpgrade(PlayerUpgrade.CometShard), GetColor(HasUpgrade(PlayerUpgrade.CometShard))),
                     new SpecialUIElement(Language.GetTextValue(key+"EtherealCore"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/EtherealCore").Value, () => ToggleUpgrade(PlayerUpgrade.EtherealCore), GetColor(HasUpgrade(PlayerUpgrade.EtherealCore))),
                     new SpecialUIElement(Language.GetTextValue(key+"PhantomHeart"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/PhantomHeart").Value, () => ToggleUpgrade(PlayerUpgrade.PhantomHeart), GetColor(HasUpgrade(PlayerUpgrade.PhantomHeart))),
@@ -70,7 +69,7 @@ namespace CalTestHelpers.UI
                     new SpecialUIElement(Language.GetTextValue(key+"GummyWorm"), TextureAssets.Item[ItemID.GummyWorm].Value, () => ToggleUpgrade(PlayerUpgrade.GummyWorm), GetColor(HasUpgrade(PlayerUpgrade.GummyWorm))),
                     new SpecialUIElement(Language.GetTextValue(key+"GalaxyPearl"), TextureAssets.Item[ItemID.GalaxyPearl].Value, () => ToggleUpgrade(PlayerUpgrade.GalaxyPearl), GetColor(HasUpgrade(PlayerUpgrade.GalaxyPearl))),
                     new SpecialUIElement(Language.GetTextValue(key+"Bread"), TextureAssets.Item[ItemID.ArtisanLoaf].Value, () => ToggleUpgrade(PlayerUpgrade.ArtisanLoaf), GetColor(HasUpgrade(PlayerUpgrade.ArtisanLoaf))),
-                    new SpecialUIElement(Language.GetTextValue(key+"NimbleBounder"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/NimbleBounder").Value, () => ToggleUpgrade(PlayerUpgrade.NimbleBounder), GetColor(HasUpgrade(PlayerUpgrade.NimbleBounder))),
+                    //new SpecialUIElement(Language.GetTextValue(key+"NimbleBounder"), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/NimbleBounder").Value, () => ToggleUpgrade(PlayerUpgrade.NimbleBounder), GetColor(HasUpgrade(PlayerUpgrade.NimbleBounder))),
         };
 
         public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 450 - 350 * ResolutionRatio, 40);
@@ -81,13 +80,13 @@ namespace CalTestHelpers.UI
         {
             string upgradeName = string.Empty;
             Color textColor = Color.White;
-            ref bool upgradeValue = ref Main.LocalPlayer.Calamity().sTangerine;
+            ref bool upgradeValue = ref Main.LocalPlayer.Calamity().bOrange;
             switch (upgradeToToggle)
             {
                 case PlayerUpgrade.BloodOrange:
-                    upgradeName = "Sanguine Tangerine";
+                    upgradeName = "Blood Orange";
                     textColor = new Color(226, 86, 55);
-                    upgradeValue = ref Main.LocalPlayer.Calamity().sTangerine;
+                    upgradeValue = ref Main.LocalPlayer.Calamity().bOrange;
                     break;
                 case PlayerUpgrade.MiracleFruit:
                     upgradeName = "Miracle Fruit";
@@ -95,14 +94,14 @@ namespace CalTestHelpers.UI
                     upgradeValue = ref Main.LocalPlayer.Calamity().mFruit;
                     break;
                 case PlayerUpgrade.Elderberry:
-                    upgradeName = "Tainted Cloudberry";
+                    upgradeName = "Elderberry";
                     textColor = new Color(58, 167, 255);
-                    upgradeValue = ref Main.LocalPlayer.Calamity().tCloudberry;
+                    upgradeValue = ref Main.LocalPlayer.Calamity().eBerry;
                     break;
                 case PlayerUpgrade.Dragonfruit:
-                    upgradeName = "Sacred Strawberry";
+                    upgradeName = "Dragonfruit";
                     textColor = new Color(56, 122, 175);
-                    upgradeValue = ref Main.LocalPlayer.Calamity().sStrawberry;
+                    upgradeValue = ref Main.LocalPlayer.Calamity().dFruit;
                     break;
                 case PlayerUpgrade.CometShard:
                     upgradeName = "Comet Shard";
@@ -194,11 +193,13 @@ namespace CalTestHelpers.UI
                     textColor = new Color(199, 111, 24);
                     upgradeValue = ref Main.LocalPlayer.ateArtisanBread;
                     break;
+                /*
                 case PlayerUpgrade.NimbleBounder:
                     upgradeName = "Nimble Bounder";
                     textColor = new Color(200, 111, 145);
                     upgradeValue = ref Main.LocalPlayer.Calamity().nimbleBounderBoost;
                     break;
+                */
             }
             upgradeValue = !upgradeValue;
             Main.NewText($"The {upgradeName} effect is now marked as: {upgradeValue}", textColor);
@@ -209,13 +210,13 @@ namespace CalTestHelpers.UI
             switch (upgradeToToggle)
             {
                 case PlayerUpgrade.BloodOrange:
-                    return Main.LocalPlayer.Calamity().sTangerine;
+                    return Main.LocalPlayer.Calamity().bOrange;
                 case PlayerUpgrade.MiracleFruit:
                     return Main.LocalPlayer.Calamity().mFruit;
                 case PlayerUpgrade.Elderberry:
-                    return Main.LocalPlayer.Calamity().tCloudberry;
+                    return Main.LocalPlayer.Calamity().eBerry;
                 case PlayerUpgrade.Dragonfruit:
-                    return Main.LocalPlayer.Calamity().sStrawberry;
+                    return Main.LocalPlayer.Calamity().dFruit;
                 case PlayerUpgrade.CometShard:
                     return Main.LocalPlayer.Calamity().cShard;
                 case PlayerUpgrade.EtherealCore:
@@ -252,8 +253,8 @@ namespace CalTestHelpers.UI
                     return Main.LocalPlayer.usedGalaxyPearl;
                 case PlayerUpgrade.ArtisanLoaf:
                     return Main.LocalPlayer.ateArtisanBread;
-                case PlayerUpgrade.NimbleBounder:
-                    return Main.LocalPlayer.Calamity().nimbleBounderBoost;
+                //case PlayerUpgrade.NimbleBounder:
+                    //return Main.LocalPlayer.Calamity().nimbleBounderBoost;
             }
             return false;
         }
