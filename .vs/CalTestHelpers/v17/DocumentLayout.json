@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "UI\\GrandUIRenderer.cs",
               "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\GrandUIRenderer.cs",
               "RelativeToolTip": "UI\\GrandUIRenderer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAF8AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-05T16:47:23.914Z",
               "IsPinned": true,
@@ -69,8 +69,7 @@
               "ViewState": "AgIAAJYAAAAAAAAAAAAwwJ0AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-07-05T16:46:49.092Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -130,8 +129,7 @@
               "RelativeToolTip": "UI\\PermanentUpgradeUIRenderer.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAUwC8AAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T01:37:32.22Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-06T01:37:32.22Z"
             },
             {
               "$type": "Document",
