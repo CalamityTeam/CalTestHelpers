@@ -40,8 +40,8 @@ namespace CalTestHelpers
                 }
             }
             Mod Calamity = ModContent.GetInstance<CalTestHelpers>().Calamity;
-            bool SummonerBranch = Calamity.TryFind("WhipPrototype", out ModItem PrototypeWhip);
-            Main.NewText($"Summoner branch: {SummonerBranch}");
+            //bool SummonerBranch = Calamity.TryFind("WhipPrototype", out ModItem PrototypeWhip);
+            //Main.NewText($"Summoner branch: {SummonerBranch}");
         }
     }
 }

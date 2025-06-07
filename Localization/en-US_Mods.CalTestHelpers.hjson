@@ -107,7 +107,6 @@ Configs: {
 		StoreFightInformation: {
 			Label: "[i:CalamityMod/AgedLaboratoryElectricPanelItem] Store Boss Fight Information"
 			Tooltip: Enables the storage of (some) fight data. Includes fight time, average DPS, and max DPS. DO NOT USE UNLESS YOU ABSOLUTELY NEED TO
-			# I'm not gonna bother localizing this can of worms before even figuring out how it works
 		}
 
 		StuffAmountDisplay: {
@@ -142,9 +141,21 @@ UI: {
 		Resumed: Time has resumed.
 	}
 
-	ToggleDeathsPH.DisplayName: Toggle Pre-hardmode boss deaths
-	ToggleDeathsHM.DisplayName: Toggle Hardmode boss deaths
-	ToggleDeathsPML.DisplayName: Toggle Post-Moon Lord boss deaths
+	ToggleDeaths: {
+		PreHM: Toggle Pre-hardmode boss deaths
+		HM: Toggle Hardmode boss deaths
+		PML: Toggle Post-Moon Lord boss deaths
+		# Gendered languages like Spanish and French will suffer from lack of gendering support from Tmod, altho I can imagine why they won't do it
+		# Use stuff like Las/Los or L@s or some other way for genders with your language
+		ToggleBossDeath: Toggle {0}'s death
+		# English possessive being weird, just copy whatever you used on the previous one in other languages
+		ToggleBossDeathEndsWithS: Toggle {0}' death
+		AllPreHM: Toggle all Pre-hardmode boss deaths
+		Toggle: "{0}'s death is now marked as {1}"
+		ToggleAllPreHM: All Pre-hardmode boss deaths are now marked as {0}
+		Alive: alive
+		Dead: dead
+	}
 
 	TogglePermanentUpgrades: {
 		DisplayName: Toggle Permanent Upgrades
@@ -171,17 +182,16 @@ UI: {
 		GalaxyPearl: Toggle Galaxy Pearl
 		Bread: Toggle Artisan Loaf
 		NimbleBounder: Toggle Nimble Bounder
-		# All of these will be renamed in Sunken Sea Overhaul
-		# Also adding NimbleBounder here to save time even tho that item is only in dev builds
 	}
 
 	ChangeItemStats.DisplayName: "[DEPRECATED] Change item stats"
 	ChangeProjectileStats.DisplayName: "[DEPRECATED] Change projectile stats"
 	ChangeUniversalStealthFactor.DisplayName: "[DEPRECATED] Change Universal Stealth Factor"
+
 	# Far easier to just give testers access to the code; Hot Reload is a blessing for changes while testing and it can change more stuff
 	# Or just use Modder's toolkit or Dragonlens idk
 	# If Tmod breaks this thing again I will comment it out
-
+	
 	ResetStats: {
 		DisplayName: "[DEPRECATED] Reset changed stats"
 		Reset: Stat changes have been reset
@@ -191,6 +201,5 @@ UI: {
 		DisplayName: Make Xeroc talk faster
 		TalkFast: Fine, I'll talk faster
 		TalkSlower: I will slow down my speech
-		# I think I nailed his personality since the writters haven't complained
 	}
 }

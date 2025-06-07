@@ -7,11 +7,18 @@ using System.Linq;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ModLoader;
+using Terraria.Localization;
 
 namespace CalTestHelpers.UI
 {
     public abstract class BossDeathUIRenderer : GrandUIRenderer
     {
+
+        public static string key = "Mods.CalTestHelpers.UI.ToggleDeaths.";
+
+        public static string BossKey = "Mods.CalTestHelpers.UI.ToggleDeaths.ToggleBossDeath";
+
+        public static string BossKeyEndsWithS = "Mods.CalTestHelpers.UI.ToggleDeaths.ToggleBossDeathEndsWithS";
         public enum Boss
         {
             KingSlime,
