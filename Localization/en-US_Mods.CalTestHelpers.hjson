@@ -21,8 +21,9 @@ Items: {
 			- Removed the change time button; just use Cosmolight or other mod's time changing since they are far better
 			- Updated localization files, added proper localization support (Idk how this mod still worked despite improper localization)
 			- Some tweaks to the UI, should work better in all resolutions now
-			- Deprecated the Item, Projectile and Stealth factor editors, you should only be using these if you are a tester without access
+			- Deprecated the Item, Projectile editors, you should only be using these if you are a tester without access
 			to code for whatever addon you're making
+			- Removed the Stealth factor editor since it has been broken for a long time
 
 			Known issues:
 			- Game going crazy if multiple time freezes are on: Wont be fixed for the time being so that players arent stuck with frozen time from this mod
