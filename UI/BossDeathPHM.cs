@@ -34,62 +34,6 @@ namespace CalTestHelpers.UI
             new SpecialUIElement(Language.GetTextValue(GetBossLocalizationKey(Boss.AllPHM)), ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/FracturedArk").Value, () => ToggleDeath(Boss.AllPHM), GetColor(GetDownedBool(Boss.AllPHM)))
         };
 
-        public static string GetBossLocalizationKey(Boss BossKey)
-        {
-            string bossName = string.Empty;
-            //Taking keys from vanilla or the main mod
-            switch (BossKey)
-            {
-                case Boss.KingSlime:
-                    bossName = Lang.GetNPCNameValue(NPCID.KingSlime);
-                    break;
-                case Boss.DesertScourge:
-                    bossName = CalamityUtils.GetTextValue("NPCs.DesertScourgeHead.DisplayName");
-                    break;
-                case Boss.GiantClam:
-                    bossName = CalamityUtils.GetTextValue(Main.zenithWorld ? Main.hardMode ? "NPCS.SupremeClamitas" : "NPCS.Clamitas" : "NPCs.GiantClam.DisplayName");
-                    break;
-                case Boss.EyeOfCthulhu:
-                    bossName = Lang.GetNPCNameValue(NPCID.EyeofCthulhu);
-                    break;
-                case Boss.Crabulon:
-                    bossName = CalamityUtils.GetTextValue("NPCs.Crabulon.DisplayName");
-                    break;
-                case Boss.EaterOfWorlds:
-                    bossName = Lang.GetNPCNameValue(NPCID.EaterofWorldsHead);
-                    break;
-                case Boss.BrainOfCthulhu:
-                    bossName = Lang.GetNPCNameValue(NPCID.BrainofCthulhu);
-                    break;
-                case Boss.HiveMind:
-                    bossName = CalamityUtils.GetTextValue("NPCs.HiveMind.DisplayName");
-                    break;
-                case Boss.Perforators:
-                    bossName = CalamityUtils.GetTextValue("NPCs.PerforatorHive.DisplayName");
-                    break;
-                case Boss.QueenBee:
-                    bossName = Lang.GetNPCNameValue(NPCID.QueenBee);
-                    break;
-                case Boss.Deerclops:
-                    bossName = Lang.GetNPCNameValue(NPCID.Deerclops);
-                    break;
-                case Boss.Skeletron:
-                    bossName = Lang.GetNPCNameValue(NPCID.SkeletronHead);
-                    break;
-                case Boss.SlimeGod:
-                    bossName = CalamityUtils.GetTextValue("NPCs.SlimeGodCore.DisplayName");
-                    break;
-                case Boss.WallOfFlesh:
-                    bossName = Lang.GetNPCNameValue(NPCID.WallofFlesh);
-                    break;
-                case Boss.AllPHM:
-                    bossName = Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleDeaths.AllPreHM");
-                    break;
-            }
-            
-
-            return bossName;
-        }
 
         public static void ToggleDeath(Boss bossDeathToToggle)
         {

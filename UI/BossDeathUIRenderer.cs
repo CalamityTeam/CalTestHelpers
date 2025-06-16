@@ -8,6 +8,7 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 using Terraria.Localization;
+using Terraria.ID;
 
 namespace CalTestHelpers.UI
 {
@@ -68,11 +69,172 @@ namespace CalTestHelpers.UI
             Yharon,
             Draedon,
             Calamitas,
+            Wyrm,
             AllPML,
             All
         }
 
         public static Color GetColor(bool bossDeath) => bossDeath ? Color.Green : Color.Red;
+
+        public static string GetBossLocalizationKey(Boss BossKey)
+        {
+            string bossName = string.Empty;
+            //Taking keys from vanilla or the main mod
+            switch (BossKey)
+            {
+                case Boss.KingSlime:
+                    bossName = Lang.GetNPCNameValue(NPCID.KingSlime);
+                    break;
+                case Boss.DesertScourge:
+                    bossName = CalamityUtils.GetTextValue("NPCs.DesertScourgeHead.DisplayName");
+                    break;
+                case Boss.GiantClam:
+                    bossName = CalamityUtils.GetTextValue(Main.zenithWorld ? Main.hardMode ? "NPCs.SupremeClamitas" : "NPCs.Clamitas" : "NPCs.GiantClam.DisplayName");
+                    break;
+                case Boss.EyeOfCthulhu:
+                    bossName = Lang.GetNPCNameValue(NPCID.EyeofCthulhu);
+                    break;
+                case Boss.Crabulon:
+                    bossName = CalamityUtils.GetTextValue("NPCs.Crabulon.DisplayName");
+                    break;
+                case Boss.EaterOfWorlds:
+                    bossName = Lang.GetNPCNameValue(NPCID.EaterofWorldsHead);
+                    break;
+                case Boss.BrainOfCthulhu:
+                    bossName = Lang.GetNPCNameValue(NPCID.BrainofCthulhu);
+                    break;
+                case Boss.HiveMind:
+                    bossName = CalamityUtils.GetTextValue("NPCs.HiveMind.DisplayName");
+                    break;
+                case Boss.Perforators:
+                    bossName = Language.GetTextValue(key+"Perforators");
+                    break;
+                case Boss.QueenBee:
+                    bossName = Lang.GetNPCNameValue(NPCID.QueenBee);
+                    break;
+                case Boss.Deerclops:
+                    bossName = Lang.GetNPCNameValue(NPCID.Deerclops);
+                    break;
+                case Boss.Skeletron:
+                    bossName = Lang.GetNPCNameValue(NPCID.SkeletronHead);
+                    break;
+                case Boss.SlimeGod:
+                    bossName = CalamityUtils.GetTextValue("NPCs.SlimeGodCore.DisplayName");
+                    break;
+                case Boss.WallOfFlesh:
+                    bossName = Lang.GetNPCNameValue(NPCID.WallofFlesh);
+                    break;
+                case Boss.AllPHM:
+                    bossName = Language.GetTextValue(key+"AllPreHM");
+                    break;
+                case Boss.QueenSlime:
+                    bossName = Lang.GetNPCNameValue(NPCID.QueenSlimeBoss);
+                    break;
+                case Boss.Cryogen:
+                    bossName = CalamityUtils.GetTextValue("NPCs.Cryogen.DisplayName");
+                    break;
+                case Boss.TheTwins:
+                    bossName = Language.GetTextValue(key + "Twins");
+                    break;
+                case Boss.TheAquaticScourge:
+                    bossName = CalamityUtils.GetTextValue("NPCs.AquaticScourgeHead.DisplayName");
+                    break;
+                case Boss.TheDestroyer:
+                    bossName = Lang.GetNPCNameValue(NPCID.TheDestroyer);
+                    break;
+                case Boss.BrimstoneElemental:
+                    bossName = CalamityUtils.GetTextValue("NPCs.BrimstoneElemental.DisplayName");
+                    break;
+                case Boss.SkeletronPrime:
+                    bossName = Lang.GetNPCNameValue(NPCID.SkeletronPrime);
+                    break;
+                case Boss.Cloneamitas:
+                    bossName = CalamityUtils.GetTextValue("NPCs.CalamitasClone.DisplayName");
+                    break;
+                case Boss.Plantera:
+                    bossName = Lang.GetNPCNameValue(NPCID.Plantera);
+                    break;
+                case Boss.Leviathan:
+                    bossName = Language.GetTextValue(key + "Leviathan");
+                    break;
+                case Boss.AstrumAureus:
+                    bossName = CalamityUtils.GetTextValue("NPCs.AstrumAureus.DisplayName");
+                    break;
+                case Boss.Golem:
+                    bossName = Lang.GetNPCNameValue(NPCID.Golem);
+                    break;
+                case Boss.PlaguebringerGoliath:
+                    bossName = CalamityUtils.GetTextValue("NPCs.PlaguebringerGoliath.DisplayName");
+                    break;
+                case Boss.DukeFishron:
+                    bossName = Lang.GetNPCNameValue(NPCID.DukeFishron);
+                    break;
+                case Boss.Ravager:
+                    bossName = CalamityUtils.GetTextValue("NPCs.RavagerBody.DisplayName");
+                    break;
+                case Boss.EmpressOfLight:
+                    bossName = Lang.GetNPCNameValue(NPCID.HallowBoss);
+                    break;
+                case Boss.LunaticCultist:
+                    bossName = Lang.GetNPCNameValue(NPCID.CultistBoss);
+                    break;
+                case Boss.AstrumDeus:
+                    bossName = CalamityUtils.GetTextValue("NPCs.AstrumDeusHead.DisplayName");
+                    break;
+                case Boss.MoonLord:
+                    bossName = Lang.GetNPCNameValue(NPCID.MoonLordHead);
+                    break;
+                case Boss.AllHM:
+                    bossName = Language.GetTextValue(key + "AllHM");
+                    break;
+                case Boss.ProfanedGuardians:
+                    bossName = Language.GetTextValue(key + "ProfanedGuardians");
+                    break;
+                case Boss.Dragonfolly:
+                    bossName = Main.zenithWorld ? CalamityUtils.GetTextValue("NPCs.Bumblebirb") : CalamityUtils.GetTextValue("NPCs.Bumblefuck.DisplayName");
+                    break;
+                case Boss.Providence:
+                    bossName = Language.GetTextValue(key + "Providence");
+                    break;
+                case Boss.StormWeaver:
+                    bossName = CalamityUtils.GetTextValue("NPCs.StormWeaverHead.DisplayName");
+                    break;
+                case Boss.CeaselessVoid:
+                    bossName = CalamityUtils.GetTextValue("NPCs.CeaselessVoid.DisplayName");
+                    break;
+                case Boss.Signus:
+                    bossName = Language.GetTextValue(key + "Signus");
+                    break;
+                case Boss.Polterghast:
+                    bossName = CalamityUtils.GetTextValue("NPCs.Polterghast.DisplayName");
+                    break;
+                case Boss.OldDuke:
+                    bossName = Main.zenithWorld ? CalamityUtils.GetTextValue("NPCs.BoomerDuke") : CalamityUtils.GetTextValue("NPCs.OldDuke.DisplayName");
+                    break;
+                case Boss.DevourerOfGods:
+                    bossName = Language.GetTextValue(key + "DoG");
+                    break;
+                case Boss.Yharon:
+                    bossName = Language.GetTextValue(key + "Yharon");
+                    break;
+                case Boss.Draedon:
+                    bossName = Language.GetTextValue(key + "ExoMechs");
+                    break;
+                case Boss.Calamitas:
+                    bossName = Language.GetTextValue(key + "SCal");
+                    break;
+                case Boss.Wyrm:
+                    bossName = Main.zenithWorld ? CalamityUtils.GetTextValue("NPCs.Jared") : CalamityUtils.GetTextValue("NPCs.PrimordialWyrmHead.DisplayName");
+                    break;
+                case Boss.AllPML:
+                    bossName = Language.GetTextValue(key + "AllPML");
+                    break;
+                case Boss.All:
+                    bossName = Language.GetTextValue(key + "All");
+                    break;
+            }
+            return bossName;
+        }
 
         public static bool GetDownedBool(Boss bossDeathToToggle)
         {

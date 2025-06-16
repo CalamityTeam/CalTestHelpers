@@ -151,11 +151,27 @@ UI: {
 		ToggleBossDeath: Toggle {0}'s death
 		# English possessive being weird, just copy whatever you used on the previous one in other languages
 		ToggleBossDeathEndsWithS: Toggle {0}' death
-		AllPreHM: Toggle all Pre-hardmode boss deaths
+		AllPreHM: Toggle all Pre-Hardmode boss deaths
+		AllHM: Toggle all Hardmode boss deaths
+		AllPML: Toggle all Post-Moon Lord boss deaths
+		All: Toggle all boss deaths
 		Toggle: "{0}'s death is now marked as {1}"
-		ToggleAllPreHM: All Pre-hardmode boss deaths are now marked as {0}
+		ToggleAllPreHM: All Pre-Hardmode boss deaths are now marked as {0}
+		ToggleAllHM: All Hardmode boss deaths are now marked as {0}
+		ToggleAllPML: All Post-Moon Lord boss deaths are now marked as {0}
+		ToggleAll: All boss deaths are now marked as {0}
 		Alive: alive
 		Dead: dead
+		Perforators: Perforators
+		Twins: The Twins
+		Leviathan: Leviathan and Anahita
+		ProfanedGuardians: Profaned Guardians
+		Providence: Providence
+		Signus: Signus
+		DoG: Devourer of Gods
+		Yharon: Yharon
+		ExoMechs: Exo Mechs
+		SCal: Supreme Calamitas
 	}
 
 	TogglePermanentUpgrades: {
