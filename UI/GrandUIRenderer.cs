@@ -91,12 +91,10 @@ namespace CalTestHelpers.UI
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.ProjectileEditerUIRenderer : null;
                     }, Color.Yellow),
-                    /*
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ChangeUniversalStealthFactor.DisplayName"), ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/Cinquedea").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.StealthEditerUIRenderer : null;
                     }, Color.Yellow),
-                    */
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ResetStats.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/Gear").Value, () =>
                     {
                         ItemOverrideCache.ResetOverrides();
@@ -106,7 +104,6 @@ namespace CalTestHelpers.UI
                     }, Color.Yellow),
                 };
 
-                /*
                 // Just so it doesnt error WeakReferences are used, this is to find if its summoner branch or not
                 Mod Calamity = GetInstance<CalTestHelpers>().Calamity;
                 if (Calamity.TryFind("ArdorBlossomStar", out ModItem SummonerBranch))
@@ -119,7 +116,6 @@ namespace CalTestHelpers.UI
                     }, CalamityGlobalNPC.DisableMultWhipTag ? Color.Green : Color.Red);
                     elements.Add(ToggleWhips);
                 }
-                */
                 //Add all elements
                 elements.AddRange(CalTestHelpers.SecondaryUIElements);
                 return elements;

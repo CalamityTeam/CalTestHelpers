@@ -18,9 +18,10 @@ Items: {
 		DisplayName: Changelogs
 		Tooltip:
 			'''
-			2.4.0.1 Changelog
+			2.4.0.1 (2.4.0.2 for dev version) Changelog (DEV VERSION)
 			- Fixed loading crashes due to Calamity's latest update
-			- Replaced Changelog sprite with one made by me and not an ex-developer
+			- Replaced Changelog sprite with one made by me and not an ex-developer (I am not an artist, just don't come to me complaining that the sprite is shit, if you want one
+			  made by you, just send it to me in the dev server.)
 			- Some internal changes to make development easier and faster and so that I don't lose progress again (I almost lost weeks of progress)
 			- Fixed deadname in mod's credits
 			- Tweaked mod's description page
@@ -32,20 +33,22 @@ Items: {
 			- Some tweaks to the UI, should work better in all resolutions now, made buttons wider since text was tiny and sometimes too long to fit
 			- You can resize the UI to your liking (I like to use 1.1)
 			- Deprecated the Item, Projectile editors, you should only be using these if you are a tester without access to code for whatever addon you're making,
-			  preferably ask for code access.
-			- Removed the Stealth factor editor since it hasn't worked for a long time
+			  preferably ask for code access. DEV ONLY: (just use Hot Reload in Visual Studio 2022)
 			- Instability factor now rounds so theres not a number with a comical amount of decimals
+			- DEV VERSION ONLY: Stealth factor editor kept since we might do rogue update since summoner is likely being delayed even tho many, including myself, would like if it wasn't
+			- DEV VERSION ONLY: Updated item and variable names
+			- DEV VERSION ONLY: Added Nimble Bounder to the Permanent Upgrade Toggler UI
+			- DEV VERSION ONLY: Deleted Siren's Song; use Naiad's Warhorn instead (its basically the same thing)
 
 			Known issues:
 			- Game going crazy if multiple time freezes are on: Wont be fixed for the time being so that players arent stuck with frozen time from this mod
 			please use other mod's time freezers if they are available
 			- Grabbing localization keys from Terraria and Calamity might cause issues if there is no localization available for them, a manual override
-			will be available in 2.4.0.2
+			will be available in public 2.4.0.2 (and dev 2.4.0.3)
+			- 
 
 			Notices:
-			- If you want to make a sprite for an item that has a placeholder or a suggestion submit it to shade__storm in #other-mod-talk or #calamity-addon-talk 
-			on the Official Calamity Discord server, or the Discussions tab in Steam Workshop 
-			(I would allow DMs if it wasn't for all those scams and bots that have popped up, sorry guys)
+			- If you want to make a sprite for an item just send it to me in dev
 			- I am not going to use Infernum's assets for boss summoning items, those belong to them
 			'''
 	}
