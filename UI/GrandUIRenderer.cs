@@ -127,7 +127,8 @@ namespace CalTestHelpers.UI
         }
 
         //keep at this, 1920 makes the icons MASSIVE
-        public static float ResolutionRatio => Main.screenWidth / 2560f;
+        //2560 is too small
+        public static float ResolutionRatio => Main.screenWidth / 2560f * CalTestHelperConfig.Instance.UISize;
 
         //this is to move the button
         public virtual Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 450, 120);
@@ -167,7 +168,7 @@ namespace CalTestHelpers.UI
                 spriteBatch.Draw(button.IconTexture, currentRectangleArea.Center(), null, Color.White, 0f, button.IconTexture.Size() * 0.5f, iconScale, SpriteEffects.None, 0f);
 
                 //make the buttons
-                button.DrawDescription(spriteBatch, currentRectangleArea.TopRight() + new Vector2(5f, IconBounds.Y * 0.25f), button.TextColor is null ? TextColor : (Color)button.TextColor, UIScale*0.85f);
+                button.DrawDescription(spriteBatch, currentRectangleArea.TopRight() + new Vector2(7.5f, IconBounds.Y * 0.25f), button.TextColor is null ? TextColor : (Color)button.TextColor, UIScale*0.8f);
 
                 if (button.OnClick != null && CalamityUtils.MouseHitbox.Intersects(currentRectangleAreaWorld))
                 {
@@ -188,7 +189,7 @@ namespace CalTestHelpers.UI
             if (GetType() == typeof(GrandUIRenderer))
             {
                 Texture2D toggleIcon = ModContent.Request<Texture2D>("CalTestHelpers/UI/GrandUIToggle").Value;
-                Rectangle currentRectangleArea = new Rectangle((int)TopLeftLocation.X-150, (int)(top - 50 * ResolutionRatio), (int)(IconBounds.X*1.1f), (int)(IconBounds.Y*1.1f));
+                Rectangle currentRectangleArea = new Rectangle((int)TopLeftLocation.X-150, (int)(top - 75 * ResolutionRatio), (int)(IconBounds.X*1.1f), (int)(IconBounds.Y*1.1f));
                 Rectangle currentRectangleAreaWorld = new Rectangle((int)(TopLeftLocation.X + Main.screenPosition.X), (int)(currentRectangleArea.Y + Main.screenPosition.Y), (int)IconBounds.X, (int)IconBounds.Y);
                 spriteBatch.Draw(toggleIcon, currentRectangleArea.Center(), null, Color.White, 0f, toggleIcon.Size() * 0.5f, ResolutionRatio * 0.6f, SpriteEffects.None, 0f);
 

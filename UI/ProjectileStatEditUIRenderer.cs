@@ -17,9 +17,9 @@ namespace CalTestHelpers.UI
 		public Projectile ProjectileBeingEdited = null;
 		public string ProjectileText = string.Empty;
 		public bool EditingProjectileText = false;
-		public override float UIScale => 0.65f * ResolutionRatio;
+		public override float UIScale => 0.6f * ResolutionRatio;
 
-		public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 660 - 270 * ResolutionRatio, 5);
+		public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 660 - 300 * ResolutionRatio, 5);
 
 		public override void DrawElements(SpriteBatch spriteBatch, float top)
 		{

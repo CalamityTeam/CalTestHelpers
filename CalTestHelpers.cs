@@ -1,5 +1,5 @@
-using CalTestHelpers.UI;
 using System.Collections.Generic;
+using CalTestHelpers.UI;
 using Terraria.ModLoader;
 
 namespace CalTestHelpers

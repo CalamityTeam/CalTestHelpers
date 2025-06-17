@@ -22,12 +22,12 @@ namespace CalTestHelpers.UI
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.GiantClam)), ModContent.Request<Texture2D>("CalamityMod/NPCs/SunkenSea/GiantClam_Head_Boss").Value, () => ToggleDeath(Boss.GiantClam), GetColor(GetDownedBool(Boss.GiantClam))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.EyeOfCthulhu)), TextureAssets.NpcHeadBoss[0].Value, () => ToggleDeath(Boss.EyeOfCthulhu), GetColor(GetDownedBool(Boss.EyeOfCthulhu))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.Crabulon)), ModContent.Request<Texture2D>("CalamityMod/NPCs/Crabulon/Crabulon_Head_Boss").Value, () => ToggleDeath(Boss.Crabulon), GetColor(GetDownedBool(Boss.Crabulon))),
-            new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.EaterOfWorlds)), TextureAssets.NpcHeadBoss[2].Value, () => ToggleDeath(Boss.EaterOfWorlds), GetColor(GetDownedBool(Boss.EaterOfWorlds))),
+            new SpecialUIElement(Language.GetTextValue(BossKeyEndsWithS, GetBossLocalizationKey(Boss.EaterOfWorlds)), TextureAssets.NpcHeadBoss[2].Value, () => ToggleDeath(Boss.EaterOfWorlds), GetColor(GetDownedBool(Boss.EaterOfWorlds))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.BrainOfCthulhu)), TextureAssets.NpcHeadBoss[23].Value, () => ToggleDeath(Boss.BrainOfCthulhu), GetColor(GetDownedBool(Boss.BrainOfCthulhu))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.HiveMind)), ModContent.Request<Texture2D>("CalamityMod/NPCs/HiveMind/HiveMindP2_Head_Boss").Value, () => ToggleDeath(Boss.HiveMind), GetColor(GetDownedBool(Boss.HiveMind))),
             new SpecialUIElement(Language.GetTextValue(BossKeyEndsWithS, GetBossLocalizationKey(Boss.Perforators)), ModContent.Request<Texture2D>("CalamityMod/NPCs/Perforator/PerforatorHive_Head_Boss").Value, () => ToggleDeath(Boss.Perforators), GetColor(GetDownedBool(Boss.Perforators))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.QueenBee)), TextureAssets.NpcHeadBoss[14].Value, () => ToggleDeath(Boss.QueenBee), GetColor(GetDownedBool(Boss.QueenBee))),
-            new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.Deerclops)), TextureAssets.NpcHeadBoss[39].Value, () => ToggleDeath(Boss.Deerclops), GetColor(GetDownedBool(Boss.Deerclops))),
+            new SpecialUIElement(Language.GetTextValue(BossKeyEndsWithS, GetBossLocalizationKey(Boss.Deerclops)), TextureAssets.NpcHeadBoss[39].Value, () => ToggleDeath(Boss.Deerclops), GetColor(GetDownedBool(Boss.Deerclops))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.Skeletron)), TextureAssets.NpcHeadBoss[19].Value, () => ToggleDeath(Boss.Skeletron), GetColor(GetDownedBool(Boss.Skeletron))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.SlimeGod)), ModContent.Request<Texture2D>("CalamityMod/NPCs/SlimeGod/SlimeGodCore_Head_Boss").Value, () => ToggleDeath(Boss.SlimeGod), GetColor(GetDownedBool(Boss.SlimeGod))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.WallOfFlesh)), TextureAssets.NpcHeadBoss[22].Value, () => ToggleDeath(Boss.WallOfFlesh), GetColor(GetDownedBool(Boss.WallOfFlesh))),
@@ -106,7 +106,8 @@ namespace CalTestHelpers.UI
             }
             bossDeathValue = !bossDeathValue;
             string DeadOrAlive = Language.GetTextValue(key + (bossDeathValue ? "Dead" : "Alive"));
-            Main.NewText(Language.GetTextValue(key+"Toggle", bossName, DeadOrAlive), textColor);
+            bool bossReferenceText = bossName.Last() == 's';
+            Main.NewText(Language.GetTextValue(key+(bossReferenceText ? "ToggleEndsWithS" : "Toggle"), bossName, DeadOrAlive), textColor);
         }
 
         public static LocalizedText ToggleAllPreHM { get; private set; }

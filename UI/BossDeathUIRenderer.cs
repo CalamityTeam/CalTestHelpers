@@ -140,7 +140,7 @@ namespace CalTestHelpers.UI
                     bossName = CalamityUtils.GetTextValue("NPCs.AquaticScourgeHead.DisplayName");
                     break;
                 case Boss.TheDestroyer:
-                    bossName = Lang.GetNPCNameValue(NPCID.TheDestroyer);
+                    bossName = Language.GetTextValue(key + "Destroyer");
                     break;
                 case Boss.BrimstoneElemental:
                     bossName = CalamityUtils.GetTextValue("NPCs.BrimstoneElemental.DisplayName");
@@ -164,7 +164,7 @@ namespace CalTestHelpers.UI
                     bossName = Lang.GetNPCNameValue(NPCID.Golem);
                     break;
                 case Boss.PlaguebringerGoliath:
-                    bossName = CalamityUtils.GetTextValue("NPCs.PlaguebringerGoliath.DisplayName");
+                    bossName = Language.GetTextValue(key + "PBG");
                     break;
                 case Boss.DukeFishron:
                     bossName = Lang.GetNPCNameValue(NPCID.DukeFishron);

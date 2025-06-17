@@ -26,7 +26,7 @@ namespace CalTestHelpers
         public static bool NoSpawns = false;
         public static bool FrozenTime = false;
         public static List<int> BossKillDPS = new List<int>();
-
+        public string LocalisationKey = "Mods.CalTestHelpers.BossDeathStats.";
         public override void SaveWorldData(TagCompound tag)
         {
             tag["NoSpawns"] = NoSpawns;
@@ -70,7 +70,13 @@ namespace CalTestHelpers
                     double averageDPS = BossKillDPS.Count == 0 ? 0f : BossKillDPS.Average();
                     double maxDPS = BossKillDPS.Count == 0 ? 0f : BossKillDPS.Max();
                     string timeString = TimeSpan.FromSeconds(BossKillTimeFrames / 60f).ToString(@"hh\:mm\:ss");
-                    string textToDisplay = $"Time Elapsed: {timeString}\n" +
+
+                    //string textToDisplay = Language.GetTextValue(, timeString, maxDPS, (maxDPS+1f)/(averageDPS+1f));
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromKey(LocalisationKey + "Time", timeString), Color.Crimson);
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromKey(LocalisationKey + "AverageDPS", averageDPS), Color.Crimson);
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromKey(LocalisationKey + "MaxDPS", maxDPS), Color.Crimson);
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromKey(LocalisationKey + "Instability", Math.Round((maxDPS + 1f) / (averageDPS + 1f), 2)), Color.Crimson);
+                    /*string textToDisplay = $"Time Elapsed: {timeString}\n" +
                                            $"Average DPS: {averageDPS}\n" +
                                            $"Maximum DPS: {maxDPS}\n" +
                                            $"DPS Instability Factor: {(maxDPS + 1f) / (averageDPS + 1f)}";
@@ -83,6 +89,7 @@ namespace CalTestHelpers
                         else if (Main.netMode == NetmodeID.Server)
                             ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(snippet), Color.Crimson);
                     }
+                    */
                 }
 
                 if (CalTestHelperConfig.Instance.StoreFightInformation)

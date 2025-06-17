@@ -4,6 +4,7 @@ using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace CalTestHelpers.Items
@@ -41,7 +42,7 @@ namespace CalTestHelpers.Items
                 if (modItem != null && modItem.UsesCharge)
                     modItem.Charge = modItem.MaxCharge;
             }
-            Main.NewText("All chargeable Arsenal weapons in your inventory have been fully charged.", Color.Cyan);
+            Main.NewText(Language.GetTextValue("Mods.CalTestHelpers.Items.ChargerTestItem.ChargedItems"), Color.Cyan);
             return true;
         }
     }

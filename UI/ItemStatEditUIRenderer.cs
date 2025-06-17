@@ -17,9 +17,9 @@ namespace CalTestHelpers.UI
 		public Item ItemBeingEdited = null;
 		public string ItemText = string.Empty;
 		public bool EditingItemText = false;
-		public override float UIScale => 0.65f * ResolutionRatio;
+		public override float UIScale => 0.7f * ResolutionRatio;
 
-		public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 660 - 270 * ResolutionRatio, 5);
+		public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 660 - 300 * ResolutionRatio, 5);
 
 		public override void DrawElements(SpriteBatch spriteBatch, float top)
 		{
@@ -79,8 +79,8 @@ namespace CalTestHelpers.UI
 				Vector2 instancedItemDrawPosition = itemDrawPosition;
 
 				// Ensure that the item positions never leave the box.
-				instancedItemDrawPosition.X += itemCounter % moveToNextLineRate * 36f;
-				instancedItemDrawPosition.Y += itemCounter / moveToNextLineRate * 36f;
+				instancedItemDrawPosition.X += itemCounter % moveToNextLineRate * 32f;
+				instancedItemDrawPosition.Y += itemCounter / moveToNextLineRate * 32f;
 				Item itemToDraw = ItemOverrideCache.LoadedItems[itemType].Clone();
 
 				Rectangle icon = Utils.CenteredRectangle(instancedItemDrawPosition + Main.screenPosition, Vector2.One * 32f);

@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\ui\\bossdeathphm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:ui\\bossdeathphm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\caltesthelpersplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:caltesthelpersplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\caltesthelpersworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:caltesthelpersworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\caltesthelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:caltesthelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\localization\\en-us_mods.caltesthelpers.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -27,24 +15,48 @@
       "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:ui\\permanentupgradeuirenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\description.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:description.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\caltesthelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:caltesthelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\caltesthelpersglobalitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:caltesthelpersglobalitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\items\\chargertestitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:items\\chargertestitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\items\\changelog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:items\\changelog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\ui\\granduirenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:ui\\granduirenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\ui\\bossdeathuirenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:ui\\bossdeathuirenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\caltesthelperconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:caltesthelperconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\ui\\itemstatedituirenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:ui\\itemstatedituirenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\ui\\projectilestatedituirenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:ui\\projectilestatedituirenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\ui\\bossdeathhm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:ui\\bossdeathhm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\ui\\bossdeathpml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:ui\\bossdeathpml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\ui\\bossdeathuirenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:ui\\bossdeathuirenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|c:\\users\\diego\\documents\\my games\\terraria\\tmodloader\\modsources\\caltesthelpers\\caltesthelpersplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E793B24-3D8B-4F5F-AEF3-CD26E5F321C0}|CalTestHelpers.csproj|solutionrelative:caltesthelpersplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,13 +70,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "PermanentUpgradeUIRenderer.cs",
               "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\PermanentUpgradeUIRenderer.cs",
               "RelativeDocumentMoniker": "UI\\PermanentUpgradeUIRenderer.cs",
               "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\PermanentUpgradeUIRenderer.cs",
               "RelativeToolTip": "UI\\PermanentUpgradeUIRenderer.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAQwC0AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAKwAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T04:21:13.581Z",
               "IsPinned": true,
@@ -72,13 +84,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "en-US_Mods.CalTestHelpers.hjson",
               "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\Localization\\en-US_Mods.CalTestHelpers.hjson",
               "RelativeDocumentMoniker": "Localization\\en-US_Mods.CalTestHelpers.hjson",
               "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\Localization\\en-US_Mods.CalTestHelpers.hjson",
               "RelativeToolTip": "Localization\\en-US_Mods.CalTestHelpers.hjson",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-06-06T04:30:42.215Z",
               "IsPinned": true,
@@ -92,36 +104,10 @@
               "RelativeDocumentMoniker": "UI\\GrandUIRenderer.cs",
               "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\GrandUIRenderer.cs",
               "RelativeToolTip": "UI\\GrandUIRenderer.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAswGIAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T04:15:14.891Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CalTestHelpersPlayer.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpersPlayer.cs",
-              "RelativeDocumentMoniker": "CalTestHelpersPlayer.cs",
-              "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpersPlayer.cs",
-              "RelativeToolTip": "CalTestHelpersPlayer.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACoAAABlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T05:04:26.619Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "description.txt",
-              "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\description.txt",
-              "RelativeDocumentMoniker": "description.txt",
-              "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\description.txt",
-              "RelativeToolTip": "description.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-06-07T05:03:53.71Z",
               "EditorCaption": ""
             },
             {
@@ -170,41 +156,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BossDeathPHM.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\BossDeathPHM.cs",
-              "RelativeDocumentMoniker": "UI\\BossDeathPHM.cs",
-              "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\BossDeathPHM.cs",
-              "RelativeToolTip": "UI\\BossDeathPHM.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwCQAAABBAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "CalTestHelpersGlobalItem.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpersGlobalItem.cs",
+              "RelativeDocumentMoniker": "CalTestHelpersGlobalItem.cs",
+              "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpersGlobalItem.cs",
+              "RelativeToolTip": "CalTestHelpersGlobalItem.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAABQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T04:57:57.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CalTestHelpersWorld.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpersWorld.cs",
-              "RelativeDocumentMoniker": "CalTestHelpersWorld.cs",
-              "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpersWorld.cs",
-              "RelativeToolTip": "CalTestHelpersWorld.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T16:20:05.171Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BossDeathHM.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\BossDeathHM.cs",
-              "RelativeDocumentMoniker": "UI\\BossDeathHM.cs",
-              "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\BossDeathHM.cs",
-              "RelativeToolTip": "UI\\BossDeathHM.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAASwKIAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T04:57:55.376Z",
+              "WhenOpened": "2025-06-17T00:34:46.858Z",
               "EditorCaption": ""
             },
             {
@@ -215,35 +175,127 @@
               "RelativeDocumentMoniker": "CalTestHelpers.cs",
               "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpers.cs",
               "RelativeToolTip": "CalTestHelpers.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAkwBAAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T05:10:46.8Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CalTestHelpersWorld.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpersWorld.cs",
+              "RelativeDocumentMoniker": "CalTestHelpersWorld.cs",
+              "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpersWorld.cs",
+              "RelativeToolTip": "CalTestHelpersWorld.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAuwEwAAAB8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T16:20:05.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChargerTestItem.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\Items\\ChargerTestItem.cs",
+              "RelativeDocumentMoniker": "Items\\ChargerTestItem.cs",
+              "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\Items\\ChargerTestItem.cs",
+              "RelativeToolTip": "Items\\ChargerTestItem.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T00:35:16.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Changelog.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\Items\\Changelog.cs",
+              "RelativeDocumentMoniker": "Items\\Changelog.cs",
+              "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\Items\\Changelog.cs",
+              "RelativeToolTip": "Items\\Changelog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T00:26:09.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ItemStatEditUIRenderer.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\ItemStatEditUIRenderer.cs",
+              "RelativeDocumentMoniker": "UI\\ItemStatEditUIRenderer.cs",
+              "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\ItemStatEditUIRenderer.cs",
+              "RelativeToolTip": "UI\\ItemStatEditUIRenderer.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAgwFEAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T00:17:18.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "CalTestHelperConfig.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelperConfig.cs",
+              "RelativeDocumentMoniker": "CalTestHelperConfig.cs",
+              "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelperConfig.cs",
+              "RelativeToolTip": "CalTestHelperConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T23:20:16.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProjectileStatEditUIRenderer.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\ProjectileStatEditUIRenderer.cs",
+              "RelativeDocumentMoniker": "UI\\ProjectileStatEditUIRenderer.cs",
+              "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\ProjectileStatEditUIRenderer.cs",
+              "RelativeToolTip": "UI\\ProjectileStatEditUIRenderer.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAgwHYAAACHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T00:19:29.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BossDeathHM.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\BossDeathHM.cs",
+              "RelativeDocumentMoniker": "UI\\BossDeathHM.cs",
+              "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\BossDeathHM.cs",
+              "RelativeToolTip": "UI\\BossDeathHM.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAYwIQAAAB/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T23:18:36.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "BossDeathUIRenderer.cs",
               "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\BossDeathUIRenderer.cs",
               "RelativeDocumentMoniker": "UI\\BossDeathUIRenderer.cs",
               "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\BossDeathUIRenderer.cs",
               "RelativeToolTip": "UI\\BossDeathUIRenderer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T05:23:36.111Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BossDeathPML.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\BossDeathPML.cs",
-              "RelativeDocumentMoniker": "UI\\BossDeathPML.cs",
-              "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\UI\\BossDeathPML.cs",
-              "RelativeToolTip": "UI\\BossDeathPML.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAASwJAAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "CalTestHelpersPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpersPlayer.cs",
+              "RelativeDocumentMoniker": "CalTestHelpersPlayer.cs",
+              "ToolTip": "C:\\Users\\diego\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\CalTestHelpers\\CalTestHelpersPlayer.cs",
+              "RelativeToolTip": "CalTestHelpersPlayer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAABlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T05:23:33.94Z"
+              "WhenOpened": "2025-06-07T05:04:26.619Z",
+              "EditorCaption": ""
             }
           ]
         }

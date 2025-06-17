@@ -1,4 +1,5 @@
 using CalamityMod;
+using CalamityMod.Items.Armor.Vanity;
 using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -15,22 +16,22 @@ namespace CalTestHelpers.UI
     {
         public override List<SpecialUIElement> UIElements => new List<SpecialUIElement>()
         {
-            new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.ProfanedGuardians)), ModContent.Request<Texture2D>("CalamityMod/NPCs/ProfanedGuardians/ProfanedGuardianCommander_Head_Boss").Value, () => ToggleDeath(Boss.ProfanedGuardians), GetColor(GetDownedBool(Boss.ProfanedGuardians))),
+            new SpecialUIElement(Language.GetTextValue(BossKeyEndsWithS, GetBossLocalizationKey(Boss.ProfanedGuardians)), ModContent.Request<Texture2D>("CalamityMod/NPCs/ProfanedGuardians/ProfanedGuardianCommander_Head_Boss").Value, () => ToggleDeath(Boss.ProfanedGuardians), GetColor(GetDownedBool(Boss.ProfanedGuardians))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.Dragonfolly)), ModContent.Request<Texture2D>("CalamityMod/NPCs/Bumblebirb/Birb_Head_Boss").Value, () => ToggleDeath(Boss.Dragonfolly), GetColor(GetDownedBool(Boss.Dragonfolly))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.Providence)), ModContent.Request<Texture2D>("CalamityMod/NPCs/Providence/Providence_Head_Boss").Value, () => ToggleDeath(Boss.Providence), GetColor(GetDownedBool(Boss.Providence))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.CeaselessVoid)), ModContent.Request<Texture2D>("CalamityMod/NPCs/CeaselessVoid/CeaselessVoid_Head_Boss").Value, () => ToggleDeath(Boss.CeaselessVoid), GetColor(GetDownedBool(Boss.CeaselessVoid))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.StormWeaver)), ModContent.Request<Texture2D>("CalamityMod/NPCs/StormWeaver/StormWeaverHeadNaked_Head_Boss").Value, () => ToggleDeath(Boss.StormWeaver), GetColor(GetDownedBool(Boss.StormWeaver))),
-            new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.Signus)), ModContent.Request<Texture2D>("CalamityMod/NPCs/Signus/Signus_Head_Boss").Value, () => ToggleDeath(Boss.Signus), GetColor(GetDownedBool(Boss.Signus))),
+            new SpecialUIElement(Language.GetTextValue(BossKeyEndsWithS, GetBossLocalizationKey(Boss.Signus)), ModContent.Request<Texture2D>("CalamityMod/NPCs/Signus/Signus_Head_Boss").Value, () => ToggleDeath(Boss.Signus), GetColor(GetDownedBool(Boss.Signus))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.Polterghast)), ModContent.Request<Texture2D>("CalamityMod/NPCs/Polterghast/Polterghast_Head_Boss").Value, () => ToggleDeath(Boss.Polterghast), GetColor(GetDownedBool(Boss.Polterghast))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.OldDuke)), ModContent.Request<Texture2D>("CalamityMod/NPCs/OldDuke/OldDuke_Head_Boss").Value, () => ToggleDeath(Boss.OldDuke), GetColor(GetDownedBool(Boss.OldDuke))),
-            new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.DevourerOfGods)), ModContent.Request<Texture2D>("CalamityMod/NPCs/DevourerofGods/DevourerofGodsHeadS_Head_Boss").Value, () => ToggleDeath(Boss.DevourerOfGods), GetColor(GetDownedBool(Boss.DevourerOfGods))),
+            new SpecialUIElement(Language.GetTextValue(BossKeyEndsWithS, GetBossLocalizationKey(Boss.DevourerOfGods)), ModContent.Request<Texture2D>("CalamityMod/NPCs/DevourerofGods/DevourerofGodsHeadS_Head_Boss").Value, () => ToggleDeath(Boss.DevourerOfGods), GetColor(GetDownedBool(Boss.DevourerOfGods))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.Yharon)), ModContent.Request<Texture2D>("CalamityMod/NPCs/Yharon/Yharon_Head_Boss").Value, () => ToggleDeath(Boss.Yharon), GetColor(GetDownedBool(Boss.Yharon))),
-            new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.Draedon)), ModContent.Request<Texture2D>("CalTestHelpers/UI/TemporaryDraedonIcon").Value, () => ToggleDeath(Boss.Draedon), GetColor(GetDownedBool(Boss.Draedon))),
-            new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.Calamitas)), ModContent.Request<Texture2D>("CalamityMod/NPCs/SupremeCalamitas/HoodlessHeadIcon").Value, () => ToggleDeath(Boss.Calamitas), GetColor(GetDownedBool(Boss.Calamitas))),
+            new SpecialUIElement(Language.GetTextValue(BossKeyEndsWithS, GetBossLocalizationKey(Boss.Draedon)), ModContent.Request<Texture2D>("CalamityMod/Items/Armor/Vanity/DraedonMask").Value, () => ToggleDeath(Boss.Draedon), GetColor(GetDownedBool(Boss.Draedon))),
+            new SpecialUIElement(Language.GetTextValue(BossKeyEndsWithS, GetBossLocalizationKey(Boss.Calamitas)), ModContent.Request<Texture2D>("CalamityMod/NPCs/SupremeCalamitas/HoodlessHeadIcon").Value, () => ToggleDeath(Boss.Calamitas), GetColor(GetDownedBool(Boss.Calamitas))),
             //Since people asked for it
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.Wyrm)), ModContent.Request<Texture2D>("CalamityMod/NPCs/PrimordialWyrm/PrimordialWyrmHead_Head_Boss").Value, () => ToggleDeath(Boss.Wyrm), GetColor(GetDownedBool(Boss.Wyrm))),
-            new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.AllPML)), ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/ArkoftheCosmos").Value, () => ToggleDeath(Boss.AllPML), GetColor(GetDownedBool(Boss.AllPML))),
-            new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.All)), ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () => ToggleDeath(Boss.All), GetColor(GetDownedBool(Boss.All)))
+            new SpecialUIElement(Language.GetTextValue(GetBossLocalizationKey(Boss.AllPML)), ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/ArkoftheCosmos").Value, () => ToggleDeath(Boss.AllPML), GetColor(GetDownedBool(Boss.AllPML))),
+            new SpecialUIElement(Language.GetTextValue(GetBossLocalizationKey(Boss.All)), ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () => ToggleDeath(Boss.All), GetColor(GetDownedBool(Boss.All)))
         };
 
         public static void ToggleDeath(Boss bossDeathToToggle)
@@ -105,7 +106,8 @@ namespace CalTestHelpers.UI
             }
             bossDeathValue = !bossDeathValue;
             string DeadOrAlive = Language.GetTextValue(key + (bossDeathValue ? "Dead" : "Alive"));
-            Main.NewText(Language.GetTextValue(key + "Toggle", bossName, DeadOrAlive), textColor);
+            bool bossReferenceText = bossName.Last() == 's';
+            Main.NewText(Language.GetTextValue(key + (bossReferenceText ? "ToggleEndsWithS" : "Toggle"), bossName, DeadOrAlive), textColor);
         }
 
         public static void ToggleAllPMLBossDeaths()

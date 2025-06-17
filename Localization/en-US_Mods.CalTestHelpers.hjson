@@ -1,9 +1,17 @@
 "Keybinds.Toggle Test UIs.DisplayName": Toggle  Test  UIs
 
+BossDeathStats: {
+	Time: Time elapsed: {0}
+	AverageDPS: Average DPS: {0}
+	MaxDPS: Maximum DPS: {0}
+	Instability: DPS Instability factor: {0}
+}
+
 Items: {
 	ChargerTestItem: {
 		DisplayName: Charger Test Item
 		Tooltip: Recharges all arsenal items in the inventory
+		ChargedItems: All chargeable Arsenal weapons in your inventory have been fully charged.
 	}
 
 	Changelog: {
@@ -13,28 +21,29 @@ Items: {
 			2.3.1.3 Changelog
 			- Fixed loading crashes due to Calamity's latest update
 			- Replaced Changelog sprite with one made by me and not an ex-developer
-			- Some background changes to make development easier and faster and so that I don't lose progress again 
+			- Some internal changes to make development easier and faster and so that I don't lose progress again (I almost lost weeks of progress)
 			- Fixed deadname in mod's credits
-			- Some internal changes to make managing this mod easier (I almost lost weeks of progress lmao)
+			- Tweaked mod's description page
 			- Added Giant Clam to boss toggles so that people can stop Amidias from spawning which was a common suggestion
-			- EoL can now be summoned at daytime with Fae's Lantern
+			- Also added Primordial Wyrm to boss toggles
+			- Empress of Light can now be summoned at daytime with Fae's Lantern, use at your own risk
 			- Removed the change time button; just use Cosmolight or other mod's time changing since they are far better
 			- Updated localization files, added proper localization support (Idk how this mod still worked despite improper localization)
-			- Some tweaks to the UI, should work better in all resolutions now
-			- Deprecated the Item, Projectile editors, you should only be using these if you are a tester without access
-			to code for whatever addon you're making
-			- Removed the Stealth factor editor since it has been broken for a long time
+			- Some tweaks to the UI, should work better in all resolutions now, made buttons wider since text was tiny and sometimes too long to fit
+			- You can resize the UI to your liking (I like to use 1.1)
+			- Deprecated the Item, Projectile editors, you should only be using these if you are a tester without access to code for whatever addon you're making,
+			  preferably ask for code access.
+			- Removed the Stealth factor editor since it hasn't worked for a long time
+			- Instability factor now rounds so theres not a number with a comical amount of decimals
 
 			Known issues:
 			- Game going crazy if multiple time freezes are on: Wont be fixed for the time being so that players arent stuck with frozen time from this mod
 			please use other mod's time freezers if they are available
 
 			Notices:
-			- If you want to make a sprite for an item that has a placeholder or a suggestion
-			submit it to shade__storm in #other-mod-talk on the Official Calamity Discord server,
-			or the Discussions tab in Steam Workshop
-			(I would allow DMs if it wasn't for all those scams and bots that have popped up,
-			sorry guys)
+			- If you want to make a sprite for an item that has a placeholder or a suggestion submit it to shade__storm in #other-mod-talk on the
+			Official Calamity Discord server, or the Discussions tab in Steam Workshop 
+			(I would allow DMs if it wasn't for all those scams and bots that have popped up, sorry guys)
 			- I am not going to use Infernum's assets for boss summoning items, those belong to them
 			'''
 	}
@@ -46,9 +55,9 @@ Items: {
 				'''
 				Summons Anahita while used in the ocean
 				An alluring song can be heard
-				Will be deleted once Calamity's Sunken Sea Update comes out as it adds an
-				Anahita Summoning item, yet the recipe will change when this mod is on
-				to keep it available Pre-Anahita
+				[c/FF0000: Notice: Will be deleted once Calamity's Sunken Sea Update comes out as it adds an]
+				[c/FF0000: Anahita Summoning item, yet the recipe will change when this mod is on to keep it]
+				[c/FF0000: available Pre-Anahita]
 				'''
 		}
 
@@ -91,7 +100,8 @@ Configs: {
 
 		Headers: {
 			Config: Calamity Test Helper configs
-			Deprecated: From extremely old 1.3 versions, not supported anymore. USE AT YOUR OWN RISK
+			Deprecated: Not supported anymore, but still works. Preferably manually edit values in code
+			ExtremelyDeprecated: From extremely old 1.3 versions, not supported anymore, buggy. USE AT YOUR OWN RISK
 			Configs: Configs Header
 		}
 
@@ -111,13 +121,18 @@ Configs: {
 		}
 
 		StuffAmountDisplay: {
-			Label: "[i:CalamityMod/LaboratoryElectricPanelItem] Amount of stuff to display"
+			Label: "[i:CalamityMod/AgedLaboratoryTerminalItem] Amount of stuff to display"
 			Tooltip: How many projectiles should the Projectile and item stat editor display?
 		}
 
 		InstantBossSummoning: {
 			Label: "[i:Stopwatch] Instant Boss Summoning"
 			Tooltip: Makes Draedon and Supreme Calamitas summon instantly, skipping their special animations.
+		}
+
+		UISize: {
+			Label: "[i:CalamityMod/ExoScreen] UI Size"
+			Tooltip: Change the size of the testing UI.
 		}
 	}
 }
@@ -156,6 +171,8 @@ UI: {
 		AllPML: Toggle all Post-Moon Lord boss deaths
 		All: Toggle all boss deaths
 		Toggle: "{0}'s death is now marked as {1}"
+		# This only applies to English
+		ToggleEndsWithS: "{0}' death is now marked as {1}"
 		ToggleAllPreHM: All Pre-Hardmode boss deaths are now marked as {0}
 		ToggleAllHM: All Hardmode boss deaths are now marked as {0}
 		ToggleAllPML: All Post-Moon Lord boss deaths are now marked as {0}
@@ -163,8 +180,10 @@ UI: {
 		Alive: alive
 		Dead: dead
 		Perforators: Perforators
-		Twins: The Twins
+		Twins: Twins
+		Destroyer: Destroyer
 		Leviathan: Leviathan and Anahita
+		PBG: Plaguebringer Goliath
 		ProfanedGuardians: Profaned Guardians
 		Providence: Providence
 		Signus: Signus
@@ -176,6 +195,9 @@ UI: {
 
 	TogglePermanentUpgrades: {
 		DisplayName: Toggle Permanent Upgrades
+		Toggle: Toggle {0}
+		ToggleItem: "{0} is now marked as {1}"
+		#Unused for now since the system is automatic, might be useful for manual overrides later
 		BloodOrange: Toggle Blood Orange
 		MiracleFruit: Toggle Miracle Fruit
 		Elderberry: Toggle Elderberry
@@ -198,6 +220,7 @@ UI: {
 		GummyWorm: Toggle Gummy Worm
 		GalaxyPearl: Toggle Galaxy Pearl
 		Bread: Toggle Artisan Loaf
+		#Future Item
 		NimbleBounder: Toggle Nimble Bounder
 	}
 
