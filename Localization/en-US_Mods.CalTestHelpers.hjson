@@ -54,18 +54,6 @@ Items: {
 	}
 
 	SummonItems: {
-		SirenSong: {
-			DisplayName: Siren Song
-			Tooltip:
-				'''
-				Summons Anahita while used in the ocean
-				An alluring song can be heard
-				[c/FF0000: Notice: Will be deleted once Calamity's Sunken Sea Update comes out as it adds an]
-				[c/FF0000: Anahita Summoning item, yet the recipe will change when this mod is on to keep it]
-				[c/FF0000: available Pre-Anahita]
-				'''
-		}
-
 		FaeLantern: {
 			DisplayName: Fae's Lantern
 			Tooltip:
