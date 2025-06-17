@@ -71,7 +71,7 @@ namespace CalTestHelpers.UI
                     new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.GummyWorm)), TextureAssets.Item[ItemID.GummyWorm].Value, () => ToggleUpgrade(PlayerUpgrade.GummyWorm), GetColor(HasUpgrade(PlayerUpgrade.GummyWorm))),
                     new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.GalaxyPearl)), TextureAssets.Item[ItemID.GalaxyPearl].Value, () => ToggleUpgrade(PlayerUpgrade.GalaxyPearl), GetColor(HasUpgrade(PlayerUpgrade.GalaxyPearl))),
                     new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.ArtisanLoaf)), TextureAssets.Item[ItemID.ArtisanLoaf].Value, () => ToggleUpgrade(PlayerUpgrade.ArtisanLoaf), GetColor(HasUpgrade(PlayerUpgrade.ArtisanLoaf))),
-                    //new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.NimbleBounder)), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/NimbleBounder").Value, () => ToggleUpgrade(PlayerUpgrade.NimbleBounder), GetColor(HasUpgrade(PlayerUpgrade.NimbleBounder))),
+                    new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.NimbleBounder)), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/NimbleBounder").Value, () => ToggleUpgrade(PlayerUpgrade.NimbleBounder), GetColor(HasUpgrade(PlayerUpgrade.NimbleBounder))),
         };
 
         public override Vector2 TopLeftLocation => SecondaryTopLeftLocation;
@@ -252,8 +252,7 @@ namespace CalTestHelpers.UI
                     upgradeValue = ref Main.LocalPlayer.ateArtisanBread;
                     break;
                 case PlayerUpgrade.NimbleBounder:
-                    upgradeName = "Nimble Bounder";
-                    textColor = new Color(200, 111, 145);
+                    textColor = new Color(114, 29, 184);
                     upgradeValue = ref Main.LocalPlayer.Calamity().nimbleBounderBoost;
                     break;
             }
