@@ -226,10 +226,10 @@ UI: {
 		Toggle: Toggle {0}
 		ToggleItem: "{0} is now marked as {1}"
 		#Manual Overrides
-		BloodOrange: Blood Orange
+		SanguineTangerine: Sanguine Tangerine
 		MiracleFruit: Miracle Fruit
-		Elderberry: Elderberry
-		Dragonfruit: Dragonfruit
+		TaintedCloudberry: Tainted Cloudberry
+		SacredStrawberry: Sacred Strawberry
 		CometShard: Comet Shard
 		EtherealCore: Ethereal Core
 		PhantomHeart: Phantom Heart
