@@ -1,5 +1,7 @@
 "Keybinds.Toggle Test UIs.DisplayName": Toggle  Test  UIs
 
+# Yes the name is abhorrent but I will not change it so no one's keybinds break
+
 BossDeathStats: {
 	Time: Time elapsed: {0}
 	AverageDPS: Average DPS: {0}
@@ -18,7 +20,25 @@ Items: {
 		DisplayName: Changelogs
 		Tooltip:
 			'''
-			Read em on #test-builds
+			2.4.0.3 (dev) Changelog
+			- Manual localization override added
+			- Fixed the UI button not working when clicked
+			- Fixed Set Spawn Point Localization failing
+			- Made some config text clearer
+			- Updated Localization files
+
+
+			Known issues:
+			- Game going crazy if multiple time freezes are on: Wont be fixed for the time being so that players arent stuck with frozen time from this mod
+			  please use other mod's time freezers if they are available
+			- Configs not updating for players to the new functions and messages, if this happens locate the config file  for Cal Test Helpers in 
+			  Documents/MyGames/Terraria/Tmodloader/ModConfigs and delete it so a new one is generated. (This works for other mods' configs should they bug out too)
+
+			Notices:
+			- If you want to make a sprite for an item that has a placeholder or a suggestion submit it to shade__storm in #other-mod-talk or #calamity-addon-talk 
+			  on the Official Calamity Discord server, or the Discussions tab in Steam Workshop 
+			  (I would allow DMs if it wasn't for all those scams and bots that have popped up, sorry guys)
+			- I am not going to use Infernum's assets for boss summoning items, those belong to them
 			'''
 	}
 
@@ -62,7 +82,7 @@ Configs: {
 
 		Headers: {
 			Config: Calamity Test Helper configs
-			Deprecated: Not supported anymore, but still works. Preferably manually edit values in code
+			Deprecated: For Deprecated functions, you can still use them but they aren't supported anymore
 			ExtremelyDeprecated: From extremely old 1.3 versions, not supported anymore, buggy. USE AT YOUR OWN RISK
 			Configs: Configs Header
 		}
@@ -96,6 +116,11 @@ Configs: {
 			Label: "[i:CalamityMod/ExoScreen] UI Size"
 			Tooltip: Change the size of the testing UI.
 		}
+
+		ManualLocalizationOverride: {
+			Label: "[i:CalamityMod/LaboratoryElectricPanelItem] Manual Localization Override"
+			Tooltip: Override the automatic localization in case there is no localization available in Calamity or base Terraria
+		}
 	}
 }
 
@@ -104,7 +129,7 @@ UI: {
 
 	SetSpawnpoint: {
 		DisplayName: Set your spawn point to your position
-		Set: Spawn point set, your new spawn point is
+		Set: Spawn point set, your new spawn point is {0}
 	}
 
 	ToggleEnemySpawns: {
@@ -141,49 +166,89 @@ UI: {
 		ToggleAll: All boss deaths are now marked as {0}
 		Alive: alive
 		Dead: dead
+		# Bosses
+		KingSlime: King Slime
+		DesertScourge: Desert Scourge
+		Clam: Giant Clam
+		EoC: Eye of Cthulhu
+		Crabulon: Crabulon
+		EoW: Eater of Worlds
+		BoC: Brain of Cthulhu
+		HiveMind: Hive Mind
 		Perforators: Perforators
+		QueenBee: Queen Bee
+		Deerclops: Deerclops
+		Skeletron: Skeletron
+		SlimeGod: Slime God
+		WoF: Wall of Flesh
+		QueenSlime: Queen Slime
+		Cryogen: Cryogen
 		Twins: Twins
+		AquaticScourge: Aquatic Scourge
 		Destroyer: Destroyer
+		Brimmy: Brimstone Elemental
+		SkeletronPrime: Skeletron Prime
+		CalClone: Calamitas Clone
+		Plantera: Plantera
 		Leviathan: Leviathan and Anahita
+		Aureus: Astrum Aureus
+		Golem: Golem
 		PBG: Plaguebringer Goliath
+		DukeFishron: Duke Fishron
+		EoL: Empress of Light
+		Ravager: Ravager
+		Cultist: Lunatic Cultist
+		Deus: Astrum Deus
+		MoonLord: Moon Lord
 		ProfanedGuardians: Profaned Guardians
+		DFolly: Dragonfolly
 		Providence: Providence
+		SW: Storm Weaver
+		Void: Ceaseless Void
 		Signus: Signus
+		Polterghast: Polterghast
+		OldFart: Old Duke
 		DoG: Devourer of Gods
 		Yharon: Yharon
 		ExoMechs: Exo Mechs
 		SCal: Supreme Calamitas
+		Wyrm: Primordial Wyrm
+		#Getfixedboi
+		Clamitas: Clamitas
+		SupremeClam: Supreme Clamitas
+		Bumblebirb: Bumblebirb
+		Boomerfish: Boomerfish
+		Jared: Jared
 	}
 
 	TogglePermanentUpgrades: {
 		DisplayName: Toggle Permanent Upgrades
 		Toggle: Toggle {0}
 		ToggleItem: "{0} is now marked as {1}"
-		#Unused for now since the system is automatic, might be useful for manual overrides later
-		BloodOrange: Toggle Blood Orange
-		MiracleFruit: Toggle Miracle Fruit
-		Elderberry: Toggle Elderberry
-		Dragonfruit: Toggle Dragonfruit
-		CometShard: Toggle Comet Shard
-		EtherealCore: Toggle Ethereal Core
-		PhantomHeart: Toggle Phantom Heart
-		MushroomPlasmaRoot: Toggle Mushroom Plasma Root
-		InfernalBlood: Toggle Infernal Blood
-		RedLightningContainer: Toggle Red Lightning Container
-		NotBarOfSoap: Toggle Electrolyte Gel Pack
-		StarlightFuelCell: Toggle Starlight Fuel Cell
-		Ectoheart: Toggle Ectoheart
-		DemonHeart: Toggle Demon Heart
-		CelestialOnion: Toggle Celestial Onion
-		VitalCrystal: Toggle Vital Crystal
-		ArcaneCrystal: Toggle Arcane Crystal
-		AegisFruit: Toggle Aegis Fruit
-		Ambrosia: Toggle Ambrosia
-		GummyWorm: Toggle Gummy Worm
-		GalaxyPearl: Toggle Galaxy Pearl
-		Bread: Toggle Artisan Loaf
-		#Future Item
-		NimbleBounder: Toggle Nimble Bounder
+		#Manual Overrides
+		BloodOrange: Blood Orange
+		MiracleFruit: Miracle Fruit
+		Elderberry: Elderberry
+		Dragonfruit: Dragonfruit
+		CometShard: Comet Shard
+		EtherealCore: Ethereal Core
+		PhantomHeart: Phantom Heart
+		MushroomPlasmaRoot: Mushroom Plasma Root
+		InfernalBlood: Infernal Blood
+		RedLightningContainer: Red Lightning Container
+		Electrolyte: Electrolyte Gel Pack
+		StarlightFuelCell: Starlight Fuel Cell
+		Ectoheart: Ectoheart
+		DemonHeart: Demon Heart
+		CelestialOnion: Celestial Onion
+		VitalCrystal: Vital Crystal
+		ArcaneCrystal: Arcane Crystal
+		AegisFruit: Aegis Fruit
+		Ambrosia: Ambrosia
+		GummyWorm: Gummy Worm
+		GalaxyPearl: Galaxy Pearl
+		Bread: Artisan Loaf
+		NimbleBounder: Nimble Bounder
 	}
 
 	ChangeItemStats.DisplayName: "[DEPRECATED] Change item stats"

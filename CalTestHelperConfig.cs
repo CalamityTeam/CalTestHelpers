@@ -34,6 +34,11 @@ namespace CalTestHelpers
         [DrawTicks]
         public float UISize { get; set; }
 
+        [BackgroundColor(192, 54, 64, 192)]
+        [DefaultValue(false)]
+
+        public bool ManualLocalizationOverride { get; set; }
+
         [Header("Deprecated")]
         [BackgroundColor(192, 54, 64, 192)]
         [DefaultValue(40)]

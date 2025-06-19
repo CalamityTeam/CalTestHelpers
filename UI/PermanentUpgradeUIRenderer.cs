@@ -1,18 +1,14 @@
+using System.Collections.Generic;
 using CalamityMod;
 using CalamityMod.Items.PermanentBoosters;
-
 // using CalamityMod.Testing;
-using CalamityMod.NPCs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using static Terraria.ModLoader.ModContent;
 
 namespace CalTestHelpers.UI
 {
@@ -46,6 +42,7 @@ namespace CalTestHelpers.UI
         }
 
         public string key = "Mods.CalTestHelpers.UI.TogglePermanentUpgrades.Toggle";
+        public static string key2 = "Mods.CalTestHelpers.UI.TogglePermanentUpgrades."; //No clue why the fuck this one needs to be static
         public override List<SpecialUIElement> UIElements => new List<SpecialUIElement>()
         {
                     new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.SanguineTangerine)), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/SanguineTangerine").Value, () => ToggleUpgrade(PlayerUpgrade.SanguineTangerine), GetColor(HasUpgrade(PlayerUpgrade.SanguineTangerine))),
@@ -81,78 +78,157 @@ namespace CalTestHelpers.UI
         public static string GetUpgradeName(PlayerUpgrade upgrade)
         {
             string UpgradeName = string.Empty;
-            switch (upgrade)
+            if (!CalTestHelperConfig.Instance.ManualLocalizationOverride)
             {
-                case PlayerUpgrade.SanguineTangerine:
-                    UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<SanguineTangerine>()).Value;
-                    break;
-                case PlayerUpgrade.MiracleFruit:
-                    UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<MiracleFruit>()).Value;
-                    break;
-                case PlayerUpgrade.TaintedCloudberry:
-                    UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<TaintedCloudberry>()).Value;
-                    break;
-                case PlayerUpgrade.SacredStrawberry:
-                    UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<SacredStrawberry>()).Value;
-                    break;
-                case PlayerUpgrade.CometShard:
-                    UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<CometShard>()).Value;
-                    break;
-                case PlayerUpgrade.EtherealCore:
-                    UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<EtherealCore>()).Value;
-                    break;
-                case PlayerUpgrade.PhantomHeart:
-                    UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<PhantomHeart>()).Value;
-                    break;
-                case PlayerUpgrade.MushroomPlasmaRoot:
-                    UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<MushroomPlasmaRoot>()).Value;
-                    break;
-                case PlayerUpgrade.InfernalBlood:
-                    UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<InfernalBlood>()).Value;
-                    break;
-                case PlayerUpgrade.RedLightningContainer:
-                    UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<RedLightningContainer>()).Value;
-                    break;
-                case PlayerUpgrade.ElectrolyteGelPack:
-                    UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<ElectrolyteGelPack>()).Value;
-                    break;
-                case PlayerUpgrade.StarlightFuelCell:
-                    UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<StarlightFuelCell>()).Value;
-                    break;
-                case PlayerUpgrade.Ectoheart:
-                    UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<Ectoheart>()).Value;
-                    break;
-                case PlayerUpgrade.DemonHeart:
-                    UpgradeName = Lang.GetItemNameValue(ItemID.DemonHeart);
-                    break;
-                case PlayerUpgrade.CelestialOnion:
-                    UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<CelestialOnion>()).Value;
-                    break;
-                case PlayerUpgrade.VitalCrystal:
-                    UpgradeName = Lang.GetItemNameValue(ItemID.AegisCrystal);
-                    break;
-                case PlayerUpgrade.ArcaneCrystal:
-                    UpgradeName = Lang.GetItemNameValue(ItemID.ArcaneCrystal);
-                    break;
-                case PlayerUpgrade.AegisFruit:
-                    UpgradeName = Lang.GetItemNameValue(ItemID.AegisFruit);
-                    break;
-                case PlayerUpgrade.Ambrosia:
-                    UpgradeName = Lang.GetItemNameValue(ItemID.Ambrosia);
-                    break;
-                case PlayerUpgrade.GummyWorm:
-                    UpgradeName = Lang.GetItemNameValue(ItemID.GummyWorm);
-                    break;
-                case PlayerUpgrade.GalaxyPearl:
-                    UpgradeName = Lang.GetItemNameValue(ItemID.GalaxyPearl);
-                    break;
-                case PlayerUpgrade.ArtisanLoaf:
-                    UpgradeName = Lang.GetItemNameValue(ItemID.ArtisanLoaf);
-                    break;
-                case PlayerUpgrade.NimbleBounder:
-                    UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<NimbleBounder>()).Value;
-                    break;
+                switch (upgrade)
+                {
+                    case PlayerUpgrade.SanguineTangerine:
+                        UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<SanguineTangerine>()).Value;
+                        break;
+                    case PlayerUpgrade.MiracleFruit:
+                        UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<MiracleFruit>()).Value;
+                        break;
+                    case PlayerUpgrade.TaintedCloudberry:
+                        UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<TaintedCloudberry>()).Value;
+                        break;
+                    case PlayerUpgrade.SacredStrawberry:
+                        UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<SacredStrawberry>()).Value;
+                        break;
+                    case PlayerUpgrade.CometShard:
+                        UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<CometShard>()).Value;
+                        break;
+                    case PlayerUpgrade.EtherealCore:
+                        UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<EtherealCore>()).Value;
+                        break;
+                    case PlayerUpgrade.PhantomHeart:
+                        UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<PhantomHeart>()).Value;
+                        break;
+                    case PlayerUpgrade.MushroomPlasmaRoot:
+                        UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<MushroomPlasmaRoot>()).Value;
+                        break;
+                    case PlayerUpgrade.InfernalBlood:
+                        UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<InfernalBlood>()).Value;
+                        break;
+                    case PlayerUpgrade.RedLightningContainer:
+                        UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<RedLightningContainer>()).Value;
+                        break;
+                    case PlayerUpgrade.ElectrolyteGelPack:
+                        UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<ElectrolyteGelPack>()).Value;
+                        break;
+                    case PlayerUpgrade.StarlightFuelCell:
+                        UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<StarlightFuelCell>()).Value;
+                        break;
+                    case PlayerUpgrade.Ectoheart:
+                        UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<Ectoheart>()).Value;
+                        break;
+                    case PlayerUpgrade.DemonHeart:
+                        UpgradeName = Lang.GetItemNameValue(ItemID.DemonHeart);
+                        break;
+                    case PlayerUpgrade.CelestialOnion:
+                        UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<CelestialOnion>()).Value;
+                        break;
+                    case PlayerUpgrade.VitalCrystal:
+                        UpgradeName = Lang.GetItemNameValue(ItemID.AegisCrystal);
+                        break;
+                    case PlayerUpgrade.ArcaneCrystal:
+                        UpgradeName = Lang.GetItemNameValue(ItemID.ArcaneCrystal);
+                        break;
+                    case PlayerUpgrade.AegisFruit:
+                        UpgradeName = Lang.GetItemNameValue(ItemID.AegisFruit);
+                        break;
+                    case PlayerUpgrade.Ambrosia:
+                        UpgradeName = Lang.GetItemNameValue(ItemID.Ambrosia);
+                        break;
+                    case PlayerUpgrade.GummyWorm:
+                        UpgradeName = Lang.GetItemNameValue(ItemID.GummyWorm);
+                        break;
+                    case PlayerUpgrade.GalaxyPearl:
+                        UpgradeName = Lang.GetItemNameValue(ItemID.GalaxyPearl);
+                        break;
+                    case PlayerUpgrade.ArtisanLoaf:
+                        UpgradeName = Lang.GetItemNameValue(ItemID.ArtisanLoaf);
+                        break;
+                    case PlayerUpgrade.NimbleBounder:
+                        UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<NimbleBounder>()).Value;
+                        break;
+                }
             }
+            else
+            {
+                switch (upgrade)
+                {
+                    case PlayerUpgrade.SanguineTangerine:
+                        UpgradeName = Language.GetTextValue(key2 + "SanguineTangerine");
+                        break;
+                    case PlayerUpgrade.MiracleFruit:
+                        UpgradeName = Language.GetTextValue(key2 + "MiracleFruit");
+                        break;
+                    case PlayerUpgrade.TaintedCloudberry:
+                        UpgradeName = Language.GetTextValue(key2 + "TaintedCloudberry");
+                        break;
+                    case PlayerUpgrade.SacredStrawberry:
+                        UpgradeName = Language.GetTextValue(key2 + "SacredStrawberry");
+                        break;
+                    case PlayerUpgrade.CometShard:
+                        UpgradeName = Language.GetTextValue(key2 + "CometShard");
+                        break;
+                    case PlayerUpgrade.EtherealCore:
+                        UpgradeName = Language.GetTextValue(key2 + "EtherealCore");
+                        break;
+                    case PlayerUpgrade.PhantomHeart:
+                        UpgradeName = Language.GetTextValue(key2 + "PhantomHeart");
+                        break;
+                    case PlayerUpgrade.MushroomPlasmaRoot:
+                        UpgradeName = Language.GetTextValue(key2 + "MushroomPlasmaRoot");
+                        break;
+                    case PlayerUpgrade.InfernalBlood:
+                        UpgradeName = Language.GetTextValue(key2 + "InfernalBlood");
+                        break;
+                    case PlayerUpgrade.RedLightningContainer:
+                        UpgradeName = Language.GetTextValue(key2 + "RedLightningContainer");
+                        break;
+                    case PlayerUpgrade.ElectrolyteGelPack:
+                        UpgradeName = Language.GetTextValue(key2 + "Electrolyte");
+                        break;
+                    case PlayerUpgrade.StarlightFuelCell:
+                        UpgradeName = Language.GetTextValue(key2 + "StarlightFuelCell");
+                        break;
+                    case PlayerUpgrade.Ectoheart:
+                        UpgradeName = Language.GetTextValue(key2 + "Ectoheart");
+                        break;
+                    case PlayerUpgrade.DemonHeart:
+                        UpgradeName = Language.GetTextValue(key2 + "DemonHeart");
+                        break;
+                    case PlayerUpgrade.CelestialOnion:
+                        UpgradeName = Language.GetTextValue(key2 + "CelestialOnion");
+                        break;
+                    case PlayerUpgrade.VitalCrystal:
+                        UpgradeName = Language.GetTextValue(key2 + "VitalCrystal");
+                        break;
+                    case PlayerUpgrade.ArcaneCrystal:
+                        UpgradeName = Language.GetTextValue(key2 + "ArcaneCrystal");
+                        break;
+                    case PlayerUpgrade.AegisFruit:
+                        UpgradeName = Language.GetTextValue(key2 + "AegisFruit");
+                        break;
+                    case PlayerUpgrade.Ambrosia:
+                        UpgradeName = Language.GetTextValue(key2 + "Ambrosia");
+                        break;
+                    case PlayerUpgrade.GummyWorm:
+                        UpgradeName = Language.GetTextValue(key2 + "GummyWorm");
+                        break;
+                    case PlayerUpgrade.GalaxyPearl:
+                        UpgradeName = Language.GetTextValue(key2 + "GalaxyPearl");
+                        break;
+                    case PlayerUpgrade.ArtisanLoaf:
+                        UpgradeName = Language.GetTextValue(key2 + "Bread");
+                        break;
+                    case PlayerUpgrade.NimbleBounder:
+                        UpgradeName = Language.GetTextValue(key2+"NimbleBounder");
+                        break;
+                }
+            }
+
             return UpgradeName;
         }
 

@@ -31,7 +31,7 @@ namespace CalTestHelpers.UI
                     {
                         Main.spawnTileX = (int)(Main.LocalPlayer.position.X - 8 + Main.LocalPlayer.width / 2) / 16;
                         Main.spawnTileY = (int)(Main.LocalPlayer.position.Y + Main.LocalPlayer.height) / 16;
-                        Main.NewText(Language.GetTextValue("Mods.CalTestHelpers.UI.SetSpawnpoint.set") + $" {new Vector2(Main.spawnTileX, Main.spawnTileY)}");
+                        Main.NewText(Language.GetTextValue("Mods.CalTestHelpers.UI.SetSpawnpoint.Set",new Vector2(Main.spawnTileX, Main.spawnTileY)));
                     }),
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleEnemySpawns.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/EnemyIcon").Value, () =>
                     {
@@ -127,9 +127,9 @@ namespace CalTestHelpers.UI
         public static float ResolutionRatio => Main.screenWidth / 2560f * CalTestHelperConfig.Instance.UISize;
 
         //this is to move the button
-        public virtual Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 450, 120);
+        public virtual Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 500, 140);
 
-        public static Vector2 SecondaryTopLeftLocation => new Vector2(Main.screenWidth - 450 - 350 * ResolutionRatio, 40);
+        public static Vector2 SecondaryTopLeftLocation => new Vector2(Main.screenWidth - 500 - 350 * ResolutionRatio, 40);
 
         public virtual float UIScale => ResolutionRatio;
 
@@ -153,8 +153,8 @@ namespace CalTestHelpers.UI
             Texture2D categorySlotTexture = ModContent.Request<Texture2D>("CalTestHelpers/UI/CategorySlot").Value;
             foreach (var button in UIElements)
             {
-                Rectangle currentRectangleArea = new Rectangle((int)TopLeftLocation.X-150, (int)top, (int)IconBounds.X, (int)IconBounds.Y);
-                Rectangle currentRectangleAreaWorld = new Rectangle((int)(TopLeftLocation.X-150 + Main.screenPosition.X), (int)(top + Main.screenPosition.Y), (int)IconBounds.X, (int)IconBounds.Y);
+                Rectangle currentRectangleArea = new Rectangle((int)TopLeftLocation.X-100, (int)top, (int)IconBounds.X, (int)IconBounds.Y);
+                Rectangle currentRectangleAreaWorld = new Rectangle((int)(TopLeftLocation.X-100 + Main.screenPosition.X), (int)(top + Main.screenPosition.Y), (int)IconBounds.X, (int)IconBounds.Y);
 
                 //White is default but colors could be changed here
                 spriteBatch.Draw(categorySlotTexture, currentRectangleArea.TopLeft(), null, Color.White, 0f, Vector2.Zero, UIScale, SpriteEffects.None, 0f);
@@ -185,12 +185,18 @@ namespace CalTestHelpers.UI
             if (GetType() == typeof(GrandUIRenderer))
             {
                 Texture2D toggleIcon = ModContent.Request<Texture2D>("CalTestHelpers/UI/GrandUIToggle").Value;
-                Rectangle currentRectangleArea = new Rectangle((int)TopLeftLocation.X-150, (int)(top - 75 * ResolutionRatio), (int)(IconBounds.X*1.1f), (int)(IconBounds.Y*1.1f));
+                Rectangle currentRectangleArea = new Rectangle((int)TopLeftLocation.X, (int)(top - 75 * ResolutionRatio), (int)(IconBounds.X*1.1f), (int)(IconBounds.Y*1.1f));
                 Rectangle currentRectangleAreaWorld = new Rectangle((int)(TopLeftLocation.X + Main.screenPosition.X), (int)(currentRectangleArea.Y + Main.screenPosition.Y), (int)IconBounds.X, (int)IconBounds.Y);
-                spriteBatch.Draw(toggleIcon, currentRectangleArea.Center(), null, Color.White, 0f, toggleIcon.Size() * 0.5f, ResolutionRatio * 0.6f, SpriteEffects.None, 0f);
+                
+                //DEBUG
+                //Main.NewText(currentRectangleAreaWorld);
+                //Main.NewText(Main.MouseWorld);
+                
+                spriteBatch.Draw(toggleIcon, currentRectangleArea.Center(), null, Color.White, 0f, toggleIcon.Size() * 0.6f, ResolutionRatio * 0.75f, SpriteEffects.None, 0f);
 
                 if (CalamityUtils.MouseHitbox.Intersects(currentRectangleAreaWorld))
                 {
+                    // DEBUG: Main.NewText("intersecting");
                     // Activate the event if the button is pressed.
                     Main.blockMouse = Main.LocalPlayer.mouseInterface = true;
                     if (Main.mouseLeft && Main.mouseLeftRelease)
