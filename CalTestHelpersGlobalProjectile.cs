@@ -13,11 +13,13 @@ namespace CalTestHelpers
 {
     public class CalTestHelpersGlobalProjectile : GlobalProjectile
     {
+        //public SCalRitualDrama ritual;
         public override void AI(Projectile projectile)
         {
             if (projectile.type == ModContent.ProjectileType<SCalRitualDrama>() && !NPC.AnyNPCs(ModContent.NPCType<SupremeCalamitas>()) && CalTestHelperConfig.Instance.InstantBossSummoning)
             {
-                //SCalRitualDrama.SummonSCal();
+                //ritual.SummonSCal(); //figured it out, nvm
+
                 //If only functions worked like Python ones, gotta copy the code then
                 //Permision granted by Xyk
 
@@ -55,6 +57,7 @@ namespace CalTestHelpers
                 GeneralParticleHandler.SpawnParticle(pulse);
                 Particle pulse2 = new DirectionalPulseRing(projectile.Center, Vector2.Zero, projectile.ai[1] == 1 ? Color.Magenta : new Color(121, 21, 77), new Vector2(2f, 2f), 0, 0f, 2.1f, 60);
                 GeneralParticleHandler.SpawnParticle(pulse2);
+
                 projectile.Kill();
             }
         }

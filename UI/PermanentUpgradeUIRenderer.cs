@@ -37,8 +37,7 @@ namespace CalTestHelpers.UI
             Ambrosia,
             GummyWorm,
             GalaxyPearl,
-            ArtisanLoaf,
-            NimbleBounder
+            ArtisanLoaf
         }
 
         public string key = "Mods.CalTestHelpers.UI.TogglePermanentUpgrades.Toggle";
@@ -68,7 +67,6 @@ namespace CalTestHelpers.UI
                     new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.GummyWorm)), TextureAssets.Item[ItemID.GummyWorm].Value, () => ToggleUpgrade(PlayerUpgrade.GummyWorm), GetColor(HasUpgrade(PlayerUpgrade.GummyWorm))),
                     new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.GalaxyPearl)), TextureAssets.Item[ItemID.GalaxyPearl].Value, () => ToggleUpgrade(PlayerUpgrade.GalaxyPearl), GetColor(HasUpgrade(PlayerUpgrade.GalaxyPearl))),
                     new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.ArtisanLoaf)), TextureAssets.Item[ItemID.ArtisanLoaf].Value, () => ToggleUpgrade(PlayerUpgrade.ArtisanLoaf), GetColor(HasUpgrade(PlayerUpgrade.ArtisanLoaf))),
-                    new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.NimbleBounder)), ModContent.Request<Texture2D>("CalamityMod/Items/PermanentBoosters/NimbleBounder").Value, () => ToggleUpgrade(PlayerUpgrade.NimbleBounder), GetColor(HasUpgrade(PlayerUpgrade.NimbleBounder))),
         };
 
         public override Vector2 TopLeftLocation => SecondaryTopLeftLocation;
@@ -148,9 +146,6 @@ namespace CalTestHelpers.UI
                     case PlayerUpgrade.ArtisanLoaf:
                         UpgradeName = Lang.GetItemNameValue(ItemID.ArtisanLoaf);
                         break;
-                    case PlayerUpgrade.NimbleBounder:
-                        UpgradeName = CalamityUtils.GetItemName(ModContent.ItemType<NimbleBounder>()).Value;
-                        break;
                 }
             }
             else
@@ -222,9 +217,6 @@ namespace CalTestHelpers.UI
                         break;
                     case PlayerUpgrade.ArtisanLoaf:
                         UpgradeName = Language.GetTextValue(key2 + "Bread");
-                        break;
-                    case PlayerUpgrade.NimbleBounder:
-                        UpgradeName = Language.GetTextValue(key2+"NimbleBounder");
                         break;
                 }
             }
@@ -327,10 +319,6 @@ namespace CalTestHelpers.UI
                     textColor = new Color(199, 111, 24);
                     upgradeValue = ref Main.LocalPlayer.ateArtisanBread;
                     break;
-                case PlayerUpgrade.NimbleBounder:
-                    textColor = new Color(114, 29, 184);
-                    upgradeValue = ref Main.LocalPlayer.Calamity().nimbleBounderBoost;
-                    break;
             }
             upgradeValue = !upgradeValue;
             Main.NewText(Language.GetTextValue("Mods.CalTestHelpers.UI.TogglePermanentUpgrades.ToggleItem", upgradeName, upgradeValue), textColor);
@@ -384,8 +372,6 @@ namespace CalTestHelpers.UI
                     return Main.LocalPlayer.usedGalaxyPearl;
                 case PlayerUpgrade.ArtisanLoaf:
                     return Main.LocalPlayer.ateArtisanBread;
-                case PlayerUpgrade.NimbleBounder:
-                    return Main.LocalPlayer.Calamity().nimbleBounderBoost;
             }
             return false;
         }

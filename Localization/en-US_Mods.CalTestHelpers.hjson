@@ -248,7 +248,6 @@ UI: {
 		GummyWorm: Gummy Worm
 		GalaxyPearl: Galaxy Pearl
 		Bread: Artisan Loaf
-		NimbleBounder: Nimble Bounder
 	}
 
 	ChangeItemStats.DisplayName: "[DEPRECATED] Change item stats"

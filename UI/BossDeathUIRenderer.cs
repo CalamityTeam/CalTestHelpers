@@ -492,6 +492,8 @@ namespace CalTestHelpers.UI
                     return DownedBossSystem._downedExoMechs;
                 case Boss.Calamitas:
                     return DownedBossSystem._downedCalamitas;
+                case Boss.Wyrm:
+                    return DownedBossSystem._downedPrimordialWyrm;
             }
 			return false;
         }

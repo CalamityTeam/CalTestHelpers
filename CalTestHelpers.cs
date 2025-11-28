@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using CalTestHelpers.UI;
+using log4net;
 using Terraria.ModLoader;
 
 namespace CalTestHelpers
@@ -8,6 +9,7 @@ namespace CalTestHelpers
     {
         internal static CalTestHelpers Instance;
         internal Mod Calamity = null;
+        //internal static ILog Log => Instance.Logger;
         public static bool ShouldDisplayUIs
         {
             get;
