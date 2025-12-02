@@ -31,7 +31,7 @@ namespace CalTestHelpers.UI
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.Skeletron)), TextureAssets.NpcHeadBoss[19].Value, () => ToggleDeath(Boss.Skeletron), GetColor(GetDownedBool(Boss.Skeletron))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.SlimeGod)), ModContent.Request<Texture2D>("CalamityMod/NPCs/SlimeGod/SlimeGodCore_Head_Boss").Value, () => ToggleDeath(Boss.SlimeGod), GetColor(GetDownedBool(Boss.SlimeGod))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.WallOfFlesh)), TextureAssets.NpcHeadBoss[22].Value, () => ToggleDeath(Boss.WallOfFlesh), GetColor(GetDownedBool(Boss.WallOfFlesh))),
-            new SpecialUIElement(Language.GetTextValue(GetBossLocalizationKey(Boss.AllPHM)), ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/FracturedArk").Value, () => ToggleDeath(Boss.AllPHM), GetColor(GetDownedBool(Boss.AllPHM)))
+            new SpecialUIElement(Language.GetTextValue(GetBossLocalizationKey(Boss.AllPHM)), ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/FracturedArk").Value, () => ToggleDeath(Boss.AllPHM), Color.Yellow)
         };
 
 
@@ -114,8 +114,8 @@ namespace CalTestHelpers.UI
         public static void ToggleAllPHMBossDeaths()
         {
             bool killAll = NPC.downedSlimeKing;
-            string DeadOrAlive = Language.GetTextValue(key + (killAll ? "Dead" : "Alive"));
-            Main.NewText(Language.GetTextValue(key+ "ToggleAllPreHM", DeadOrAlive), Color.Red);
+            string DeadOrAlive = Language.GetTextValue(key + (!killAll ? "Dead" : "Alive"));
+            Main.NewText(Language.GetTextValue(key + "ToggleAllPreHM", DeadOrAlive), Color.Red);
 
             NPC.downedSlimeKing = DownedBossSystem._downedDesertScourge = NPC.downedBoss1 = DownedBossSystem._downedCLAM = !killAll;
             DownedBossSystem._downedCrabulon = NPC.downedBoss2 = DownedBossSystem._downedHiveMind = DownedBossSystem._downedPerforator = !killAll;

@@ -30,8 +30,8 @@ namespace CalTestHelpers.UI
             new SpecialUIElement(Language.GetTextValue(BossKeyEndsWithS, GetBossLocalizationKey(Boss.Calamitas)), ModContent.Request<Texture2D>("CalamityMod/NPCs/SupremeCalamitas/HoodlessHeadIcon").Value, () => ToggleDeath(Boss.Calamitas), GetColor(GetDownedBool(Boss.Calamitas))),
             //Since people asked for it
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.Wyrm)), ModContent.Request<Texture2D>("CalamityMod/NPCs/PrimordialWyrm/PrimordialWyrmHead_Head_Boss").Value, () => ToggleDeath(Boss.Wyrm), GetColor(GetDownedBool(Boss.Wyrm))),
-            new SpecialUIElement(Language.GetTextValue(GetBossLocalizationKey(Boss.AllPML)), ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/ArkoftheCosmos").Value, () => ToggleDeath(Boss.AllPML), GetColor(GetDownedBool(Boss.AllPML))),
-            new SpecialUIElement(Language.GetTextValue(GetBossLocalizationKey(Boss.All)), ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () => ToggleDeath(Boss.All), GetColor(GetDownedBool(Boss.All)))
+            new SpecialUIElement(Language.GetTextValue(GetBossLocalizationKey(Boss.AllPML)), ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/ArkoftheCosmos").Value, () => ToggleDeath(Boss.AllPML), Color.Yellow),
+            new SpecialUIElement(Language.GetTextValue(GetBossLocalizationKey(Boss.All)), ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () => ToggleDeath(Boss.All), Color.Yellow)
         };
 
         public static void ToggleDeath(Boss bossDeathToToggle)
@@ -115,22 +115,23 @@ namespace CalTestHelpers.UI
         public static void ToggleAllPMLBossDeaths()
         {
             bool killAll = DownedBossSystem._downedGuardians;
-            string DeadOrAlive = Language.GetTextValue(key + (killAll ? "Dead" : "Alive"));
+            string DeadOrAlive = Language.GetTextValue(key + (!killAll ? "Dead" : "Alive"));
             Main.NewText(Language.GetTextValue(key + "ToggleAllPML", DeadOrAlive), Color.Red);
 
             DownedBossSystem._downedGuardians = DownedBossSystem._downedDragonfolly = DownedBossSystem._downedProvidence = !killAll;
             DownedBossSystem._downedCeaselessVoid = DownedBossSystem._downedStormWeaver = DownedBossSystem._downedSignus = !killAll;
             DownedBossSystem._downedPolterghast = DownedBossSystem._downedBoomerDuke = DownedBossSystem._downedDoG = !killAll;
             DownedBossSystem._downedYharon = DownedBossSystem._downedExoMechs = DownedBossSystem._downedCalamitas = !killAll;
+            DownedBossSystem._downedPrimordialWyrm = !killAll;
         }
 
         public static void ToggleAllBossDeaths()
         {
             bool killAll = NPC.downedSlimeKing;
-            string DeadOrAlive = Language.GetTextValue(key + (killAll ? "Dead" : "Alive"));
+            string DeadOrAlive = Language.GetTextValue(key + (!killAll ? "Dead" : "Alive"));
             Main.NewText(Language.GetTextValue(key + "ToggleAll", DeadOrAlive), Color.Red);
 
-            NPC.downedSlimeKing = DownedBossSystem._downedDesertScourge = NPC.downedBoss1 = !killAll;
+            NPC.downedSlimeKing = DownedBossSystem._downedDesertScourge = DownedBossSystem._downedCLAM = DownedBossSystem._downedCLAMHardMode = NPC.downedBoss1 = !killAll;
             DownedBossSystem._downedCrabulon = NPC.downedBoss2 = DownedBossSystem._downedHiveMind = DownedBossSystem._downedPerforator = !killAll;
             NPC.downedQueenBee = NPC.downedDeerclops = NPC.downedBoss3 = DownedBossSystem._downedSlimeGod = Main.hardMode = !killAll;
             NPC.downedQueenSlime = NPC.downedMechBoss1 = NPC.downedMechBoss2 = NPC.downedMechBoss3 = !killAll;
@@ -142,7 +143,7 @@ namespace CalTestHelpers.UI
             DownedBossSystem._downedCeaselessVoid = DownedBossSystem._downedStormWeaver = DownedBossSystem._downedSignus = !killAll;
             DownedBossSystem._downedPolterghast = DownedBossSystem._downedBoomerDuke = DownedBossSystem._downedDoG = !killAll;
             DownedBossSystem._downedYharon = DownedBossSystem._downedExoMechs = DownedBossSystem._downedCalamitas = !killAll;
-            NPC.downedMechBossAny = !killAll;
+            NPC.downedMechBossAny = DownedBossSystem._downedPrimordialWyrm = !killAll;
         }
     }
 }

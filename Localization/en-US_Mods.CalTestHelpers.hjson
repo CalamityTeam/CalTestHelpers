@@ -26,6 +26,8 @@ Items: {
 			- Fixed Set Spawn Point Localization failing
 			- Made some config text clearer
 			- Updated Localization files
+			- The Toggle all boss deaths bools are now always yellow instead of depending of the first boss on the list
+			- Made the text after setting all bosses dead/alive work properly instead of being based on the first boss on the list (and King Slime for all)
 
 
 			Known issues:

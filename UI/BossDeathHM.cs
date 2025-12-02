@@ -34,7 +34,7 @@ namespace CalTestHelpers.UI
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.LunaticCultist)), TextureAssets.NpcHeadBoss[31].Value, () => ToggleDeath(Boss.LunaticCultist), GetColor(GetDownedBool(Boss.LunaticCultist))),
             new SpecialUIElement(Language.GetTextValue(BossKeyEndsWithS, GetBossLocalizationKey(Boss.AstrumDeus)), ModContent.Request<Texture2D>("CalamityMod/NPCs/AstrumDeus/AstrumDeusHead_Head_Boss").Value, () => ToggleDeath(Boss.AstrumDeus), GetColor(GetDownedBool(Boss.AstrumDeus))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.MoonLord)), TextureAssets.NpcHeadBoss[8].Value, () => ToggleDeath(Boss.MoonLord), GetColor(GetDownedBool(Boss.MoonLord))),
-            new SpecialUIElement(Language.GetTextValue(GetBossLocalizationKey(Boss.AllHM)), ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/TrueArkoftheAncients").Value, () => ToggleDeath(Boss.AllHM), GetColor(GetDownedBool(Boss.AllHM)))
+            new SpecialUIElement(Language.GetTextValue(GetBossLocalizationKey(Boss.AllHM)), ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/TrueArkoftheAncients").Value, () => ToggleDeath(Boss.AllHM), Color.Yellow)
         };
 
         public static void ToggleDeath(Boss bossDeathToToggle)
@@ -136,7 +136,7 @@ namespace CalTestHelpers.UI
         public static void ToggleAllHMBossDeaths()
         {
             bool killAll = NPC.downedQueenSlime;
-            string DeadOrAlive = Language.GetTextValue(key + (killAll ? "Dead" : "Alive"));
+            string DeadOrAlive = Language.GetTextValue(key + (!killAll ? "Dead" : "Alive"));
             Main.NewText(Language.GetTextValue(key + "ToggleAllHM", DeadOrAlive), Color.Red);
 
             NPC.downedQueenSlime = NPC.downedMechBoss1 = NPC.downedMechBoss2 = NPC.downedMechBoss3 = !killAll;
