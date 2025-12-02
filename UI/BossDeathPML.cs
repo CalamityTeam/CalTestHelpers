@@ -106,6 +106,8 @@ namespace CalTestHelpers.UI
             }
             bossDeathValue = !bossDeathValue;
             string DeadOrAlive = Language.GetTextValue(key + (bossDeathValue ? "Dead" : "Alive"));
+
+            // Could Tmod make their pluralization code fucking normal so I did not have to do this?
             bool bossReferenceText = bossName.Last() == 's';
             Main.NewText(Language.GetTextValue(key + (bossReferenceText ? "ToggleEndsWithS" : "Toggle"), bossName, DeadOrAlive), textColor);
         }
