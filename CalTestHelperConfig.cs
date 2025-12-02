@@ -35,6 +35,11 @@ namespace CalTestHelpers
         public float UISize { get; set; }
 
         [BackgroundColor(192, 54, 64, 192)]
+        [DefaultValue(true)]
+
+        public bool FreeReforges { get; set; }
+
+        [BackgroundColor(192, 54, 64, 192)]
         [DefaultValue(false)]
 
         public bool ManualLocalizationOverride { get; set; }

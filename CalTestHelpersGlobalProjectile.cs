@@ -18,7 +18,7 @@ namespace CalTestHelpers
         {
             if (projectile.type == ModContent.ProjectileType<SCalRitualDrama>() && !NPC.AnyNPCs(ModContent.NPCType<SupremeCalamitas>()) && CalTestHelperConfig.Instance.InstantBossSummoning)
             {
-                //ritual.SummonSCal(); //figured it out, nvm
+                //ritual.SummonSCal(); //This wont work outside of the file due to not being static
 
                 //If only functions worked like Python ones, gotta copy the code then
                 //Permision granted by Xyk

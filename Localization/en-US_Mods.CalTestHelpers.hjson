@@ -21,27 +21,20 @@ Items: {
 		Tooltip:
 			'''
 			2.4.1.0 (dev) Changelog
-			- Manual localization override added
-			- Fixed the UI button not working when clicked
-			- Fixed Set Spawn Point Localization failing
-			- Made some config text clearer
-			- Updated Localization files
+			- Removed Nimble Bounder
+			- Removed the Fight Information function
 			- The Toggle all boss deaths bools are now always yellow instead of depending of the first boss on the list
-			- Made the text after setting all bosses dead/alive work properly instead of being based on the first boss on the list (and King Slime for all)
-
+			- Made the text after setting all bosses dead/alive work properly for real this time
+			- Added a way to turn off free reforges
+			- Updated Mod Icons for workshop and Ingame config
+			- Added Doze to the developers list
+			- Updated Localization files
 
 			Known issues:
 			- Game going crazy if multiple time freezes are on: Wont be fixed for the time being so that players arent stuck with frozen time from this mod
 			  please use other mod's time freezers if they are available
 			- Configs not updating for players to the new functions and messages, if this happens locate the config file  for Cal Test Helpers in 
 			  Documents/MyGames/Terraria/Tmodloader/ModConfigs and delete it so a new one is generated. (This works for other mods' configs should they bug out too)
-
-			Notices:
-			- If you want to make a sprite for an item that has a placeholder or a suggestion submit it to shade__storm in #other-mod-talk or #calamity-addon-talk 
-			  on the Official Calamity Discord server, or the Discussions tab in Steam Workshop
-			  (I would allow DMs if it wasn't for all those scams and bots that have popped up, sorry guys)
-			- I am not going to use Infernum's assets for boss summoning items, those belong to them
-			- Tbh at this point I might as well make em if I get time.
 			'''
 	}
 
@@ -117,6 +110,11 @@ Configs: {
 		ManualLocalizationOverride: {
 			Label: "[i:CalamityMod/LaboratoryElectricPanelItem] Manual Localization Override"
 			Tooltip: Override the automatic localization in case there is no localization available in Calamity or base Terraria
+		}
+
+		FreeReforges: {
+			Label: "[i:SilverHammer] Free Reforges
+			Tooltip: Make Reforges free
 		}
 	}
 }
