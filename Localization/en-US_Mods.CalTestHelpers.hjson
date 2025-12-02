@@ -26,7 +26,8 @@ Items: {
 			- The Toggle all boss deaths bools are now always yellow instead of depending of the first boss on the list
 			- Made the text after setting all bosses dead/alive work properly for real this time
 			- Added a way to turn off free reforges
-			- Updated Mod Icons for workshop and Ingame config
+			- Updated Mod Icons
+			- A small icon now shows up in the Mod Configs menu
 			- Added Doze to the developers list
 			- Updated Localization files
 
