@@ -45,10 +45,6 @@ namespace CalTestHelpers
         [Range(20, 80)] //Over 80 it gets outside the box vertically
         public int StuffAmountDisplay { get; set; }
 
-        [Header("ExtremelyDeprecated")]
-        [BackgroundColor(192, 54, 64, 192)]
-        [DefaultValue(false)]
-        public bool StoreFightInformation { get; set; }
         public override bool AcceptClientChanges(ModConfig pendingConfig, int whoAmI, ref NetworkText message) => false;
     }
 }
