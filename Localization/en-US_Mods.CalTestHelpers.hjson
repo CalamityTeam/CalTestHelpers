@@ -114,7 +114,7 @@ Configs: {
 		}
 
 		FreeReforges: {
-			Label: "[i:SilverHammer] Free Reforges
+			Label: "[i:SilverHammer] Free Reforges"
 			Tooltip: Make Reforges free
 		}
 	}
