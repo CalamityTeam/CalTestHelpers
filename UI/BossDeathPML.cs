@@ -113,7 +113,7 @@ namespace CalTestHelpers.UI
         public static void ToggleAllPMLBossDeaths()
         {
             bool killAll = DownedBossSystem._downedGuardians;
-            string DeadOrAlive = Language.GetTextValue(key + (killAll ? "Dead" : "Alive"));
+            string DeadOrAlive = Language.GetTextValue(key + (!killAll ? "Dead" : "Alive"));
             Main.NewText(Language.GetTextValue(key + "ToggleAllPML", DeadOrAlive), Color.Red);
 
             DownedBossSystem._downedGuardians = DownedBossSystem._downedDragonfolly = DownedBossSystem._downedProvidence = !killAll;
@@ -125,7 +125,7 @@ namespace CalTestHelpers.UI
         public static void ToggleAllBossDeaths()
         {
             bool killAll = NPC.downedSlimeKing;
-            string DeadOrAlive = Language.GetTextValue(key + (killAll ? "Dead" : "Alive"));
+            string DeadOrAlive = Language.GetTextValue(key + (!killAll ? "Dead" : "Alive"));
             Main.NewText(Language.GetTextValue(key + "ToggleAll", DeadOrAlive), Color.Red);
 
             NPC.downedSlimeKing = DownedBossSystem._downedDesertScourge = NPC.downedBoss1 = !killAll;

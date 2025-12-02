@@ -114,7 +114,7 @@ namespace CalTestHelpers.UI
         public static void ToggleAllPHMBossDeaths()
         {
             bool killAll = NPC.downedSlimeKing;
-            string DeadOrAlive = Language.GetTextValue(key + (killAll ? "Dead" : "Alive"));
+            string DeadOrAlive = Language.GetTextValue(key + (!killAll ? "Dead" : "Alive"));
             Main.NewText(Language.GetTextValue(key+ "ToggleAllPreHM", DeadOrAlive), Color.Red);
 
             NPC.downedSlimeKing = DownedBossSystem._downedDesertScourge = NPC.downedBoss1 = DownedBossSystem._downedCLAM = !killAll;
