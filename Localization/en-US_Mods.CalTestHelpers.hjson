@@ -124,14 +124,14 @@ Configs: {
 			Tooltip: Change the size of the testing UI.
 		}
 
-		FreeReforges:{
-			Label: Free Reforhes
-			Tooltip: Makes reforges free
-		}
-
 		ManualLocalizationOverride: {
 			Label: "[i:CalamityMod/LaboratoryElectricPanelItem] Manual Localization Override"
 			Tooltip: Override the automatic localization in case there is no localization available in Calamity or base Terraria
+		}
+
+		FreeReforges: {
+			Label: "[i:SilverHammer] Free Reforges"
+			Tooltip: Make Reforges free
 		}
 	}
 }
