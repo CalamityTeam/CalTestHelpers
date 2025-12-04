@@ -21,10 +21,13 @@ toggling permanent upgrades and deaths, and toggling enemy spawns
 
 - Instant summoning for some bosses (SCal and Draedon)
 
-Ping me (shade__storm) on the Calamity Mod Official Discord's #other-mod-talk channel for suggestions, as I currently maintain this mod.
+Ping me (Shade; shade__storm on Discord) on the Calamity Mod Official Discord's #other-mod-talk channel for suggestions, as I currently maintain this mod.
 Alternatively use the Discussions tab on Steam.
 
 Localization Credits:
 English: Shade
 Russian: Zavarski
 Chinese: Fox Radish, Listentowind and the rest of The Chinese Calamity Translation team
+
+Please use existing translation mods alongside CalTestHelpers, if none are available or there is no specific localization for something,
+enable Manual Localization Override inside the Mod's configs.
