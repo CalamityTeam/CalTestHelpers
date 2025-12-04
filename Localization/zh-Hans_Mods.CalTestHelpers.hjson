@@ -22,7 +22,7 @@ Items: {
 			'''
 			2.4.0.3 Changelog
 			- Many fixes and changes to functions in the mod
-			- Added Russian and (partial) Chinese localization
+			- Added Russian and Chinese localization
 
 			Known issues:
 			- Game going crazy if multiple time freezes are on: Wont be fixed for the time being so that players arent stuck with frozen time from this mod
@@ -257,8 +257,6 @@ UI: {
 		// GummyWorm: Gummy Worm
 		// GalaxyPearl: Galaxy Pearl
 		// Bread: Artisan Loaf
-		#Future Item
-		// NimbleBounder: Nimble Bounder
 	}
 
 	ChangeItemStats.DisplayName: "[废弃]修改物品属性"
