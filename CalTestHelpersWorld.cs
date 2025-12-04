@@ -96,6 +96,7 @@ namespace CalTestHelpers
                 if (CalTestHelperConfig.Instance.StoreFightInformation)
                     FightInformationPrintManager.SaveFightInformation();
                 */
+
                 BossKillDPS.Clear();
                 BossKillTimeFrames = 0;
             }
