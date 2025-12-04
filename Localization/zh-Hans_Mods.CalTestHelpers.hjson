@@ -29,8 +29,6 @@ Items: {
 			  please use other mod's time freezers if they are available
 			- Configs not updating for players to the new functions and messages, if this happens locate the config file  for Cal Test Helpers in 
 			  Documents/MyGames/Terraria/Tmodloader/ModConfigs and delete it so a new one is generated. (This works for other mods' configs should they bug out too)
-			- Various parts of the Chinese localization being in English
-			- Siren's lure having an outdated message in the Chinese localization
 
 			Notices:
 			- If you want to make a sprite for an item that has a placeholder or a suggestion submit it to shade__storm in #other-mod-talk on the

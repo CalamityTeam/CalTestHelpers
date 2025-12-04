@@ -29,8 +29,6 @@ Items: {
 			  Рекомендуем использовать остановку времени других модов
 			– Конфигурации не обновились, нет новых функций/сообщений: Найдите файл на вашем компьютере по пути Documents/MyGames/Terraria/Tmodloader/ModConfigs
 			  и удалите файл CalTestHelper. При перезагрузке модов появится новый рабочий файл (работает с конфигурациями других модов, если они сломаются)
-			- китайский элемент журнала изменений теперь на английском языке
-			- Приманка Сирены, имеющая устаревшее сообщение в китайской локализации
 
 			Внимание:
 			– Если вы хотите добавить спрайт для предмета или что-то предложить — обращайтесь к shade__storm на официальном Discord-сервере Calamity
@@ -173,9 +171,9 @@ UI: {
 		PML: Переключить смерти боссов пост-Лунный лорд
 		# Gendered languages like Spanish and French will suffer from lack of gendering support from Tmod, altho I can imagine why they won't do it
 		# Use stuff like Las/Los or L@s or some other way for genders with your language
-		ToggleBossDeath: {0}
+		ToggleBossDeath: Переключить смерть босса {0}
 		# English possessive being weird, just copy whatever you used on the previous one in other languages
-		ToggleBossDeathEndsWithS: {0}
+		ToggleBossDeathEndsWithS: Переключить смерть босса {0}
 		AllPreHM: Переключить всех боссов пре-хардмода
 		AllHM: Переключить всех боссов хардмода
 		AllPML: Переключить всех боссов после Лунного лорда
