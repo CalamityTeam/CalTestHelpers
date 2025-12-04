@@ -2,4 +2,4 @@ displayName = Calamity Test Helper Mod
 author = Lucille K, Ben-TK, Shade
 modReferences=CalamityMod
 buildIgnore = Properties\*, *.csproj
-version = 2.4.0.2
+version = 2.4.0.3

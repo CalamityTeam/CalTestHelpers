@@ -20,13 +20,9 @@ Items: {
 		DisplayName: Changelogs
 		Tooltip:
 			'''
-			2.4.0.2 Changelog
-			- Manual localization override added
-			- Fixed the UI button not working when clicked
-			- Fixed Set Spawn Point Localization failing
-			- Made some config text clearer
-			- Updated Localization files
-
+			2.4.0.3 Changelog
+			- Fixed Boss UI status message
+			- Added Russian and Simplified Chinese localization
 
 			Known issues:
 			- Game going crazy if multiple time freezes are on: Wont be fixed for the time being so that players arent stuck with frozen time from this mod
