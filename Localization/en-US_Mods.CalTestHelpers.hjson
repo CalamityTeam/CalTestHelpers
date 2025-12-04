@@ -21,14 +21,16 @@ Items: {
 		Tooltip:
 			'''
 			2.4.0.3 Changelog
-			- Fixed Boss UI status message
-			- Added Russian and Simplified Chinese localization
+			- Many fixes and background changes to the mod
+			- Added Russian and Chinese localization
 
 			Known issues:
 			- Game going crazy if multiple time freezes are on: Wont be fixed for the time being so that players arent stuck with frozen time from this mod
 			  please use other mod's time freezers if they are available
 			- Configs not updating for players to the new functions and messages, if this happens locate the config file  for Cal Test Helpers in 
 			  Documents/MyGames/Terraria/Tmodloader/ModConfigs and delete it so a new one is generated. (This works for other mods' configs should they bug out too)
+			- Various parts of the Chinese localization being in English
+			- Siren's lure having an outdated message in the Chinese localization
 
 			Notices:
 			- If you want to make a sprite for an item that has a placeholder or a suggestion submit it to shade__storm in #other-mod-talk or #calamity-addon-talk 

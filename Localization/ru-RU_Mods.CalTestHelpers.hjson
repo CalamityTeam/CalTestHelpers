@@ -1,0 +1,294 @@
+"Keybinds.Toggle Test UIs.DisplayName": Открыть меню тестирования
+
+# Yes the name is abhorrent but I will not change it so no one's keybinds break
+
+BossDeathStats: {
+	Time: Время в битве: {0}
+	AverageDPS: Средний УВС: {0}
+	MaxDPS: Максимальный УВС: {0}
+	Instability: Нестабильность УВС: {0}
+}
+
+Items: {
+	ChargerTestItem: {
+		DisplayName: Тестовый предмет зарядки
+		Tooltip: Полностью заряжает все имеющиеся предметы арсенала Дрэйдона при использовании
+		ChargedItems: Все предметы арсенала в вашем инвентаре были полностью заряжены.
+	}
+
+	Changelog: {
+		DisplayName: Изменения
+		Tooltip:
+			'''
+			Изменения версии 2.4.0.3:
+			– Некоторые изменения в работе мода
+			– Добавлен перевод на русский и китайский
+			
+			Известные проблемы:
+			– Игра сходит с ума, когда включено несколько остановок времени: Пока не будет исправлено, чтобы игроки не остались с вечной заморозкой времени.
+			  Рекомендуем использовать остановку времени других модов
+			– Конфигурации не обновились, нет новых функций/сообщений: Найдите файл на вашем компьютере по пути Documents/MyGames/Terraria/Tmodloader/ModConfigs
+			  и удалите файл CalTestHelper. При перезагрузке модов появится новый рабочий файл (работает с конфигурациями других модов, если они сломаются)
+			- китайский элемент журнала изменений теперь на английском языке
+			- Приманка Сирены, имеющая устаревшее сообщение в китайской локализации
+
+			Внимание:
+			– Если вы хотите добавить спрайт для предмета или что-то предложить — обращайтесь к shade__storm на официальном Discord-сервере Calamity
+			  в каналах #other-mod-talk или #calamity-addon-talk, или же в обсуждениях на странице Мастерской
+			  (Я бы принимал личные сообщения, но нынче слишком много скама и ботом, извините)
+			– Я не буду использовать спрайты призывалок для боссов из Инфернума, это называется нарушение авторского права
+			'''
+	}
+
+	SummonItems: {
+		SirenSong: {
+			DisplayName: Песнь Сирены
+			Tooltip:
+				'''
+				Призывает Анахиту при использовании в океане
+				«Вы слышите тихую, но манящую мелодию»
+				[c/FF0000: В обновлении Calamity «Затонувшее море» будет добавлен свой предмет для призыва]
+				[c/FF0000: Анахиты, а этот будет удалён. Однако, если вы включите этот мод, рецепт этого предмета]
+				[c/FF0000: будет изменён, чтобы его можно было создать, не убивая Левиафан и Анахит]
+				'''
+		}
+
+		FaeLantern: {
+			DisplayName: Ночник феи
+			Tooltip:
+				'''
+				Призывает Императрицу света ночью
+				[c/FF0000:НЕ ИСПОЛЬЗУЙТЕ ДНЁМ ПРИ ПРОВЕРКЕ БАЛАНСА]
+				А так, используйте на здоровье
+				НЕ ФИНАЛЬНЫЙ СПРАЙТ
+				'''
+		}
+
+		WORM: {
+			DisplayName: Великолепный трюфельный червь
+			Tooltip:
+				'''
+				Призывает Герцога Рыброна при использовании в океане
+				«Покрыт мелко порубленным великолепным мясом»
+				НЕ ФИНАЛЬНЫЙ СПРАЙТ
+				'''
+		}
+
+		BloodyWorm: {
+			DisplayName: Кровавая глицера
+			Tooltip:
+				'''
+				Призывает Старого герцога при использовании в сернистом море
+				«Старыброн»
+				НЕ ФИНАЛЬНЫЙ СПРАЙТ
+				'''
+		}
+	}
+}
+
+Configs: {
+	CalTestHelperConfig: {
+		DisplayName: Конфигурация
+
+		Headers: {
+			Config: Calamity Test Helper configs
+			Deprecated: Не поддерживается, но всё ещё работает. Рекомендуем менять значения переменных в коде мода
+			ExtremelyDeprecated: Настройка с супер древней версии с 1.3, не поддерживается, плюс забагована. ИСПОЛЬЗУЙТЕ НА СВОЙ СТРАХ И РИСК
+			Configs: Конфигурации «Calamity Test Helper»
+		}
+
+		BossDeathStatMessages: {
+			Label: "[i:Book] Показывать информацию о битвах с боссами"
+			Tooltip:
+				'''
+				После вашей смерти или смерти босса в чат будет выводится информация о битве,
+				включая время битвы, средний и максимальный урон в секунду.
+				'''
+		}
+
+		Changelog: {
+			Label: "[i:CalTestHelpers/Changelog] Изменения"
+			Tooltip: При заходе в мир вам выдаётся предмет, где расписаны все изменения в новой версии мода.
+		}
+
+		StoreFightInformation: {
+			Label: "[i:CalamityMod/AgedLaboratoryElectricPanelItem] Сохранять информацию о битвах с боссами"
+			Tooltip:
+				'''
+				(Некоторая) информация о битвах с боссами будет сохраняться на вашем ПК
+				Включает в себя время битвы, средний и максимальный урон в секунду
+				НЕ ВКЛЮЧАЙТЕ ДАННУЮ НАСТРОЙКУ БЕЗ НЕОБХОДИМОСТИ
+				'''
+		}
+
+		StuffAmountDisplay: {
+			Label: "[i:CalamityMod/AgedLaboratoryTerminalItem] Что показывать"
+			Tooltip: Насколько много предметов должен показывать редактор предметов и снарядов?
+		}
+
+		InstantBossSummoning: {
+			Label: "[i:Stopwatch] Мгновенный призыв боссов"
+			Tooltip: Дрэйдон и Каламитас будут призываться сразу, без их анимаций появления.
+		}
+
+		UISize: {
+			Label: "[i:CalamityMod/ExoScreen] Размер пользовательского интерфейса"
+			Tooltip: Изменяет размер ПИ тестового меню.
+		}
+
+		ManualLocalizationOverride: {
+			Label: "[i:CalamityMod/LaboratoryElectricPanelItem] Использование ключей вместо автоматической локализации"
+			Tooltip:
+				'''
+				Если включить, вместо автоматических ключей из Terraria и Calamity
+				будут использоваться ключи локализации, сделанные вручную для этого мода
+				'''
+		}
+	}
+}
+
+UI: {
+	RevealMap.DisplayName: Показать всю карту
+
+	SetSpawnpoint: {
+		DisplayName: Установить точку возрождения на вашей позиции
+		Set: Точка возрождения установлена, теперь она находится на 
+	}
+
+	ToggleEnemySpawns: {
+		DisplayName: Переключить появление врагов
+		CanSpawn: Враги теперь могут сами появляться.
+		CannotSpawn: Враги теперь не могут сами появляться.
+	}
+
+	StopTime: {
+		DisplayName: Остановить время
+		Stopped: Время остановлено.
+		Resumed: Время возобновлено.
+	}
+
+	ToggleDeaths: {
+		PreHM: Переключить смерти боссов пре-хардмода
+		HM: Переключить смерти боссов хардмода
+		PML: Переключить смерти боссов пост-Лунный лорд
+		# Gendered languages like Spanish and French will suffer from lack of gendering support from Tmod, altho I can imagine why they won't do it
+		# Use stuff like Las/Los or L@s or some other way for genders with your language
+		ToggleBossDeath: {0}
+		# English possessive being weird, just copy whatever you used on the previous one in other languages
+		ToggleBossDeathEndsWithS: {0}
+		AllPreHM: Переключить всех боссов пре-хардмода
+		AllHM: Переключить всех боссов хардмода
+		AllPML: Переключить всех боссов после Лунного лорда
+		All: Переключить всех боссов
+		Toggle: Босс {0} теперь имеет статус: {1}
+		# This only applies to English
+		ToggleEndsWithS: Босс {0} теперь имеет статус: {1}
+		ToggleAllPreHM: Все боссы пре-хардмода теперь имеют статус: {0}
+		ToggleAllHM: Все боссы хардмода теперь имеют статус: {0}
+		ToggleAllPML: Все боссы после Лунного лорда теперь имеют статус: {0}
+		ToggleAll: Все боссы теперь имеют статус: {0}
+		Alive: жив
+		Dead: мёртв
+		# Bosses
+		KingSlime: Король слизней
+		DesertScourge: Пустынный бич
+		Clam: Гигантский моллюск
+		EoC: Глаз Ктулху
+		Crabulon: Крабулон
+		EoW: Пожиратель миров
+		BoC: Мозг Ктулху
+		HiveMind: Разум порчи
+		Perforators: Перфораторы
+		QueenBee: Королева пчёл
+		Deerclops: Циклоп-олень
+		Skeletron: Скелетрон
+		SlimeGod: Слизневый бог
+		WoF: Стена плоти
+		QueenSlime: Королева слизней
+		Cryogen: Криоген
+		Twins: Близнецы
+		AquaticScourge: Акватический бич
+		Destroyer: Уничтожитель
+		Brimmy: Серный элементаль
+		SkeletronPrime: Скелетрон Прайм
+		CalClone: Клон Каламитас
+		Plantera: Плантера
+		Leviathan: Левиафан и Анахита
+		Aureus: Аструм Ауреус
+		Golem: Голем
+		PBG: Разносчица чумы Голиаф
+		DukeFishron: Герцог Рыброн
+		EoL: Императрица света
+		Ravager: Разрушитель
+		Cultist: Культист-лунатик
+		Deus: Аструм Деус
+		MoonLord: Лунный лорд
+		ProfanedGuardians: Осквернённые стражи
+		DFolly: Дуракон
+		Providence: Провиденс
+		SW: Ткач бурь
+		Void: Неусмиримая пустота
+		Signus: Сигнус
+		Polterghast: Полтергаст
+		OldFart: Старый герцог
+		DoG: Поглотитель Богов
+		Yharon: Ярон
+		ExoMechs: Экзо-мехи
+		SCal: Каламитас
+		Wyrm: Первобытный змей
+		#Getfixedboi
+		Clamitas: Кламитас
+		SupremeClam: Верховная Кламитас
+		Bumblebirb: Шмелептиц
+		Boomerfish: Старыброн
+		Jared: Джаред
+	}
+
+	TogglePermanentUpgrades: {
+		DisplayName: Переключить перманентные усилители
+		Toggle: "{0}"
+		ToggleItem: "{0} теперь имеет статус: {1}"
+		#Unused for now since the system is automatic, might be useful for manual overrides later
+		BloodOrange: Кровавый апельсин
+		MiracleFruit: Чудесный фрукт
+		Elderberry: Древняя бузина
+		Dragonfruit: Драконий фрукт
+		CometShard: Осколок кометы
+		EtherealCore: Эфирное ядро
+		PhantomHeart: Призрачное сердце
+		MushroomPlasmaRoot: Грибной плазменный корень
+		InfernalBlood: Инфернальная кровь
+		RedLightningContainer: Контейнер красной молнии
+		NotBarOfSoap: Гелевый пакет электролитов
+		StarlightFuelCell: Топливная ячейка звёздного света
+		Ectoheart: Эктосердце
+		DemonHeart: Сердце демона
+		CelestialOnion: Небесная луковица
+		VitalCrystal: Жизненный кристалл
+		ArcaneCrystal: Таинственный кристалл
+		AegisFruit: Фрукт эгиды
+		Ambrosia: Амброзия
+		GummyWorm: Мармеладный червяк
+		GalaxyPearl: Галактическая жемчужина
+		Bread: Батон мастера-пекаря
+	}
+
+	ChangeItemStats.DisplayName: "[НЕ ПОДДЕРЖИВАЕТСЯ] Изменить характеристики предметов"
+	ChangeProjectileStats.DisplayName: "[НЕ ПОДДЕРЖИВАЕТСЯ] Изменить характеристики снарядов"
+	ChangeUniversalStealthFactor.DisplayName: Данная настройка была удалена
+
+	# Far easier to just give testers access to the code; Hot Reload is a blessing for changes while testing and it can change more stuff
+	# Or just use Modder's toolkit or Dragonlens idk
+	# If Tmod breaks this thing again I will comment it out
+	
+	ResetStats: {
+		DisplayName: "[НЕ ПОДДЕРЖИВАЕТСЯ] Сбросить изменённые хар-ки"
+		Reset: Изменённые характеристики были сброшены до первоначальных значений
+	}
+
+	BossRushTalkFaster: {
+		DisplayName: Заставить Ксерока говорить быстрее
+		TalkFast: Ладно, я буду говорить быстрее
+		TalkSlower: Я буду менее расторопен в своих речах
+	}
+}

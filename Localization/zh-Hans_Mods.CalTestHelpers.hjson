@@ -1,0 +1,282 @@
+"Keybinds.Toggle Test UIs.DisplayName": 开启/关闭测试UI
+
+# Yes the name is abhorrent but I will not change it so no one's keybinds break
+
+BossDeathStats: {
+	Time: 战斗时间：{0}
+	AverageDPS: 平均DPS：{0}
+	MaxDPS: 最大DPS：{0}
+	Instability: DPS不稳定因子：{0}
+}
+
+Items: {
+	ChargerTestItem: {
+		DisplayName: 充能测试物品
+		Tooltip: 重新充能物品栏中的所有军械武器
+		ChargedItems: 你物品栏中所有可充能的军械武器已全部充满能。
+	}
+
+	Changelog: {
+		DisplayName: 更新日志
+		Tooltip:
+			'''
+			2.4.0.3 Changelog
+			- Many fixes and changes to functions in the mod
+			- Added Russian and (partial) Chinese localization
+
+			Known issues:
+			- Game going crazy if multiple time freezes are on: Wont be fixed for the time being so that players arent stuck with frozen time from this mod
+			  please use other mod's time freezers if they are available
+			- Configs not updating for players to the new functions and messages, if this happens locate the config file  for Cal Test Helpers in 
+			  Documents/MyGames/Terraria/Tmodloader/ModConfigs and delete it so a new one is generated. (This works for other mods' configs should they bug out too)
+			- Various parts of the Chinese localization being in English
+			- Siren's lure having an outdated message in the Chinese localization
+
+			Notices:
+			- If you want to make a sprite for an item that has a placeholder or a suggestion submit it to shade__storm in #other-mod-talk on the
+			Official Calamity Discord server, or the Discussions tab in Steam Workshop 
+			(I would allow DMs if it wasn't for all those scams and bots that have popped up, sorry guys)
+			- I am not going to use Infernum's assets for boss summoning items, those belong to them
+			'''
+	}
+
+	SummonItems: {
+		SirenSong: {
+			DisplayName: 塞壬之歌
+			Tooltip:
+				'''
+				在海洋使用以召唤阿娜希塔
+				可以听到一首诱人歌曲
+				[c/FF0000: 注意：灾厄沉沦海更新后会被立刻删除，因为其加入了阿娜希塔的召唤物品]
+				[c/FF0000: 但启用本模组时配方会改动以保持在阿娜希塔前可用]
+				'''
+		}
+
+		FaeLantern: {
+			DisplayName: 仙灵灯笼
+			Tooltip:
+				'''
+				在晚上召唤光之女皇
+				[c/FF0000:平衡后不要在白天召唤]
+				其他情况自便
+				贴图仅为占位符
+				'''
+		}
+
+		WORM: {
+			DisplayName: 美味松露虫
+			Tooltip:
+				'''
+				在海洋使用以召唤猪龙鱼公爵
+				被美味冻肉粉末覆盖
+				贴图仅为占位符
+				'''
+		}
+
+		BloodyWorm: {
+			DisplayName: 嗜血蠕虫
+			Tooltip:
+				'''
+				在硫磺海使用以召唤硫海遗爵
+				老核弹
+				贴图仅为占位符
+				'''
+		}
+	}
+}
+
+Configs: {
+	CalTestHelperConfig: {
+		DisplayName: 配置
+
+		Headers: {
+			Config: Calamity Test Helper配置
+			Deprecated: 对于废弃功能，你仍可使用它们但它们不再被支持。
+			ExtremelyDeprecated: 源自极老的1.3版本，不再支持且存在Bug。使用时风险自负！！！
+			Configs: 配置标题
+		}
+
+		BossDeathStatMessages: {
+			Label: "[i:Book] Boss死亡数据的聊天栏信息"
+			Tooltip: 开启Boss死亡数据的聊天栏信息，包括战斗时间，平均DPS和最大DPS。
+		}
+
+		Changelog: {
+			Label: "[i:CalTestHelpers/Changelog] 更新日志"
+			Tooltip: 进入世界时给你一个更新日志物品。
+		}
+
+		StoreFightInformation: {
+			Label: "[i:CalamityMod/AgedLaboratoryElectricPanelItem] 存储Boss战信息"
+			Tooltip: 开启（一些）战斗数据的存储，包括战斗时间，平均DPS和最大DPS。非绝对必要情况下不要使用！！！
+		}
+
+		StuffAmountDisplay: {
+			Label: "[i:CalamityMod/AgedLaboratoryTerminalItem] 显示弹幕的数量"
+			Tooltip: 弹幕和物品属性编辑器需要显示多少弹幕？
+		}
+
+		InstantBossSummoning: {
+			Label: "[i:Stopwatch] 立刻召唤Boss"
+			Tooltip: 立刻召唤嘉登和至尊灾厄，跳过它们的特殊动画。
+		}
+
+		UISize: {
+			Label: "[i:CalamityMod/ExoScreen] UI大小"
+			Tooltip: 修改测试UI的大小。
+		}
+
+		ManualLocalizationOverride: {
+			Label: "[i:CalamityMod/LaboratoryElectricPanelItem] 手动覆盖本地化"
+			Tooltip: 如果灾厄或原版没有本地化可用，覆盖自动的本地化
+		}
+	}
+}
+
+UI: {
+	RevealMap.DisplayName: 显示整张地图
+
+	SetSpawnpoint: {
+		DisplayName: 将你的位置设为生成点
+		Set: 生成点已设置，你的新生成点位置是{0}
+	}
+
+	ToggleEnemySpawns: {
+		DisplayName: 切换敌怪生成状态
+		CanSpawn: 敌怪现在可以生成。
+		CannotSpawn: 敌怪现在无法生成。
+	}
+
+	StopTime: {
+		DisplayName: 暂停时间
+		Stopped: 时间已经暂停。
+		Resumed: 时间开始流逝。
+	}
+
+	ToggleDeaths: {
+		PreHM: 切换困难模式前Boss的死亡状态
+		HM: 切换困难模式Boss的死亡状态
+		PML: 切换月亮领主后Boss的死亡状态
+		# Gendered languages like Spanish and French will suffer from lack of gendering support from Tmod, altho I can imagine why they won't do it
+		# Use stuff like Las/Los or L@s or some other way for genders with your language
+		ToggleBossDeath: 切换{0}的死亡状态
+		# English possessive being weird, just copy whatever you used on the previous one in other languages
+		ToggleBossDeathEndsWithS: 切换{0}的死亡状态
+		AllPreHM: 切换所有困难模式前Boss的死亡状态
+		AllHM: 切换所有困难模式Boss的死亡状态
+		AllPML: 切换所有月亮领主后Boss的死亡状态
+		All: 切换所有Boss的死亡状态
+		Toggle: "{0}现在已标记为{1}"
+		# This only applies to English
+		ToggleEndsWithS: "{0}现在已标记为{1}"
+		ToggleAllPreHM: 所有困难模式前Boss现在已标记为{0}
+		ToggleAllHM: 所有困难模式Boss现在已标记为{0}
+		ToggleAllPML: 所有月亮领主后Boss现在已标记为{0}
+		ToggleAll: 所有Boss现在已标记为{0}
+		Alive: 未死亡
+		Dead: 死亡
+		# Bosses
+		// KingSlime: King Slime
+		// DesertScourge: Desert Scourge
+		// Clam: Giant Clam
+		// EoC: Eye of Cthulhu
+		// Crabulon: Crabulon
+		// EoW: Eater of Worlds
+		// BoC: Brain of Cthulhu
+		// HiveMind: Hive Mind
+		Perforators: 血肉宿主
+		// QueenBee: Queen Bee
+		// Deerclops: Deerclops
+		// Skeletron: Skeletron
+		// SlimeGod: Slime God
+		// WoF: Wall of Flesh
+		// QueenSlime: Queen Slime
+		// Cryogen: Cryogen
+		Twins: 双子魔眼
+		// AquaticScourge: Aquatic Scourge
+		Destroyer: 毁灭者
+		// Brimmy: Brimstone Elemental
+		// SkeletronPrime: Skeletron Prime
+		// CalClone: Calamitas Clone
+		// Plantera: Plantera
+		Leviathan: 利维坦和阿娜希塔
+		// Aureus: Astrum Aureus
+		// Golem: Golem
+		PBG: 瘟疫使者歌莉娅
+		// DukeFishron: Duke Fishron
+		// EoL: Empress of Light
+		// Ravager: Ravager
+		// Cultist: Lunatic Cultist
+		// Deus: Astrum Deus
+		// MoonLord: Moon Lord
+		ProfanedGuardians: 亵渎守卫
+		// DFolly: Dragonfolly
+		Providence: 亵渎天神
+		// SW: Storm Weaver
+		// Void: Ceaseless Void
+		Signus: 西格纳斯
+		// Polterghast: Polterghast
+		// OldFart: Old Duke
+		DoG: 神明吞噬者
+		Yharon: 犽戎
+		ExoMechs: 星流巨械
+		SCal: 至尊灾厄
+		// Wyrm: Primordial Wyrm
+		#Getfixedboi
+		// Clamitas: Clamitas
+		// SupremeClam: Supreme Clamitas
+		// Bumblebirb: Bumblebirb
+		// Boomerfish: Boomerfish
+		// Jared: Jared
+	}
+
+	TogglePermanentUpgrades: {
+		DisplayName: 切换永久性升级的使用状态
+		Toggle: 切换{0}的使用状态
+		ToggleItem: "{0}现在已标记为{1}"
+		#Manual Overrides
+		// BloodOrange: Blood Orange
+		// MiracleFruit: Miracle Fruit
+		// Elderberry: Elderberry
+		// Dragonfruit: Dragonfruit
+		// CometShard: Comet Shard
+		// EtherealCore: Ethereal Core
+		// PhantomHeart: Phantom Heart
+		// MushroomPlasmaRoot: Mushroom Plasma Root
+		// InfernalBlood: Infernal Blood
+		// RedLightningContainer: Red Lightning Container
+		// Electrolyte: Electrolyte Gel Pack
+		// StarlightFuelCell: Starlight Fuel Cell
+		// Ectoheart: Ectoheart
+		// DemonHeart: Demon Heart
+		// CelestialOnion: Celestial Onion
+		// VitalCrystal: Vital Crystal
+		// ArcaneCrystal: Arcane Crystal
+		// AegisFruit: Aegis Fruit
+		// Ambrosia: Ambrosia
+		// GummyWorm: Gummy Worm
+		// GalaxyPearl: Galaxy Pearl
+		// Bread: Artisan Loaf
+		#Future Item
+		// NimbleBounder: Nimble Bounder
+	}
+
+	ChangeItemStats.DisplayName: "[废弃]修改物品属性"
+	ChangeProjectileStats.DisplayName: "[废弃]修改弹幕属性"
+	ChangeUniversalStealthFactor.DisplayName: "[废弃]修改全局潜伏系数"
+
+	# Far easier to just give testers access to the code; Hot Reload is a blessing for changes while testing and it can change more stuff
+	# Or just use Modder's toolkit or Dragonlens idk
+	# If Tmod breaks this thing again I will comment it out
+	
+	ResetStats: {
+		DisplayName: "[废弃]重置修改的属性"
+		Reset: 属性改动已被重置
+	}
+
+	BossRushTalkFaster: {
+		DisplayName: 让克希洛克说话更快
+		TalkFast: 好，我会说快点
+		TalkSlower: 我将降低演讲语速
+	}
+}
