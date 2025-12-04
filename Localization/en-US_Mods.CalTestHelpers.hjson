@@ -91,7 +91,6 @@ Configs: {
 		Headers: {
 			Config: Calamity Test Helper configs
 			Deprecated: For Deprecated functions, you can still use them but they aren't supported anymore
-			ExtremelyDeprecated: From extremely old 1.3 versions, not supported anymore, buggy. USE AT YOUR OWN RISK
 			Configs: Configs Header
 		}
 
@@ -123,6 +122,11 @@ Configs: {
 		UISize: {
 			Label: "[i:CalamityMod/ExoScreen] UI Size"
 			Tooltip: Change the size of the testing UI.
+		}
+
+		FreeReforges:{
+			Label: Free Reforhes
+			Tooltip: Makes reforges free
 		}
 
 		ManualLocalizationOverride: {
