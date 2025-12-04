@@ -23,7 +23,7 @@ Items: {
 			Изменения версии 2.4.0.3:
 			– Некоторые изменения в работе мода
 			– Добавлен перевод на русский и китайский
-			
+
 			Известные проблемы:
 			– Игра сходит с ума, когда включено несколько остановок времени: Пока не будет исправлено, чтобы игроки не остались с вечной заморозкой времени.
 			  Рекомендуем использовать остановку времени других модов
@@ -150,7 +150,7 @@ UI: {
 
 	SetSpawnpoint: {
 		DisplayName: Установить точку возрождения на вашей позиции
-		Set: Точка возрождения установлена, теперь она находится на 
+		Set: Точка возрождения установлена, теперь она находится на
 	}
 
 	ToggleEnemySpawns: {
@@ -246,7 +246,7 @@ UI: {
 		DisplayName: Переключить перманентные усилители
 		Toggle: "{0}"
 		ToggleItem: "{0} теперь имеет статус: {1}"
-		#Unused for now since the system is automatic, might be useful for manual overrides later
+		#Manual Overrides
 		BloodOrange: Кровавый апельсин
 		MiracleFruit: Чудесный фрукт
 		Elderberry: Древняя бузина
@@ -257,7 +257,7 @@ UI: {
 		MushroomPlasmaRoot: Грибной плазменный корень
 		InfernalBlood: Инфернальная кровь
 		RedLightningContainer: Контейнер красной молнии
-		NotBarOfSoap: Гелевый пакет электролитов
+		// Electrolyte: Electrolyte Gel Pack
 		StarlightFuelCell: Топливная ячейка звёздного света
 		Ectoheart: Эктосердце
 		DemonHeart: Сердце демона
