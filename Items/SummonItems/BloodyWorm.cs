@@ -36,6 +36,7 @@ namespace CalTestHelpers.Items.SummonItems
         public override void ModifyResearchSorting(ref ContentSamples.CreativeHelper.ItemGroup itemGroup)
         {
             itemGroup = ContentSamples.CreativeHelper.ItemGroup.BossItem;
+            ItemID.Sets.SortingPriorityBossSpawns[Type] = 19; // Celestial Sigil
         }
 
         public override bool CanUseItem(Player player)
@@ -47,7 +48,7 @@ namespace CalTestHelpers.Items.SummonItems
 
         public override bool? UseItem(Player player)
         {
-            SoundEngine.PlaySound(SoundID.Zombie20, player.Center); //Just gonna use Fishron's sound
+            SoundEngine.PlaySound(CalamityMod.NPCs.OldDuke.OldDuke.RoarSound, player.Center);
             if (Main.netMode != NetmodeID.MultiplayerClient)
                 NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<OldDuke>());
             else
@@ -62,6 +63,7 @@ namespace CalTestHelpers.Items.SummonItems
                 AddIngredient(ModContent.ItemType<BloodwormItem>(), 1).
                 AddIngredient(ItemID.ChumBucket, 10).
                 AddTile(TileID.MeatGrinder).
+                AddTile(TileID.LunarCraftingStation).
                 Register();
         }
     }

@@ -59,6 +59,7 @@ namespace CalTestHelpers.Items.SummonItems
             CreateRecipe().
                 AddIngredient(ItemID.MusicBox, 1).
                 AddIngredient(ItemID.Seashell, 10).
+                AddTile(TileID.MythrilAnvil).
                 Register();
         }
     }

@@ -53,7 +53,7 @@ namespace CalTestHelpers
             if (FrozenTime && Main.netMode == NetmodeID.SinglePlayer)
                 Main.time -= Main.dayRate;
 
-            if (CalamityPlayer.areThereAnyDamnBosses && !Main.LocalPlayer.dead)
+            if (CalamityPlayer.areThereAnyDamnBosses && !Main.LocalPlayer.dead && CalTestHelperConfig.Instance.BossDeathStatMessages)
             {
                 BossKillTimeFrames++;
 

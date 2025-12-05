@@ -20,9 +20,12 @@ Items: {
 		DisplayName: Changelogs
 		Tooltip:
 			'''
-			2.4.0.3 Changelog
-			- Fixed Boss UI status message
-			- Added Russian and Simplified Chinese localization
+			2.4.0.4 Changelog
+			- Added a way to toggle free reforges off
+			- Removed the extremely deprecated Store Fight Information function
+			- All summon items from the mod require Mythril Anvil (Celestial Manipulator for Bloody worm)
+			- Bloody worm now actually uses Old Duke's roar
+			- Sorted Bloody worm for the journey menu (should now appear alongside all Post-ML boss items)
 
 			Known issues:
 			- Game going crazy if multiple time freezes are on: Wont be fixed for the time being so that players arent stuck with frozen time from this mod
@@ -104,6 +107,7 @@ Configs: {
 			Tooltip: Gives you a changelog item on world entry.
 		}
 
+		# Not used anymore, but could be revived if I redo it
 		StoreFightInformation: {
 			Label: "[i:CalamityMod/AgedLaboratoryElectricPanelItem] Store Boss Fight Information"
 			Tooltip: Enables the storage of (some) fight data. Includes fight time, average DPS, and max DPS. DO NOT USE UNLESS YOU ABSOLUTELY NEED TO

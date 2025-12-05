@@ -56,6 +56,7 @@ namespace CalTestHelpers.Items.SummonItems
             CreateRecipe().
                 AddIngredient(ItemID.BrassLantern, 1).
                 AddIngredient(ItemID.EmpressButterfly, 1).
+                AddTile(TileID.MythrilAnvil).
                 Register();
         }
     }
