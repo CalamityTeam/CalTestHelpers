@@ -20,22 +20,26 @@ Items: {
 		DisplayName: Changelogs
 		Tooltip:
 			'''
-			2.4.1.0 (dev) Changelog
-			- Removed Nimble Bounder
+			2.4.1.0 Changelog
 			- Removed the Fight Information function
+			- Removed the Stealth Factor function
 			- The Toggle all boss deaths bools are now always yellow instead of depending of the first boss on the list
 			- Made the text after setting all bosses dead/alive work properly for real this time
 			- Added a way to turn off free reforges
-			- Updated Mod Icons
 			- A small icon now shows up in the Mod Configs menu
-			- Added Doze to the developers list
+			- Removed Time Freeze function since Calamity added an item for it (Bakidon)
 			- Updated Localization files
+			- Open source now
 
 			Known issues:
-			- Game going crazy if multiple time freezes are on: Wont be fixed for the time being so that players arent stuck with frozen time from this mod
-			  please use other mod's time freezers if they are available
 			- Configs not updating for players to the new functions and messages, if this happens locate the config file  for Cal Test Helpers in 
 			  Documents/MyGames/Terraria/Tmodloader/ModConfigs and delete it so a new one is generated. (This works for other mods' configs should they bug out too)
+			- (NOT REALLY A BUG) EoW and BoC share the same death flag in Terraria, so clicking either of them controls both
+			- Chinese and Rusian localization missing from this item
+
+			NOTICES:
+			- THIS WILL BE THE LAST PATCH WITH THIS ITEM, YOU WILL HAVE TO CHECK CHANGELOGS ON STEAM
+			- THIS MOD MIGHT NOT BE MAINTAINED OR UPDATED IN THE FUTURE
 			'''
 	}
 
@@ -132,12 +136,6 @@ UI: {
 		DisplayName: Toggle enemy spawns.
 		CanSpawn: Enemies can now spawn.
 		CannotSpawn: Enemies cannot spawn.
-	}
-
-	StopTime: {
-		DisplayName: Stop Time
-		Stopped: Time has stopped.
-		Resumed: Time has resumed.
 	}
 
 	ToggleDeaths: {

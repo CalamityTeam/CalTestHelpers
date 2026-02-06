@@ -35,24 +35,18 @@ namespace CalTestHelpers
         public override void LoadWorldData(TagCompound tag)
         {
             NoSpawns = tag.GetBool("NoSpawns");
-            FrozenTime = tag.GetBool("FrozenTime");
         }
         public override void NetSend(BinaryWriter writer)
         {
             writer.Write(NoSpawns);
-            writer.Write(FrozenTime);
         }
         public override void NetReceive(BinaryReader reader)
         {
             NoSpawns = reader.ReadBoolean();
-            FrozenTime = reader.ReadBoolean();
         }
 
         public override void PostUpdateWorld()
         {
-            if (FrozenTime && Main.netMode == NetmodeID.SinglePlayer)
-                Main.time -= Main.dayRate;
-
             if (CalamityPlayer.areThereAnyDamnBosses && !Main.LocalPlayer.dead)
             {
                 BossKillTimeFrames++;
@@ -134,6 +128,7 @@ namespace CalTestHelpers
                     // Draw a gear at the bottom of the screen if any stat manipulations have been done
                     // This is done to prevent cheating by nohitters (who use this mod).
                     // If you attempt to remove this behavior and do something like this, I am not responsible.
+                    // - Lucille
                     if (CalTestHelpers.HaveAnyStatManipulationsBeenDone)
                     {
                         Texture2D gearTexture = ModContent.Request<Texture2D>("CalTestHelpers/UI/Gear").Value;

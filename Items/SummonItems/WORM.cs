@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
 using CalamityMod;
-using CalamityMod.Items.Potions;
+using CalamityMod.Items.Potions.Food;
 using Microsoft.Xna.Framework;
 
 namespace CalTestHelpers.Items.SummonItems

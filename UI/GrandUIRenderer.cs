@@ -57,11 +57,6 @@ namespace CalTestHelpers.UI
                         //Localization making shit slightly harder
                         Main.NewText(CalTestHelpersWorld.NoSpawns ? Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleEnemySpawns.CannotSpawn") : Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleEnemySpawns.CanSpawn"));
                     }, CalTestHelpersWorld.NoSpawns ? Color.Green : Color.Red),
-                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.StopTime.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/WatchTexture").Value, () =>
-                    {
-                        CalTestHelpersWorld.FrozenTime = !CalTestHelpersWorld.FrozenTime;
-                        Main.NewText(CalTestHelpersWorld.FrozenTime ? Language.GetTextValue("Mods.CalTestHelpers.UI.StopTime.Stopped") : Language.GetTextValue("Mods.CalTestHelpers.UI.StopTime.Resumed"), CalTestHelpersWorld.FrozenTime ? Color.Cyan : Color.Goldenrod);
-                    }, CalTestHelpersWorld.FrozenTime ? Color.Green : Color.Red),
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleDeaths.PreHM"), ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesPHM").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderPHM : null;
@@ -91,10 +86,12 @@ namespace CalTestHelpers.UI
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.ProjectileEditerUIRenderer : null;
                     }, Color.Yellow),
+                    /*
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ChangeUniversalStealthFactor.DisplayName"), ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/Cinquedea").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.StealthEditerUIRenderer : null;
                     }, Color.Yellow),
+                    */
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ResetStats.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/Gear").Value, () =>
                     {
                         ItemOverrideCache.ResetOverrides();
@@ -103,19 +100,6 @@ namespace CalTestHelpers.UI
                         Main.NewText(Language.GetTextValue("Mods.CalTestHelpers.UI.ResetStats.Reset"));
                     }, Color.Yellow),
                 };
-
-                // Just so it doesnt error WeakReferences are used, this is to find if its summoner branch or not
-                Mod Calamity = GetInstance<CalTestHelpers>().Calamity;
-                if (Calamity.TryFind("ArdorBlossomStar", out ModItem SummonerBranch))
-                {
-                    SpecialUIElement ToggleWhips = new SpecialUIElement("Toggle Whip tag (Dev versions only)", TextureAssets.Item[ItemID.BlandWhip].Value, () =>
-                    {
-                        Calamity.Call("ToggleWhipTag");
-                        //im not gonna bother localizing something only the dev server can see, unless a dev requests
-                        Main.NewText($"Tag damage is now {(CalamityGlobalNPC.DisableMultWhipTag ? "flat" : "multiplicative")}.");
-                    }, CalamityGlobalNPC.DisableMultWhipTag ? Color.Green : Color.Red);
-                    elements.Add(ToggleWhips);
-                }
                 //Add all elements
                 elements.AddRange(CalTestHelpers.SecondaryUIElements);
                 return elements;

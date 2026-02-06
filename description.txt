@@ -1,4 +1,4 @@
-The Calamity-based testing mod (DEV VERSION)
+The Calamity-based testing mod
 
 This mod provides various services, such as:
 
@@ -21,5 +21,5 @@ toggling permanent upgrades and deaths, and toggling enemy spawns
 
 - Instant summoning for some bosses (SCal and Draedon)
 
-Ping me (shade__storm) on the Calamity Mod Official Discord's #other-mod-talk or #calamity-addon-talk channels for suggestions, 
-as I currently maintain this mod. Alternatively use the Discussions tab on Steam.
+People who have formerly worked on this mod: Lucille K, Ben-TK, Shade
+This mod might not be maintained or updated in the future, but it will remain for posteriority.

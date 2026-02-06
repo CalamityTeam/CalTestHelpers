@@ -1,5 +1,5 @@
 displayName = Calamity Test Helper Mod
-author = Lucille K, Ben-TK, Shade, Doze
+author = The Calamity Dev Team
 modReferences=CalamityMod
-buildIgnore = Properties\*, *.csproj
+buildIgnore = Properties\*
 version = 2.4.1.0
