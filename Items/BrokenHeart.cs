@@ -27,6 +27,8 @@ namespace CalTestHelpers.Items
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.color = Color.DimGray;
             Item.UseSound = SoundID.Item4;
+            Item.useTime = 30;
+            Item.useAnimation = 30;
         }
 
         public override bool CanUseItem(Player player)

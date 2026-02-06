@@ -4,6 +4,7 @@ using CalamityMod.NPCs.SupremeCalamitas;
 using CalamityMod.Particles;
 using CalamityMod.Projectiles.Boss;
 using Microsoft.Xna.Framework;
+using Mono.Cecil;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -18,9 +19,12 @@ namespace CalTestHelpers
 
         public override void OnSpawn(Projectile projectile, IEntitySource source)
         {
-            Player player = source as Player;
-            if (projectile.DamageType == RogueDamageClass.Instance && CalTestHelpersPlayer.Equals(projectile, source) && player.GetModPlayer<CalTestHelpersPlayer>().CannotProcRogue)
+            Player player = Main.player[projectile.owner];
+            if (projectile.DamageType == RogueDamageClass.Instance && player.GetModPlayer<CalTestHelpersPlayer>().CannotProcRogue)
+            {
                 projectile.Calamity().CannotProc = true;
+                projectile.Calamity().stealthStrike = false;
+            }
         }
 
         //public SCalRitualDrama ritual;
@@ -69,6 +73,13 @@ namespace CalTestHelpers
                 GeneralParticleHandler.SpawnParticle(pulse2);
 
                 projectile.Kill();
+            }
+            //Gotta have it twice since projectiles spawning projectiles
+            Player player = Main.player[projectile.owner];
+            if (projectile.DamageType == RogueDamageClass.Instance && player.GetModPlayer<CalTestHelpersPlayer>().CannotProcRogue)
+            {
+                projectile.Calamity().CannotProc = true;
+                projectile.Calamity().stealthStrike = false;
             }
         }
     }
