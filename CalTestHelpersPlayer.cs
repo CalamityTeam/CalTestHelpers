@@ -1,4 +1,6 @@
 using CalTestHelpers.Items;
+using CalTestHelpers;
+using log4net;
 using Terraria;
 using Terraria.GameInput;
 using Terraria.ID;
@@ -8,8 +10,14 @@ namespace CalTestHelpers
 {
     public class CalTestHelpersPlayer : ModPlayer
     {
-        public int statChangeCooldown = 0;
+        /// <summary>
+        /// Used to turn off Rogue procs for the player
+        /// </summary>
+        public bool CannotProcRogue = false;
 
+        //private static readonly ILog Log;
+
+        public int statChangeCooldown = 0;
         public override void UpdateDead()
         {
             statChangeCooldown = 0;
@@ -39,8 +47,9 @@ namespace CalTestHelpers
                     NetMessage.SendData(MessageID.InstancedItem, p.whoAmI, -1, null, changelog);
                 }
             }
-            Mod Calamity = ModContent.GetInstance<CalTestHelpers>().Calamity;
+            //Mod Calamity = ModContent.GetInstance<CalTestHelpers>().Calamity;
             //bool SummonerBranch = Calamity.TryFind("ArdorBlossomStar", out ModItem ArdorBlossomStar);
+            //Log.Info($"Summoner branch: {SummonerBranch}");
             //Main.NewText($"Summoner branch: {SummonerBranch}");
         }
     }

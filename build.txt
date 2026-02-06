@@ -1,5 +1,5 @@
 displayName = Calamity Test Helper Mod
-author = Lucille K, Ben-TK, Shade
+author = Lucille K, Ben-TK, Shade, Ozzatron
 modReferences=CalamityMod
-buildIgnore = Properties\*, *.csproj
-version = 2.4.0.3
+buildIgnore = Properties\*
+version = 2.4.1.0

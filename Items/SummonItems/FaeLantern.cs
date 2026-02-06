@@ -37,7 +37,7 @@ namespace CalTestHelpers.Items.SummonItems
         public override bool CanUseItem(Player player)
         {
             // No biome restriction since she doesn't enrage
-            return !Main.dayTime && !NPC.AnyNPCs(NPCID.EmpressButterfly) && !NPC.AnyNPCs(NPCID.HallowBoss) && !BossRushEvent.BossRushActive;
+            return !NPC.AnyNPCs(NPCID.EmpressButterfly) && !NPC.AnyNPCs(NPCID.HallowBoss) && !BossRushEvent.BossRushActive;
         }
 
         public override bool? UseItem(Player player)
@@ -56,6 +56,7 @@ namespace CalTestHelpers.Items.SummonItems
             CreateRecipe().
                 AddIngredient(ItemID.BrassLantern, 1).
                 AddIngredient(ItemID.EmpressButterfly, 1).
+                AddTile(TileID.MythrilAnvil).
                 Register();
         }
     }

@@ -20,42 +20,64 @@ Items: {
 		DisplayName: Changelogs
 		Tooltip:
 			'''
-			2.4.0.3 Changelog
-			- Many fixes and background changes to the mod
-			- Added Russian and Chinese localization
+			2.4.1.0 Changelog
+			- Removed the Fight Information function
+			- Removed the Stealth Factor function
+			- The Toggle all boss deaths bools are now always yellow instead of depending of the first boss on the list
+			- Made the text after setting all bosses dead/alive work properly for real this time
+			- Added a way to turn off free reforges
+			- A small icon now shows up in the Mod Configs menu
+			- Removed Time Freeze function since Calamity added an item for it (Bakidon)
+			- Updated Localization files
+			- Open source now
+			- Added Minecart Upgrade kit to the Permanent Upgrade menu
+			- Fae's Lantern can now be properly used at daytime
 
 			Known issues:
-			- Game going crazy if multiple time freezes are on: Wont be fixed for the time being so that players arent stuck with frozen time from this mod
-			  please use other mod's time freezers if they are available
 			- Configs not updating for players to the new functions and messages, if this happens locate the config file  for Cal Test Helpers in 
 			  Documents/MyGames/Terraria/Tmodloader/ModConfigs and delete it so a new one is generated. (This works for other mods' configs should they bug out too)
+			- (NOT REALLY A BUG) EoW and BoC share the same death flag in Terraria, so clicking either of them controls both
+			- Chinese and Rusian localization missing from this item and new items
 
-			Notices:
-			- If you want to make a sprite for an item that has a placeholder or a suggestion submit it to shade__storm in #other-mod-talk or #calamity-addon-talk 
-			  on the Official Calamity Discord server, or the Discussions tab in Steam Workshop 
-			  (I would allow DMs if it wasn't for all those scams and bots that have popped up, sorry guys)
-			- I am not going to use Infernum's assets for boss summoning items, those belong to them
+			NOTICES:
+			- THIS WILL BE THE LAST PATCH WITH THIS ITEM, YOU WILL HAVE TO CHECK CHANGELOGS ON STEAM
+			- THIS MOD MIGHT NOT BE MAINTAINED OR UPDATED IN THE FUTURE
+
+			Plans:
+			Add a way to freeze bosses in place
+			Make actual sprites for items
+			Update localizations
 			'''
 	}
 
-	SummonItems: {
-		SirenSong: {
-			DisplayName: Siren Song
-			Tooltip:
-				'''
-				Summons Anahita while used in the ocean
-				An alluring song can be heard
-				[c/FF0000: Notice: Will be deleted once Calamity's Sunken Sea Update comes out as it adds an]
-				[c/FF0000: Anahita Summoning item, yet the recipe will change when this mod is on to keep it]
-				[c/FF0000: available Pre-Anahita]
-				'''
-		}
+	BrokenHeart: {
+		DisplayName: Broken Heart
+		Tooltip:
+		'''
+		Reduces Max Life by 20, up to a minimum of 100
+		Does nothing if a Calamity health upgrade is active
+		[c/522e2e: One must carry on in a moment of heartbreak, even if it hurts.]
+		TEXTURE IS A PLACEHOLDER
+		'''
+	}
 
+	ShatteredStar: {
+		DisplayName: Shattered Star
+		Tooltip:
+		'''
+		Reduces Max Mana by 20, up to a minimum of 20
+		Does nothing if a Calamity mana upgrade is active
+		[c/303857: One must strive foward on even if there is no star to guide their way on the night sky.]
+		TEXTURE IS A PLACEHOLDER
+		'''
+	}
+
+	SummonItems: {
 		FaeLantern: {
 			DisplayName: Fae's Lantern
 			Tooltip:
 				'''
-				Summons Empress of Light at night
+				Summons Empress of Light
 				[c/FF0000:DO NOT SUMMON AT DAYTIME WHILE BALANCING]
 				Otherwise go ahead
 				TEXTURE IS A PLACEHOLDER
@@ -91,7 +113,6 @@ Configs: {
 		Headers: {
 			Config: Calamity Test Helper configs
 			Deprecated: For Deprecated functions, you can still use them but they aren't supported anymore
-			ExtremelyDeprecated: From extremely old 1.3 versions, not supported anymore, buggy. USE AT YOUR OWN RISK
 			Configs: Configs Header
 		}
 
@@ -103,11 +124,6 @@ Configs: {
 		Changelog: {
 			Label: "[i:CalTestHelpers/Changelog] Changelog"
 			Tooltip: Gives you a changelog item on world entry.
-		}
-
-		StoreFightInformation: {
-			Label: "[i:CalamityMod/AgedLaboratoryElectricPanelItem] Store Boss Fight Information"
-			Tooltip: Enables the storage of (some) fight data. Includes fight time, average DPS, and max DPS. DO NOT USE UNLESS YOU ABSOLUTELY NEED TO
 		}
 
 		StuffAmountDisplay: {
@@ -129,6 +145,11 @@ Configs: {
 			Label: "[i:CalamityMod/LaboratoryElectricPanelItem] Manual Localization Override"
 			Tooltip: Override the automatic localization in case there is no localization available in Calamity or base Terraria
 		}
+
+		FreeReforges: {
+			Label: "[i:SilverHammer] Free Reforges"
+			Tooltip: Make Reforges free
+		}
 	}
 }
 
@@ -144,12 +165,6 @@ UI: {
 		DisplayName: Toggle enemy spawns.
 		CanSpawn: Enemies can now spawn.
 		CannotSpawn: Enemies cannot spawn.
-	}
-
-	StopTime: {
-		DisplayName: Stop Time
-		Stopped: Time has stopped.
-		Resumed: Time has resumed.
 	}
 
 	ToggleDeaths: {
@@ -234,10 +249,10 @@ UI: {
 		Toggle: Toggle {0}
 		ToggleItem: "{0} is now marked as {1}"
 		#Manual Overrides
-		BloodOrange: Blood Orange
+		SanguineTangerine: Sanguine Tangerine
 		MiracleFruit: Miracle Fruit
-		Elderberry: Elderberry
-		Dragonfruit: Dragonfruit
+		TaintedCloudberry: Tainted Cloudberry
+		SacredStrawberry: Sacred Strawberry
 		CometShard: Comet Shard
 		EtherealCore: Ethereal Core
 		PhantomHeart: Phantom Heart
@@ -256,6 +271,7 @@ UI: {
 		GummyWorm: Gummy Worm
 		GalaxyPearl: Galaxy Pearl
 		Bread: Artisan Loaf
+		Mechcart: Minecart Upgrade Kit
 	}
 
 	ChangeItemStats.DisplayName: "[DEPRECATED] Change item stats"

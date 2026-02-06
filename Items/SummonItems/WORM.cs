@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
 using CalamityMod;
-using CalamityMod.Items.Potions;
+using CalamityMod.Items.Potions.Food;
 using Microsoft.Xna.Framework;
 
 namespace CalTestHelpers.Items.SummonItems
@@ -62,6 +62,7 @@ namespace CalTestHelpers.Items.SummonItems
                 AddIngredient(ItemID.TruffleWorm, 1).
                 AddIngredient(ModContent.ItemType<DeliciousMeat>(), 10).
                 AddTile(TileID.MeatGrinder).
+                AddTile(TileID.MythrilAnvil).
                 Register();
         }
     }

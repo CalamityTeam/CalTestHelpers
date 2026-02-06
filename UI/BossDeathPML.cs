@@ -24,14 +24,14 @@ namespace CalTestHelpers.UI
             new SpecialUIElement(Language.GetTextValue(BossKeyEndsWithS, GetBossLocalizationKey(Boss.Signus)), ModContent.Request<Texture2D>("CalamityMod/NPCs/Signus/Signus_Head_Boss").Value, () => ToggleDeath(Boss.Signus), GetColor(GetDownedBool(Boss.Signus))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.Polterghast)), ModContent.Request<Texture2D>("CalamityMod/NPCs/Polterghast/Polterghast_Head_Boss").Value, () => ToggleDeath(Boss.Polterghast), GetColor(GetDownedBool(Boss.Polterghast))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.OldDuke)), ModContent.Request<Texture2D>("CalamityMod/NPCs/OldDuke/OldDuke_Head_Boss").Value, () => ToggleDeath(Boss.OldDuke), GetColor(GetDownedBool(Boss.OldDuke))),
-            new SpecialUIElement(Language.GetTextValue(BossKeyEndsWithS, GetBossLocalizationKey(Boss.DevourerOfGods)), ModContent.Request<Texture2D>("CalamityMod/NPCs/DevourerofGods/DevourerofGodsHeadS_Head_Boss").Value, () => ToggleDeath(Boss.DevourerOfGods), GetColor(GetDownedBool(Boss.DevourerOfGods))),
+            new SpecialUIElement(Language.GetTextValue(BossKeyEndsWithS, GetBossLocalizationKey(Boss.DevourerOfGods)), ModContent.Request<Texture2D>("CalamityMod/NPCs/DevourerofGods/DevourerofGodsHead_Head_Boss").Value, () => ToggleDeath(Boss.DevourerOfGods), GetColor(GetDownedBool(Boss.DevourerOfGods))),
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.Yharon)), ModContent.Request<Texture2D>("CalamityMod/NPCs/Yharon/Yharon_Head_Boss").Value, () => ToggleDeath(Boss.Yharon), GetColor(GetDownedBool(Boss.Yharon))),
             new SpecialUIElement(Language.GetTextValue(BossKeyEndsWithS, GetBossLocalizationKey(Boss.Draedon)), ModContent.Request<Texture2D>("CalamityMod/Items/Armor/Vanity/DraedonMask").Value, () => ToggleDeath(Boss.Draedon), GetColor(GetDownedBool(Boss.Draedon))),
             new SpecialUIElement(Language.GetTextValue(BossKeyEndsWithS, GetBossLocalizationKey(Boss.Calamitas)), ModContent.Request<Texture2D>("CalamityMod/NPCs/SupremeCalamitas/HoodlessHeadIcon").Value, () => ToggleDeath(Boss.Calamitas), GetColor(GetDownedBool(Boss.Calamitas))),
             //Since people asked for it
             new SpecialUIElement(Language.GetTextValue(BossKey, GetBossLocalizationKey(Boss.Wyrm)), ModContent.Request<Texture2D>("CalamityMod/NPCs/PrimordialWyrm/PrimordialWyrmHead_Head_Boss").Value, () => ToggleDeath(Boss.Wyrm), GetColor(GetDownedBool(Boss.Wyrm))),
-            new SpecialUIElement(Language.GetTextValue(GetBossLocalizationKey(Boss.AllPML)), ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/ArkoftheCosmos").Value, () => ToggleDeath(Boss.AllPML), GetColor(GetDownedBool(Boss.AllPML))),
-            new SpecialUIElement(Language.GetTextValue(GetBossLocalizationKey(Boss.All)), ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () => ToggleDeath(Boss.All), GetColor(GetDownedBool(Boss.All)))
+            new SpecialUIElement(Language.GetTextValue(GetBossLocalizationKey(Boss.AllPML)), ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/ArkoftheCosmos").Value, () => ToggleDeath(Boss.AllPML), Color.Yellow),
+            new SpecialUIElement(Language.GetTextValue(GetBossLocalizationKey(Boss.All)), ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value, () => ToggleDeath(Boss.All), Color.Yellow)
         };
 
         public static void ToggleDeath(Boss bossDeathToToggle)
@@ -106,6 +106,8 @@ namespace CalTestHelpers.UI
             }
             bossDeathValue = !bossDeathValue;
             string DeadOrAlive = Language.GetTextValue(key + (bossDeathValue ? "Dead" : "Alive"));
+
+            // Could Tmod make their pluralization code fucking normal so I did not have to do this?
             bool bossReferenceText = bossName.Last() == 's';
             Main.NewText(Language.GetTextValue(key + (bossReferenceText ? "ToggleEndsWithS" : "Toggle"), bossName, DeadOrAlive), textColor);
         }
@@ -120,6 +122,7 @@ namespace CalTestHelpers.UI
             DownedBossSystem._downedCeaselessVoid = DownedBossSystem._downedStormWeaver = DownedBossSystem._downedSignus = !killAll;
             DownedBossSystem._downedPolterghast = DownedBossSystem._downedBoomerDuke = DownedBossSystem._downedDoG = !killAll;
             DownedBossSystem._downedYharon = DownedBossSystem._downedExoMechs = DownedBossSystem._downedCalamitas = !killAll;
+            DownedBossSystem._downedPrimordialWyrm = !killAll;
         }
 
         public static void ToggleAllBossDeaths()
@@ -128,7 +131,7 @@ namespace CalTestHelpers.UI
             string DeadOrAlive = Language.GetTextValue(key + (!killAll ? "Dead" : "Alive"));
             Main.NewText(Language.GetTextValue(key + "ToggleAll", DeadOrAlive), Color.Red);
 
-            NPC.downedSlimeKing = DownedBossSystem._downedDesertScourge = NPC.downedBoss1 = !killAll;
+            NPC.downedSlimeKing = DownedBossSystem._downedDesertScourge = DownedBossSystem._downedCLAM = DownedBossSystem._downedCLAMHardMode = NPC.downedBoss1 = !killAll;
             DownedBossSystem._downedCrabulon = NPC.downedBoss2 = DownedBossSystem._downedHiveMind = DownedBossSystem._downedPerforator = !killAll;
             NPC.downedQueenBee = NPC.downedDeerclops = NPC.downedBoss3 = DownedBossSystem._downedSlimeGod = Main.hardMode = !killAll;
             NPC.downedQueenSlime = NPC.downedMechBoss1 = NPC.downedMechBoss2 = NPC.downedMechBoss3 = !killAll;
@@ -140,7 +143,7 @@ namespace CalTestHelpers.UI
             DownedBossSystem._downedCeaselessVoid = DownedBossSystem._downedStormWeaver = DownedBossSystem._downedSignus = !killAll;
             DownedBossSystem._downedPolterghast = DownedBossSystem._downedBoomerDuke = DownedBossSystem._downedDoG = !killAll;
             DownedBossSystem._downedYharon = DownedBossSystem._downedExoMechs = DownedBossSystem._downedCalamitas = !killAll;
-            NPC.downedMechBossAny = !killAll;
+            NPC.downedMechBossAny = DownedBossSystem._downedPrimordialWyrm = !killAll;
         }
     }
 }

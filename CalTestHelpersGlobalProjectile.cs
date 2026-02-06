@@ -6,6 +6,7 @@ using CalamityMod.Projectiles.Boss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -13,11 +14,22 @@ namespace CalTestHelpers
 {
     public class CalTestHelpersGlobalProjectile : GlobalProjectile
     {
+
+
+        public override void OnSpawn(Projectile projectile, IEntitySource source)
+        {
+            Player player = source as Player;
+            if (projectile.DamageType == RogueDamageClass.Instance && CalTestHelpersPlayer.Equals(projectile, source) && player.GetModPlayer<CalTestHelpersPlayer>().CannotProcRogue)
+                projectile.Calamity().CannotProc = true;
+        }
+
+        //public SCalRitualDrama ritual;
         public override void AI(Projectile projectile)
         {
             if (projectile.type == ModContent.ProjectileType<SCalRitualDrama>() && !NPC.AnyNPCs(ModContent.NPCType<SupremeCalamitas>()) && CalTestHelperConfig.Instance.InstantBossSummoning)
             {
-                //SCalRitualDrama.SummonSCal();
+                //ritual.SummonSCal(); //This wont work outside of the file due to not being static
+
                 //If only functions worked like Python ones, gotta copy the code then
                 //Permision granted by Xyk
 
@@ -55,6 +67,7 @@ namespace CalTestHelpers
                 GeneralParticleHandler.SpawnParticle(pulse);
                 Particle pulse2 = new DirectionalPulseRing(projectile.Center, Vector2.Zero, projectile.ai[1] == 1 ? Color.Magenta : new Color(121, 21, 77), new Vector2(2f, 2f), 0, 0f, 2.1f, 60);
                 GeneralParticleHandler.SpawnParticle(pulse2);
+
                 projectile.Kill();
             }
         }
