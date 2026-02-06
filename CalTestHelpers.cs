@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using CalamityMod.CalPlayer;
 using CalTestHelpers.UI;
 using log4net;
+using Terraria;
 using Terraria.ModLoader;
 
 namespace CalTestHelpers

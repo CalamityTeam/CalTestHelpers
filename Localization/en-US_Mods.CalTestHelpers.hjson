@@ -30,17 +30,46 @@ Items: {
 			- Removed Time Freeze function since Calamity added an item for it (Bakidon)
 			- Updated Localization files
 			- Open source now
+			- Added Minecart Upgrade kit to the Permanent Upgrade menu
+			- Fae's Lantern can now be properly used at daytime
 
 			Known issues:
 			- Configs not updating for players to the new functions and messages, if this happens locate the config file  for Cal Test Helpers in 
 			  Documents/MyGames/Terraria/Tmodloader/ModConfigs and delete it so a new one is generated. (This works for other mods' configs should they bug out too)
 			- (NOT REALLY A BUG) EoW and BoC share the same death flag in Terraria, so clicking either of them controls both
-			- Chinese and Rusian localization missing from this item
+			- Chinese and Rusian localization missing from this item and new items
 
 			NOTICES:
 			- THIS WILL BE THE LAST PATCH WITH THIS ITEM, YOU WILL HAVE TO CHECK CHANGELOGS ON STEAM
 			- THIS MOD MIGHT NOT BE MAINTAINED OR UPDATED IN THE FUTURE
+
+			Plans:
+			Add a way to freeze bosses in place
+			Make actual sprites for items
+			Update localizations
 			'''
+	}
+
+	BrokenHeart: {
+		DisplayName: Broken Heart
+		Tooltip:
+		'''
+		Reduces Max Life by 20, up to a minimum of 100
+		Does nothing if a Calamity health upgrade is active
+		[c/522e2e: One must carry on in a moment of heartbreak, even if it hurts.]
+		TEXTURE IS A PLACEHOLDER
+		'''
+	}
+
+	ShatteredStar: {
+		DisplayName: Shattered Star
+		Tooltip:
+		'''
+		Reduces Max Mana by 20, up to a minimum of 20
+		Does nothing if a Calamity mana upgrade is active
+		[c/303857: One must strive foward on even if there is no star to guide their way on the night sky.]
+		TEXTURE IS A PLACEHOLDER
+		'''
 	}
 
 	SummonItems: {
@@ -48,7 +77,7 @@ Items: {
 			DisplayName: Fae's Lantern
 			Tooltip:
 				'''
-				Summons Empress of Light at night
+				Summons Empress of Light
 				[c/FF0000:DO NOT SUMMON AT DAYTIME WHILE BALANCING]
 				Otherwise go ahead
 				TEXTURE IS A PLACEHOLDER
@@ -242,6 +271,7 @@ UI: {
 		GummyWorm: Gummy Worm
 		GalaxyPearl: Galaxy Pearl
 		Bread: Artisan Loaf
+		Mechcart: Minecart Upgrade Kit
 	}
 
 	ChangeItemStats.DisplayName: "[DEPRECATED] Change item stats"

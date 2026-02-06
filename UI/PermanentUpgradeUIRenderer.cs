@@ -37,7 +37,8 @@ namespace CalTestHelpers.UI
             Ambrosia,
             GummyWorm,
             GalaxyPearl,
-            ArtisanLoaf
+            ArtisanLoaf,
+            MinecartUpgradeKit,
         }
 
         public string key = "Mods.CalTestHelpers.UI.TogglePermanentUpgrades.Toggle";
@@ -67,6 +68,7 @@ namespace CalTestHelpers.UI
                     new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.GummyWorm)), TextureAssets.Item[ItemID.GummyWorm].Value, () => ToggleUpgrade(PlayerUpgrade.GummyWorm), GetColor(HasUpgrade(PlayerUpgrade.GummyWorm))),
                     new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.GalaxyPearl)), TextureAssets.Item[ItemID.GalaxyPearl].Value, () => ToggleUpgrade(PlayerUpgrade.GalaxyPearl), GetColor(HasUpgrade(PlayerUpgrade.GalaxyPearl))),
                     new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.ArtisanLoaf)), TextureAssets.Item[ItemID.ArtisanLoaf].Value, () => ToggleUpgrade(PlayerUpgrade.ArtisanLoaf), GetColor(HasUpgrade(PlayerUpgrade.ArtisanLoaf))),
+                    new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.MinecartUpgradeKit)), TextureAssets.Item[ItemID.MinecartPowerup].Value, () => ToggleUpgrade(PlayerUpgrade.MinecartUpgradeKit), GetColor(HasUpgrade(PlayerUpgrade.MinecartUpgradeKit))),
         };
 
         public override Vector2 TopLeftLocation => SecondaryTopLeftLocation;
@@ -146,6 +148,9 @@ namespace CalTestHelpers.UI
                     case PlayerUpgrade.ArtisanLoaf:
                         UpgradeName = Lang.GetItemNameValue(ItemID.ArtisanLoaf);
                         break;
+                    case PlayerUpgrade.MinecartUpgradeKit:
+                        UpgradeName = Lang.GetItemNameValue(ItemID.MinecartPowerup);
+                        break;
                 }
             }
             else
@@ -217,6 +222,9 @@ namespace CalTestHelpers.UI
                         break;
                     case PlayerUpgrade.ArtisanLoaf:
                         UpgradeName = Language.GetTextValue(key2 + "Bread");
+                        break;
+                    case PlayerUpgrade.MinecartUpgradeKit:
+                        UpgradeName = Language.GetTextValue(key2 + "Mechcart");
                         break;
                 }
             }
@@ -319,6 +327,10 @@ namespace CalTestHelpers.UI
                     textColor = new Color(199, 111, 24);
                     upgradeValue = ref Main.LocalPlayer.ateArtisanBread;
                     break;
+                case PlayerUpgrade.MinecartUpgradeKit:
+                    textColor = new Color(102, 102, 102);
+                    upgradeValue = ref Main.LocalPlayer.unlockedSuperCart;
+                    break;
             }
             upgradeValue = !upgradeValue;
             Main.NewText(Language.GetTextValue("Mods.CalTestHelpers.UI.TogglePermanentUpgrades.ToggleItem", upgradeName, upgradeValue), textColor);
@@ -372,6 +384,8 @@ namespace CalTestHelpers.UI
                     return Main.LocalPlayer.usedGalaxyPearl;
                 case PlayerUpgrade.ArtisanLoaf:
                     return Main.LocalPlayer.ateArtisanBread;
+                case PlayerUpgrade.MinecartUpgradeKit:
+                    return Main.LocalPlayer.unlockedSuperCart;
             }
             return false;
         }

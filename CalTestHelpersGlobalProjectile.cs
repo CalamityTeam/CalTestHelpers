@@ -6,6 +6,7 @@ using CalamityMod.Projectiles.Boss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -13,6 +14,15 @@ namespace CalTestHelpers
 {
     public class CalTestHelpersGlobalProjectile : GlobalProjectile
     {
+
+
+        public override void OnSpawn(Projectile projectile, IEntitySource source)
+        {
+            Player player = source as Player;
+            if (projectile.DamageType == RogueDamageClass.Instance && CalTestHelpersPlayer.Equals(projectile, source) && player.GetModPlayer<CalTestHelpersPlayer>().CannotProcRogue)
+                projectile.Calamity().CannotProc = true;
+        }
+
         //public SCalRitualDrama ritual;
         public override void AI(Projectile projectile)
         {
