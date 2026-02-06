@@ -399,8 +399,6 @@ namespace CalTestHelpers.UI
         {
             switch (bossDeathToToggle)
             {
-				case Boss.All:
-				case Boss.AllPHM:
                 case Boss.KingSlime:
                     return NPC.downedSlimeKing;
                 case Boss.DesertScourge:
@@ -428,7 +426,6 @@ namespace CalTestHelpers.UI
                     return DownedBossSystem._downedSlimeGod;
                 case Boss.WallOfFlesh:
                     return Main.hardMode;
-				case Boss.AllHM:
                 case Boss.QueenSlime:
                     return NPC.downedQueenSlime;
                 case Boss.Cryogen:
@@ -467,7 +464,6 @@ namespace CalTestHelpers.UI
                     return DownedBossSystem._downedAstrumDeus;
                 case Boss.MoonLord:
                     return NPC.downedMoonlord;
-				case Boss.AllPML:
                 case Boss.ProfanedGuardians:
                     return DownedBossSystem._downedGuardians;
                 case Boss.Dragonfolly:
@@ -492,6 +488,8 @@ namespace CalTestHelpers.UI
                     return DownedBossSystem._downedExoMechs;
                 case Boss.Calamitas:
                     return DownedBossSystem._downedCalamitas;
+                case Boss.Wyrm:
+                    return DownedBossSystem._downedPrimordialWyrm;
             }
 			return false;
         }

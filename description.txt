@@ -21,5 +21,4 @@ toggling permanent upgrades and deaths, and toggling enemy spawns
 
 - Instant summoning for some bosses (SCal and Draedon)
 
-Ping me (shade__storm) on the Calamity Mod Official Discord's #other-mod-talk channel for suggestions, as I currently maintain this mod.
-Alternatively use the Discussions tab on Steam.
+This mod might not be maintained or updated in the future, but it will remain for posteriority.

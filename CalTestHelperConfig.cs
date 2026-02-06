@@ -23,7 +23,7 @@ namespace CalTestHelpers
         public bool InstantBossSummoning { get; set; }
 
         [BackgroundColor(192, 54, 64, 192)]
-        [DefaultValue(true)]
+        [DefaultValue(false)] //should be false in dev version
         public bool Changelog { get; set; }
 
         [BackgroundColor(192, 54, 64, 192)]
@@ -40,7 +40,7 @@ namespace CalTestHelpers
         public bool FreeReforges { get; set; }
 
         [BackgroundColor(192, 54, 64, 192)]
-        [DefaultValue(false)]
+        [DefaultValue(true)]
 
         public bool ManualLocalizationOverride { get; set; }
 

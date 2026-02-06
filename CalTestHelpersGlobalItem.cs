@@ -17,8 +17,10 @@ namespace CalTestHelpers
     {
         public override bool ReforgePrice(Item item, ref int reforgePrice, ref bool canApplyDiscount)
         {
-            if (CalTestHelperConfig.Instance.FreeReforges)
+            if (CalTestHelperConfig.Instance.FreeReforges == true )
+            {
                 reforgePrice = 0;
+            }
             return false;
         }
         /*
