@@ -20,42 +20,39 @@ Items: {
 		DisplayName: Изменения
 		Tooltip:
 			'''
-			Изменения версии 2.4.0.3:
-			– Некоторые изменения в работе мода
-			– Добавлен перевод на русский и китайский
-
-			Известные проблемы:
-			– Игра сходит с ума, когда включено несколько остановок времени: Пока не будет исправлено, чтобы игроки не остались с вечной заморозкой времени.
-			  Рекомендуем использовать остановку времени других модов
-			– Конфигурации не обновились, нет новых функций/сообщений: Найдите файл на вашем компьютере по пути Documents/MyGames/Terraria/Tmodloader/ModConfigs
-			  и удалите файл CalTestHelper. При перезагрузке модов появится новый рабочий файл (работает с конфигурациями других модов, если они сломаются)
-
-			Внимание:
-			– Если вы хотите добавить спрайт для предмета или что-то предложить — обращайтесь к shade__storm на официальном Discord-сервере Calamity
-			  в каналах #other-mod-talk или #calamity-addon-talk, или же в обсуждениях на странице Мастерской
-			  (Я бы принимал личные сообщения, но нынче слишком много скама и ботом, извините)
-			– Я не буду использовать спрайты призывалок для боссов из Инфернума, это называется нарушение авторского права
+			This needs updating, see English localization
 			'''
 	}
 
-	SummonItems: {
-		SirenSong: {
-			DisplayName: Песнь Сирены
-			Tooltip:
-				'''
-				Призывает Анахиту при использовании в океане
-				«Вы слышите тихую, но манящую мелодию»
-				[c/FF0000: В обновлении Calamity «Затонувшее море» будет добавлен свой предмет для призыва]
-				[c/FF0000: Анахиты, а этот будет удалён. Однако, если вы включите этот мод, рецепт этого предмета]
-				[c/FF0000: будет изменён, чтобы его можно было создать, не убивая Левиафан и Анахит]
-				'''
-		}
+	BrokenHeart: {
+		DisplayName: Broken Heart
+		Tooltip:
+		'''
+		Reduces Max Life by 20, up to a minimum of 100
+		Does nothing if a Calamity health upgrade is active
+		[c/522e2e: One must carry on in a moment of heartbreak, even if it hurts.]
+		TEXTURE IS A PLACEHOLDER
+		'''
+	}
 
+	ShatteredStar: {
+		DisplayName: Shattered Star
+		Tooltip:
+		'''
+		Reduces Max Mana by 20, up to a minimum of 20
+		Does nothing if a Calamity mana upgrade is active
+		[c/303857: One must strive foward on even if there is no star to guide their way on the night sky.]
+		TEXTURE IS A PLACEHOLDER
+		'''
+	}
+
+
+	SummonItems: {
 		FaeLantern: {
 			DisplayName: Ночник феи
 			Tooltip:
 				'''
-				Призывает Императрицу света ночью
+				Призывает Императрицу света ночью (remove whatever word means night)
 				[c/FF0000:НЕ ИСПОЛЬЗУЙТЕ ДНЁМ ПРИ ПРОВЕРКЕ БАЛАНСА]
 				А так, используйте на здоровье
 				НЕ ФИНАЛЬНЫЙ СПРАЙТ
@@ -269,6 +266,7 @@ UI: {
 		GummyWorm: Мармеладный червяк
 		GalaxyPearl: Галактическая жемчужина
 		Bread: Батон мастера-пекаря
+		Mechcart: Minecart Upgrade Kit
 	}
 
 	ChangeItemStats.DisplayName: "[НЕ ПОДДЕРЖИВАЕТСЯ] Изменить характеристики предметов"

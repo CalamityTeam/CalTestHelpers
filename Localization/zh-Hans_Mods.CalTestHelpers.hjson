@@ -20,21 +20,7 @@ Items: {
 		DisplayName: 更新日志
 		Tooltip:
 			'''
-			2.4.0.3 更新日志
-			- 对模组中许多功能的修复和改动
-			- 加入俄语和简体中文的本地化
-
-			已知问题：
-			- 如果启用多个时间冻结效果游戏会变得疯狂：暂时不会被修复，因此玩家不会被本模组的冻结时间效果困扰
-			  请使用其他模组可用的冻结时间效果
-			- 配置不会对玩家更新新功能和消息，如果此种情况发生，找到Documents/MyGames/Terraria/Tmodloader/ModConfigs下的Cal Test Helpers配置文件
-			   删除它然后就可以生成一个新的。（这在其他模组的配置出现问题时也适用）
-
-			注意：
-			- 如果你想制作带占位符物品的贴图或提交建议
-			请在官方灾厄Discord服务器中的#other-mod-talk或Steam创意工坊的讨论页面联系shade__storm
-			（如果不是有出现诈骗行为或机器人，我可能会允许私信，对不起伙计们）
-			- 我不打算使用炼狱Boss召唤物品的贴图，因为这些属于他们
+			This needs updating, see English localization
 			'''
 	}
 
@@ -256,6 +242,7 @@ UI: {
 		GummyWorm: 黏性蠕虫
 		GalaxyPearl: 星系珍珠
 		Bread: 工匠面包
+		Mechcart: Minecart Upgrade Kit
 	}
 
 	ChangeItemStats.DisplayName: "[废弃]修改物品属性"
