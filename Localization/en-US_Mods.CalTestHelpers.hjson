@@ -53,23 +53,23 @@ Items: {
 	BrokenHeart: {
 		DisplayName: Broken Heart
 		Tooltip:
-		'''
-		Reduces Max Life by 20, up to a minimum of 100
-		Does nothing if a Calamity health upgrade is active
-		[c/522e2e: One must carry on in a moment of heartbreak, even if it hurts.]
-		TEXTURE IS A PLACEHOLDER
-		'''
+			'''
+			Reduces Max Life by 20, up to a minimum of 100
+			Does nothing if a Calamity health upgrade is active
+			[c/522e2e: One must carry on in a moment of heartbreak, even if it hurts.]
+			TEXTURE IS A PLACEHOLDER
+			'''
 	}
 
 	ShatteredStar: {
 		DisplayName: Shattered Star
 		Tooltip:
-		'''
-		Reduces Max Mana by 20, up to a minimum of 20
-		Does nothing if a Calamity mana upgrade is active
-		[c/303857: One must strive foward on even if there is no star to guide their way on the night sky.]
-		TEXTURE IS A PLACEHOLDER
-		'''
+			'''
+			Reduces Max Mana by 20, up to a minimum of 20
+			Does nothing if a Calamity mana upgrade is active
+			[c/303857: One must strive foward on even if there is no star to guide their way on the night sky.]
+			TEXTURE IS A PLACEHOLDER
+			'''
 	}
 
 	SummonItems: {
@@ -155,6 +155,7 @@ Configs: {
 
 UI: {
 	RevealMap.DisplayName: Reveal the entire map
+	RemoveRogueProcs.DisplayName: Remove Rogue Accessory & Stealth effects
 
 	SetSpawnpoint: {
 		DisplayName: Set your spawn point to your position
