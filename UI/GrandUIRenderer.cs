@@ -75,6 +75,14 @@ namespace CalTestHelpers.UI
                        BossRushDialogueSystem.GottaGoFast = !BossRushDialogueSystem.GottaGoFast;
                        Main.NewText(BossRushDialogueSystem.GottaGoFast ? Language.GetTextValue("Mods.CalTestHelpers.UI.BossRushTalkFaster.TalkFast") : Language.GetTextValue("Mods.CalTestHelpers.UI.BossRushTalkFaster.TalkSlower"), BossRushEvent.XerocTextColor);
                     }, BossRushDialogueSystem.GottaGoFast ? Color.Green : Color.Red),
+                    //Request from Sunny
+                    //Well she requested to have a weapon without Rogue Procs, but why not just make every rogue weapon be unable to proc
+                    //Sucks that some procs are specifically tied to the stealth bool and not just the cannotProc bool
+                    // - Shade
+                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.RemoveRogueProcs.DisplayName"), ModContent.Request<Texture2D>("CalamityMod/Items/Accessories/ScuttlersJewel").Value, () =>
+                    {
+                        Main.LocalPlayer.GetModPlayer<CalTestHelpersPlayer>().CannotProcRogue = !Main.LocalPlayer.GetModPlayer<CalTestHelpersPlayer>().CannotProcRogue;
+                    }, Main.LocalPlayer.GetModPlayer<CalTestHelpersPlayer>().CannotProcRogue ? Color.Green : Color.Red),
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ChangeItemStats.DisplayName"), ModContent.Request<Texture2D>("CalamityMod/Items/TreasureBags/MiscGrabBags/StarterBag").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.ItemEditerUIRenderer : null;
@@ -89,13 +97,6 @@ namespace CalTestHelpers.UI
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.StealthEditerUIRenderer : null;
                     }, Color.Yellow),
                     */
-                    //Request from Sunny
-                    //Well she requested to have a weapon without Rogue Procs, but why not just make every rogue weapon be unable to proc
-                    // - Shade
-                    new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.RemoveRogueProcs.DisplayName"), ModContent.Request<Texture2D>("CalamityMod/Items/Accessories/ScuttlersJewel").Value, () =>
-                    {
-                        Main.LocalPlayer.GetModPlayer<CalTestHelpersPlayer>().CannotProcRogue = true;
-                    }, Main.LocalPlayer.GetModPlayer<CalTestHelpersPlayer>().CannotProcRogue ? Color.Green : Color.Red),
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ResetStats.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/Gear").Value, () =>
                     {
                         ItemOverrideCache.ResetOverrides();
@@ -151,7 +152,7 @@ namespace CalTestHelpers.UI
                 spriteBatch.Draw(button.IconTexture, currentRectangleArea.Center(), null, Color.White, 0f, button.IconTexture.Size() * 0.5f, iconScale, SpriteEffects.None, 0f);
 
                 //make the buttons
-                button.DrawDescription(spriteBatch, currentRectangleArea.TopRight() + new Vector2(7.5f, IconBounds.Y * 0.25f), button.TextColor is null ? TextColor : (Color)button.TextColor, UIScale * 0.8f);
+                button.DrawDescription(spriteBatch, currentRectangleArea.TopRight() + new Vector2(7.5f, IconBounds.Y * 0.25f), button.TextColor is null ? TextColor : (Color)button.TextColor, UIScale * 0.75f);
 
                 if (button.OnClick != null && CalamityUtils.MouseHitbox.Intersects(currentRectangleAreaWorld))
                 {
