@@ -16,62 +16,25 @@ Items: {
 		ChargedItems: Все предметы арсенала в вашем инвентаре были полностью заряжены.
 	}
 
-	Changelog: {
-		DisplayName: Изменения
-		/* Tooltip:
-			'''
-			2.4.1.0 Changelog
-			- Removed the Fight Information function
-			- Readded the Stealth Factor function, fixed bugs with it as well
-			- The Toggle all boss deaths bools are now always yellow instead of depending of the first boss on the list
-			- Made the text after setting all bosses dead/alive work properly for real this time
-			- Added a way to turn off free reforges
-			- A small icon now shows up in the Mod Configs menu
-			- Removed Time Freeze function since Calamity added an item for it (Bakidon)
-			- Removed Siren's Song since Calamity added an item for it (Naiad's Warhorn)
-			- Added an alternative recipe for Naiad's Warhorn
-			- Updated Localization files
-			- Open source now
-			- Added Minecart Upgrade kit to the Permanent Upgrade menu
-			- Fae's Lantern can now be properly used at daytime
-
-			Known issues:
-			- Configs not updating for players to the new functions and messages, if this happens locate the config file  for Cal Test Helpers in 
-			  Documents/MyGames/Terraria/Tmodloader/ModConfigs and delete it so a new one is generated. (This works for other mods' configs should they bug out too)
-			- (NOT REALLY A BUG) EoW and BoC share the same death flag in Terraria, so clicking either of them controls both
-			- Chinese and Rusian localization missing from this item and new items
-
-			NOTICES:
-			- THIS WILL BE THE LAST PATCH WITH THIS ITEM, YOU WILL HAVE TO CHECK CHANGELOGS ON STEAM
-			- THIS MOD MIGHT NOT BE MAINTAINED OR UPDATED IN THE FUTURE
-
-			Plans:
-			Add a way to freeze bosses in place
-			Make actual sprites for items
-			Update localizations
-			Possibly add more languagues to localizations
-			''' */
-	}
-
 	BrokenHeart: {
-		DisplayName: Broken Heart
+		DisplayName: Разбитое сердце
 		Tooltip:
 			'''
-			Reduces Max Life by 20, up to a minimum of 100
-			Does nothing if a Calamity health upgrade is active
-			[c/522e2e: One must carry on in a moment of heartbreak, even if it hurts.]
-			TEXTURE IS A PLACEHOLDER
+			Уменьшает максимальный запас здоровья на 20, минимум до 100 единиц
+			Ничего не делает, если вы использовали улучшения здоровья Calamity
+			[c/522e2e:Несмотря на всю боль, вы должны жить дальше даже с разбитым сердцем.]
+			НЕ ФИНАЛЬНЫЙ СПРАЙТ
 			'''
 	}
 
 	ShatteredStar: {
-		DisplayName: Shattered Star
+		DisplayName: Расколовшаяся звезда
 		Tooltip:
 			'''
-			Reduces Max Mana by 20, up to a minimum of 20
-			Does nothing if a Calamity mana upgrade is active
-			[c/303857: One must strive foward on even if there is no star to guide their way on the night sky.]
-			TEXTURE IS A PLACEHOLDER
+			Уменьшает максимальный запас маны на 20, минимум до 20 единиц
+			Ничего не делает, если вы использовали улучшения маны Calamity
+			[c/303857:Несмотря на пустующее небо, вы должны продолжать свой путь даже без путеводной звезды.]
+			НЕ ФИНАЛЬНЫЙ СПРАЙТ
 			'''
 	}
 
@@ -80,7 +43,7 @@ Items: {
 			DisplayName: Ночник феи
 			Tooltip:
 				'''
-				Призывает Императрицу света ночью (remove whatever word means night)
+				Призывает Императрицу света
 				[c/FF0000:НЕ ИСПОЛЬЗУЙТЕ ДНЁМ ПРИ ПРОВЕРКЕ БАЛАНСА]
 				А так, используйте на здоровье
 				НЕ ФИНАЛЬНЫЙ СПРАЙТ
@@ -114,17 +77,17 @@ Configs: {
 		DisplayName: Конфигурация
 
 		Headers: {
-			Config: Calamity Test Helper configs
+			Config: Конфигурации «Calamity Test Helper»
 			Deprecated: Не поддерживается, но всё ещё работает. Рекомендуем менять значения переменных в коде мода
 			Configs: Конфигурации «Calamity Test Helper»
 		}
 
 		BossDeathStatMessages: {
 			Label: "[i:Book] Показывать информацию о битвах с боссами"
-			Tooltip:
+			Tooltip: 
 				'''
 				После вашей смерти или смерти босса в чат будет выводится информация о битве,
-				включая время битвы, средний и максимальный урон в секунду.
+				включая время битвы, а также средний и максимальный урон в секунду.
 				'''
 		}
 
@@ -153,13 +116,13 @@ Configs: {
 			Tooltip:
 				'''
 				Если включить, вместо автоматических ключей из Terraria и Calamity
-				будут использоваться ключи локализации, сделанные вручную для этого мода
+				будут использоваться ключи локализации, сделанные вручную для этого мода.
 				'''
 		}
 
 		FreeReforges: {
-			// Label: "[i:SilverHammer] Free Reforges"
-			// Tooltip: Make Reforges free
+			Label: "[i:SilverHammer] Бесплатные перековки"
+			Tooltip: Комментарии излишни.
 		}
 	}
 }
@@ -168,13 +131,13 @@ UI: {
 	RevealMap.DisplayName: Показать всю карту
 
 	RemoveRogueProcs: {
-		DisplayName: Remove Rogue Accessory & Stealth effects
-		// Toggle: Toggled Rogue effects
+		DisplayName: Убрать эффекты аксессуаров плута и скрытности
+		Toggle: Эффекты плута переключены
 	}
 
 	SetSpawnpoint: {
 		DisplayName: Установить точку возрождения на вашей позиции
-		Set: Точка возрождения установлена, теперь она находится на
+		Set: Точка возрождения установлена, теперь она находится на {0}
 	}
 
 	ToggleEnemySpawns: {
@@ -218,7 +181,7 @@ UI: {
 		QueenBee: Королева пчёл
 		Deerclops: Циклоп-олень
 		Skeletron: Скелетрон
-		SlimeGod: Слизневый бог
+		SlimeGod: Бог слизней
 		WoF: Стена плоти
 		QueenSlime: Королева слизней
 		Cryogen: Криоген
@@ -251,10 +214,10 @@ UI: {
 		Yharon: Ярон
 		ExoMechs: Экзо-мехи
 		SCal: Каламитас
-		Wyrm: Первобытный змей
+		Wyrm: Первородный змей
 		#Getfixedboi
-		Clamitas: Кламитас
-		SupremeClam: Верховная Кламитас
+		Clamitas: Серный моллюск Кламитас
+		SupremeClam: Верховный моллюск Кламитас
 		Bumblebirb: Шмелептиц
 		Boomerfish: Старыброн
 		Jared: Джаред
@@ -265,19 +228,19 @@ UI: {
 		Toggle: "{0}"
 		ToggleItem: "{0} теперь имеет статус: {1}"
 		#Manual Overrides
-		// SanguineTangerine: Sanguine Tangerine
+		SanguineTangerine: Кровавый мандарин
 		MiracleFruit: Чудесный фрукт
-		// TaintedCloudberry: Tainted Cloudberry
-		// SacredStrawberry: Sacred Strawberry
+		TaintedCloudberry: Подпорченная морошка
+		SacredStrawberry: Священная клубника
 		CometShard: Осколок кометы
 		EtherealCore: Эфирное ядро
 		PhantomHeart: Призрачное сердце
 		MushroomPlasmaRoot: Грибной плазменный корень
 		InfernalBlood: Инфернальная кровь
 		RedLightningContainer: Контейнер красной молнии
-		// Electrolyte: Electrolyte Gel Pack
+		Electrolyte: Гелевый пакет электролитов
 		StarlightFuelCell: Топливная ячейка звёздного света
-		Ectoheart: Эктосердце
+		Ectoheart: Экто-сердце
 		DemonHeart: Сердце демона
 		CelestialOnion: Небесная луковица
 		VitalCrystal: Жизненный кристалл
@@ -287,7 +250,7 @@ UI: {
 		GummyWorm: Мармеладный червяк
 		GalaxyPearl: Галактическая жемчужина
 		Bread: Батон мастера-пекаря
-		Mechcart: Minecart Upgrade Kit
+		Mechcart: Набор для модернизации вагонетки
 	}
 
 	ChangeItemStats.DisplayName: "[НЕ ПОДДЕРЖИВАЕТСЯ] Изменить характеристики предметов"
@@ -306,6 +269,6 @@ UI: {
 	BossRushTalkFaster: {
 		DisplayName: Заставить Ксерока говорить быстрее
 		TalkFast: Ладно, я буду говорить быстрее
-		TalkSlower: Я буду менее расторопен в своих речах
+		TalkSlower: Я буду менее расторопен в речах своих
 	}
 }

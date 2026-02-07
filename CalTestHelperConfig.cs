@@ -23,10 +23,6 @@ namespace CalTestHelpers
         public bool InstantBossSummoning { get; set; }
 
         [BackgroundColor(192, 54, 64, 192)]
-        [DefaultValue(false)] //should be false in dev version
-        public bool Changelog { get; set; }
-
-        [BackgroundColor(192, 54, 64, 192)]
         [SliderColor(224, 165, 56, 128)]
         [Range(0.8f, 1.5f)]
         [DefaultValue(1f)]

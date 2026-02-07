@@ -16,63 +16,26 @@ Items: {
 		ChargedItems: 你物品栏中所有可充能的军械武器已全部充满能。
 	}
 
-	Changelog: {
-		DisplayName: 更新日志
-		/* Tooltip:
-			'''
-			2.4.1.0 Changelog
-			- Removed the Fight Information function
-			- Readded the Stealth Factor function, fixed bugs with it as well
-			- The Toggle all boss deaths bools are now always yellow instead of depending of the first boss on the list
-			- Made the text after setting all bosses dead/alive work properly for real this time
-			- Added a way to turn off free reforges
-			- A small icon now shows up in the Mod Configs menu
-			- Removed Time Freeze function since Calamity added an item for it (Bakidon)
-			- Removed Siren's Song since Calamity added an item for it (Naiad's Warhorn)
-			- Added an alternative recipe for Naiad's Warhorn
-			- Updated Localization files
-			- Open source now
-			- Added Minecart Upgrade kit to the Permanent Upgrade menu
-			- Fae's Lantern can now be properly used at daytime
-
-			Known issues:
-			- Configs not updating for players to the new functions and messages, if this happens locate the config file  for Cal Test Helpers in 
-			  Documents/MyGames/Terraria/Tmodloader/ModConfigs and delete it so a new one is generated. (This works for other mods' configs should they bug out too)
-			- (NOT REALLY A BUG) EoW and BoC share the same death flag in Terraria, so clicking either of them controls both
-			- Chinese and Rusian localization missing from this item and new items
-
-			NOTICES:
-			- THIS WILL BE THE LAST PATCH WITH THIS ITEM, YOU WILL HAVE TO CHECK CHANGELOGS ON STEAM
-			- THIS MOD MIGHT NOT BE MAINTAINED OR UPDATED IN THE FUTURE
-
-			Plans:
-			Add a way to freeze bosses in place
-			Make actual sprites for items
-			Update localizations
-			Possibly add more languagues to localizations
-			''' */
-	}
-
 	BrokenHeart: {
-		// DisplayName: Broken Heart
-		/* Tooltip:
+		DisplayName: 碎心
+		Tooltip:
 			'''
-			Reduces Max Life by 20, up to a minimum of 100
-			Does nothing if a Calamity health upgrade is active
-			[c/522e2e:One must carry on in a moment of heartbreak, even if it hurts.]
-			TEXTURE IS A PLACEHOLDER
-			''' */
+			降低20点最大生命值，最低100点
+			激活灾厄生命升级时没有效果
+			[c/522e2e:即便心碎也要继续坚持，就算很受伤。]
+			贴图仅为占位符
+			'''
 	}
 
 	ShatteredStar: {
-		// DisplayName: Shattered Star
-		/* Tooltip:
+		DisplayName: 裂星
+		Tooltip:
 			'''
-			Reduces Max Mana by 20, up to a minimum of 20
-			Does nothing if a Calamity mana upgrade is active
-			[c/303857:One must strive foward on even if there is no star to guide their way on the night sky.]
-			TEXTURE IS A PLACEHOLDER
-			''' */
+			降低20点最大魔力值，最低20点
+			激活灾厄魔力升级时没有效果
+			[c/303857:即便夜空中没有星星指引方向，也要奋力前行。]
+			贴图仅为占位符
+			'''
 	}
 
 	SummonItems: {
@@ -150,8 +113,8 @@ Configs: {
 		}
 
 		FreeReforges: {
-			// Label: "[i:SilverHammer] Free Reforges"
-			// Tooltip: Make Reforges free
+			Label: "[i:SilverHammer] 免费重铸"
+			Tooltip: 让重铸免费
 		}
 	}
 }
@@ -160,8 +123,8 @@ UI: {
 	RevealMap.DisplayName: 显示整张地图
 
 	RemoveRogueProcs: {
-		DisplayName: Remove Rogue Accessory & Stealth effects
-		// Toggle: Toggled Rogue effects
+		DisplayName: 移除盗贼饰品和潜伏效果
+		Toggle: 切换盗贼效果
 	}
 
 	SetSpawnpoint: {
@@ -257,10 +220,10 @@ UI: {
 		Toggle: 切换{0}的使用状态
 		ToggleItem: "{0}现在已标记为{1}"
 		#Manual Overrides
-		// SanguineTangerine: Sanguine Tangerine
+		SanguineTangerine: 沐血柑橘
 		MiracleFruit: 奇迹之果
-		// TaintedCloudberry: Tainted Cloudberry
-		// SacredStrawberry: Sacred Strawberry
+		TaintedCloudberry: 污浊云莓
+		SacredStrawberry: 圣佑草莓
 		CometShard: 彗星碎片
 		EtherealCore: 飘渺之核
 		PhantomHeart: 幻影之心
@@ -279,7 +242,7 @@ UI: {
 		GummyWorm: 黏性蠕虫
 		GalaxyPearl: 星系珍珠
 		Bread: 工匠面包
-		Mechcart: Minecart Upgrade Kit
+		Mechcart: 矿车升级包
 	}
 
 	ChangeItemStats.DisplayName: "[废弃]修改物品属性"
