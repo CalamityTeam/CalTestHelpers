@@ -51,7 +51,7 @@ namespace CalTestHelpers.UI
                         }
                         //Localization making shit slightly harder
                         Main.NewText(CalTestHelpersWorld.NoSpawns ? Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleEnemySpawns.CannotSpawn") : Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleEnemySpawns.CanSpawn"));
-                    }, CalTestHelpersWorld.NoSpawns ? Color.Green : Color.Red),
+                    }, CalTestHelpersWorld.NoSpawns ? Color.Red : Color.Green),
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ToggleDeaths.PreHM"), ModContent.Request<Texture2D>("CalTestHelpers/UI/BladesPHM").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.BossUIRenderPHM : null;

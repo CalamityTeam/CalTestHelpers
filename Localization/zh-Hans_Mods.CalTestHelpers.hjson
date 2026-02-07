@@ -18,7 +18,7 @@ Items: {
 
 	Changelog: {
 		DisplayName: 更新日志
-		/*Tooltip:
+		/* Tooltip:
 			'''
 			2.4.1.0 Changelog
 			- Removed the Fight Information function
