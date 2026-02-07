@@ -10,6 +10,9 @@ using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.Events;
 using Terraria.GameContent.Personalities;
 using Terraria.Localization;
+using CalamityMod.Items.SummonItems;
+using CalamityMod.Items.Placeables.FurnitureDriftwood;
+using CalamityMod.Items.Placeables.Abyss;
 
 namespace CalTestHelpers
 {
@@ -46,5 +49,15 @@ namespace CalTestHelpers
                 Item.NewItem(Main.LocalPlayer.GetSource_Loot(), Main.LocalPlayer.Center, ItemID.PlatinumCoin, coinCounts[3]);
         }
         */
+        public override void AddRecipes()
+        {
+            Recipe r = Recipe.Create(ModContent.ItemType<NaiadsWarhorn>());
+            r.AddIngredient(ItemID.SharkFin, 10);
+            r.AddIngredient(ItemID.SeafoodDinner, 2);
+            r.AddIngredient<Driftwood>(10);
+            r.AddIngredient<AbyssGravel>(15);
+            r.AddCondition(Condition.NearWater);
+            r.Register();
+        }
     }
 }

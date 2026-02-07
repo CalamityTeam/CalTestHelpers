@@ -17,7 +17,7 @@ toggling permanent upgrades and deaths, and toggling enemy spawns
 
 - A game-time based boss kill timer
 
-- Some boss summoning items (Anahita & Leviathan, EoL, Duke Fishron and Old Duke)
+- Some boss summoning items (EoL, Duke Fishron and Old Duke)
 
 - Instant summoning for some bosses (SCal and Draedon)
 
