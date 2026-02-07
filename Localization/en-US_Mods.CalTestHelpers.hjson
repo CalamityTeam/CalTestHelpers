@@ -22,12 +22,13 @@ Items: {
 			'''
 			2.4.1.0 Changelog
 			- Removed the Fight Information function
-			- Removed the Stealth Factor function
+			- Readded the Stealth Factor function, fixed bugs with it as well
 			- The Toggle all boss deaths bools are now always yellow instead of depending of the first boss on the list
 			- Made the text after setting all bosses dead/alive work properly for real this time
 			- Added a way to turn off free reforges
 			- A small icon now shows up in the Mod Configs menu
 			- Removed Time Freeze function since Calamity added an item for it (Bakidon)
+			- Removed Siren's Song since Calamity added an item for it (Naiad's Warhorn)
 			- Updated Localization files
 			- Open source now
 			- Added Minecart Upgrade kit to the Permanent Upgrade menu
@@ -47,6 +48,7 @@ Items: {
 			Add a way to freeze bosses in place
 			Make actual sprites for items
 			Update localizations
+			Possibly add more languagues to localizations
 			'''
 	}
 
@@ -56,7 +58,7 @@ Items: {
 			'''
 			Reduces Max Life by 20, up to a minimum of 100
 			Does nothing if a Calamity health upgrade is active
-			[c/522e2e: One must carry on in a moment of heartbreak, even if it hurts.]
+			[c/522e2e:One must carry on in a moment of heartbreak, even if it hurts.]
 			TEXTURE IS A PLACEHOLDER
 			'''
 	}
@@ -67,7 +69,7 @@ Items: {
 			'''
 			Reduces Max Mana by 20, up to a minimum of 20
 			Does nothing if a Calamity mana upgrade is active
-			[c/303857: One must strive foward on even if there is no star to guide their way on the night sky.]
+			[c/303857:One must strive foward on even if there is no star to guide their way on the night sky.]
 			TEXTURE IS A PLACEHOLDER
 			'''
 	}
@@ -155,7 +157,11 @@ Configs: {
 
 UI: {
 	RevealMap.DisplayName: Reveal the entire map
-	RemoveRogueProcs.DisplayName: Remove Rogue Accessory & Stealth effects
+
+	RemoveRogueProcs: {
+		DisplayName: Remove Rogue Accessory & Stealth effects
+		Toggle: Toggled Rogue effects
+	}
 
 	SetSpawnpoint: {
 		DisplayName: Set your spawn point to your position

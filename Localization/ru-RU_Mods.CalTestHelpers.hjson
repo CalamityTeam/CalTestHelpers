@@ -18,34 +18,61 @@ Items: {
 
 	Changelog: {
 		DisplayName: Изменения
-		Tooltip:
+		/* Tooltip:
 			'''
-			This needs updating, see English localization
-			'''
+			2.4.1.0 Changelog
+			- Removed the Fight Information function
+			- Readded the Stealth Factor function, fixed bugs with it as well
+			- The Toggle all boss deaths bools are now always yellow instead of depending of the first boss on the list
+			- Made the text after setting all bosses dead/alive work properly for real this time
+			- Added a way to turn off free reforges
+			- A small icon now shows up in the Mod Configs menu
+			- Removed Time Freeze function since Calamity added an item for it (Bakidon)
+			- Removed Siren's Song since Calamity added an item for it (Naiad's Warhorn)
+			- Updated Localization files
+			- Open source now
+			- Added Minecart Upgrade kit to the Permanent Upgrade menu
+			- Fae's Lantern can now be properly used at daytime
+
+			Known issues:
+			- Configs not updating for players to the new functions and messages, if this happens locate the config file  for Cal Test Helpers in 
+			  Documents/MyGames/Terraria/Tmodloader/ModConfigs and delete it so a new one is generated. (This works for other mods' configs should they bug out too)
+			- (NOT REALLY A BUG) EoW and BoC share the same death flag in Terraria, so clicking either of them controls both
+			- Chinese and Rusian localization missing from this item and new items
+
+			NOTICES:
+			- THIS WILL BE THE LAST PATCH WITH THIS ITEM, YOU WILL HAVE TO CHECK CHANGELOGS ON STEAM
+			- THIS MOD MIGHT NOT BE MAINTAINED OR UPDATED IN THE FUTURE
+
+			Plans:
+			Add a way to freeze bosses in place
+			Make actual sprites for items
+			Update localizations
+			Possibly add more languagues to localizations
+			''' */
 	}
 
 	BrokenHeart: {
 		DisplayName: Broken Heart
 		Tooltip:
-		'''
-		Reduces Max Life by 20, up to a minimum of 100
-		Does nothing if a Calamity health upgrade is active
-		[c/522e2e: One must carry on in a moment of heartbreak, even if it hurts.]
-		TEXTURE IS A PLACEHOLDER
-		'''
+			'''
+			Reduces Max Life by 20, up to a minimum of 100
+			Does nothing if a Calamity health upgrade is active
+			[c/522e2e: One must carry on in a moment of heartbreak, even if it hurts.]
+			TEXTURE IS A PLACEHOLDER
+			'''
 	}
 
 	ShatteredStar: {
 		DisplayName: Shattered Star
 		Tooltip:
-		'''
-		Reduces Max Mana by 20, up to a minimum of 20
-		Does nothing if a Calamity mana upgrade is active
-		[c/303857: One must strive foward on even if there is no star to guide their way on the night sky.]
-		TEXTURE IS A PLACEHOLDER
-		'''
+			'''
+			Reduces Max Mana by 20, up to a minimum of 20
+			Does nothing if a Calamity mana upgrade is active
+			[c/303857: One must strive foward on even if there is no star to guide their way on the night sky.]
+			TEXTURE IS A PLACEHOLDER
+			'''
 	}
-
 
 	SummonItems: {
 		FaeLantern: {
@@ -88,7 +115,6 @@ Configs: {
 		Headers: {
 			Config: Calamity Test Helper configs
 			Deprecated: Не поддерживается, но всё ещё работает. Рекомендуем менять значения переменных в коде мода
-			ExtremelyDeprecated: Настройка с супер древней версии с 1.3, не поддерживается, плюс забагована. ИСПОЛЬЗУЙТЕ НА СВОЙ СТРАХ И РИСК
 			Configs: Конфигурации «Calamity Test Helper»
 		}
 
@@ -104,16 +130,6 @@ Configs: {
 		Changelog: {
 			Label: "[i:CalTestHelpers/Changelog] Изменения"
 			Tooltip: При заходе в мир вам выдаётся предмет, где расписаны все изменения в новой версии мода.
-		}
-
-		StoreFightInformation: {
-			Label: "[i:CalamityMod/AgedLaboratoryElectricPanelItem] Сохранять информацию о битвах с боссами"
-			Tooltip:
-				'''
-				(Некоторая) информация о битвах с боссами будет сохраняться на вашем ПК
-				Включает в себя время битвы, средний и максимальный урон в секунду
-				НЕ ВКЛЮЧАЙТЕ ДАННУЮ НАСТРОЙКУ БЕЗ НЕОБХОДИМОСТИ
-				'''
 		}
 
 		StuffAmountDisplay: {
@@ -139,11 +155,21 @@ Configs: {
 				будут использоваться ключи локализации, сделанные вручную для этого мода
 				'''
 		}
+
+		FreeReforges: {
+			// Label: "[i:SilverHammer] Free Reforges"
+			// Tooltip: Make Reforges free
+		}
 	}
 }
 
 UI: {
 	RevealMap.DisplayName: Показать всю карту
+
+	RemoveRogueProcs: {
+		DisplayName: Remove Rogue Accessory & Stealth effects
+		// Toggle: Toggled Rogue effects
+	}
 
 	SetSpawnpoint: {
 		DisplayName: Установить точку возрождения на вашей позиции
@@ -154,12 +180,6 @@ UI: {
 		DisplayName: Переключить появление врагов
 		CanSpawn: Враги теперь могут сами появляться.
 		CannotSpawn: Враги теперь не могут сами появляться.
-	}
-
-	StopTime: {
-		DisplayName: Остановить время
-		Stopped: Время остановлено.
-		Resumed: Время возобновлено.
 	}
 
 	ToggleDeaths: {
@@ -244,10 +264,10 @@ UI: {
 		Toggle: "{0}"
 		ToggleItem: "{0} теперь имеет статус: {1}"
 		#Manual Overrides
-		BloodOrange: Кровавый апельсин
+		// SanguineTangerine: Sanguine Tangerine
 		MiracleFruit: Чудесный фрукт
-		Elderberry: Древняя бузина
-		Dragonfruit: Драконий фрукт
+		// TaintedCloudberry: Tainted Cloudberry
+		// SacredStrawberry: Sacred Strawberry
 		CometShard: Осколок кометы
 		EtherealCore: Эфирное ядро
 		PhantomHeart: Призрачное сердце

@@ -18,25 +18,63 @@ Items: {
 
 	Changelog: {
 		DisplayName: 更新日志
-		Tooltip:
+		/*Tooltip:
 			'''
-			This needs updating, see English localization
+			2.4.1.0 Changelog
+			- Removed the Fight Information function
+			- Readded the Stealth Factor function, fixed bugs with it as well
+			- The Toggle all boss deaths bools are now always yellow instead of depending of the first boss on the list
+			- Made the text after setting all bosses dead/alive work properly for real this time
+			- Added a way to turn off free reforges
+			- A small icon now shows up in the Mod Configs menu
+			- Removed Time Freeze function since Calamity added an item for it (Bakidon)
+			- Removed Siren's Song since Calamity added an item for it (Naiad's Warhorn)
+			- Updated Localization files
+			- Open source now
+			- Added Minecart Upgrade kit to the Permanent Upgrade menu
+			- Fae's Lantern can now be properly used at daytime
+
+			Known issues:
+			- Configs not updating for players to the new functions and messages, if this happens locate the config file  for Cal Test Helpers in 
+			  Documents/MyGames/Terraria/Tmodloader/ModConfigs and delete it so a new one is generated. (This works for other mods' configs should they bug out too)
+			- (NOT REALLY A BUG) EoW and BoC share the same death flag in Terraria, so clicking either of them controls both
+			- Chinese and Rusian localization missing from this item and new items
+
+			NOTICES:
+			- THIS WILL BE THE LAST PATCH WITH THIS ITEM, YOU WILL HAVE TO CHECK CHANGELOGS ON STEAM
+			- THIS MOD MIGHT NOT BE MAINTAINED OR UPDATED IN THE FUTURE
+
+			Plans:
+			Add a way to freeze bosses in place
+			Make actual sprites for items
+			Update localizations
+			Possibly add more languagues to localizations
+			''' */
+	}
+
+	BrokenHeart: {
+		// DisplayName: Broken Heart
+		/* Tooltip:
 			'''
+			Reduces Max Life by 20, up to a minimum of 100
+			Does nothing if a Calamity health upgrade is active
+			[c/522e2e:One must carry on in a moment of heartbreak, even if it hurts.]
+			TEXTURE IS A PLACEHOLDER
+			''' */
+	}
+
+	ShatteredStar: {
+		// DisplayName: Shattered Star
+		/* Tooltip:
+			'''
+			Reduces Max Mana by 20, up to a minimum of 20
+			Does nothing if a Calamity mana upgrade is active
+			[c/303857:One must strive foward on even if there is no star to guide their way on the night sky.]
+			TEXTURE IS A PLACEHOLDER
+			''' */
 	}
 
 	SummonItems: {
-		SirenSong: {
-			DisplayName: 塞壬之歌
-			Tooltip:
-				'''
-				在海洋使用以召唤阿娜希塔
-				可以听到一首诱人歌曲
-				[c/FF0000: 注意：灾厄沉沦海更新后会被立刻删除]
-                [c/FF0000: 因为其加入了阿娜希塔的召唤物品]
-				[c/FF0000: 但启用本模组时配方会改动以保持在阿娜希塔前可用]
-				'''
-		}
-
 		FaeLantern: {
 			DisplayName: 仙灵灯笼
 			Tooltip:
@@ -77,7 +115,6 @@ Configs: {
 		Headers: {
 			Config: Calamity Test Helper配置
 			Deprecated: 对于废弃功能，你仍可使用它们但它们不再被支持。
-			ExtremelyDeprecated: 源自极老的1.3版本，不再支持且存在Bug。使用时风险自负！！！
 			Configs: 配置标题
 		}
 
@@ -89,11 +126,6 @@ Configs: {
 		Changelog: {
 			Label: "[i:CalTestHelpers/Changelog] 更新日志"
 			Tooltip: 进入世界时给你一个更新日志物品。
-		}
-
-		StoreFightInformation: {
-			Label: "[i:CalamityMod/AgedLaboratoryElectricPanelItem] 存储Boss战信息"
-			Tooltip: 开启（一些）战斗数据的存储，包括战斗时间，平均DPS和最大DPS。非绝对必要情况下不要使用！！！
 		}
 
 		StuffAmountDisplay: {
@@ -115,11 +147,21 @@ Configs: {
 			Label: "[i:CalamityMod/LaboratoryElectricPanelItem] 手动覆盖本地化"
 			Tooltip: 如果灾厄或原版没有本地化可用，覆盖自动的本地化
 		}
+
+		FreeReforges: {
+			// Label: "[i:SilverHammer] Free Reforges"
+			// Tooltip: Make Reforges free
+		}
 	}
 }
 
 UI: {
 	RevealMap.DisplayName: 显示整张地图
+
+	RemoveRogueProcs: {
+		DisplayName: Remove Rogue Accessory & Stealth effects
+		// Toggle: Toggled Rogue effects
+	}
 
 	SetSpawnpoint: {
 		DisplayName: 将你的位置设为生成点
@@ -130,12 +172,6 @@ UI: {
 		DisplayName: 切换敌怪生成状态
 		CanSpawn: 敌怪现在可以生成。
 		CannotSpawn: 敌怪现在无法生成。
-	}
-
-	StopTime: {
-		DisplayName: 暂停时间
-		Stopped: 时间已经暂停。
-		Resumed: 时间开始流逝。
 	}
 
 	ToggleDeaths: {
@@ -220,10 +256,10 @@ UI: {
 		Toggle: 切换{0}的使用状态
 		ToggleItem: "{0}现在已标记为{1}"
 		#Manual Overrides
-		BloodOrange: 血橙
+		// SanguineTangerine: Sanguine Tangerine
 		MiracleFruit: 奇迹之果
-		Elderberry: 旧神浆果
-		Dragonfruit: 龙果
+		// TaintedCloudberry: Tainted Cloudberry
+		// SacredStrawberry: Sacred Strawberry
 		CometShard: 彗星碎片
 		EtherealCore: 飘渺之核
 		PhantomHeart: 幻影之心

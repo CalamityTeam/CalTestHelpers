@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using CalamityMod;
 using CalamityMod.Events;
-// using CalamityMod.Testing;
 using CalamityMod.NPCs;
 using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
@@ -11,7 +10,6 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-//using CalamityMod.Items.Weapons.Summon.Whips;
 
 namespace CalTestHelpers.UI
 {
@@ -82,6 +80,7 @@ namespace CalTestHelpers.UI
                      new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.RemoveRogueProcs.DisplayName"), ModContent.Request<Texture2D>("CalamityMod/Items/Accessories/ScuttlersJewel").Value, () =>
                     {
                         Main.LocalPlayer.GetModPlayer<CalTestHelpersPlayer>().CannotProcRogue = !Main.LocalPlayer.GetModPlayer<CalTestHelpersPlayer>().CannotProcRogue;
+                        Main.NewText(Language.GetTextValue("Mods.CalTestHelpers.UI.RemoveRogueProcs.Toggle"), new Color(185, 105, 250));
                     }, Main.LocalPlayer.GetModPlayer<CalTestHelpersPlayer>().CannotProcRogue ? Color.Green : Color.Red),
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ChangeItemStats.DisplayName"), ModContent.Request<Texture2D>("CalamityMod/Items/TreasureBags/MiscGrabBags/StarterBag").Value, () =>
                     {
@@ -91,17 +90,17 @@ namespace CalTestHelpers.UI
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.ProjectileEditerUIRenderer : null;
                     }, Color.Yellow),
-                    /*
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ChangeUniversalStealthFactor.DisplayName"), ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/Cinquedea").Value, () =>
                     {
                         CalTestHelpers.SecondaryUIToDisplay = CalTestHelpers.SecondaryUIToDisplay is null ? CalTestHelpers.StealthEditerUIRenderer : null;
                     }, Color.Yellow),
-                    */
                     new SpecialUIElement(Language.GetTextValue("Mods.CalTestHelpers.UI.ResetStats.DisplayName"), ModContent.Request<Texture2D>("CalTestHelpers/UI/Gear").Value, () =>
                     {
                         ItemOverrideCache.ResetOverrides();
                         EntityOverrideCache.ResetOverrides();
+                        StealthStatEditUIRenderer.ResetStealth();
                         CalTestHelpers.ItemEditerUIRenderer.ItemBeingEdited = null;
+                        CalTestHelpers.HaveAnyStatManipulationsBeenDone = false;
                         Main.NewText(Language.GetTextValue("Mods.CalTestHelpers.UI.ResetStats.Reset"));
                     }, Color.Yellow),
                 };

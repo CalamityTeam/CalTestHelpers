@@ -11,11 +11,12 @@ namespace CalTestHelpers.UI
 {
 	public class StealthStatEditUIRenderer : GrandUIRenderer
 	{
-		public override float UIScale => 0.45f * ResolutionRatio;
+		public const double OriginalStealthFactor = 0.42; //Taken from Cal Code, should be changed to match the stealth factor
+		public override float UIScale => 0.5f * ResolutionRatio;
 
-		public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 660 - 270 * ResolutionRatio, 50f);
+		public override Vector2 TopLeftLocation => new Vector2(Main.screenWidth - 660 - 175 * ResolutionRatio, 50f);
 
-		public string StealthDamageFactorText => $"Stealth Damage Factor: x{Math.Round(BalancingConstants.UniversalStealthStrikeDamageFactor / 0.5f, 4)}";
+		public string StealthDamageFactorText => $"Stealth Damage Factor: x{Math.Round(BalancingConstants.UniversalStealthStrikeDamageFactor, 4)}";
 
 		public override void DrawElements(SpriteBatch spriteBatch, float top)
 		{
@@ -33,7 +34,7 @@ namespace CalTestHelpers.UI
 				arrowColor = Color.Yellow;
 			}
 
-			if (hoveringOverArrow && Main.mouseLeft && CalTestHelpers.GlobalTickTimer % 4 == 0) 
+			if (hoveringOverArrow && Main.mouseLeft && CalTestHelpers.GlobalTickTimer % 8 == 0) 
 			{
 				BalancingConstants.UniversalStealthStrikeDamageFactor -= 0.005f;
 				CalTestHelpers.HaveAnyStatManipulationsBeenDone = true;
@@ -67,6 +68,11 @@ namespace CalTestHelpers.UI
 
 			// Clamp the stealth damage to 1% - 500%. or x0.01 - x5
 			BalancingConstants.UniversalStealthStrikeDamageFactor = Utils.Clamp(BalancingConstants.UniversalStealthStrikeDamageFactor, 0.005f, 2.5f);
+		}
+
+		public static void ResetStealth()
+		{
+			BalancingConstants.UniversalStealthStrikeDamageFactor = OriginalStealthFactor;
 		}
 	}
 }
