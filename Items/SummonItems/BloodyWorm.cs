@@ -63,7 +63,6 @@ namespace CalTestHelpers.Items.SummonItems
                 AddIngredient(ModContent.ItemType<BloodwormItem>(), 1).
                 AddIngredient(ItemID.ChumBucket, 10).
                 AddTile(TileID.MeatGrinder).
-                AddTile(TileID.LunarCraftingStation).
                 Register();
         }
     }

@@ -62,7 +62,6 @@ namespace CalTestHelpers.Items.SummonItems
                 AddIngredient(ItemID.TruffleWorm, 1).
                 AddIngredient(ModContent.ItemType<DeliciousMeat>(), 10).
                 AddTile(TileID.MeatGrinder).
-                AddTile(TileID.MythrilAnvil).
                 Register();
         }
     }
