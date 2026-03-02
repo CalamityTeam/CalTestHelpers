@@ -16,43 +16,6 @@ Items: {
 		ChargedItems: All chargeable Arsenal weapons in your inventory have been fully charged.
 	}
 
-	Changelog: {
-		DisplayName: Changelogs
-		Tooltip:
-			'''
-			2.4.1.0 Changelog
-			- Removed the Fight Information function
-			- Readded the Stealth Factor function, fixed bugs with it as well
-			- The Toggle all boss deaths bools are now always yellow instead of depending of the first boss on the list
-			- Made the text after setting all bosses dead/alive work properly for real this time
-			- Added a way to turn off free reforges
-			- A small icon now shows up in the Mod Configs menu
-			- Removed Time Freeze function since Calamity added an item for it (Bakidon)
-			- Removed Siren's Song since Calamity added an item for it (Naiad's Warhorn)
-			- Added an alternative recipe for Naiad's Warhorn
-			- Updated Localization files
-			- Open source now
-			- Added Minecart Upgrade kit to the Permanent Upgrade menu
-			- Fae's Lantern can now be properly used at daytime
-
-			Known issues:
-			- Configs not updating for players to the new functions and messages, if this happens locate the config file  for Cal Test Helpers in 
-			  Documents/MyGames/Terraria/Tmodloader/ModConfigs and delete it so a new one is generated. (This works for other mods' configs should they bug out too)
-			- (NOT REALLY A BUG) EoW and BoC share the same death flag in Terraria, so clicking either of them controls both
-			- Chinese and Rusian localization missing from this item and new items
-
-			NOTICES:
-			- THIS WILL BE THE LAST PATCH WITH THIS ITEM, YOU WILL HAVE TO CHECK CHANGELOGS ON STEAM
-			- THIS MOD MIGHT NOT BE MAINTAINED OR UPDATED IN THE FUTURE
-
-			Plans:
-			Add a way to freeze bosses in place
-			Make actual sprites for items
-			Update localizations
-			Possibly add more languagues to localizations
-			'''
-	}
-
 	BrokenHeart: {
 		DisplayName: Broken Heart
 		Tooltip:
