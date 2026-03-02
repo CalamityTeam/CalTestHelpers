@@ -39,6 +39,7 @@ namespace CalTestHelpers.UI
             GalaxyPearl,
             ArtisanLoaf,
             MinecartUpgradeKit,
+            TorchGod,
         }
 
         public string key = "Mods.CalTestHelpers.UI.TogglePermanentUpgrades.Toggle";
@@ -69,6 +70,7 @@ namespace CalTestHelpers.UI
                     new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.GalaxyPearl)), TextureAssets.Item[ItemID.GalaxyPearl].Value, () => ToggleUpgrade(PlayerUpgrade.GalaxyPearl), GetColor(HasUpgrade(PlayerUpgrade.GalaxyPearl))),
                     new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.ArtisanLoaf)), TextureAssets.Item[ItemID.ArtisanLoaf].Value, () => ToggleUpgrade(PlayerUpgrade.ArtisanLoaf), GetColor(HasUpgrade(PlayerUpgrade.ArtisanLoaf))),
                     new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.MinecartUpgradeKit)), TextureAssets.Item[ItemID.MinecartPowerup].Value, () => ToggleUpgrade(PlayerUpgrade.MinecartUpgradeKit), GetColor(HasUpgrade(PlayerUpgrade.MinecartUpgradeKit))),
+                    new SpecialUIElement(Language.GetTextValue(key,GetUpgradeName(PlayerUpgrade.TorchGod)), TextureAssets.Item[ItemID.TorchGodsFavor].Value, () => ToggleUpgrade(PlayerUpgrade.TorchGod), GetColor(HasUpgrade(PlayerUpgrade.TorchGod))),
         };
 
         public override Vector2 TopLeftLocation => SecondaryTopLeftLocation;
@@ -151,6 +153,9 @@ namespace CalTestHelpers.UI
                     case PlayerUpgrade.MinecartUpgradeKit:
                         UpgradeName = Lang.GetItemNameValue(ItemID.MinecartPowerup);
                         break;
+                    case PlayerUpgrade.TorchGod:
+                        UpgradeName = Lang.GetItemNameValue(ItemID.TorchGodsFavor);
+                        break;
                 }
             }
             else
@@ -225,6 +230,9 @@ namespace CalTestHelpers.UI
                         break;
                     case PlayerUpgrade.MinecartUpgradeKit:
                         UpgradeName = Language.GetTextValue(key2 + "Mechcart");
+                        break;
+                    case PlayerUpgrade.TorchGod:
+                        UpgradeName = Language.GetTextValue(key2 + "TorchGod");
                         break;
                 }
             }
@@ -331,6 +339,10 @@ namespace CalTestHelpers.UI
                     textColor = new Color(102, 102, 102);
                     upgradeValue = ref Main.LocalPlayer.unlockedSuperCart;
                     break;
+                case PlayerUpgrade.TorchGod:
+                    textColor = new Color(102, 102, 102);
+                    upgradeValue = ref Main.LocalPlayer.unlockedBiomeTorches;
+                    break;
             }
             upgradeValue = !upgradeValue;
             Main.NewText(Language.GetTextValue("Mods.CalTestHelpers.UI.TogglePermanentUpgrades.ToggleItem", upgradeName, upgradeValue), textColor);
@@ -386,6 +398,8 @@ namespace CalTestHelpers.UI
                     return Main.LocalPlayer.ateArtisanBread;
                 case PlayerUpgrade.MinecartUpgradeKit:
                     return Main.LocalPlayer.unlockedSuperCart;
+                case PlayerUpgrade.TorchGod:
+                    return Main.LocalPlayer.unlockedBiomeTorches;
             }
             return false;
         }

@@ -7,7 +7,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CalamityMod">
-      <HintPath>..\CalamityMod\bin\Debug\net8.0\CalamityMod.dll</HintPath>
+      <HintPath>..\ModAssemblies\CalamityMod_v2.1.2.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
