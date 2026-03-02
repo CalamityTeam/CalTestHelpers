@@ -1,5 +1,10 @@
+using System;
+using System.Collections.Generic;
 using CalamityMod;
+using CalamityMod.CustomRecipes;
 using CalamityMod.Items;
+using CalamityMod.Items.DraedonMisc;
+using CalamityMod.Items.Materials;
 using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -30,6 +35,7 @@ namespace CalTestHelpers.Items
             Item.autoReuse = false;
             Item.useTurn = true;
         }
+        public override void ModifyTooltips(List<TooltipLine> tooltips) => CalamityGlobalItem.InsertKnowledgeTooltip(tooltips, 1);
 
         public override bool? UseItem(Player player)
         {
@@ -44,6 +50,15 @@ namespace CalTestHelpers.Items
             }
             Main.NewText(Language.GetTextValue("Mods.CalTestHelpers.Items.ChargerTestItem.ChargedItems"), Color.Cyan);
             return true;
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe().
+                AddIngredient<DubiousPlating>(10).
+                AddIngredient<MysteriousCircuitry>(10).
+                AddCondition(ArsenalTierGatedRecipe.ConstructRecipeCondition(1, out Func<bool> condition), condition).
+                Register();
         }
     }
 }
