@@ -251,6 +251,7 @@ UI: {
 		GalaxyPearl: Галактическая жемчужина
 		Bread: Батон мастера-пекаря
 		Mechcart: Набор для модернизации вагонетки
+		// TorchGod: Torch God's Favor
 	}
 
 	ChangeItemStats.DisplayName: "[НЕ ПОДДЕРЖИВАЕТСЯ] Изменить характеристики предметов"

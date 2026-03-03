@@ -96,6 +96,11 @@ Configs: {
 			Label: "[i:CalamityMod/AgedLaboratoryTerminalItem] Amount of stuff to display"
 			Tooltip: How many projectiles should the Projectile and item stat editor display?
 		}
+		
+		StoreFightInformation: {
+			Label: "[i:CalamityMod/AgedLaboratoryElectricPanelItem] Store Boss Fight Information"
+			Tooltip: Enables the storage of (some) fight data. Includes fight time, average DPS, and max DPS. DO NOT USE UNLESS YOU ABSOLUTELY NEED TO
+		}
 
 		InstantBossSummoning: {
 			Label: "[i:Stopwatch] Instant Boss Summoning"
@@ -246,16 +251,16 @@ UI: {
 		TorchGod: Torch God's Favor
 	}
 
-	ChangeItemStats.DisplayName: "Change item stats"
-	ChangeProjectileStats.DisplayName: "Change projectile stats"
-	ChangeUniversalStealthFactor.DisplayName: "Change Universal Stealth Factor"
+	ChangeItemStats.DisplayName: Change item stats
+	ChangeProjectileStats.DisplayName: Change projectile stats
+	ChangeUniversalStealthFactor.DisplayName: Change Universal Stealth Factor
 
 	# Far easier to just give testers access to the code; Hot Reload is a blessing for changes while testing and it can change more stuff
 	# Or just use Modder's toolkit or Dragonlens idk
 	# If Tmod breaks this thing again I will comment it out
 	
 	ResetStats: {
-		DisplayName: "Reset changed stats"
+		DisplayName: Reset changed stats
 		Reset: Stat changes have been reset
 	}
 

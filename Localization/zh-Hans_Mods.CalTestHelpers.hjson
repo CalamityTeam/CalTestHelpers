@@ -243,6 +243,7 @@ UI: {
 		GalaxyPearl: 星系珍珠
 		Bread: 工匠面包
 		Mechcart: 矿车升级包
+		// TorchGod: Torch God's Favor
 	}
 
 	ChangeItemStats.DisplayName: "[废弃]修改物品属性"

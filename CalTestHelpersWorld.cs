@@ -59,12 +59,11 @@ namespace CalTestHelpers
             }
             else if (BossKillTimeFrames >= 2)
             {
+                double averageDPS = BossKillDPS.Count == 0 ? 0f : BossKillDPS.Average();
+                double maxDPS = BossKillDPS.Count == 0 ? 0f : BossKillDPS.Max();
+                string timeString = TimeSpan.FromSeconds(BossKillTimeFrames / 60f).ToString(@"hh\:mm\:ss");
                 if (CalTestHelperConfig.Instance.BossDeathStatMessages)
                 {
-                    double averageDPS = BossKillDPS.Count == 0 ? 0f : BossKillDPS.Average();
-                    double maxDPS = BossKillDPS.Count == 0 ? 0f : BossKillDPS.Max();
-                    string timeString = TimeSpan.FromSeconds(BossKillTimeFrames / 60f).ToString(@"hh\:mm\:ss");
-
                     //string textToDisplay = Language.GetTextValue(, timeString, maxDPS, (maxDPS+1f)/(averageDPS+1f));
                     ChatHelper.BroadcastChatMessage(NetworkText.FromKey(LocalisationKey + "Time", timeString), Color.Crimson);
                     ChatHelper.BroadcastChatMessage(NetworkText.FromKey(LocalisationKey + "AverageDPS", averageDPS), Color.Crimson);
@@ -86,10 +85,10 @@ namespace CalTestHelpers
                     */
                 }
 
-                /*
+                
                 if (CalTestHelperConfig.Instance.StoreFightInformation)
                     FightInformationPrintManager.SaveFightInformation();
-                */
+                
 
                 BossKillDPS.Clear();
                 BossKillTimeFrames = 0;
